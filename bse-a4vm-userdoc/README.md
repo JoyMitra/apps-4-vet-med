@@ -6,7 +6,7 @@ Contents
 
 1.  [General Information](#GenInfo)
 2.  [Initial Setup](#Setup)
-3.  [Collections](#Colletions)
+3.  [Collecting Data](#Collections)
 4.  [Bulls](#Bulls)
 5.  [Input Types](#InputTyp)
 6.  [Export](#Export)
@@ -25,7 +25,7 @@ The Bull Soundnes Evaluation or the BSE app serves as a tool to aid users in the
 
 
 
-<h2 id="Setup"></h2>
+<h2 id="Setup">Initial Setup</h2>
 Upon installation, the first time the you open the application, you will be prompted to input your necessory personal information about you like your Name and Email address
 
 Veterinary Information can be found in the Settings part of the application. You will input your personal information and other required fields into the text boxes. Rest assured, your personal information is not stored anywhere other than locally on the device. See screesnhot for illustration
@@ -47,13 +47,13 @@ Before proceeding to collecting data, morphology fields will also have to be fil
 
 
 
-<h2 id="Collections"></h2>
+<h2 id="Collections">Collecting Data</h2>
 Collections are defined by the application as a group of bulls. A use­case for this idea may be considered a day in the field at one ranch. This is an entire collection tied to one Owner. If you switch locations for the day or start collection information for a new Owner, you should create a new collection
 
 Clicking on the Collections & Groups button on the home screen will take you to a list of recent collections and give you the ability to create a new collection. See screenshots below for an illustration.
 
 <h3>Iphone Screesnhot/s:</h3>
-![CollImg](/img/screenshots/IMG_5410.PNG?raw=true)
+![CollImg](img/screenshots/IMG_5410.PNG?raw=true)
 
 <h3>Android Screenshot/s:</h3>
 images
