@@ -93,7 +93,7 @@ images
 
 
 
-<h1 id="Bulls">
+<h1 id="Bulls"> Bulls </h1>
 
 <h3 id="BullBoard">Bull Dashboard</h3>
 You can come to this screen by clicking "View/Edit Bulls" in the Group screen. This will display a list of all Bull Ids collected for that group. Clicking on a Bull ID in the list will take you to the Bull Exams screen. The Bull Dashboard screen also has a button for creating a new Bull entry. Clicking on this button will also take you to the Bull Exams screen. See screenshots below for illustrations.
