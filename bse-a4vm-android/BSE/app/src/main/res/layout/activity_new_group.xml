@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cis.ksu.ezcount.NewGroup">
+
+    <ScrollView android:id="@+id/ScrollView02"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="@string/rname"
+                android:id="@+id/rName"
+                android:editable="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/rName"
+                android:hint="@string/rnName"
+                android:id="@+id/rnName"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/rnName"
+                android:hint="@string/email"
+                android:id="@+id/rancherEmail"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/rancherEmail"
+                android:hint="@string/Addr1"
+                android:id="@+id/addr1"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/addr1"
+                android:hint="@string/Addr2"
+                android:id="@+id/addr2"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/addr2"
+                android:hint="@string/city"
+                android:id="@+id/city"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/city"
+                android:hint="@string/state"
+                android:id="@+id/state"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/state"
+                android:hint="@string/zip"
+                android:id="@+id/zip"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/zip"
+                android:hint="@string/phone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/phone"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/save"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/phone"
+                android:layout_centerInParent="true"
+                android:onClick="onClick"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

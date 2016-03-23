@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cis.ksu.ezcount.Classification">
+
+    <ScrollView android:id="@+id/ScrollView02"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/classification"
+                android:id="@+id/classify1"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true" />
+
+
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textOff="@string/classifyType1"
+                        android:textOn="@string/classifyType1"
+                        android:id="@+id/classifyType1"
+                        android:layout_below="@id/classify1"
+                        android:background="@color/white"
+                        android:textColor="@color/lightBlue" />
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textOff="@string/classifyType2"
+                        android:textOn="@string/classifyType2"
+                        android:textColor="@color/lightBlue"
+                        android:id="@+id/classifyType2"
+                        android:layout_below="@id/classifyType1"
+                        android:background="@color/white"/>
+
+
+
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textOff="@string/classifyType3"
+                        android:textOn="@string/classifyType3"
+                        android:id="@+id/classifyType3"
+                        android:layout_below="@id/classifyType2"
+                        android:background="@color/white"
+                        android:textColor="@color/lightBlue" />
+
+
+                    <ToggleButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textOff="@string/classifyType4"
+                        android:textOn="@string/classifyType4"
+                        android:id="@+id/classifyType4"
+                        android:layout_below="@id/classifyType3"
+                        android:background="@color/white"
+                        android:textColor="@color/lightBlue" />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/classifyType4"
+                android:hint="@string/misc"
+                android:id="@+id/classify2"
+                android:layout_marginTop="30dp"
+                android:editable="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:layout_marginTop="30dp"
+                android:id="@+id/saveClassification"
+                android:layout_below="@+id/classify2"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

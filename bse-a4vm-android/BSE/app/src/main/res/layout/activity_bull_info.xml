@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cis.ksu.ezcount.BullInfo"
+    android:focusable="false">
+
+    <ScrollView android:id="@+id/ScrollView02"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tag"
+                android:id="@+id/IdTag" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tattoo"
+                android:id="@+id/IdTattoo"
+                android:layout_below="@+id/IdTag" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RFID"
+                android:id="@+id/IdRfid"
+                android:layout_below="@+id/IdTattoo" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Brand"
+                android:id="@+id/IdBrand"
+                android:layout_below="@+id/IdRfid" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="yyyy-mm-dd"
+                android:id="@+id/date"
+                android:layout_below="@+id/IdBrand" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Age(Years)"
+                android:id="@+id/ageYrs"
+                android:layout_below="@+id/date" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Age(Months)"
+                android:id="@+id/ageMths"
+                android:layout_below="@+id/date"
+                android:layout_toRightOf="@+id/ageYrs" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bull_lot"
+                android:id="@+id/lot"
+                android:layout_below="@+id/ageYrs" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/breed"
+                android:id="@+id/breed"
+                android:layout_below="@+id/lot" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/misc"
+                android:id="@+id/comm"
+                android:layout_below="@+id/breed" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/saveBullInfo"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/comm"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

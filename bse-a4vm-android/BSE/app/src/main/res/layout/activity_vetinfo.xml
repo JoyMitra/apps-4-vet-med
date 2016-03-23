@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.cis.ksu.ezcount.VetinfoActivity">
+
+    <ScrollView android:id="@+id/ScrollView01"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fillViewport="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:hint="@string/fname"
+                android:id="@+id/firstName"
+                android:editable="true"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/firstName"
+                android:hint="@string/lname"
+                android:id="@+id/lastName"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/lastName"
+                android:hint="@string/cname"
+                android:id="@+id/clinic"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/clinic"
+                android:hint="@string/Addr1"
+                android:id="@+id/addr1"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/addr1"
+                android:hint="@string/Addr2"
+                android:id="@+id/addr2"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/addr2"
+                android:hint="@string/city"
+                android:id="@+id/city"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/city"
+                android:hint="@string/state"
+                android:id="@+id/state"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/state"
+                android:hint="@string/zip"
+                android:id="@+id/zip"
+                android:layout_marginTop="10dp"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_below="@+id/zip"
+                android:hint="@string/email"
+                android:layout_marginTop="10dp"
+                android:id="@+id/email"
+                android:editable="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/grey"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/vetInfoSave"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/email"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
