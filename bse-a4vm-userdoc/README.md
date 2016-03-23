@@ -56,4 +56,5 @@ Clicking on the Collections & Groups button on the home screen will take you to 
 ![CollImg](/img/screenshots/IMG_5410.PNG)
 
 <h3>Android Screenshot/s:</h3>
+images
 
