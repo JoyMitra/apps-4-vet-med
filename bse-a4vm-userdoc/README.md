@@ -4,7 +4,7 @@
 
 Contents
 
-1.  [General Information][GenInfo]
+1.  [General Information](#GenInfo)
 2.  [Setup](google.com)
 3.  [Collections](google.com)
 4.  [Bulls](google.com)
@@ -12,4 +12,9 @@ Contents
 6.  [Export](google.com)
 
 
-[GenInfo] : Placeholder for GenInfo...
+<h2 id="GenInfo">General Information</h2>
+The Bull Soundnes Evaluation or the BSE app serves as a tool to aid users in the evaluation of bulls.
+<h3>What does it do?</h3>
+* allows for the collection of nearly one­hundred fields about a bull.
+* mass export of data to a CSV format that can then be used in excel or other data processing applications.
+<p> You can download the iphone app from [here](iphoneLink) and the Android app [here](playstore)</p>
