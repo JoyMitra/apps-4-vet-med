@@ -36,3 +36,27 @@ Veterinary Information can be found in the Settings part of the application. You
 <h3>Android Screenshot/s:</h3>
 <Images>
 
+
+
+Before proceeding to collecting data, morphology fields will also have to be filled up. This information will allow you to use the in application counter to assist in the counting of semen samples. At least one field will be labelled as "Normal" by default. See screenshots below for an illustrations.
+
+<h3>Iphone Screesnhot/s:</h3>
+![VetInfoImage](img/screenshots/IMG_5285.PNG)
+
+<h3>Android Screenshot/s:</h3>
+<Images>
+
+
+
+
+<h2 id="Collections"></h2>
+Collections are defined by the application as a group of bulls. A use­case for this idea may be considered a day in the field at one ranch. This is an entire collection tied to one Owner. If you switch locations for the day or start collection information for a new Owner, you should create a new collection
+
+Clicking on the Collections & Groups button on the home screen will take you to a list of recent collections and give you the ability to create a new collection. See screenshots below for an illustration.
+
+<h3>Iphone Screesnhot/s:</h3>
+![VetInfoImage](/img/screenshots/IMG_5410.PNG)
+
+<h3>Android Screenshot/s:</h3>
+<Images>
+
