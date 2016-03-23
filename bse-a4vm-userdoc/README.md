@@ -53,7 +53,7 @@ Collections are defined by the application as a group of bulls. A use­case for 
 Clicking on the Collections & Groups button on the home screen will take you to a list of recent collections and give you the ability to create a new collection. See screenshots below for an illustration.
 
 <h3>Iphone Screesnhot/s:</h3>
-![CollImg](/img/screenshots/IMG_5410.PNG)
+![CollImg](/img/screenshots/IMG_5410.PNG?raw=true)
 
 <h3>Android Screenshot/s:</h3>
 images
