@@ -6,10 +6,10 @@ Contents
 
 1.  [General Information](#GenInfo)
 2.  [Initial Setup](#Setup)
-3.  [Collections](google.com)
-4.  [Bulls](google.com)
-5.  [Input Types](google.com)
-6.  [Export](google.com)
+3.  [Collections](#Colletions)
+4.  [Bulls](#Bulls)
+5.  [Input Types](#InputTyp)
+6.  [Export](#Export)
 
 
 
@@ -32,7 +32,11 @@ Upon installation, the first time the you open the application, you will be prom
 
 Veterinary Information can be found in the Settings part of the application. You will input your personal information and other required fields into the text boxes. Rest assured, your personal information is not stored anywhere other than locally on the device. See screesnhot for illustration
 
-![VetInfoImage](img/screenshots/IMG_5391.PNG?raw=true)
+![VetInfoImage](img/screenshots/IMG_5391.PNG?raw=true "Iphone")
+
+
+
+
 
 
 <h3>Android app</h3>
