@@ -34,17 +34,15 @@ Veterinary Information can be found in the Settings part of the application. You
 ![VetInfoImg](img/screenshots/IMG_5391.PNG?raw=true "Iphone")
 
 <h3>Android Screenshot/s:</h3>
-<Images>
 
 
 
 Before proceeding to collecting data, morphology fields will also have to be filled up. This information will allow you to use the in application counter to assist in the counting of semen samples. At least one field will be labelled as "Normal" by default. See screenshots below for an illustrations.
 
 <h3>Iphone Screesnhot/s:</h3>
-![MorphInfoImg](img/screenshots/IMG_5285.PNG)
+![MorphInfoImg](img/screenshots/IMG_5285.PNG?raw=true)
 
 <h3>Android Screenshot/s:</h3>
-<Images>
 
 
 
@@ -58,5 +56,4 @@ Clicking on the Collections & Groups button on the home screen will take you to 
 ![CollImg](/img/screenshots/IMG_5410.PNG)
 
 <h3>Android Screenshot/s:</h3>
-<Images>
 
