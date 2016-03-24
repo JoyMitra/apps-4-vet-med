@@ -28,6 +28,8 @@ Contents
 
 
 <h1 id="GenInfo">General Information</h2>
+* [iphone](google.com)
+* [Android](google.com)
 
 
 <h1 id="Setup">Initial Setup</h1>
