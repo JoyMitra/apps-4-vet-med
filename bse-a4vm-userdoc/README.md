@@ -29,12 +29,12 @@ Contents
 
 <h1 id="GenInfo">General Information</h2>
 The Bull Soundnes Evaluation or the BSE app serves as a tool to aid users in the evaluation of bulls.
-<h3>What does it do?</h3>
-* allows for the collection of nearly one hundred fields about a bull.
-* mass export of data to a CSV format that can then be used in excel or other data processing applications.
-<p> You can download the app from:
+What does it do?
+1.  allows for the collection of nearly one hundred fields about a bull.
+2.  mass export of data to a CSV format that can then be used in excel or other data processing applications.
+You can download the app from:
 * [iphone](https://www.myistore.co.za) 
-* [Android](https://play.google.com/store?hl=en)</p>
+* [Android](https://play.google.com/store?hl=en)
 
 
 <h1 id="Setup">Initial Setup</h1>
