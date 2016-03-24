@@ -40,7 +40,7 @@ Upon installation, the first time the you open the application, you will be prom
 Veterinary Information can be found in the Settings part of the application. You will input your personal information and other required fields into the text boxes. Rest assured, your personal information is not stored anywhere other than locally on the device. See screesnhot for illustration
 
 <h4>Iphone Screesnhot/s:</h4>
-![VetInfoImg](img/screenshots/IMG_5391.PNG?raw=true "Iphone")
+![VetInfoImg](img/screenshots/IMG_5391.PNG?raw=true "Iphone")  ![VetInfoAndr](img/screenshots/Android/VetInfo.png?raw=true)
 
 <h4>Android Screenshot/s:</h4>
 ![VetInfoAndr](img/screenshots/Android/VetInfo.png?raw=true)
@@ -50,7 +50,7 @@ Veterinary Information can be found in the Settings part of the application. You
 Before proceeding to collecting data, morphology fields will also have to be filled up. This information will allow you to use the in application counter to assist in the counting of semen samples. At least one field will be labelled as "Normal" by default. See screenshots below for an illustrations.
 
 <h4>Iphone Screesnhot/s:</h4>
-![MorphInfoImg](img/screenshots/IMG_5285.PNG?raw=true)
+![MorphInfoImg](img/screenshots/IMG_5285.PNG?raw=true) 
 
 <h4>Android Screenshot/s:</h4>
 ![MorphInfoAndr](img/screenshots/Android/MorphConfig.png?raw=true)
