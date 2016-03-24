@@ -46,6 +46,7 @@ Veterinary Information can be found in the Settings part of the application. You
 ![VetInfoImg](img/screenshots/IMG_5391.PNG?raw=true "Iphone")
 
 <h4>Android Screenshot/s:</h4>
+![VetInfoAndr](img/screenshots/Android/VetInfo.JPG?raw=true)
 
 
 
