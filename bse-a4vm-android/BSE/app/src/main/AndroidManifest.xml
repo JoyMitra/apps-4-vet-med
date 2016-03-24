@@ -13,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/bse_a4vm"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -24,24 +24,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".VetinfoActivity" />
-        <activity android:name=".MorphologyActivity" />
-        <activity android:name=".Collections" />
-        <activity android:name=".EditCollections" />
-        <activity android:name=".NewGroup" />
-        <activity android:name=".BullGroup" />
-        <activity android:name=".BullExam" />
-        <activity android:name=".BullInfo" />
-        <activity android:name=".MatingInfo" />
-        <activity android:name=".PhysicalParameter" />
-        <activity android:name=".MeasurementsTable" />
-        <activity android:name=".PhysicalExam" />
-        <activity android:name=".Motility" />
-        <activity android:name=".Classification" />
-        <activity android:name=".Comments" />
-        <activity android:name=".MorphologyDashboard" />
-        <activity android:name=".MorphologyCount" />
+        <activity android:name=".SettingsActivity" android:label="Settings"/>
+        <activity android:name=".VetinfoActivity" android:label="Vet Info"/>
+        <activity android:name=".MorphologyActivity" android:label="Morphology Config"/>
+        <activity android:name=".Collections" android:label="Dasboard"/>
+        <activity android:name=".EditCollections" android:label="Group"/>
+        <activity android:name=".NewGroup" android:label="New Group"/>
+        <activity android:name=".BullGroup" android:label="Bull Dashboard"/>
+        <activity android:name=".BullExam" android:label="Bull Exams"/>
+        <activity android:name=".BullInfo" android:label="Bull Info"/>
+        <activity android:name=".MatingInfo" android:label="Sex and Mating Info"/>
+        <activity android:name=".PhysicalParameter" android:label="Physical Parameters"/>
+        <activity android:name=".MeasurementsTable" android:label="Measurements"/>
+        <activity android:name=".PhysicalExam" android:label="Physical Exam"/>
+        <activity android:name=".Motility" android:label="Motility"/>
+        <activity android:name=".Classification" android:label="Classification"/>
+        <activity android:name=".Comments" android:label="Comments"/>
+        <activity android:name=".MorphologyDashboard" android:label="Morphology Dashboard"/>
+        <activity android:name=".MorphologyCount" android:label="Morphology Count"/>
     </application>
 
 </manifest>

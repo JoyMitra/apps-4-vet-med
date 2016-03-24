@@ -122,7 +122,7 @@ public class Motility extends AppCompatActivity {
                     if (!hasFocus) {
                         String text = ringsDesc.getText().toString().trim();
                         try {
-                            if (text.length()==0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) < 100.0)) {
+                            if (text.length()==0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) <= 100.0)) {
                                 ringsDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                             } else {
                                 ringsDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
@@ -142,7 +142,7 @@ public class Motility extends AppCompatActivity {
                     if (!hasFocus) {
                         String text = scrotalDesc.getText().toString().trim();
                         try {
-                            if (text.length()==0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) < 100.0)) {
+                            if (text.length()==0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) <= 100.0)) {
                                 scrotalDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                             } else {
                                 scrotalDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
