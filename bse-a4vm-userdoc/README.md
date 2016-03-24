@@ -28,8 +28,8 @@ Contents
 
 
 <h1 id="GenInfo">General Information</h2>
-* [iphone](google.com)
-* [Android](google.com)
+* [Export](#Export)
+* [Data Clean up](#CleanUp)
 
 
 <h1 id="Setup">Initial Setup</h1>
