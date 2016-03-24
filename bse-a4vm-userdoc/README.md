@@ -20,8 +20,8 @@ Contents
   * [Motility Information](#Motility)
   * [Classification Information](#Classify)
   * [Comments & Other Information](#Comments)
-* [Input Types](#InputTyp)
 * [Export](#Export)
+* [Data Clean up](#CleanUp)
 
 
 
@@ -130,3 +130,13 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
 <h3 id="Comments">Comments & Other Information</h3>
 You can come here from the "Bull Exams" screen. Fill in all the details as provided by the hints in each field. Invalid values will result in a warning. Hit Save before you leave the screen. See screenshots below.
 
+
+
+
+
+
+<h1 id="Export"> Export Collections</h1>
+At any time you can click on "Export Data" in the "Group" to screen to export the entire collection to a file in CSV format and email it. See screenshots below.
+
+<h1 id="CleanUp"> Data Clean up</h1>
+At any time you can click on "Delete 30 day history" on the main page of the app to clear collections upto 30 days old. Please note such a clean up will be permanent and you will lose all your collections upto 30 days old. You can also perform such a clean up group-wise. You can go to the "Group" page and choose to delete all collections for that group. It is recommended that you do such a clean up from time to time, to prevent the app from eating too much of your phone space.
