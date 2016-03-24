@@ -28,8 +28,10 @@ Contents
 
 
 <h1 id="GenInfo">General Information</h2>
-* [Export](#Export)
-* [Data Clean up](#CleanUp)
+BSE app serves as a tool to aid users in the evaluation of bulls. It allows for the collection of nearly one­hundred fields about bull, and mass export of data to a CSV format that can then be used in excel or other data processing applications.
+<h3>Download the app from:</h3>
+* [iphone](https://play.google.com/store?hl=en)
+* [Android](https://play.google.com/store?hl=en)
 
 
 <h1 id="Setup">Initial Setup</h1>
