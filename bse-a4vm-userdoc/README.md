@@ -103,6 +103,7 @@ You can come to this screen by clicking "View/Edit Bulls" in the Group screen. T
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/BullDashboard.png?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/BullDashboard.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
