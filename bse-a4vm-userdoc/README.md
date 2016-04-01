@@ -114,16 +114,19 @@ You can come to this screen from the Bull Dashboard screen. This screen into a l
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/BullExam.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/BullExams.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
 
 
 <h3 id="BullInfo">Bull Information</h3>
-You can come to this screen from the Bull Exams screen. Each field will have a hint associated with it to suggest the type of information this field accepts. A field is highlighted in red if you enter invalid data. Also, at least one ID field among Tag, Tattoo, RFID and Brand has to be filled. The Bull's age is also mandatory and will be automatically filled if the date of birth has been filled. Remember to click on the save button after you have entered the necessary information.
+You can come to this screen from the Bull Exams screen. Each field will have a hint associated with it to suggest the type of information this field accepts. A field is highlighted in red if you enter invalid data. Also, at least one ID field among Tag, Tattoo, RFID and Brand has to be filled. The Bull's age is also mandatory and will be automatically filled if the date of birth has been filled. Remember to click on the save button after you have entered the necessary information. See screenshots below for an illustration. The first two screen shots from the left are for iPhone and the last one is for Android.
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/BullInfo.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/BullInfo1.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/BullInfo.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -134,6 +137,7 @@ You can come to this screen from the Bull Exams screen. Each field will have a h
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/Mating.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Mating.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -144,12 +148,15 @@ You can come to this screen from the Bull Exams screen. This screen will have tw
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/PhyParms.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/PhyParms.png?raw=true" width="200" height="400" /></td>
  </tr>
  <tr>
+  <td><img src="img/screenshots/iPhone/Measure.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Measurements.png?raw=true" width="200" height="400" /></td>
  </tr>
  <tr>
+  <td><img src="img/screenshots/iPhone/phyInfo.PNG" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/PhyExam.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -167,9 +174,11 @@ You will be able to see the total morphology count on the "Morphology Dashboard"
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/MorphDashboard.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/MorphDashboard.png?raw=true" width="200" height="400" /></td>
  </tr>
  <tr>
+  <td><img src="img/screenshots/iPhone/MorphInfo.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/MorphCount.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -180,6 +189,7 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/Motility.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Motility.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -190,6 +200,7 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
 
 <table>
  <tr>
+  <td><img src="img/screenshots/iPhone/Classification.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Classify.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
