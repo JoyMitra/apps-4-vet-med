@@ -44,7 +44,7 @@ Veterinary Information can be found in the Settings part of the application. You
   <td><img src="img/screenshots/IMG_5391.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/VetInfo.png?raw=true" width="200" height="400" /></td>
  </tr>
-</table
+</table>
 
 
 
