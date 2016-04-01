@@ -39,7 +39,7 @@ Upon installation, the first time the you open the application, you will be prom
 
 Veterinary Information can be found in the Settings part of the application. You will input your personal information and other required fields into the text boxes. Rest assured, your personal information is not stored anywhere other than locally on the device. See screesnhot for illustration
 
-<table>
+<table align="center">
  <tr>
   <td><img src="img/screenshots/IMG_5391.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/VetInfo.png?raw=true" width="200" height="400" /></td>
