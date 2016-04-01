@@ -9,30 +9,22 @@ import android.widget.AdapterView;
 import android.content.Intent;
 import android.widget.Button;
 import android.view.View;
-import android.widget.Toast;
-
-
 import com.cis.ksu.ezcount.Constants.Constant;
 import com.cis.ksu.ezcount.util.SharedPrefUtil;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 import static android.R.layout.simple_list_item_1;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 
 public class Collections extends AppCompatActivity{
-
-    /*private static final String[] items = {"Date:RanchName1","Date:RanchName2",
-            "Date:RanchName3"};*/
-
-
-
     private Button btn = null;
     private ListView lv = null;
     private Set<String> ranchNames = null;
@@ -90,10 +82,6 @@ public class Collections extends AppCompatActivity{
                         if(entry != null && entry.length==2 && entry[0].equalsIgnoreCase("Ranch Name"))
                         {
                             name = entry[1];
-                            /*Date cDate = new Date();
-                            String fDate = new SimpleDateFormat("dd-MM-yyyy").format(cDate);
-                            ranchNames.add(fDate + ":" + entry[1]);
-                            break;*/
                         }
                         if(entry != null && entry.length==2 && entry[0].equalsIgnoreCase("TimeStamp"))
                         {

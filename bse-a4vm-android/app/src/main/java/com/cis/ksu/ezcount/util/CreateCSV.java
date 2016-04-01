@@ -10,8 +10,12 @@ import java.util.HashMap;
 import java.util.Set;
 
 /**
- * Created by Joy on 3/11/16.
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
  */
+
 public class CreateCSV {
 
     public static ArrayList<ArrayList> getData(Context ctx, String groupKey)

@@ -1,31 +1,27 @@
 package com.cis.ksu.ezcount;
 
-import android.app.ActionBar;
-import android.app.usage.ConfigurationStats;
-import android.content.Intent;
 import android.media.MediaPlayer;
-import android.provider.MediaStore;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TableRow;
 import android.widget.Toast;
-
 import com.cis.ksu.ezcount.Constants.Constant;
 import com.cis.ksu.ezcount.util.SharedPrefUtil;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 public class MorphologyCount extends AppCompatActivity {
 
@@ -46,9 +42,6 @@ public class MorphologyCount extends AppCompatActivity {
     private String currentButton = null;
 
 
-    //final MediaPlayer limitRchdSound = MediaPlayer.create(getApplicationContext(),R.raw.limit_reached);
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +57,6 @@ public class MorphologyCount extends AppCompatActivity {
         super.onResume();
         final MediaPlayer btnChangeSound = MediaPlayer.create(getApplicationContext(),R.raw.button_changed);
         final MediaPlayer limitRchdSound = MediaPlayer.create(getApplicationContext(), R.raw.limit_reached);
-        //Toast.makeText(getApplicationContext(),morphKey,Toast.LENGTH_SHORT).show();
         labels = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_FILE_MORPH_INFO,Constant.KEY_MORPHOLOGY);
         initVals = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
@@ -78,8 +70,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn1 = new Button(this);
                 btn1.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -105,8 +95,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn2 = new Button(this);
                 btn2.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -133,8 +121,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn3 = new Button(this);
                 btn3.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -159,8 +145,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn4 = new Button(this);
                 btn4.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -186,8 +170,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn5 = new Button(this);
                 btn5.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -212,8 +194,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn6 = new Button(this);
                 btn6.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -239,8 +219,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn7 = new Button(this);
                 btn7.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -265,8 +243,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(it.hasNext())
             {
                 String label = it.next().trim();
-                /*String limit = SharedPrefUtil.getSingleValue(getApplicationContext(),
-                        Constant.PREFS_FILE_MORPH_INFO, label);*/
                 btn8 = new Button(this);
                 btn8.setText(label +":0");
                 if(initVals!=null && !initVals.isEmpty())
@@ -311,22 +287,6 @@ public class MorphologyCount extends AppCompatActivity {
             if(btn8!=null)
                 layout.addView(btn8);
         }
-
-        /*btnChangeSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                btnChangeSound.stop();
-                btnChangeSound.release();
-            }
-        });
-
-        limitRchdSound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-                limitRchdSound.stop();
-                limitRchdSound.release();
-            }
-        });*/
 
         if(btn1!=null && labels!=null)
         {

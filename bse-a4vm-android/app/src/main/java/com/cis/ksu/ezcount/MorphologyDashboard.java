@@ -8,14 +8,17 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-
 import com.cis.ksu.ezcount.Constants.Constant;
 import com.cis.ksu.ezcount.util.SharedPrefUtil;
-
-import java.util.HashSet;
 import java.util.LinkedHashSet;
-import java.util.Objects;
 import java.util.Set;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 import static android.R.layout.simple_list_item_1;
 

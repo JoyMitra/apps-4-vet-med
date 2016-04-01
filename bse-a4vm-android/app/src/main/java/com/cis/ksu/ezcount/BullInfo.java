@@ -7,13 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.widget.ToggleButton;
-
 import com.cis.ksu.ezcount.Constants.Constant;
 import com.cis.ksu.ezcount.util.SharedPrefUtil;
-
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -21,6 +16,13 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 public class BullInfo extends AppCompatActivity {
 
@@ -75,7 +77,6 @@ public class BullInfo extends AppCompatActivity {
         //load data
         Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_BULL_INFO, bullKey), fields);
-        //Toast.makeText(getApplicationContext(),getIntent().getStringExtra("bullKey"),Toast.LENGTH_LONG).show();
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override

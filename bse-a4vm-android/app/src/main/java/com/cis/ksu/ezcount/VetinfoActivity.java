@@ -1,6 +1,5 @@
 package com.cis.ksu.ezcount;
 
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -8,14 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.cis.ksu.ezcount.Constants.Constant;
 import com.cis.ksu.ezcount.util.SharedPrefUtil;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 public class VetinfoActivity extends AppCompatActivity
     {

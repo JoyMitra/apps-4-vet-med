@@ -1,7 +1,6 @@
 package com.cis.ksu.ezcount;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Environment;
@@ -26,6 +25,13 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+
 public class EditCollections extends AppCompatActivity {
 
     String grpId = null;
@@ -37,7 +43,6 @@ public class EditCollections extends AppCompatActivity {
         Bundle extras = i.getExtras();
         String ranchInfo = extras.getString("ranch");
         grpId = extras.getString("GrpId");
-        //Toast.makeText(getApplicationContext(),grpId, Toast.LENGTH_LONG).show();
         String name = null;
         String dateColleted = null;
         TextView tvRanch = (TextView) findViewById(R.id.ranchName);

@@ -2,20 +2,16 @@ package com.cis.ksu.ezcount.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.provider.SyncStateContract;
-
 import com.cis.ksu.ezcount.Constants.Constant;
-import com.cis.ksu.ezcount.vo.GroupInfoVO;
-import com.cis.ksu.ezcount.vo.InfoVO;
-import com.cis.ksu.ezcount.vo.MorphologyInfoVO;
-import com.cis.ksu.ezcount.vo.VetInfoVO;
-
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * Created by Joy on 2/22/16.
+ * Created by Joydeep Mitra on 2/22/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
  */
+
 public class SharedPrefUtil {
 
 

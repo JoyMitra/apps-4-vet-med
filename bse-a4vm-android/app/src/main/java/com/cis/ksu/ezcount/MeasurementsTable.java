@@ -1,6 +1,5 @@
 package com.cis.ksu.ezcount;
 
-import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +15,13 @@ import com.cis.ksu.ezcount.util.SharedPrefUtil;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 public class MeasurementsTable extends AppCompatActivity {
 
@@ -104,7 +110,6 @@ public class MeasurementsTable extends AppCompatActivity {
                 Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), fields);
         Util.setCheckBoxes(SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), checks);
-        //Toast.makeText(getApplicationContext(),getIntent().getStringExtra("bullKey"),Toast.LENGTH_SHORT).show();
         check9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

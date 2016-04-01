@@ -19,6 +19,13 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -59,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*
+    deleting 30-day history
+    on a different thread.
+     */
     private class deleteHistory extends AsyncTask<String, String, String>
     {
         protected String doInBackground(String... param)
@@ -96,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
                                             Date today = new Date();
                                             long diff = today.getTime() - dateCaptured.getTime();
                                             days = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
-                                            //Toast.makeText(getApplicationContext(),"Days="+days,Toast.LENGTH_SHORT).show();
                                         }
                                         catch(ParseException pe)
                                         {

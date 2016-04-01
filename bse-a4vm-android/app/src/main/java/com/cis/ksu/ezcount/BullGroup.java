@@ -8,16 +8,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
-
 import com.cis.ksu.ezcount.Constants.Constant;
 import com.cis.ksu.ezcount.util.SharedPrefUtil;
-
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
-
 import static android.R.layout.simple_list_item_1;
+
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 
 public class BullGroup extends AppCompatActivity {
 
@@ -38,8 +41,6 @@ public class BullGroup extends AppCompatActivity {
     {
         super.onResume();
         grpId = getIntent().getStringExtra("grpId");
-
-        //Toast.makeText(getApplicationContext(),grpId,Toast.LENGTH_LONG).show();
         Button btn = (Button) findViewById(R.id.addBullBtn);
         lv = (ListView) findViewById(R.id.bullId);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +82,6 @@ public class BullGroup extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(getApplicationContext(), "Position=" + Integer.toString(position), Toast.LENGTH_LONG).show();
                 Intent goToBullExam = new Intent(getApplicationContext(), BullExam.class);
                 if(bulls!=null && position < bulls.toArray().length)
                 {

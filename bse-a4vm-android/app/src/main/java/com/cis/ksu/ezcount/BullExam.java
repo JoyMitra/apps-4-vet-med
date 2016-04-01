@@ -13,6 +13,13 @@ import com.cis.ksu.ezcount.util.SharedPrefUtil;
 
 import java.util.Set;
 
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+
 public class BullExam extends AppCompatActivity {
 
     Button bullInfoBtn = null;
@@ -27,7 +34,6 @@ public class BullExam extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bull_exam);
-        //Toast.makeText(getApplicationContext(), getIntent().getStringExtra("bullKey"), Toast.LENGTH_LONG).show();
         key = getIntent().getStringExtra("bullKey");
         bullInfoBtn = (Button)findViewById(R.id.bullInfo);
         matingInfoBtn = (Button)findViewById(R.id.matingInfo);
@@ -269,7 +275,6 @@ public class BullExam extends AppCompatActivity {
         bullInfoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //bullInfoBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                 Intent goToBullInfo = new Intent(getApplicationContext(), BullInfo.class);
                 goToBullInfo.putExtra("bullKey",key);
                 startActivity(goToBullInfo);
@@ -279,7 +284,6 @@ public class BullExam extends AppCompatActivity {
         matingInfoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //matingInfoBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                 if(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)!=null
                         && SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)
                         .contains(key))
@@ -298,7 +302,6 @@ public class BullExam extends AppCompatActivity {
         phyParams.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //phyParams.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                 if (SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL) != null
                         && SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)
                         .contains(key)) {
@@ -314,7 +317,6 @@ public class BullExam extends AppCompatActivity {
         motilityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //motilityBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                 if(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)!=null
                         && SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)
                         .contains(key))
@@ -333,7 +335,6 @@ public class BullExam extends AppCompatActivity {
         classificationBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //classificationBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                 if(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)!=null
                         && SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)
                         .contains(key))
@@ -350,7 +351,6 @@ public class BullExam extends AppCompatActivity {
         commentsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //commentsButton.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                 if(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)!=null
                         && SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL)
                         .contains(key))
