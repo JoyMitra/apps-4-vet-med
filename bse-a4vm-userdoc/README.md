@@ -19,7 +19,6 @@ Contents
   * [Morphology Information](#Morph)
   * [Motility Information](#Motility)
   * [Classification Information](#Classify)
-  * [Comments & Other Information](#Comments)
 * [Export](#Export)
 * [Data Clean up](#CleanUp)
 
@@ -221,4 +220,4 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
 At any time you can click on "Export Data" in the "Group" to screen to export the entire collection to a file in CSV format and email it.
 
 <h1 id="CleanUp"> Data Clean up</h1>
-At any time you can click on "Delete 30 day history" on the main page of the app to clear collections upto 30 days old. Please note such a clean up will be permanent and you will lose all your collections upto 30 days old. You can also perform such a clean up group-wise. You can go to the "Group" page and choose to delete all collections for that group. It is recommended that you do such a clean up from time to time, to prevent the app from eating too much of your phone space.
+At any time you can click on "Delete 30+ day old data" on the main page of the app to clear collections upto 30 days old. Please note such a clean up will be permanent and you will lose all your collections upto 30 days old. You can also perform such a clean up group-wise. You can go to the "Group" page and choose to delete all collections for that group. It is recommended that you do such a clean up from time to time, to prevent the app from eating too much of your phone space.
