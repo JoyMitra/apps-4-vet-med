@@ -20,7 +20,6 @@
   *  [Motility Information](#Motility)
   *  [Classification Information](#Classify)
 *  [Export](#Export)
-*  [Data Clean up](#CleanUp)
 
 <h1 id="GenInfo">General Information</h1>
 BSE-A4VM app aids users to collect data while evaluating bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can then be used in MS Excel or other data processing applications.
@@ -54,9 +53,14 @@ Before proceeding to collecting data, morphology fields will also have to be con
 </table>
 
 <h1 id="HomeScreen">Home Screen</h1>
-*TODO: Add content here*
+Clicking the BSE app icon on your phone will bring you to the home page of the app. From this page you will be able to navigate to the group page and the settings page. You will also be able to delete 30+ day old data.
 
-*TODO: Add screenshot of home screen*
+<table>
+ <tr>
+  <td><img src="img/screenshots/Home.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/Android/Home.png?raw=true" width="200" height="400" /></td>
+ </tr>
+</table>
 
 <h3 id="Cleanup">Clean Up</h3>
 The application saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  Please note such a clean up will be permanent and cannot be undone.  You can also perform such a clean up at group level. It is recommended that you periodically delete data to prevent the app from eating the storage space on your phone.
@@ -207,17 +211,6 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
   <td><img src="img/screenshots/Android/Classify.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
-
-
-<h3 id="Comments">Comments & Other Information</h3>
-You can come here from the "Bull Exams" screen. Fill in all the details as provided by the hints in each field. Invalid values will result in a warning. Hit Save before you leave the screen. See screenshots below.
-
-<table>
- <tr>
-  <td><img src="img/screenshots/Android/Comments.png?raw=true" width="200" height="400" /></td>
- </tr>
-</table>
-
 
 
 <h1 id="Export">Export Group</h1>
