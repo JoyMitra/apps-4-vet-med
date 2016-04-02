@@ -1,42 +1,40 @@
 # Bull Soundness Evaluation (BSE-A4VM)
 
-* * *
+## Contents
 
-Contents
-
-* [General Information](#GenInfo)
-* [Initial Setup](#Setup)
-* [Collections](#Collections)
-  * [View Dashboard](#Dashboard) 
-  * [Create New Group](#NewGrp)
-  * [Edit a Group](#EditGrp) 
-* [Bulls](#Bulls)
-  * [Bull Dashboard](#BullBoard)
-  * [Bull Exams](#Exams)
-  * [Bull Information](#BullInfo)
-  * [Sex & Mating Information](#SexInfo)
-  * [Physical Parameters](#Parameters)
-  * [Morphology Information](#Morph)
-  * [Motility Information](#Motility)
-  * [Classification Information](#Classify)
-* [Export](#Export)
-* [Data Clean up](#CleanUp)
-
-
-
-
+*  [General Information](#GenInfo)
+*  [Initial Setup](#Setup)
+*  [Home Screen](#HomeScreen)
+*  [Groups](#Groups)
+  *  [View Dashboard](#Dashboard)
+  *  [Create New Group](#NewGrp)
+  *  [Edit a Group](#EditGrp)
+*  [Bulls](#Bulls)
+  *  [Bull Dashboard](#BullBoard)
+  *  [Bull Exams](#Exams)
+  *  [Bull Information](#BullInfo)
+  *  [Sex & Mating Information](#SexInfo)
+  *  [Physical Parameters](#Parameters)
+  *  [Morphology Information](#Morph)
+  *  [Motility Information](#Motility)
+  *  [Classification Information](#Classify)
+*  [Export](#Export)
+*  [Data Clean up](#CleanUp)
 
 <h1 id="GenInfo">General Information</h1>
-BSE app serves as a tool to aid users in the evaluation of bulls. It allows for the collection of nearly one­hundred fields about bull, and mass export of data to a CSV format that can then be used in excel or other data processing applications.
+BSE-A4VM app aids users to collect data while evaluating bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can then be used in MS Excel or other data processing applications.
 <h3>Download the app from:</h3>
-* [iphone](https://play.google.com/store?hl=en)
-* [Android](https://play.google.com/store?hl=en)
+* [for iPhone](https://play.google.com/store?hl=en) *TODO: Add link to app page on iStore*
+* [for Android](https://play.google.com/store?hl=en) *TODO: Add link to app page on Google Play Store*
 
+_For most part, these mobile applications do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data.
+
+Since the mobile app has consistent look and feel on both Android and iPhone platforms, the rest of this documentation will describe the app with no specific reference to the platform.  When screenshots are provided for illustration, screenshots from both iPhone app (left) and Android app (right) will be provided.
 
 <h1 id="Setup">Initial Setup</h1>
-Upon installation, the first time the you open the application, you will be prompted to input your necessory personal information about you like your Name and Email address
+Upon opening the application for the first time after installation, veterinarian will be prompted to input personal information such as name and email address.
 
-Veterinary Information can be found in the Settings part of the application. You will input your personal information and other required fields into the text boxes. Rest assured, your personal information is not stored anywhere other than locally on the device. See screesnhot for illustration. Please note for all subsequent screenshots, the one on the left is for iPhone and the one on the right is for Android.
+Current veterinary information can be viewed and edited via the _Settings_ page of the application.
 
 <table>
  <tr>
@@ -45,9 +43,7 @@ Veterinary Information can be found in the Settings part of the application. You
  </tr>
 </table>
 
-
-
-Before proceeding to collecting data, morphology fields will also have to be filled up. This information will allow you to use the in application counter to assist in the counting of semen samples. At least one field will be labelled as "Normal" by default. See screenshots below for an illustrations.
+Before proceeding to collecting data, morphology fields will also have to be configured. This information will allow you to use the in-application counter to assist in collecting count data about bull semen samples.  By default, the first field is labelled as "Normal" and the users cannot reconfigure this field.
 
 <table>
  <tr>
@@ -56,13 +52,20 @@ Before proceeding to collecting data, morphology fields will also have to be fil
  </tr>
 </table>
 
+<h1 id="HomeScreen">Home Screen</h1>
+*TODO: Add content here*
 
-<h1 id="Collections">Collections</h1>
+*TODO: Add screenshot of home screen*
+
+<h3 id="Cleanup">Clean Up</h3>
+The application saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  Please note such a clean up will be permanent and cannot be undone.  You can also perform such a clean up at group level. It is recommended that you periodically delete data to prevent the app from eating the storage space on your phone.
+
+<h1 id="Groups">Groups</h1>
+A _group_ is a group of bulls along with their examination data.  Each ranch/location/owner can have multiple groups, e.g., one group for each day of the visit to the ranch, one group for the morning batch of bulls and one group for the afternoon batch of bulls.
+
 
 <h3 id="Dashboard">View Dashboard</h3>
-Collections are defined by the application as a group of bulls. A use­case for this idea may be considered a day in the field at one ranch. This is an entire collection tied to one Owner. If you switch locations for the day or start collection information for a new Owner, you should create a new collection
-
-Clicking on the Collections & Groups button on the home screen will take you to a list of recent collections and give you the ability to create a new collection. We call this screen the Dashboard. See screenshots below for an illustration.
+From the home screen, you can get to the _Dashboard_ by clicking on the _Groups_ button.  The dashboard allows you to view the list of groups on the phone and create new groups. *TODO: Use realistic names for ranch and ower, e.g., Dodge City Ranch.*
 
 <table>
  <tr>
@@ -71,9 +74,8 @@ Clicking on the Collections & Groups button on the home screen will take you to 
  </tr>
 </table>
 
-
 <h3 id="NewGrp">Create New Group</h3>
-Upon clicking “Add New Group” you will be prompted to input information about the group of bulls you are about to collect. Once you click save, the information will be saved and taken on to the Bull table. This is where you can collect and view bull information. See screenshots below for an illustration.
+If you chose to create a new group by clicking _Add New Group_, then you will be prompted to input data about the owner of the set of bulls to be examined in this group.  Once you click _Save_, the data will be saved and you will be able to collect data about bulls.
 
 <table>
  <tr>
@@ -82,9 +84,8 @@ Upon clicking “Add New Group” you will be prompted to input information abou
  </tr>
 </table>
 
-
 <h3 id="EditGrp">Edit a Group</h3>
-Selecting an existing group from the list on this page will take you to the Group screen from where you can edit collections for that Group, export the data to a csv file or delete all collections for that group. See screenshot below for an illustration.
+This screen allows you to view and edit data for bulls in the current group (by clicking _View/Edit Bulls_). It also allows you to export the data for the current group of bulls (by clicking _Export Data_).  
 
 <table>
  <tr>
@@ -93,12 +94,10 @@ Selecting an existing group from the list on this page will take you to the Grou
  </tr>
 </table>
 
-
-
 <h1 id="Bulls"> Bulls </h1>
 
 <h3 id="BullBoard">Bull Dashboard</h3>
-You can come to this screen by clicking "View/Edit Bulls" in the Group screen. This will display a list of all Bull Ids collected for that group. Clicking on a Bull ID in the list will take you to the Bull Exams screen. The Bull Dashboard screen also has a button for creating a new Bull entry. Clicking on this button will also take you to the Bull Exams screen. See screenshots below for illustrations.
+This screen allows you to view and edit data about bulls.  The data about a specific bull can be viewed and edited by clicking on the corresponding _Bull ID_ button.  A new entry for a bull can be added to the group by clicking on _Add New Bull_ button.
 
 <table>
  <tr>
@@ -109,7 +108,11 @@ You can come to this screen by clicking "View/Edit Bulls" in the Group screen. T
 
 
 <h3 id="Exams">Bull Exams</h3>
-You can come to this screen from the Bull Dashboard screen. This screen into a list of buttons. Clicking on each button allows you to fill in some information about the Bull. For instance, the Bull Info button allows you to fill in details about the identity of the bull, like ID, age, date of birth etc. A button on this screen is marked grey if it has not been visited at all. A button is marked blue if it has been visited but not all fields related to it have been filled. A button is marked green if it has been visited and all fields have been filled up. See screenshot below for an illustration. 
+This screen allows you to enter various data about the bull being examined (or edit previously collected data).  Data about bulls are grouped into sets of related data, e.g., bull info, morphology, motility.  Each group can be accessed by clicking the corresponding button.
+
+To assist the examiner make a thorough examination, the app uses a simple color scheme.  
+  - If the examiner visits a data group and fills out some (not all) data fields, then the button or the marble for the group changes to blue color.
+  - If the examiner filled all data fields of a data group, then the button or the marble for the group changes to green color.
 
 <table>
  <tr>
@@ -164,8 +167,8 @@ You can come to this screen from the Bull Exams screen. This screen will have tw
 <h3 id="Morph">Morphology Information</h3>
 Morphology information is captured in a screen called "Morphology Dashboard". You can come to this screen by clicking on the "morphology" button in the "Bull Exams" screen. This screen will have:
 
-1. A button at the top called "Add New Semen Collection" 
-2. A list of "Semen collection counts" captured on a particular date. 
+1. A button at the top called "Add New Semen Collection"
+2. A list of "Semen collection counts" captured on a particular date.
 
 Clicking on the button will take you to a page with a list of buttons. These buttons represent the Morphology information you had setup in the "Settings" section of the app. This page can have a maximum of eight buttons. Clicking on each button will increase that particular Morphology by 1. When you change from one button to another an alarm will be set off to warn you of that change. When you reach the limit/threshold for that morphology, another alarm will be set off to warn you.
 
@@ -216,8 +219,6 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
 
 
 
-<h1 id="Export"> Export Collections</h1>
+<h1 id="Export">Export Group</h1>
 At any time you can click on "Export Data" in the "Group" to screen to export the entire collection to a file in CSV format and email it.
 
-<h1 id="CleanUp"> Data Clean up</h1>
-At any time you can click on "Delete 30+ day old data" on the main page of the app to clear collections upto 30 days old. Please note such a clean up will be permanent and you will lose all your collections upto 30 days old. You can also perform such a clean up group-wise. You can go to the "Group" page and choose to delete all collections for that group. It is recommended that you do such a clean up from time to time, to prevent the app from eating too much of your phone space.
