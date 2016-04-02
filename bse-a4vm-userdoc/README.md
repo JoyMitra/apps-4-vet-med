@@ -5,6 +5,7 @@
 *  [General Information](#GenInfo)
 *  [Initial Setup](#Setup)
 *  [Home Screen](#HomeScreen)
+  *  [Clean Up](#Cleanup)
 *  [Groups](#Groups)
   *  [View Dashboard](#Dashboard)
   *  [Create New Group](#NewGrp)
