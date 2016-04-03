@@ -63,8 +63,6 @@ To open the app, click on BSE app icon *TODO: place img/icon-image.png* on your 
 </table>
 
 <h3 id="Cleanup">Clean Up</h3>
-From the home screen, you can delete old app data on your phone. 
-
 The app saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  This deletion is permanent and cannot be undone.  You can also delete data corresponding to each group (from the groups page *TODO: is this true for both apps?*. It is recommended that you periodically delete old data to prevent the app from occupying the storage space on your phone.
 
 <h1 id="Groups">Groups</h1>
