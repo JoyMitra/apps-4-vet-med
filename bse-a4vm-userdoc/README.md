@@ -10,31 +10,30 @@
   *  [View Dashboard](#Dashboard)
   *  [Create New Group](#NewGrp)
   *  [Edit a Group](#EditGrp)
+  *  [Export](#Export)
 *  [Bulls](#Bulls)
   *  [Bull Dashboard](#BullBoard)
   *  [Bull Exams](#Exams)
   *  [Bull Information](#BullInfo)
   *  [Sex & Mating Information](#SexInfo)
   *  [Physical Parameters](#Parameters)
-  *  [Morphology Information](#Morph)
-  *  [Motility Information](#Motility)
-  *  [Classification Information](#Classify)
-*  [Export](#Export)
+  *  [Morphology Dashboard](#Morph)
+  *  [Motility Information and Classification Information](#Motility)
 
 <h1 id="GenInfo">General Information</h1>
-BSE-A4VM app aids users to collect data while evaluating bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can then be used in MS Excel or other data processing applications.
+BSE-A4VM app aids veterinarians to collect data while examining bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
 <h3>Download the app from:</h3>
 * [for iPhone](https://play.google.com/store?hl=en) *TODO: Add link to app page on iStore*
 * [for Android](https://play.google.com/store?hl=en) *TODO: Add link to app page on Google Play Store*
 
-_For most part, these mobile applications do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data.
+_For most part, these mobile apps do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data.
 
-Since the mobile app has consistent look and feel on both Android and iPhone platforms, the rest of this documentation will describe the app with no specific reference to the platform.  When screenshots are provided for illustration, screenshots from both iPhone app (left) and Android app (right) will be provided.
+Since the mobile app has consistent look and feel on both Android and iPhone platforms, the rest of this documentation will describe the app with no specific reference to the platform.  When screen shots are provided for illustration, screen shots from both iPhone app (left) and Android app (right) will be provided.
 
 <h1 id="Setup">Initial Setup</h1>
-Upon opening the application for the first time after installation, veterinarian will be prompted to input personal information such as name and email address.
+Upon opening the app for the first time after installation, veterinarian will be prompted to input personal information such as name and email address.
 
-Current veterinary information can be viewed and edited via the _Settings_ page of the application.
+Current veterinary information can be viewed and edited via the _Settings_ page of the app.
 
 <table>
  <tr>
@@ -43,7 +42,7 @@ Current veterinary information can be viewed and edited via the _Settings_ page 
  </tr>
 </table>
 
-Before proceeding to collecting data, morphology fields will also have to be configured. This information will allow you to use the in-application counter to assist in collecting count data about bull semen samples.  By default, the first field is labelled as "Normal" and the users cannot reconfigure this field.
+Before proceeding to collecting data, morphology fields will also have to be configured. This information will allow you to use the in-application counter to assist in collecting count data about bull semen samples.  By default, the first field is labelled as _Normal_ and the users cannot reconfigure this field.
 
 <table>
  <tr>
@@ -53,7 +52,7 @@ Before proceeding to collecting data, morphology fields will also have to be con
 </table>
 
 <h1 id="HomeScreen">Home Screen</h1>
-Clicking the BSE app icon on your phone will bring you to the home page of the app. From this page you will be able to navigate to the group page and the settings page. You will also be able to delete 30+ day old data.
+To open the app, click on BSE app icon *TODO: place icon-image.png* on your phone.  This will open the home screen of the app.  From here, you can navigate to the _Groups_ page and the _Settings_ page. 
 
 <table>
  <tr>
@@ -63,7 +62,9 @@ Clicking the BSE app icon on your phone will bring you to the home page of the a
 </table>
 
 <h3 id="Cleanup">Clean Up</h3>
-The application saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  Please note such a clean up will be permanent and cannot be undone.  You can also perform such a clean up at group level. It is recommended that you periodically delete data to prevent the app from eating the storage space on your phone.
+From the home screen, you can delete old app data on your phone. 
+
+The app saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  This deletion is permanent and cannot be undone.  You can also delete data corresponding to each group (from the groups page *TODO: is this true for both apps?*. It is recommended that you periodically delete old data to prevent the app from occupying the storage space on your phone.
 
 <h1 id="Groups">Groups</h1>
 A _group_ is a group of bulls along with their examination data.  Each ranch/location/owner can have multiple groups, e.g., one group for each day of the visit to the ranch, one group for the morning batch of bulls and one group for the afternoon batch of bulls.
@@ -99,7 +100,10 @@ This screen allows you to view and edit data for bulls in the current group (by 
  </tr>
 </table>
 
-<h1 id="Bulls"> Bulls </h1>
+<h3 id="Export">Export Group</h3>
+You can export the data for the current group by clicking _Export Data_ button.  This will package the data for the group as a CSV file, open the email client on your phone, create an email with the CSV file as an attachment, and give you back the control to edit the email and send it.
+
+<h1 id="Bulls">Bulls</h1>
 
 <h3 id="BullBoard">Bull Dashboard</h3>
 This screen allows you to view and edit data about bulls.  The data about a specific bull can be viewed and edited by clicking on the corresponding _Bull ID_ button.  A new entry for a bull can be added to the group by clicking on _Add New Bull_ button.
@@ -110,7 +114,6 @@ This screen allows you to view and edit data about bulls.  The data about a spec
   <td><img src="img/screenshots/Android/BullDashboard.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
-
 
 <h3 id="Exams">Bull Exams</h3>
 This screen allows you to enter various data about the bull being examined (or edit previously collected data).  Data about bulls are grouped into sets of related data, e.g., bull info, morphology, motility.  Each group can be accessed by clicking the corresponding button.
@@ -128,7 +131,7 @@ To assist the examiner make a thorough examination, the app uses a simple color 
 
 
 <h3 id="BullInfo">Bull Information</h3>
-You can come to this screen from the Bull Exams screen. Each field will have a hint associated with it to suggest the type of information this field accepts. A field is highlighted in red if you enter invalid data. Also, at least one ID field among Tag, Tattoo, RFID and Brand has to be filled. The Bull's age is also mandatory and will be automatically filled if the date of birth has been filled. Remember to click on the save button after you have entered the necessary information. See screenshots below for an illustration. The first two screen shots from the left are for iPhone and the last one is for Android.
+In this screen, each field is associated with a hint that suggests the type of information accepted by the field. A field is highlighted in red if you enter invalid data.  Also, at least one of the ID fields -- Tag, RFID, Brand, and Tattoo -- has to be filled.  The age of a bull is mandatory.  If you provide the date of birth, the age of the bull will be automatically filled. Remember to click on the _Save_ button after you have entered the necessary (mandatory) information.
 
 <table>
  <tr>
@@ -140,7 +143,7 @@ You can come to this screen from the Bull Exams screen. Each field will have a h
 
 
 <h3 id="SexInfo">Sex & Mating Information</h3>
-You can come to this screen from the Bull Exams screen. Each field will have a hint associated with it to suggest the type of information this field accepts. Click on the save button before you navigate from the screen. If you try to enter invalid information the app will warn you by highlighting the field in red.
+In this screen, each field is associated with a hint that suggests the type of information accepted by the field.  Remember to click the _Save_ button before you navigate away from the screen. If you enter invalid information, the app will notify you by highlighting corresponding fields in red.
 
 <table>
  <tr>
@@ -151,7 +154,9 @@ You can come to this screen from the Bull Exams screen. Each field will have a h
 
 
 <h3 id="Parameters">Physical Parameters</h3>
-You can come to this screen from the Bull Exams screen. This screen will have two buttons. One will take the user to the Measurements screen and the other will take the user to the Physical Exam screen. On both of those screens enter data in the fields as suggested by the hints. Invalid data in any of the fields will result in the field being highlighted as red. beside each field there will be a check box to inditcate "normal" or not. Checking the check box will indicate "normal", not checking it will indicate "not normal". At the bottom of the screen before the save button there will be another check box labelled "Select all as Normal". Checking this will check all the check boxes and unchecking it will uncheck all the check boxes. Remember to hit save before navigating away from the app. See screens shots below for an illustration.
+This screen has two buttons. One will take the user to the _Measurements_ screen and the other will take the user to the _Physical Exam_ screen. In these screens, you can enter data in the fields.  Again, there will be hints about the type of valid data, and the app will notify you of invalid data  by highlighting corresponding fields in red.  Also, remember to click the _Save_ button before your navigate away from the screens.
+
+Each field is associated with a check box to indicate "normal" or not.  Check this boxes when you do not want to enter a description but want to record the corresponding parameter is normal.  If you do not provide any description and not check the corresponding bos, then the app will record the parameter as abnormal. *TODO: Joydeep/Shubh, please confirm the parameter is recorded as abnormal*  If you wish to record all parameters as normal, then you can use the _Select all as Normal_ check box at the bottom of the screen to mark all parameters as normal -- this will check the check boxes associated with all parameters.  Unchecking this check box will uncheck the check boxes associated with all the parameters on the screen.
 
 <table>
  <tr>
@@ -169,15 +174,19 @@ You can come to this screen from the Bull Exams screen. This screen will have tw
 </table>
 
 
-<h3 id="Morph">Morphology Information</h3>
-Morphology information is captured in a screen called "Morphology Dashboard". You can come to this screen by clicking on the "morphology" button in the "Bull Exams" screen. This screen will have:
+<h3 id="Morph">Morphology Dashboard</h3>
+Morphology information is captured in the _Morphology Dashboard_ screen.  This screen will have:
 
-1. A button at the top called "Add New Semen Collection"
-2. A list of "Semen collection counts" captured on a particular date.
+1. A button at the top called _Add New Semen Collection_.
+2. A list of _Semen collection counts_ for the bull (in the current examination session).
 
-Clicking on the button will take you to a page with a list of buttons. These buttons represent the Morphology information you had setup in the "Settings" section of the app. This page can have a maximum of eight buttons. Clicking on each button will increase that particular Morphology by 1. When you change from one button to another an alarm will be set off to warn you of that change. When you reach the limit/threshold for that morphology, another alarm will be set off to warn you.
+Upon clicking _Add New Semen Collection_, you will be presented with a page full of buttons (up to eight buttons). These buttons represent the Morphology information you had setup in the _Settings_ section of the app. You can gather tally data for various morphology features by clicking on the corresponding button. 
 
-You will be able to see the total morphology count on the "Morphology Dashboard" screen. Clicking on each Semen collection in the dashboard will give you the break up of the counts in each morphology. See screenshots below for an illustration.
+During collection, when you switch buttons, the app will generate a unique sound alert .  Similarly, when the tally count reaches the limit/threshold for a morphology feature, the app will generate a unique sound alert.
+
+For each semen collection, you can view the total count and the break down via the _Morphology Count_ screen by selecting a specific sample.  If needed, you can modify (only increase) the recorded count in this screen.
+
+In terms of work flow, we recommend that you create a new semen collection instead of modifying an existing collection.
 
 <table>
  <tr>
@@ -191,8 +200,8 @@ You will be able to see the total morphology count on the "Morphology Dashboard"
 </table>
 
 
-<h3 id="Motility">Motilility Information</h3>
-You can come here from the "Bull Exams" screen. Fill in all the details as provided by the hints in each field. Invalid values will result in a warning. Hit Save before you leave the screen. See screenshots below.
+<h3 id="Motility">Motilility Information and Classification Information</h3>
+As with previous screens, the data collected on these screens are self explanatory (and hints are associated with fields). Again, remember to _Save_ the data before navigating away from the screen.  Also, the app will notify you of invalid data by highlighting the corresponding fields in red.
 
 <table>
  <tr>
@@ -201,10 +210,6 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
  </tr>
 </table>
 
-
-<h3 id="Classify">Classification Information</h3>
-You can come here from the "Bull Exams" screen. Fill in all the details as provided by the hints in each field. Invalid values will result in a warning. Hit Save before you leave the screen. See screenshots below.
-
 <table>
  <tr>
   <td><img src="img/screenshots/iPhone/Classification.PNG?raw=true" width="200" height="400" /></td>
@@ -212,7 +217,4 @@ You can come here from the "Bull Exams" screen. Fill in all the details as provi
  </tr>
 </table>
 
-
-<h1 id="Export">Export Group</h1>
-At any time you can click on "Export Data" in the "Group" to screen to export the entire collection to a file in CSV format and email it.
 
