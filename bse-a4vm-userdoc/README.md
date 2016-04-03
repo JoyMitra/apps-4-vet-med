@@ -1,7 +1,5 @@
 # Bull Soundness Evaluation (BSE-A4VM)
 
-## Contents
-
 *  [General Information](#GenInfo)
 *  [Initial Setup](#Setup)
 *  [Home Screen](#HomeScreen)
