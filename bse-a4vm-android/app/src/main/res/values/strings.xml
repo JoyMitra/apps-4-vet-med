@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">BSE</string>
-    <string name="Collections">Collections and Groups</string>
+    <string name="Collections">Groups</string>
     <string name="Settings">Settings</string>
     <string name="Delete">Delete 30+ day old data</string>
     <string name="VetInfo">Vetrinary Information</string>

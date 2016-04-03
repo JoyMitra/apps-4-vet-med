@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cis.ksu.ezcount.NewGroup">
+    tools:context="edu.ksu.cis.bse.NewGroup">
 
     <ScrollView android:id="@+id/ScrollView02"
         xmlns:android="http://schemas.android.com/apk/res/android"

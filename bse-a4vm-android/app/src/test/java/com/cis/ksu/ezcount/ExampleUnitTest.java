@@ -1,4 +1,4 @@
-package com.cis.ksu.ezcount;
+package com.cis.ksu.bse_a4vm_android;
 
 import org.junit.Test;
 

@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cis.ksu.ezcount.MainActivity">
+    tools:context="edu.ksu.cis.bse.MainActivity">
 
 
     <TextView
@@ -17,7 +17,7 @@
         android:text="@string/Collections"
         android:id="@+id/collections"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="75dp"
         android:gravity="center"
         android:clickable="true"
         android:textAlignment="gravity"
@@ -31,7 +31,7 @@
         android:id="@+id/usrSetting"
         android:layout_below="@+id/collections"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="75dp"
         android:gravity="center"
         android:clickable="true"
         android:onClick="onClick"
@@ -46,10 +46,26 @@
         android:id="@+id/DeleteHistory"
         android:layout_below="@+id/usrSetting"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
+        android:layout_marginTop="75dp"
         android:gravity="center"
         android:clickable="true"
         android:onClick="onClick"
         android:textAlignment="gravity"
         android:textColor="@color/colorPrimaryDark"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="textMultiLine"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:text="Author:Joydeep Mitra \nTeam:Shubh Chopra, Rober Larson, Chris Piggott, Venkatesh-Prasad Ranganath, Nora Schrag, and Miles Theurer \nAffiliation: Kansas State University \nWebsite:http://apps-4-vet-med.github.io/bse"
+        android:ems="10"
+        android:id="@+id/Attributions"
+        android:layout_below="@id/DeleteHistory"
+        android:textSize="6dp" />
+
+
 </RelativeLayout>

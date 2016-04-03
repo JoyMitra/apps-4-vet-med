@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cis.ksu.ezcount">
+    package="edu.ksu.cis.bse">
 
     <uses-sdk
         android:maxSdkVersion="23"
@@ -16,31 +16,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="edu.ksu.cis.bse.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity" android:label="Settings"/>
-        <activity android:name=".VetinfoActivity" android:label="Vet Info"/>
-        <activity android:name=".MorphologyActivity" android:label="Morphology Config"/>
-        <activity android:name=".Collections" android:label="Dasboard"/>
-        <activity android:name=".EditCollections" android:label="Group"/>
-        <activity android:name=".NewGroup" android:label="New Group"/>
-        <activity android:name=".BullGroup" android:label="Bull Dashboard"/>
-        <activity android:name=".BullExam" android:label="Bull Exams"/>
-        <activity android:name=".BullInfo" android:label="Bull Info"/>
-        <activity android:name=".MatingInfo" android:label="Sex and Mating Info"/>
-        <activity android:name=".PhysicalParameter" android:label="Physical Parameters"/>
-        <activity android:name=".MeasurementsTable" android:label="Measurements"/>
-        <activity android:name=".PhysicalExam" android:label="Physical Exam"/>
-        <activity android:name=".Motility" android:label="Motility"/>
-        <activity android:name=".Classification" android:label="Classification"/>
-        <activity android:name=".Comments" android:label="Comments"/>
-        <activity android:name=".MorphologyDashboard" android:label="Morphology Dashboard"/>
-        <activity android:name=".MorphologyCount" android:label="Morphology Count"/>
+        <activity android:name="edu.ksu.cis.bse.SettingsActivity" android:label="Settings"/>
+        <activity android:name="edu.ksu.cis.bse.VetinfoActivity" android:label="Vet Info"/>
+        <activity android:name="edu.ksu.cis.bse.MorphologyActivity" android:label="Morphology Config"/>
+        <activity android:name="edu.ksu.cis.bse.Collections" android:label="Dasboard"/>
+        <activity android:name="edu.ksu.cis.bse.EditCollections" android:label="Group"/>
+        <activity android:name="edu.ksu.cis.bse.NewGroup" android:label="New Group"/>
+        <activity android:name="edu.ksu.cis.bse.BullGroup" android:label="Bull Dashboard"/>
+        <activity android:name="edu.ksu.cis.bse.BullExam" android:label="Bull Exams"/>
+        <activity android:name="edu.ksu.cis.bse.BullInfo" android:label="Bull Info"/>
+        <activity android:name="edu.ksu.cis.bse.MatingInfo" android:label="Sex and Mating Info"/>
+        <activity android:name="edu.ksu.cis.bse.PhysicalParameter" android:label="Physical Parameters"/>
+        <activity android:name="edu.ksu.cis.bse.MeasurementsTable" android:label="Measurements"/>
+        <activity android:name="edu.ksu.cis.bse.PhysicalExam" android:label="Physical Exam"/>
+        <activity android:name="edu.ksu.cis.bse.Motility" android:label="Motility"/>
+        <activity android:name="edu.ksu.cis.bse.Classification" android:label="Classification"/>
+        <activity android:name="edu.ksu.cis.bse.Comments" android:label="Comments"/>
+        <activity android:name="edu.ksu.cis.bse.MorphologyDashboard" android:label="Morphology Dashboard"/>
+        <activity android:name="edu.ksu.cis.bse.MorphologyCount" android:label="Morphology Count"/>
     </application>
 
 </manifest>
