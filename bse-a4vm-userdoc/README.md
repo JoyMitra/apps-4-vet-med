@@ -22,12 +22,12 @@
 *  [Feedback](#Feedback)
 
 <h1 id="GenInfo">General Information</h1>
-BSE-A4VM app aids veterinarians to collect data while examining bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
+BSE-A4VM mobile apps aid veterinarians to collect data while examining bulls. They allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
 <h3>Download the app from:</h3>
 * [for iPhone](https://play.google.com/store?hl=en) *TODO: Add link to app page on iStore*
 * [for Android](https://play.google.com/store?hl=en) *TODO: Add link to app page on Google Play Store*
 
-_For most part, these mobile apps do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data.
+_For most part, these mobile apps do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data for purposes of aggregation and reporting.
 
 Since the mobile app has consistent look and feel on both Android and iPhone platforms, the rest of this documentation will describe the app with no specific reference to the platform.  When screen shots are provided for illustration, screen shots from both iPhone app (left) and Android app (right) will be provided.
 
@@ -38,7 +38,7 @@ Current veterinary information can be viewed and edited via the _Settings_ page 
 
 <table>
  <tr>
-  <td><img src="img/screenshots/IMG_5391.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/VetInfo.png?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/VetInfo.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -47,7 +47,7 @@ Before proceeding to collecting data, morphology fields will also have to be con
 
 <table>
  <tr>
-  <td><img src="img/screenshots/IMG_5285.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/MorphConfig.png?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/MorphConfig.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -57,7 +57,7 @@ To open the app, click on BSE app icon *TODO: place img/icon-image.png* on your 
 
 <table>
  <tr>
-  <td><img src="img/screenshots//iPhone/Home.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/Home.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Home.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -74,7 +74,7 @@ From the home screen, you can get to the _Dashboard_ by clicking on the _Groups_
 
 <table>
  <tr>
-  <td><img src="img/screenshots/IMG_5410.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/GrpDashboard.png?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/GrpDashboard.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -84,7 +84,7 @@ If you chose to create a new group by clicking _Add New Group_, then you will be
 
 <table>
  <tr>
-  <td><img src="img/screenshots/IMG_5397.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/NewGrp.png?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/NewGrp.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -94,7 +94,7 @@ This screen allows you to view and edit data for bulls in the current group (by 
 
 <table>
  <tr>
-  <td><img src="img/screenshots/IMG_5408.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/Grp.png?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Grp.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
