@@ -57,7 +57,7 @@ To open the app, click on BSE app icon *TODO: place img/icon-image.png* on your 
 
 <table>
  <tr>
-  <td><img src="img/screenshots/Home.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots//iPhone/Home.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Home.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
