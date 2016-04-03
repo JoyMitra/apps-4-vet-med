@@ -19,6 +19,7 @@
   *  [Physical Parameters](#Parameters)
   *  [Morphology Dashboard](#Morph)
   *  [Motility Information and Classification Information](#Motility)
+*  [Feedback](#Feedback)
 
 <h1 id="GenInfo">General Information</h1>
 BSE-A4VM app aids veterinarians to collect data while examining bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
@@ -217,4 +218,6 @@ As with previous screens, the data collected on these screens are self explanato
  </tr>
 </table>
 
+<h3 id="Feedback">Feedback</h3>
+If you have any comments, feedback, or issues, please email them to us at <a href="mailto:mobile-apps-group@santoslab.org">mobile-apps-group@santoslab.org</a>.
 
