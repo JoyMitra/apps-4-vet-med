@@ -68,7 +68,7 @@ A _group_ is a group of bulls along with their examination data.  Each ranch/loc
 
 
 <h3 id="Dashboard">View Dashboard</h3>
-From the home screen, you can get to the _Dashboard_ by clicking on the _Groups_ button.  The dashboard allows you to view the list of groups on the phone and create new groups. *TODO: Use realistic names for ranch and ower, e.g., Dodge City Ranch.*
+From the home screen, you can get to the _Dashboard_ by clicking on the _Groups_ button.  The dashboard allows you to view the list of groups on the phone and create new groups.
 
 <table>
  <tr>
@@ -153,7 +153,7 @@ In this screen, each field is associated with a hint that suggests the type of i
 <h3 id="Parameters">Physical Parameters</h3>
 This screen has two buttons. One will take the user to the _Measurements_ screen and the other will take the user to the _Physical Exam_ screen. In these screens, you can enter data in the fields.  Again, there will be hints about the type of valid data, and the app will notify you of invalid data  by highlighting corresponding fields in red.  Also, remember to click the _Save_ button before your navigate away from the screens.
 
-Each field is associated with a check box to indicate "normal" or not.  Check this boxes when you do not want to enter a description but want to record the corresponding parameter is normal.  If you do not provide any description and not check the corresponding bos, then the app will record the parameter as abnormal. *TODO: Joydeep/Shubh, please confirm the parameter is recorded as abnormal*  If you wish to record all parameters as normal, then you can use the _Select all as Normal_ check box at the bottom of the screen to mark all parameters as normal -- this will check the check boxes associated with all parameters.  Unchecking this check box will uncheck the check boxes associated with all the parameters on the screen.
+Each field is associated with a check box to indicate "normal" or not.  Check this boxes when you do not want to enter a description but want to record the corresponding parameter is normal.  If you do not provide any description and not check the corresponding bos, then the app will record the parameter as abnormal.  If you wish to record all parameters as normal, then you can use the _Select all as Normal_ check box at the bottom of the screen to mark all parameters as normal -- this will check the check boxes associated with all parameters.  Unchecking this check box will uncheck the check boxes associated with all the parameters on the screen.
 
 <table>
  <tr>
