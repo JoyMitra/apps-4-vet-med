@@ -1,1 +1,1 @@
-The index.html was genereated from index.md in the master branch using [CloudConvert](https://cloudconvert.com/md-to-html)
+The index.html was genereated from index.md using [CloudConvert](https://cloudconvert.com/md-to-html)
