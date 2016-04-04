@@ -36,7 +36,7 @@ Current veterinary information can be viewed and edited via the _Settings_ page 
 
 <table>
  <tr>
-  <td><img src="img/screenshots/iPhone/VetInfo.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/Vetinfo.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/VetInfo.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -45,7 +45,7 @@ Before proceeding to collecting data, morphology fields will also have to be con
 
 <table>
  <tr>
-  <td><img src="img/screenshots/iPhone/MorphConfig.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/Morphology.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/MorphConfig.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
@@ -72,7 +72,7 @@ From the home screen, you can get to the _Dashboard_ by clicking on the _Groups_
 
 <table>
  <tr>
-  <td><img src="img/screenshots/iPhone/GrpDashboard.png?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/Groups.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/GrpDashboard.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
