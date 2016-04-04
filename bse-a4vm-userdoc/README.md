@@ -51,7 +51,7 @@ Before proceeding to collecting data, morphology fields will also have to be con
 </table>
 
 <h1 id="HomeScreen">Home Screen</h1>
-To open the app, click on BSE app icon *TODO: place img/icon-image.png* on your phone.  This will open the home screen of the app.  From here, you can navigate to the _Groups_ page and the _Settings_ page. 
+To open the app, click on BSE app icon on your phone.  This will open the home screen of the app.  From here, you can navigate to the _Groups_ page and the _Settings_ page. 
 
 <table>
  <tr>
