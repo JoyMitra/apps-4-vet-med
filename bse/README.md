@@ -92,7 +92,7 @@ This screen allows you to view and edit data for bulls in the current group (by 
 
 <table>
  <tr>
-  <td><img src="img/screenshots/iPhone/Grp.png?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/SingleGroup.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/Grp.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
