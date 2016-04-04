@@ -23,7 +23,7 @@
 BSE-A4VM mobile apps aid veterinarians to collect data while examining bulls. They allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
 <h3>Download the app from:</h3>
 * [for iPhone](https://play.google.com/store?hl=en) *TODO: Add link to app page on iStore*
-* [for Android](https://play.google.com/store?hl=en) *TODO: Add link to app page on Google Play Store*
+* [for Android](https://play.google.com/store/apps/details?id=edu.ksu.cis.bse_a4m_android&hl=en)
 
 _For most part, these mobile apps do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data for purposes of aggregation and reporting.
 
