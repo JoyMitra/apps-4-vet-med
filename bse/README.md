@@ -82,7 +82,7 @@ If you chose to create a new group by clicking _Add New Group_, then you will be
 
 <table>
  <tr>
-  <td><img src="img/screenshots/iPhone/NewGrp.png?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/NewGrp.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/NewGrp.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
