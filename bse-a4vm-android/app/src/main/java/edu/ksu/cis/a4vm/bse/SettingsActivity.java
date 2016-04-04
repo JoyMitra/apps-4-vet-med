@@ -1,8 +1,8 @@
-package edu.ksu.cis.bse;
+package edu.ksu.cis.a4vm.bse;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 

@@ -1,4 +1,4 @@
-package edu.ksu.cis.bse;
+package edu.ksu.cis.a4vm.bse;
 
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -9,14 +9,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import edu.ksu.cis.bse.Constants.Constant;
-import edu.ksu.cis.bse.util.SharedPrefUtil;
-
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
+
+import edu.ksu.cis.a4vm.bse.Constants.Constant;
+import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
 
 
 /**

@@ -1,9 +1,11 @@
-package edu.ksu.cis.bse.util;
+package edu.ksu.cis.a4vm.bse.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import edu.ksu.cis.bse.Constants.Constant;
+
 import java.util.Set;
+
+import edu.ksu.cis.a4vm.bse.Constants.Constant;
 
 /**
  * Created by Joydeep Mitra on 2/22/16.

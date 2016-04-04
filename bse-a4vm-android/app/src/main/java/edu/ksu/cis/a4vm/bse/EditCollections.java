@@ -1,29 +1,23 @@
-package edu.ksu.cis.bse;
+package edu.ksu.cis.a4vm.bse;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.content.Intent;
 import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
 import android.view.View.OnClickListener;
-import android.widget.Toast;
-
-import edu.ksu.cis.bse.Constants.Constant;
-import edu.ksu.cis.bse.util.CreateCSV;
-import edu.ksu.cis.bse.util.SharedPrefUtil;
+import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Set;
+
+import edu.ksu.cis.a4vm.bse.Constants.Constant;
+import edu.ksu.cis.a4vm.bse.util.CreateCSV;
 
 /**
  * Created by Joydeep Mitra on 3/11/16.
@@ -49,7 +43,7 @@ public class EditCollections extends AppCompatActivity {
         TextView tvDate = (TextView) findViewById(R.id.ranchDate);
         TextView tvBull = (TextView) findViewById(R.id.editBulls);
         TextView tvExport = (TextView) findViewById(R.id.export);
-        TextView tvDelete = (TextView) findViewById(R.id.deleteGrp);
+        //TextView tvDelete = (TextView) findViewById(R.id.deleteGrp);
         if (ranchInfo!=null)
         {
             name = ranchInfo.substring(0,ranchInfo.indexOf(":"));
@@ -124,7 +118,7 @@ public class EditCollections extends AppCompatActivity {
             }
         });
 
-        tvDelete.setOnClickListener(new OnClickListener() {
+       /* tvDelete.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 try
@@ -179,7 +173,7 @@ public class EditCollections extends AppCompatActivity {
 
 
             }
-        });
+        });*/
     }
 
     @Override

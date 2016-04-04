@@ -1,4 +1,4 @@
-package edu.ksu.cis.bse.Constants;
+package edu.ksu.cis.a4vm.bse.Constants;
 
 /**
  * Created by Joy on 2/22/16.

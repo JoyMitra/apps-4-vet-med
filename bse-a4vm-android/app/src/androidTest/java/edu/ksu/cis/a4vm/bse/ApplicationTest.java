@@ -1,4 +1,4 @@
-package edu.ksu.cis.bse;
+package edu.ksu.cis.a4vm.bse;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

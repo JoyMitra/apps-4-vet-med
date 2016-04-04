@@ -1,18 +1,21 @@
-package edu.ksu.cis.bse;
+package edu.ksu.cis.a4vm.bse;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import edu.ksu.cis.bse.Constants.Constant;
-import edu.ksu.cis.bse.util.SharedPrefUtil;
+
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+
+import edu.ksu.cis.a4vm.bse.Constants.Constant;
+import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
+
 import static android.R.layout.simple_list_item_1;
 
 /**

@@ -1,4 +1,4 @@
-package edu.ksu.cis.bse;
+package edu.ksu.cis.a4vm.bse;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -9,15 +9,15 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import edu.ksu.cis.bse.Constants.Constant;
-import edu.ksu.cis.bse.util.SharedPrefUtil;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
+import edu.ksu.cis.a4vm.bse.Constants.Constant;
+import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
 
 /**
  * Created by Joydeep Mitra on 3/11/16.

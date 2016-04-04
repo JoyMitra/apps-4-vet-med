@@ -1,12 +1,12 @@
-package edu.ksu.cis.bse.util;
+package edu.ksu.cis.a4vm.bse.util;
 
 import android.content.Context;
 
-import edu.ksu.cis.bse.Constants.Constant;
-import edu.ksu.cis.bse.Util;
-
 import java.util.ArrayList;
 import java.util.Set;
+
+import edu.ksu.cis.a4vm.bse.Constants.Constant;
+import edu.ksu.cis.a4vm.bse.Util;
 
 /**
  * Created by Joydeep Mitra on 3/11/16.
