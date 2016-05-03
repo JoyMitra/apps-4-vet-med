@@ -19,12 +19,22 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/save"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClick"/>
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:hint="@string/rname"
                 android:id="@+id/rName"
+                android:layout_below="@+id/save"
                 android:editable="true"
                 android:layout_marginTop="5dp"
                 android:layout_centerHorizontal="true"
@@ -126,15 +136,7 @@
                 android:layout_centerHorizontal="true"
                 android:background="@color/grey"/>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/save"
-                android:id="@+id/save"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/phone"
-                android:layout_centerInParent="true"
-                android:onClick="onClick"/>
+
 
         </RelativeLayout>
 

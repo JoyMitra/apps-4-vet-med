@@ -43,5 +43,16 @@ public class PhysicalParameter extends AppCompatActivity {
                 startActivity(goToPhysicalExam);
             }
         });
+
+
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+        goPrev.putExtra("bullKey",bullKey);
+        startActivity(goPrev);
     }
 }

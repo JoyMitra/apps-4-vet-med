@@ -17,14 +17,57 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent">
 
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/save"
+               android:id="@+id/saveMatingInfo"
+               android:layout_centerHorizontal="true"/>
+
+           <TableLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/saveMatingInfo"
+               android:layout_marginTop="10dp"
+               android:id="@+id/sireType">
+
+               <TableRow android:background="@color/lightBlue">
+                   <ToggleButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textOff="@string/sireType1"
+                       android:textOn="@string/sireType1"
+                       android:id="@+id/singleSire"
+                       android:background="@color/white"
+                       android:textColor="@color/lightBlue" />
+
+                   <ToggleButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textOff="@string/sireType2"
+                       android:textOn="@string/sireType2"
+                       android:textColor="@color/lightBlue"
+                       android:id="@+id/multiSire"
+                       android:background="@color/white"/>
+                   <ToggleButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:textOff="@string/sireType3"
+                       android:textOn="@string/sireType3"
+                       android:textColor="@color/lightBlue"
+                       android:id="@+id/NotUsedSire"
+                       android:background="@color/white"/>
+
+               </TableRow>
+           </TableLayout>
+
            <EditText
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:hint="@string/matingInfo_text1"
                android:id="@+id/mateSeason"
-               android:layout_alignParentTop="true"
-               android:layout_alignParentLeft="true"
-               android:layout_alignParentStart="true" />
+               android:layout_below="@+id/sireType"
+               android:layout_marginTop="10dp" />
 
            <TextView
                android:layout_width="match_parent"
@@ -96,43 +139,9 @@
                android:layout_below="@+id/perfDesc"
                android:layout_marginTop="10dp"/>
 
-           <TableLayout
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_below="@+id/comments"
-               android:layout_marginTop="10dp"
-               android:id="@+id/sireType">
 
-               <TableRow android:background="@color/lightBlue">
-                   <ToggleButton
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:textOff="@string/sireType1"
-                       android:textOn="@string/sireType1"
-                       android:id="@+id/singleSire"
-                       android:background="@color/white"
-                       android:textColor="@color/lightBlue" />
 
-                   <ToggleButton
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:textOff="@string/sireType2"
-                       android:textOn="@string/sireType2"
-                       android:textColor="@color/lightBlue"
-                       android:id="@+id/multiSire"
-                       android:background="@color/white"/>
 
-               </TableRow>
-           </TableLayout>
-
-           <Button
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:text="@string/save"
-               android:id="@+id/saveMatingInfo"
-               android:layout_marginTop="20dp"
-               android:layout_below="@+id/sireType"
-               android:layout_centerInParent="true"/>
 
        </RelativeLayout>
 

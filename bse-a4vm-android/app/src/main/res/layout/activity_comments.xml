@@ -19,23 +19,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:id="@+id/saveComments"
+                android:layout_centerHorizontal="true"/>
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:hint="@string/misc"
                 android:id="@+id/comments"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/saveComments"
+                android:layout_marginTop="50dp"
+                android:layout_centerInParent="true"
                 android:editable="true" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/save"
-                android:id="@+id/saveComments"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/email"
-                android:layout_centerInParent="true"/>
+
 
 
         </RelativeLayout>

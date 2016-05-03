@@ -71,7 +71,7 @@ public class MorphologyDashboard extends AppCompatActivity {
                 String[] elems = key.split("_");
                 if(elems.length==3 && (elems[0].trim()+"_"+elems[1].trim()).equalsIgnoreCase(bullKey))
                 {
-                    int total = 0;
+                    //int total = 0;
                     String dateTime = null;
                     Set<String> morphologyCounts = SharedPrefUtil.getValue(getApplicationContext(),
                             Constant.PREFS_BULL_MORPHOLOGY_INFO, key);
@@ -86,13 +86,14 @@ public class MorphologyDashboard extends AppCompatActivity {
                             {
                                 dateTime = morphologyCount[1];
                             }
-                            else if(morphologyCount!=null && morphologyCount.length==2)
+                            /*else if(morphologyCount!=null && morphologyCount.length==2)
                             {
                                 total = total + Integer.valueOf(morphologyCount[1]);
-                            }
+                            }*/
                         }
                     }
-                    collectedTotals.add(Constant.MESSAGE_TOTAL + total + "\n" + Constant.DATE_MSG + dateTime);
+                    //collectedTotals.add(Constant.MESSAGE_TOTAL + total + "\n" + Constant.DATE_MSG + dateTime);
+                    collectedTotals.add(Constant.DATE_MSG + dateTime);
                     collectedKeys.add(key);
                 }
             }

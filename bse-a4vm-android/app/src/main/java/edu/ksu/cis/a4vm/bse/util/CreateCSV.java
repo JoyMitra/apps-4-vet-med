@@ -276,6 +276,18 @@ public class CreateCSV {
                                                             return null;
                                                         }
                                                     }
+                                                    else if(split_item!=null && split_item.length==2 && "Not Used".equalsIgnoreCase(split_item[0]))
+                                                    {
+                                                        try{
+                                                            if(Util.valueOfColor(ctx,split_item[1]))
+                                                                row.set(52,split_item[0]);
+                                                        }
+                                                        catch(NumberFormatException ne)
+                                                        {
+                                                            ne.printStackTrace();
+                                                            return null;
+                                                        }
+                                                    }
                                                 }
                                             }
 

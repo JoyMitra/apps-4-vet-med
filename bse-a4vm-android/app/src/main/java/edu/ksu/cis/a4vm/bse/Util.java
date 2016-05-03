@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.app.Activity;
 import android.content.Context;
 import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
@@ -52,7 +53,7 @@ public class Util
         return togBtn;
     }
 
-    public static void setFields(Set<String> arg1, Set<EditText> arg2) {
+    public static boolean setFields(Set<String> arg1, Set<EditText> arg2) {
         Set<String> set1 = arg1;
         Set<EditText> set2 = arg2;
         if (set1 != null && set2 != null) {
@@ -77,7 +78,9 @@ public class Util
 
 
             }
+            return true;
         }
+        return false;
     }
 
 
@@ -205,66 +208,19 @@ public class Util
         return bullKey;
     }
 
-    public static Set<String> editMorghologyCount(Context ctx,Button btn1, Set<String> labels, Set<String> morphologyCounts, MediaPlayer mp)
+    public static Set<String> editMorghologyCount(Context ctx,int limit,Button btn1, Set<String> morphologyCounts, MediaPlayer mp)
     {
-        try{
-            String[] text = btn1.getText().toString().trim().split(":");
-            if(text!=null && text.length==2 && labels.contains(text[0].trim())) {
-                String strLimit = SharedPrefUtil.getSingleValue(ctx, Constant.PREFS_FILE_MORPH_INFO, text[0].trim());
-                int limit = Integer.valueOf(strLimit);
-                int count = Integer.valueOf(text[1].trim());
-                int count1 = count;
-                if (morphologyCounts != null && morphologyCounts.contains(text[0].trim() + "=" + count)) {
-                    count = count + 1;
-                    if (count < limit) {
-                        btn1.setText(text[0].trim() + ":" + count);
-                        morphologyCounts.remove(text[0].trim() + "=" + count1);
-                        morphologyCounts.add(text[0].trim() + "=" + count);
-                    }
-                    else if (count == limit) {
-                        btn1.setText(text[0].trim() + ":" + count);
-                        morphologyCounts.remove(text[0].trim() + "=" + count1);
-                        morphologyCounts.add(text[0].trim() + "=" + count);
-                        mp.start();
-                    }
-                    else {
-                        Toast.makeText(ctx, "Morphology limit crossed!!", Toast.LENGTH_SHORT).show();
-                    }
 
-                } else if (morphologyCounts != null && !morphologyCounts.contains(text[0].trim() + "=" + count)) {
-                    count = count+1;
-                    if (count < limit) {
-                        btn1.setText(text[0].trim() + ":" + count);
-                        //morphologyCounts.remove(text[0].trim() + "=" + count1);
-                        morphologyCounts.add(text[0].trim() + "=" + count);
-                    }
-                    else if (count == limit) {
-                        btn1.setText(text[0].trim() + ":" + count);
-                        //morphologyCounts.remove(text[0].trim() + "=" + count1);
-                        morphologyCounts.add(text[0].trim() + "=" + count);
-                        mp.start();
-                    }
-                    else {
-                        Toast.makeText(ctx, "Morphology limit crossed!!", Toast.LENGTH_SHORT).show();
-                    }
-                } else if (morphologyCounts == null) {
-                    if (++count <= limit) {
-                        btn1.setText(text[0].trim() + ":" + count);
-                        morphologyCounts = new HashSet<String>();
-                        morphologyCounts.add(text[0].trim() + "=" + count);
-                    } else {
-                        Toast.makeText(ctx, "Morphology limit reached!!", Toast.LENGTH_SHORT).show();
-                    }
-                }
-            }
+            String[] text = btn1.getText().toString().trim().split(":");
+            Double count = Double.valueOf(text[1].substring(0,text[1].trim().indexOf("(")));
             return morphologyCounts;
-        }
-        catch(Exception e)
-        {
-            return null;
-        }
+
+
+
+
 
     }
+
 
     public static int get_days_of_a_month(int month, int year)
     {

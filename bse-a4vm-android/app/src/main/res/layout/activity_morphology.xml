@@ -30,12 +30,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TableLayout
-                        android:layout_width="match_parent"
+                    <Button
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tab1">
+                        android:id="@+id/saveMorphology"
+                        android:text="@string/save"
+                        android:layout_centerHorizontal="true"/>
 
-                        <TableRow android:layout_width="match_parent">
 
                             <EditText
                                 android:layout_width="match_parent"
@@ -43,212 +44,137 @@
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:text="@string/morph1"
                                 android:id="@+id/morphfield1"
+                                android:layout_below="@+id/saveMorphology"
                                 android:editable="false"
-                                android:layout_marginTop="5dp"
+                                android:layout_marginTop="20dp"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit1"
-                                android:editable="true"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="50dp"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
 
-                        </TableRow>
 
-                        <TableRow android:layout_width="match_parent">
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph2"
                                 android:id="@+id/morphfield2"
+                                android:layout_below="@+id/morphfield1"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit2"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
-                        </TableRow>
 
-                        <TableRow>
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph3"
                                 android:id="@+id/morphField3"
+                                android:layout_below="@+id/morphfield2"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit3"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
 
 
 
-                        </TableRow>
-                        <TableRow>
+
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph4"
                                 android:id="@+id/morphField4"
+                                android:layout_below="@+id/morphField3"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit4"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
-                        </TableRow>
-                        <TableRow>
+
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph5"
                                 android:id="@+id/morphField5"
+                                android:layout_below="@+id/morphField4"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit5"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
 
-                        </TableRow>
-                        <TableRow>
+
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph6"
                                 android:id="@+id/morphField6"
+                                android:layout_below="@+id/morphField5"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit6"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
-                        </TableRow>
-                        <TableRow>
+
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph7"
                                 android:id="@+id/morphField7"
+                                android:layout_below="@+id/morphField6"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit7"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
 
-                        </TableRow>
-                        <TableRow>
+
+
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:hint="@string/morph8"
                                 android:id="@+id/morphField8"
+                                android:layout_below="@+id/morphField7"
                                 android:layout_marginTop="10dp"
                                 android:editable="true"
                                 android:layout_centerHorizontal="true"
                                 android:background="@color/grey"/>
 
-                            <EditText
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:hint="@string/morphologyLimit"
-                                android:id="@+id/morphLimit8"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginLeft="50dp"
-                                android:editable="true"
-                                android:layout_centerHorizontal="true"
-                                android:background="@color/grey"/>
-
-                        </TableRow>
-
-                    </TableLayout>
 
 
-                    <Button
-                        android:layout_width="wrap_content"
+
+                    <EditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/saveMorphology"
-                        android:text="@string/save"
-                        android:layout_marginTop="40dp"
-                        android:layout_below="@+id/tab1"
-                        android:layout_centerInParent="true"/>
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:hint="@string/morphologyLimit"
+                        android:id="@+id/morphLimit"
+                        android:layout_below="@+id/morphField8"
+                        android:editable="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/grey"/>
+
+
+
+
+
+
 
                 </RelativeLayout>
 

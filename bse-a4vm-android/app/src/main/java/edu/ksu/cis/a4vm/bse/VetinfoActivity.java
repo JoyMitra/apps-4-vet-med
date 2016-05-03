@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -166,8 +167,7 @@ public class VetinfoActivity extends AppCompatActivity
                                                       if (city.getText().toString().trim().length() > 0) {
                                                           city.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                           validateCity = false;
-                                                      }
-                                                      else {
+                                                      } else {
                                                           city.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                           validateCity = true;
                                                           Toast.makeText(getApplicationContext(), "city cannot be empty", Toast.LENGTH_SHORT).show();
@@ -193,8 +193,7 @@ public class VetinfoActivity extends AppCompatActivity
                                                            if (state.getText().toString().trim().length() == 2) {
                                                                state.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                                validateState = false;
-                                                           }
-                                                           else {
+                                                           } else {
                                                                state.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                                validateState = true;
                                                                Toast.makeText(getApplicationContext(), "State can have exactly 2 characters (Eg: KS)", Toast.LENGTH_SHORT).show();
@@ -209,50 +208,47 @@ public class VetinfoActivity extends AppCompatActivity
 
                 zip.setOnFocusChangeListener(new View.OnFocusChangeListener()
 
-                {
-                    @Override
-                    public void onFocusChange (View v,boolean hasFocus){
+                                             {
+                                                 @Override
+                                                 public void onFocusChange(View v, boolean hasFocus) {
 
-                    try {
-                        if (zip.getText().toString().trim().length() == 5 &&
-                                Integer.valueOf(zip.getText().toString().trim()) > 0) {
-                            zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
-                            validateZip = false;
-                        }
-                        else {
-                            zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            validateZip = true;
-                            Toast.makeText(getApplicationContext(), "Zip must be a 5 digit number", Toast.LENGTH_SHORT).show();
-                        }
-                    } catch (NumberFormatException ne) {
-                        validateZip = true;
-                        zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                        Toast.makeText(getApplicationContext(), "Zip must be a 5 digit number", Toast.LENGTH_SHORT).show();
-                    }
+                                                     try {
+                                                         if (zip.getText().toString().trim().length() == 5 &&
+                                                                 Integer.valueOf(zip.getText().toString().trim()) > 0) {
+                                                             zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                                                             validateZip = false;
+                                                         } else {
+                                                             zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                                             validateZip = true;
+                                                             Toast.makeText(getApplicationContext(), "Zip must be a 5 digit number", Toast.LENGTH_SHORT).show();
+                                                         }
+                                                     } catch (NumberFormatException ne) {
+                                                         validateZip = true;
+                                                         zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                                         Toast.makeText(getApplicationContext(), "Zip must be a 5 digit number", Toast.LENGTH_SHORT).show();
+                                                     }
 
-                }
-                }
+                                                 }
+                                             }
 
                 );
 
                 email.setOnFocusChangeListener(new View.OnFocusChangeListener()
 
-                {
-                    @Override
-                    public void onFocusChange (View v,boolean hasFocus){
-                    if(Util.isEmailValid(email.getText().toString().trim()))
-                    {
-                        email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
-                        validateEmail = false;
-                    }
-                    else{
-                        validateEmail = true;
-                        email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                        Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
-                    }
+                                               {
+                                                   @Override
+                                                   public void onFocusChange(View v, boolean hasFocus) {
+                                                       if (Util.isEmailValid(email.getText().toString().trim())) {
+                                                           email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                                                           validateEmail = false;
+                                                       } else {
+                                                           validateEmail = true;
+                                                           email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                                           Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
+                                                       }
 
-                }
-                }
+                                                   }
+                                               }
 
                 );
 
@@ -267,22 +263,21 @@ public class VetinfoActivity extends AppCompatActivity
                                                        && !validateCity && !validateState
                                                        && !validateZip && !validateEmail) {
                                                    HashSet<String> data = new LinkedHashSet<String>();
-                                                   data.add(firstName.getHint().toString().trim() + "=" + firstName.getText().toString().trim());
-                                                   data.add(lastName.getHint().toString().trim() + "=" + lastName.getText().toString().trim());
-                                                   data.add(clinic.getHint().toString().trim() + "=" + clinic.getText().toString().trim());
-                                                   data.add(addr1.getHint().toString().trim() + "=" + addr1.getText().toString().trim());
-                                                   data.add(addr2.getHint().toString().trim() + "=" + addr2.getText().toString().trim());
-                                                   data.add(city.getHint().toString().trim() + "=" + city.getText().toString().trim());
-                                                   data.add(state.getHint().toString().trim() + "=" + state.getText().toString().trim());
-                                                   data.add(zip.getHint().toString().trim() + "=" + zip.getText().toString().trim());
-                                                   data.add(email.getHint().toString().trim() + "=" + email.getText().toString().trim());
+                                                   data.add(firstName.getHint().toString().trim() + "=" + firstName.getText().toString().trim().replace(",", ";"));
+                                                   data.add(lastName.getHint().toString().trim() + "=" + lastName.getText().toString().trim().replace(";", ","));
+                                                   data.add(clinic.getHint().toString().trim() + "=" + clinic.getText().toString().trim().replace(",", ";"));
+                                                   data.add(addr1.getHint().toString().trim() + "=" + addr1.getText().toString().trim().replace(",", ";"));
+                                                   data.add(addr2.getHint().toString().trim() + "=" + addr2.getText().toString().trim().replace(",", ";"));
+                                                   data.add(city.getHint().toString().trim() + "=" + city.getText().toString().trim().replace(",", ";"));
+                                                   data.add(state.getHint().toString().trim() + "=" + state.getText().toString().trim().replace(",", ";"));
+                                                   data.add(zip.getHint().toString().trim() + "=" + zip.getText().toString().trim().replace(",", ";"));
+                                                   data.add(email.getHint().toString().trim() + "=" + email.getText().toString().trim().replace(",", ";"));
 
                                                    //persist VetInfo
                                                    SharedPrefUtil.saveVetInfo(getApplicationContext(), data);
                                                    Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_LONG).show();
-                                                   //display
-                                                   Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
-                                                           Constant.PREFS_FILE_VET_INFO, Constant.KEY_VET), fields);
+                                                   Intent goPrev = new Intent(getApplicationContext(), SettingsActivity.class);
+                                                   startActivity(goPrev);
                                                } else {
                                                    Toast.makeText(getApplicationContext(), "Fix fields marked red before saving!", Toast.LENGTH_LONG).show();
                                                }
@@ -292,4 +287,12 @@ public class VetinfoActivity extends AppCompatActivity
 
             );
             }
+
+        @Override
+        public void onBackPressed()
+        {
+            super.onBackPressed();
+            Intent goPrev = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(goPrev);
         }
+    }

@@ -36,4 +36,12 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(goPrev);
+    }
 }

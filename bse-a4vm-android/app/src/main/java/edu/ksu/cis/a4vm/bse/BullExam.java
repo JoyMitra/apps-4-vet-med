@@ -48,6 +48,7 @@ public class BullExam extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
+        key = getIntent().getStringExtra("bullKey");
         final Set<String> bullInfo = SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_BULL_INFO, key);
         if(bullInfo!=null && !bullInfo.isEmpty())
         {
@@ -380,5 +381,18 @@ public class BullExam extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        String[] ids = key.split("_");
+        Intent goPrev = new Intent(getApplicationContext(), BullGroup.class);
+        if(ids!=null && ids.length==2)
+            goPrev.putExtra("grpId", ids[0]);
+        else
+            goPrev.putExtra("grpId", "");
+        startActivity(goPrev);
     }
 }

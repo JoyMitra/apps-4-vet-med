@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -136,8 +137,15 @@ public class Motility extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Value must be between 0-100", Toast.LENGTH_SHORT).show();
                             }
                         } catch (NumberFormatException ne) {
-                            ringsDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
+                            if(text.length()>0)
+                            {
+                                ringsDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                ringsDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.no_fill));
+                            }
+
                         }
                     }
                 }
@@ -156,8 +164,15 @@ public class Motility extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Value must be between 0-100", Toast.LENGTH_SHORT).show();
                             }
                         } catch (NumberFormatException ne) {
-                            scrotalDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
+                            if(text.length()>0)
+                            {
+                                scrotalDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                scrotalDesc.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.no_fill));
+                            }
+
                         }
                     }
                 }
@@ -166,29 +181,34 @@ public class Motility extends AppCompatActivity {
             save.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (ringsDesc.getText().toString().trim().length() > 0
-                            && scrotalDesc.getText().toString().trim().length() > 0) {
+                    if (tgbtn1.getCurrentTextColor()==ContextCompat.getColor(getApplicationContext(), R.color.colorAccent) ||
+                            tgbtn2.getCurrentTextColor()==ContextCompat.getColor(getApplicationContext(), R.color.colorAccent) ||
+                            tgbtn3.getCurrentTextColor()==ContextCompat.getColor(getApplicationContext(), R.color.colorAccent) ||
+                            tgbtn.getCurrentTextColor()==ContextCompat.getColor(getApplicationContext(), R.color.colorAccent))
+                    {
                         LinkedHashSet<String> data = new LinkedHashSet<String>();
                         data.add(tgbtn.getText().toString().trim() + "=" + tgbtn.getCurrentTextColor());
                         data.add(tgbtn1.getText().toString().trim() + "=" + tgbtn1.getCurrentTextColor());
                         data.add(tgbtn2.getText().toString().trim() + "=" + tgbtn2.getCurrentTextColor());
                         data.add(tgbtn3.getText().toString().trim() + "=" + tgbtn3.getCurrentTextColor());
-                        data.add(ringsDesc.getHint().toString().trim() + "=" + ringsDesc.getText().toString().trim());
-                        data.add(scrotalDesc.getHint().toString().trim() + "=" + scrotalDesc.getText().toString().trim());
+                        data.add(ringsDesc.getHint().toString().trim() + "=" + ringsDesc.getText().toString().trim().replace(",", ";"));
+                        data.add(scrotalDesc.getHint().toString().trim() + "=" + scrotalDesc.getText().toString().trim().replace(",", ";"));
 
                         //save to shared pref
                         SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_MOTILITY_INFO, bullKey, data);
 
+                        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+                        goPrev.putExtra("bullKey", bullKey);
+                        startActivity(goPrev);
+
                         //display fields
-                        Util.setFields(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_MOTILITY_INFO,
+                        /*Util.setFields(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_MOTILITY_INFO,
                                 bullKey), fields);
                         //display toggle buttons
                         Util.setToggleButtons(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_MOTILITY_INFO,
-                                bullKey), tgBtns);
+                                bullKey), tgBtns);*/
 
                         Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Nothing to save", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -199,5 +219,14 @@ public class Motility extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+        goPrev.putExtra("bullKey", bullKey);
+        startActivity(goPrev);
     }
 }

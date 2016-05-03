@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -34,7 +35,7 @@ public class MeasurementsTable extends AppCompatActivity {
     private EditText field7 = null;
     private EditText field8 = null;
 
-    private CheckBox check1 = null;
+    /*private CheckBox check1 = null;
     private CheckBox check2 = null;
     private CheckBox check3 = null;
     private CheckBox check4 = null;
@@ -42,7 +43,7 @@ public class MeasurementsTable extends AppCompatActivity {
     private CheckBox check6 = null;
     private CheckBox check7 = null;
     private CheckBox check8 = null;
-    private CheckBox check9 = null;
+    private CheckBox check9 = null;*/
 
     private Button saveBtn = null;
 
@@ -50,6 +51,16 @@ public class MeasurementsTable extends AppCompatActivity {
     private Set<CheckBox> checks = null;
 
     private String bullKey = null;
+
+    public boolean valid1 = true;
+    public boolean valid2 = true;
+    public boolean valid3 = true;
+    public boolean valid4 = true;
+    public boolean valid5 = true;
+    public boolean valid6 = true;
+    public boolean valid8 = true;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +86,7 @@ public class MeasurementsTable extends AppCompatActivity {
         fields.add(field7);
         fields.add(field8);
 
-        check1 = (CheckBox) findViewById(R.id.checkbox1);
+        /*check1 = (CheckBox) findViewById(R.id.checkbox1);
         check2 = (CheckBox) findViewById(R.id.checkbox2);
         check3 = (CheckBox) findViewById(R.id.checkbox3);
         check4 = (CheckBox) findViewById(R.id.checkbox4);
@@ -94,7 +105,7 @@ public class MeasurementsTable extends AppCompatActivity {
         checks.add(check6);
         checks.add(check7);
         checks.add(check8);
-        checks.add(check9);
+        checks.add(check9);*/
 
         saveBtn = (Button) findViewById(R.id.saveMeasurement);
     }
@@ -110,7 +121,7 @@ public class MeasurementsTable extends AppCompatActivity {
                 Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), fields);
         Util.setCheckBoxes(SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), checks);
-        check9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*check9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked)
@@ -122,21 +133,22 @@ public class MeasurementsTable extends AppCompatActivity {
                     Util.setAllCheckBoxes(checks, false);
                 }
             }
-        });
+        });*/
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinkedHashSet<String> data = new LinkedHashSet<String>();
-                data.add(field1.getHint().toString().trim() + "=" + field1.getText().toString().trim());
-                data.add(field2.getHint().toString().trim() + "=" + field2.getText().toString().trim());
-                data.add(field3.getHint().toString().trim() + "=" + field3.getText().toString().trim());
-                data.add(field4.getHint().toString().trim() + "=" + field4.getText().toString().trim());
-                data.add(field5.getHint().toString().trim() + "=" + field5.getText().toString().trim());
-                data.add(field6.getHint().toString().trim() + "=" + field6.getText().toString().trim());
-                data.add(field7.getHint().toString().trim() + "=" + field7.getText().toString().trim());
-                data.add(field8.getHint().toString().trim() + "=" + field8.getText().toString().trim());
-                if (check1.isChecked())
+                if (valid1 && valid2 && valid3 && valid4 && valid5 && valid6 && valid8) {
+                    LinkedHashSet<String> data = new LinkedHashSet<String>();
+                    data.add(field1.getHint().toString().trim() + "=" + field1.getText().toString().trim().replace(",", ";"));
+                    data.add(field2.getHint().toString().trim() + "=" + field2.getText().toString().trim().replace(",", ";"));
+                    data.add(field3.getHint().toString().trim() + "=" + field3.getText().toString().trim().replace(",", ";"));
+                    data.add(field4.getHint().toString().trim() + "=" + field4.getText().toString().trim().replace(",", ";"));
+                    data.add(field5.getHint().toString().trim() + "=" + field5.getText().toString().trim().replace(",", ";"));
+                    data.add(field6.getHint().toString().trim() + "=" + field6.getText().toString().trim().replace(",", ";"));
+                    data.add(field7.getHint().toString().trim() + "=" + field7.getText().toString().trim().replace(",", ";"));
+                    data.add(field8.getHint().toString().trim() + "=" + field8.getText().toString().trim().replace(",", ";"));
+                /*if (check1.isChecked())
                     data.add(Integer.toString(check1.getId()).trim() + "=" + field1.getHint().toString().trim());
                 if (check2.isChecked())
                     data.add(Integer.toString(check2.getId()).trim() + "=" + field2.getHint().toString().trim());
@@ -153,18 +165,26 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (check8.isChecked())
                     data.add(Integer.toString(check8.getId()).trim() + "=" + field8.getHint().toString().trim());
                 if (check9.isChecked())
-                    data.add(Integer.toString(check9.getId()).trim() + "=" + "true");
+                    data.add(Integer.toString(check9.getId()).trim() + "=" + "true");*/
 
-                //save to file
-                SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey, data);
+                    //save to file
+                    SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey, data);
 
-                //display
-                Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
-                        Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), fields);
-                Util.setCheckBoxes(SharedPrefUtil.getValue(getApplicationContext(),
-                        Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), checks);
+                    Intent goPrev = new Intent(getApplicationContext(), PhysicalParameter.class);
+                    goPrev.putExtra("bullKey", bullKey);
+                    startActivity(goPrev);
 
-                Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
+                    //display
+                    /*Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
+                            Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), fields);
+                    Util.setCheckBoxes(SharedPrefUtil.getValue(getApplicationContext(),
+                            Constant.PREFS_BULL_MEASUREMENT_INFO, bullKey), checks);*/
+
+                    Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Correct the fields highlighted red", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
@@ -174,14 +194,17 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (!hasFocus) {
                     String text = field1.getText().toString().trim();
                     try {
-                        if (text.length()==0 || (Float.valueOf(text) >= 0.0 && Integer.valueOf(text) < 61.0)) {
+                        if (text.length() == 0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) < 61.0)) {
                             field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                            valid1 = true;
                         } else {
                             field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            valid1 = false;
                             Toast.makeText(getApplicationContext(), "Value must be between 0-60", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException ne) {
                         field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid1 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -194,14 +217,17 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (!hasFocus) {
                     String text = field2.getText().toString().trim();
                     try {
-                        if (text.length()==0 ||(Float.valueOf(text) >= 0.0 && Float.valueOf(text) < 10.0)) {
+                        if (text.length() == 0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) < 10.0)) {
                             field2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                            valid2 = true;
                         } else {
                             field2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            valid2 = false;
                             Toast.makeText(getApplicationContext(), "Value must be between 0-9", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException ne) {
                         field2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid2 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -214,14 +240,17 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (!hasFocus) {
                     String text = field3.getText().toString().trim();
                     try {
-                        if (text.length()==0 || (Float.valueOf(text) >= 8.0 && Float.valueOf(text) < 31.0)) {
+                        if (text.length() == 0 || (Float.valueOf(text) >= 8.0 && Float.valueOf(text) < 31.0)) {
                             field3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                            valid3 = true;
                         } else {
                             field3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            valid3 = false;
                             Toast.makeText(getApplicationContext(), "Value must be between 8-30", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException ne) {
                         field3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid3 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -234,14 +263,17 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (!hasFocus) {
                     String text = field4.getText().toString().trim();
                     try {
-                        if (text.length()==0 || (Float.valueOf(text) >= 8.0 && Float.valueOf(text) < 31.0)) {
+                        if (text.length() == 0 || (Float.valueOf(text) >= 8.0 && Float.valueOf(text) < 31.0)) {
                             field4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                            valid4 = true;
                         } else {
                             field4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            valid4 = false;
                             Toast.makeText(getApplicationContext(), "Value must be between 8-30", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException ne) {
                         field4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid4 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -254,14 +286,17 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (!hasFocus) {
                     String text = field5.getText().toString().trim();
                     try {
-                        if (text.length()==0 || (Integer.valueOf(text) > 0 && Integer.valueOf(text) < 21)) {
+                        if (text.length() == 0 || (Float.valueOf(text) > 0.0 && Float.valueOf(text) < 21.0)) {
                             field5.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                            valid5 = true;
                         } else {
                             field5.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            Toast.makeText(getApplicationContext(), "Value must be between 8-30", Toast.LENGTH_SHORT).show();
+                            valid5 = false;
+                            Toast.makeText(getApplicationContext(), "Value must be between 1-20", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException ne) {
                         field5.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid5 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -274,14 +309,17 @@ public class MeasurementsTable extends AppCompatActivity {
                 if (!hasFocus) {
                     String text = field6.getText().toString().trim();
                     try {
-                        if (text.length()==0 || Float.valueOf(text) >= 0.0) {
+                        if (text.length() == 0 || Float.valueOf(text) >= 0.0) {
                             field6.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                            valid6 = true;
                         } else {
                             field6.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            Toast.makeText(getApplicationContext(), "Value must be between 8-30", Toast.LENGTH_SHORT).show();
+                            valid6 = false;
+                            Toast.makeText(getApplicationContext(), "Value must positive", Toast.LENGTH_SHORT).show();
                         }
                     } catch (NumberFormatException ne) {
                         field6.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid6 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -293,26 +331,31 @@ public class MeasurementsTable extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
                     String text = field8.getText().toString().trim();
-                    try
-                    {
-                        if(text.length()==0 || text.equalsIgnoreCase("cm") || text.equalsIgnoreCase("inches"))
-                        {
+                    try {
+                        if (text.length() == 0 || text.equalsIgnoreCase("cm") || text.equalsIgnoreCase("inches")) {
+                            valid8 = true;
                             field8.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
-                        }
-                        else
-                        {
+                        } else {
                             field8.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            valid8 = false;
                             Toast.makeText(getApplicationContext(), "cm or inches allowed", Toast.LENGTH_SHORT).show();
                         }
-                    }
-                    catch(Exception e)
-                    {
+                    } catch (Exception e) {
                         field8.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        valid8 = false;
                         Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
 
+    }
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), PhysicalParameter.class);
+        goPrev.putExtra("bullKey", bullKey);
+        startActivity(goPrev);
     }
 }

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -28,14 +29,15 @@ import edu.ksu.cis.a4vm.bse.util.CreateCSV;
 
 public class EditCollections extends AppCompatActivity {
 
-    String grpId = null;
+    public String grpId = null;
+    public String ranchInfo = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_collections);
         Intent i = getIntent();
         Bundle extras = i.getExtras();
-        String ranchInfo = extras.getString("ranch");
+        ranchInfo = extras.getString("ranch");
         grpId = extras.getString("GrpId");
         String name = null;
         String dateColleted = null;
@@ -43,6 +45,7 @@ public class EditCollections extends AppCompatActivity {
         TextView tvDate = (TextView) findViewById(R.id.ranchDate);
         TextView tvBull = (TextView) findViewById(R.id.editBulls);
         TextView tvExport = (TextView) findViewById(R.id.export);
+        TextView tvEditGrp = (TextView) findViewById(R.id.editGrp);
         //TextView tvDelete = (TextView) findViewById(R.id.deleteGrp);
         if (ranchInfo!=null)
         {
@@ -54,7 +57,19 @@ public class EditCollections extends AppCompatActivity {
         tvBull.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent goToMorph = new Intent(getApplicationContext(), BullGroup.class);
-                goToMorph.putExtra("grpId", grpId);
+                Bundle items = new Bundle();
+                items.putString("ranch",ranchInfo);
+                items.putString("grpId", grpId);
+                goToMorph.putExtras(items);
+                startActivity(goToMorph);
+            }
+        });
+
+        tvEditGrp.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToMorph = new Intent(getApplicationContext(), NewGroup.class);
+                goToMorph.putExtra("grpKey", grpId);
                 startActivity(goToMorph);
             }
         });
@@ -62,7 +77,7 @@ public class EditCollections extends AppCompatActivity {
         tvExport.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                File file = null;
+                File file;
                 File root = Environment.getExternalStorageDirectory();
                 if (root.canWrite()){
                     File dir = new File (root.getAbsolutePath() + "/bull_collections");
@@ -85,7 +100,7 @@ public class EditCollections extends AppCompatActivity {
                             {
                                 out.write("\n".getBytes());
                                 ArrayList<String> row = list.get(i);
-                                String contents = null;
+                                String contents;
                                 if(row!=null)
                                 {
                                     contents = row.get(0);
@@ -115,65 +130,22 @@ public class EditCollections extends AppCompatActivity {
                     sendIntent.setType("text/html");
                     startActivityForResult(sendIntent, 119);
                 }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Failed to mount dir!",Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
-       /* tvDelete.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try
-                {
-                    AlertDialog.Builder build = new AlertDialog.Builder(EditCollections.this);
-                    build.setTitle("Delete Group");
-                    build.setMessage("This will permanently delete the group. Are you sure?");
-                    build.setCancelable(true);
-                    build.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            try {
-                                final Set<String> groupIds = SharedPrefUtil.getValue(getApplicationContext(),
-                                        Constant.PREFS_GROUP_INFO, Constant.KEY_GROUP);
-                                Set<String> tmpGroupIds = new HashSet<String>();
-                                for (String elem : groupIds) {
-                                    tmpGroupIds.add(elem);
-                                }
-                                for (String elem : groupIds) {
-                                    if (grpId.equalsIgnoreCase(elem)) {
-                                        tmpGroupIds.remove(grpId);
-                                    }
-                                }
-                                if (!tmpGroupIds.isEmpty()) {
-                                    SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GROUP_INFO, Constant.KEY_GROUP, tmpGroupIds);
-                                    Toast.makeText(getApplicationContext(), "Group deleted successfully", Toast.LENGTH_SHORT).show();
-                                }
 
-                            } catch (NullPointerException ne) {
-                                Toast.makeText(getApplicationContext(), "Nothing to delete!", Toast.LENGTH_SHORT).show();
-                            } catch (Exception e) {
-                                Toast.makeText(getApplicationContext(), "Unable to delete at this moment. Try again.", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
+    }
 
-                    build.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-
-                    AlertDialog alert = build.create();
-                    alert.show();
-                }
-                catch(Exception e)
-                {
-                    e.printStackTrace();
-                    Toast.makeText(getApplicationContext(), "Unable to delete. Try again later.",Toast.LENGTH_SHORT).show();
-                }
-
-
-            }
-        });*/
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), Collections.class);
+        startActivity(goPrev);
     }
 
     @Override

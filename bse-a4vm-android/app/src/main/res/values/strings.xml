@@ -3,7 +3,7 @@
     <string name="Collections">Groups</string>
     <string name="Settings">Settings</string>
     <string name="Delete">Delete 30+ day old data</string>
-    <string name="VetInfo">Vetrinary Information</string>
+    <string name="VetInfo">Veterinary Information</string>
     <string name="MorphFields">Morphology Fields</string>
     <string name="fname">First Name</string>
     <string name="lname">Last Name</string>
@@ -23,6 +23,7 @@
     <string name="morph6">Morphology Field 6</string>
     <string name="morph7">Morphology Field 7</string>
     <string name="morph8">Morphology Field 8</string>
+    <string name="morph9">Morphology Field 9</string>
     <string name="add">Add New Group</string>
     <string name="rname">Ranch Name</string>
     <string name="rnName">Rancher Name</string>
@@ -51,6 +52,7 @@
     <string name="matingInfo_text4">Other Comments</string>
     <string name="sireType1">Single-Sire</string>
     <string name="sireType2">Multi-Sire</string>
+    <string name="sireType3">Not Used</string>
     <string name="phyParms1">Measurements</string>
     <string name="phyParms2">Physical Exam</string>
     <string name="bullMeasurement1">Scrotal circumference (cm)</string>

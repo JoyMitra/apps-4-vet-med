@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -30,6 +31,7 @@ public class MatingInfo extends AppCompatActivity {
     private ToggleButton tgbtn3 = null;
     private ToggleButton sire1Btn = null;
     private ToggleButton sire2Btn = null;
+    private ToggleButton sire3Btn = null;
     private EditText breedSeason = null;
     private EditText perfDesc = null;
     private EditText comments = null;
@@ -58,6 +60,7 @@ public class MatingInfo extends AppCompatActivity {
 
         sire1Btn = (ToggleButton)findViewById(R.id.singleSire);
         sire2Btn = (ToggleButton)findViewById(R.id.multiSire);
+        sire3Btn = (ToggleButton)findViewById(R.id.NotUsedSire);
 
         save = (Button) findViewById(R.id.saveMatingInfo);
 
@@ -74,11 +77,12 @@ public class MatingInfo extends AppCompatActivity {
         tgBtns.add(tgbtn3);
         tgBtns.add(sire1Btn);
         tgBtns.add(sire2Btn);
+        tgBtns.add(sire3Btn);
 
         tgbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Util.changeToggleColor(tgbtn,getApplicationContext());
+                Util.changeToggleColor(tgbtn, getApplicationContext());
                 tgbtn1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
                 tgbtn2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
                 tgbtn3.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
@@ -120,6 +124,7 @@ public class MatingInfo extends AppCompatActivity {
             public void onClick(View v) {
                 Util.changeToggleColor(sire1Btn, getApplicationContext());
                 sire2Btn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
+                sire3Btn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
             }
         });
 
@@ -128,6 +133,16 @@ public class MatingInfo extends AppCompatActivity {
             public void onClick(View v) {
                 Util.changeToggleColor(sire2Btn, getApplicationContext());
                 sire1Btn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
+                sire3Btn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
+            }
+        });
+
+        sire3Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Util.changeToggleColor(sire3Btn, getApplicationContext());
+                sire1Btn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
+                sire2Btn.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.lightBlue));
             }
         });
     }
@@ -153,29 +168,29 @@ public class MatingInfo extends AppCompatActivity {
                         tgbtn2.getCurrentTextColor() == ContextCompat.getColor(getApplicationContext(), R.color.colorAccent) ||
                         tgbtn3.getCurrentTextColor() == ContextCompat.getColor(getApplicationContext(), R.color.colorAccent)) {
                     try {
-                        if (breedSeason.getText().toString().trim().length() > 0 &&
-                                Integer.parseInt(breedSeason.getText().toString().trim()) > 0 &&
-                                Integer.parseInt(breedSeason.getText().toString().trim()) < 31) {
+                        if (breedSeason.getText().toString().trim().length() == 0 ||
+                                (Integer.parseInt(breedSeason.getText().toString().trim()) > 0 &&
+                                        Integer.parseInt(breedSeason.getText().toString().trim()) < 31)) {
                             LinkedHashSet<String> data = new LinkedHashSet<String>();
                             data.add(tgbtn.getText().toString().trim() + "=" + tgbtn.getCurrentTextColor());
                             data.add(tgbtn1.getText().toString().trim() + "=" + tgbtn1.getCurrentTextColor());
                             data.add(tgbtn2.getText().toString().trim() + "=" + tgbtn2.getCurrentTextColor());
                             data.add(tgbtn3.getText().toString().trim() + "=" + tgbtn3.getCurrentTextColor());
                             data.add(breedSeason.getHint().toString().trim() + "=" + breedSeason.getText().toString().trim());
-                            data.add(perfDesc.getHint().toString().trim() + "=" + perfDesc.getText().toString().trim());
-                            data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim());
+                            data.add(perfDesc.getHint().toString().trim() + "=" + perfDesc.getText().toString().trim().replace(",", ";"));
+                            data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim().replace(",", ";"));
                             data.add(sire1Btn.getText().toString().trim() + "=" + sire1Btn.getCurrentTextColor());
                             data.add(sire2Btn.getText().toString().trim() + "=" + sire2Btn.getCurrentTextColor());
+                            data.add(sire3Btn.getText().toString().trim() + "=" + sire3Btn.getCurrentTextColor());
 
                             //save to shared pref
                             SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_MATING_INFO, bullKey, data);
 
-                            //display fields
-                            Util.setFields(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_MATING_INFO,
-                                    bullKey), fields);
-                            //display toggle buttons
-                            Util.setToggleButtons(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_MATING_INFO,
-                                    bullKey), tgBtns);
+                            Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+                            goPrev.putExtra("bullKey", bullKey);
+                            startActivity(goPrev);
+
+
 
                             Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
                         } else {
@@ -183,8 +198,13 @@ public class MatingInfo extends AppCompatActivity {
                             breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         }
                     } catch (NumberFormatException ne) {
-                        Toast.makeText(getApplicationContext(), "Breed Season should be 1-30", Toast.LENGTH_SHORT).show();
-                        breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        if (breedSeason.getText().toString().trim().length() > 0) {
+                            Toast.makeText(getApplicationContext(), "Breed Season should be 1-30", Toast.LENGTH_SHORT).show();
+                            breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                        } else {
+                            breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.no_fill));
+                        }
+
                     } catch (Exception e) {
                         Toast.makeText(getApplicationContext(), "Invalid information entered", Toast.LENGTH_SHORT).show();
                     }
@@ -198,30 +218,39 @@ public class MatingInfo extends AppCompatActivity {
         breedSeason.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if(!hasFocus)
-                {
+                if (!hasFocus) {
                     String text = breedSeason.getText().toString().trim();
-                    try{
-                        if(Integer.valueOf(text)>0 && Integer.valueOf(text)<31)
-                        {
+                    try {
+                        if (Integer.valueOf(text) > 0 && Integer.valueOf(text) < 31) {
                             breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
-                        }
-                        else
-                        {
+                        } else {
                             breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                             Toast.makeText(getApplicationContext(), "Breed Season should be 1-30", Toast.LENGTH_SHORT).show();
                         }
-                    }
-                    catch(NumberFormatException ne)
-                    {
-                        ne.printStackTrace();
-                        breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                        Toast.makeText(getApplicationContext(), "Invalid breed season", Toast.LENGTH_SHORT).show();
+                    } catch (NumberFormatException ne) {
+
+                        if (text.length() > 0) {
+                            ne.printStackTrace();
+                            breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            Toast.makeText(getApplicationContext(), "Invalid breed season", Toast.LENGTH_SHORT).show();
+                        } else {
+                            breedSeason.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.no_fill));
+                        }
+
                     }
                 }
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+        goPrev.putExtra("bullKey", bullKey);
+        startActivity(goPrev);
     }
 
 }

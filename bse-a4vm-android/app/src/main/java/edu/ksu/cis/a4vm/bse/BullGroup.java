@@ -29,6 +29,7 @@ public class BullGroup extends AppCompatActivity {
 
     private ListView lv = null;
     private String grpId = null;
+    private String ranch = null;
     private Set<String> bulls = null;
     private Set<String> bullIds = null;
     @Override
@@ -43,7 +44,10 @@ public class BullGroup extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
-        grpId = getIntent().getStringExtra("grpId");
+        Intent i = getIntent();
+        Bundle extras = i.getExtras();
+        grpId = extras.getString("grpId");
+        ranch = extras.getString("ranch");
         Button btn = (Button) findViewById(R.id.addBullBtn);
         lv = (ListView) findViewById(R.id.bullId);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -86,13 +90,25 @@ public class BullGroup extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent goToBullExam = new Intent(getApplicationContext(), BullExam.class);
-                if(bulls!=null && position < bulls.toArray().length)
-                {
-                    goToBullExam.putExtra("bullKey",bulls.toArray()[position].toString());
+                if (bulls != null && position < bulls.toArray().length) {
+                    goToBullExam.putExtra("bullKey", bulls.toArray()[position].toString());
                 }
                 startActivity(goToBullExam);
 
             }
         });
     }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), EditCollections.class);
+        Bundle extras = new Bundle();
+        extras.putString("GrpId",grpId);
+        extras.putString("ranch",ranch);
+        goPrev.putExtras(extras);
+        startActivity(goPrev);
+    }
+
 }

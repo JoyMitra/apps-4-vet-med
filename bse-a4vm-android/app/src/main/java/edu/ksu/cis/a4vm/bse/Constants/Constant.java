@@ -139,4 +139,15 @@ public class Constant {
             "veterinarian_clinicName," +
             "veterinarian_firstName," +
             "veterinarian_lastName";
+
+    public static int sum = 0;
+    public static String mfield1 = "Morphology Field 1";
+    public static String mfield2 = "Morphology Field 2";
+    public static String mfield3 = "Morphology Field 3";
+    public static String mfield4 = "Morphology Field 4";
+    public static String mfield5 = "Morphology Field 5";
+    public static String mfield6 = "Morphology Field 6";
+    public static String mfield7 = "Morphology Field 7";
+    public static String mfield8 = "Morphology Field 8";
+    public static String mfield9 = "Morphology Field 9";
 }

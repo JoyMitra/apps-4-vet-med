@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -56,18 +57,18 @@ public class Comments extends AppCompatActivity {
                 Set data = new HashSet();
                 if(comments.getText().toString().trim().length() > 0)
                 {
-                    data.add(comments.getText().toString().trim());
+                    data.add(comments.getText().toString().trim().replace(",",";"));
                     SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_COMMENTS_INFO, bullKey, data);
-                    comments.setText(comments.getText().toString().trim());
+                    comments.setText(comments.getText().toString().trim().replace(",",";"));
                     Toast.makeText(getApplicationContext(),"Saved!",Toast.LENGTH_SHORT).show();
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"nothing to save",Toast.LENGTH_SHORT).show();
-                }
+                Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+                goPrev.putExtra("bullKey",bullKey);
+                startActivity(goPrev);
 
             }
         });
 
     }
+
 }

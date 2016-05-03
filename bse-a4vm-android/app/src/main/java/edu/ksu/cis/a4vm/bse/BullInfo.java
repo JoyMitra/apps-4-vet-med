@@ -1,8 +1,11 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +44,9 @@ public class BullInfo extends AppCompatActivity {
     EditText comments = null;
     Button save = null;
     Set<EditText> fields = null;
+    boolean yearCalculated = false;
+    boolean mthCalculated = false;
+    public String bullKey = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +64,8 @@ public class BullInfo extends AppCompatActivity {
         comments = (EditText) findViewById(R.id.comm);
         save = (Button) findViewById(R.id.saveBullInfo);
 
+
+
         fields = new HashSet<EditText>();
         fields.add(idTag);
         fields.add(idTattoo);
@@ -74,34 +82,43 @@ public class BullInfo extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
-        final String bullKey = getIntent().getStringExtra("bullKey");
+        bullKey = getIntent().getStringExtra("bullKey");
 
         //load data
-        Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
-                Constant.PREFS_BULL_INFO, bullKey), fields);
+        if(!Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
+                Constant.PREFS_BULL_INFO, bullKey), fields))
+        {
+            Date cDate = new Date();
+            String fDate = new SimpleDateFormat("yyyy-MM-dd").format(cDate);
+            dob.setText(fDate);
+            ageYrs.setText("0");
+            ageMths.setText("0");
+        }
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+                try {
                     if (idTag.getText().toString().trim().length() > 0
                             || idTattoo.getText().toString().trim().length() > 0
                             || idRfid.getText().toString().trim().length() > 0
                             || idBrand.getText().toString().trim().length() > 0) {
+
+
                         if (Integer.valueOf(ageYrs.getText().toString().trim()) <= 25 ||
-                                Integer.valueOf(ageMths.getText().toString().trim()) <= 11) {
+                                Integer.valueOf(ageMths.getText().toString().trim()) <= 18) {
                             //save bull info
                             HashSet<String> data = new LinkedHashSet<String>();
-                            data.add(idTag.getHint().toString().trim() + "=" + idTag.getText().toString().trim());
-                            data.add(idTattoo.getHint().toString().trim() + "=" + idTattoo.getText().toString().trim());
-                            data.add(idRfid.getHint().toString().trim() + "=" + idRfid.getText().toString().trim());
-                            data.add(idBrand.getHint().toString().trim() + "=" + idBrand.getText().toString().trim());
-                            data.add(dob.getHint().toString().trim() + "=" + dob.getText().toString().trim());
-                            data.add(ageYrs.getHint().toString().trim() + "=" + ageYrs.getText().toString().trim());
-                            data.add(ageMths.getHint().toString().trim() + "=" + ageMths.getText().toString().trim());
-                            data.add(lot.getHint().toString().trim() + "=" + lot.getText().toString().trim());
-                            data.add(breed.getHint().toString().trim() + "=" + breed.getText().toString().trim());
-                            data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim());
+                            data.add(idTag.getHint().toString().trim() + "=" + idTag.getText().toString().trim().replace(",", ";"));
+                            data.add(idTattoo.getHint().toString().trim() + "=" + idTattoo.getText().toString().trim().replace(",", ";"));
+                            data.add(idRfid.getHint().toString().trim() + "=" + idRfid.getText().toString().trim().replace(",", ";"));
+                            data.add(idBrand.getHint().toString().trim() + "=" + idBrand.getText().toString().trim().replace(",", ";"));
+                            data.add(dob.getHint().toString().trim() + "=" + dob.getText().toString().trim().replace(",", ";"));
+                            data.add(ageYrs.getHint().toString().trim() + "=" + ageYrs.getText().toString().trim().replace(",", ";"));
+                            data.add(ageMths.getHint().toString().trim() + "=" + ageMths.getText().toString().trim().replace(",", ";"));
+                            data.add(lot.getHint().toString().trim() + "=" + lot.getText().toString().trim().replace(",", ";"));
+                            data.add(breed.getHint().toString().trim() + "=" + breed.getText().toString().trim().replace(",", ";"));
+                            data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim().replace(",", ";"));
 
                             //capture timestamp
                             Date cDate = new Date();
@@ -122,8 +139,7 @@ public class BullInfo extends AppCompatActivity {
                                 if (keySet != null) {
                                     keySet1 = new HashSet<String>();
                                     Iterator<String> it = keySet.iterator();
-                                    while(it.hasNext())
-                                    {
+                                    while (it.hasNext()) {
                                         keySet1.add(it.next());
                                     }
                                     if (!keySet1.contains(bullKey)) {
@@ -135,8 +151,7 @@ public class BullInfo extends AppCompatActivity {
 
                                 }
 
-                                if(keySet1!=null && bullKey!=null)
-                                {
+                                if (keySet1 != null && bullKey != null) {
                                     SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_INFO,
                                             Constant.KEY_BULL, keySet1);
 
@@ -145,11 +160,12 @@ public class BullInfo extends AppCompatActivity {
                                     Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
 
                                     //display
-                                    Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
-                                            Constant.PREFS_BULL_INFO, bullKey), fields);
-                                }
-                                else
-                                {
+                                    Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+                                    goPrev.putExtra("bullKey", bullKey);
+                                    startActivity(goPrev);
+                                    /*Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
+                                            Constant.PREFS_BULL_INFO, bullKey), fields);*/
+                                } else {
                                     Toast.makeText(getApplicationContext(), "Oops! could not save due to internal app error.", Toast.LENGTH_SHORT).show();
                                 }
 
@@ -173,9 +189,7 @@ public class BullInfo extends AppCompatActivity {
 
 
                     }
-                }
-                catch(NumberFormatException e)
-                {
+                } catch (NumberFormatException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "Please correct the fields marked red", Toast.LENGTH_LONG).show();
                     ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
@@ -213,8 +227,10 @@ public class BullInfo extends AppCompatActivity {
                                     }
                                 }
                                 if (ageYrs != null && ageMths != null && ageY <= 25 && ageM < 12
-                                        && birthDay <= Util.get_days_of_a_month(birthMth,birthYr)) {
+                                        && birthDay <= Util.get_days_of_a_month(birthMth, birthYr)) {
+                                    yearCalculated = true;
                                     ageYrs.setText(String.valueOf(ageY));
+                                    mthCalculated = true;
                                     ageMths.setText(String.valueOf(ageM));
                                     dob.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                 } else {
@@ -264,15 +280,36 @@ public class BullInfo extends AppCompatActivity {
             }
         });
 
+        ageYrs.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                //do nothing
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //do nothing
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (yearCalculated)
+                    yearCalculated = false;
+                else
+                    dob.setText("");
+
+            }
+        });
+
         ageMths.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
                     String year = ageMths.getText().toString().trim();
                     try {
-                        if (Integer.valueOf(year) > 11) {
+                        if (Integer.valueOf(year) > 18) {
                             ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            Toast.makeText(getApplicationContext(), "Month cannot be more than 11", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Month cannot be more than 18", Toast.LENGTH_SHORT).show();
                         } else
                             ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                     } catch (NumberFormatException ne) {
@@ -284,6 +321,26 @@ public class BullInfo extends AppCompatActivity {
                     }
                 }
 
+            }
+        });
+
+        ageMths.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                //do nothing
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                //do nothing
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (mthCalculated)
+                    mthCalculated = false;
+                else
+                    dob.setText("");
             }
         });
 
@@ -305,8 +362,7 @@ public class BullInfo extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
-                    if (idTattoo.getText().toString().trim().length() > 0)
-                    {
+                    if (idTattoo.getText().toString().trim().length() > 0) {
                         idTag.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                         idTattoo.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                         idRfid.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
@@ -345,5 +401,13 @@ public class BullInfo extends AppCompatActivity {
         });
 
 
+    }
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+        goPrev.putExtra("bullKey", bullKey);
+        startActivity(goPrev);
     }
 }

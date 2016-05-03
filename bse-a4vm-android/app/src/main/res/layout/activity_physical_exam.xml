@@ -19,10 +19,19 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/savePhyExam"
+                android:text="Save"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"/>
+
             <EditText
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/field1"
+                android:layout_below="@+id/savePhyExam"
                 android:hint="@string/phyExam1"
                 android:layout_alignParentLeft="true" />
             <CheckBox
@@ -30,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkbox1"
                 android:layout_toRightOf="@id/field1"
+                android:layout_below="@+id/savePhyExam"
                 android:layout_marginRight="20dp"/>
             <EditText
                 android:layout_width="250dp"
@@ -144,14 +154,7 @@
                 android:layout_toRightOf="@id/field9"
                 android:layout_below="@id/field8"
                 android:layout_marginRight="20dp"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/savePhyExam"
-                android:text="Save"
-                android:layout_marginTop="30dp"
-                android:layout_below="@id/field9"
-                android:layout_centerHorizontal="true"/>
+
 
         </RelativeLayout>
 

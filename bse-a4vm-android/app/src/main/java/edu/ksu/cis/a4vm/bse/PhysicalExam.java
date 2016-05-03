@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -127,46 +128,65 @@ public class PhysicalExam extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LinkedHashSet<String> data = new LinkedHashSet<String>();
-                data.add(field1.getHint().toString().trim()+"="+field1.getText().toString().trim());
-                data.add(field2.getHint().toString().trim()+"="+field2.getText().toString().trim());
-                data.add(field3.getHint().toString().trim()+"="+field3.getText().toString().trim());
-                data.add(field4.getHint().toString().trim()+"="+field4.getText().toString().trim());
-                data.add(field5.getHint().toString().trim()+"="+field5.getText().toString().trim());
-                data.add(field6.getHint().toString().trim()+"="+field6.getText().toString().trim());
-                data.add(field7.getHint().toString().trim()+"="+field7.getText().toString().trim());
-                data.add(field8.getHint().toString().trim()+"="+field8.getText().toString().trim());
-                if(check1.isChecked())
-                    data.add(Integer.toString(check1.getId()).trim()+"="+field1.getHint().toString().trim());
-                if(check2.isChecked())
-                    data.add(Integer.toString(check2.getId()).trim()+"="+field2.getHint().toString().trim());
-                if(check3.isChecked())
-                    data.add(Integer.toString(check3.getId()).trim()+"="+field3.getHint().toString().trim());
-                if(check4.isChecked())
-                    data.add(Integer.toString(check4.getId()).trim()+"="+field4.getHint().toString().trim());
-                if(check5.isChecked())
-                    data.add(Integer.toString(check5.getId()).trim()+"="+field5.getHint().toString().trim());
-                if(check6.isChecked())
-                    data.add(Integer.toString(check6.getId()).trim()+"="+field6.getHint().toString().trim());
-                if(check7.isChecked())
-                    data.add(Integer.toString(check7.getId()).trim()+"="+field7.getHint().toString().trim());
-                if(check8.isChecked())
-                    data.add(Integer.toString(check8.getId()).trim()+"="+field8.getHint().toString().trim());
-                if(check9.isChecked())
-                    data.add(Integer.toString(check9.getId()).trim()+"="+"true");
+                if(field1.getText().toString().trim().length()>0 || field2.getText().toString().trim().length()>0
+                        || field3.getText().toString().trim().length()>0 || field4.getText().toString().trim().length()>0
+                        || field5.getText().toString().trim().length()>0 || field6.getText().toString().trim().length()>0
+                        || field7.getText().toString().trim().length()>0 || field8.getText().toString().trim().length()>0)
+                {
+                    LinkedHashSet<String> data = new LinkedHashSet<String>();
+                    data.add(field1.getHint().toString().trim()+"="+field1.getText().toString().trim().replace(",",";"));
+                    data.add(field2.getHint().toString().trim()+"="+field2.getText().toString().trim().replace(",", ";"));
+                    data.add(field3.getHint().toString().trim()+"="+field3.getText().toString().trim().replace(",", ";"));
+                    data.add(field4.getHint().toString().trim()+"="+field4.getText().toString().trim().replace(",", ";"));
+                    data.add(field5.getHint().toString().trim()+"="+field5.getText().toString().trim().replace(",", ";"));
+                    data.add(field6.getHint().toString().trim()+"="+field6.getText().toString().trim().replace(",", ";"));
+                    data.add(field7.getHint().toString().trim()+"="+field7.getText().toString().trim().replace(",", ";"));
+                    data.add(field8.getHint().toString().trim()+"=" +field8.getText().toString().trim().replace(",",";"));
+                    if(check1.isChecked())
+                        data.add(Integer.toString(check1.getId()).trim()+"="+field1.getHint().toString().trim());
+                    if(check2.isChecked())
+                        data.add(Integer.toString(check2.getId()).trim()+"="+field2.getHint().toString().trim());
+                    if(check3.isChecked())
+                        data.add(Integer.toString(check3.getId()).trim()+"="+field3.getHint().toString().trim());
+                    if(check4.isChecked())
+                        data.add(Integer.toString(check4.getId()).trim()+"="+field4.getHint().toString().trim());
+                    if(check5.isChecked())
+                        data.add(Integer.toString(check5.getId()).trim()+"="+field5.getHint().toString().trim());
+                    if(check6.isChecked())
+                        data.add(Integer.toString(check6.getId()).trim()+"="+field6.getHint().toString().trim());
+                    if(check7.isChecked())
+                        data.add(Integer.toString(check7.getId()).trim()+"="+field7.getHint().toString().trim());
+                    if(check8.isChecked())
+                        data.add(Integer.toString(check8.getId()).trim()+"="+field8.getHint().toString().trim());
+                    if(check9.isChecked())
+                        data.add(Integer.toString(check9.getId()).trim()+"="+"true");
 
-                //save to file
-                SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_PHY_PRAMS_INFO,bullKey,data);
+                    //save to file
+                    SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_PHY_PRAMS_INFO,bullKey,data);
 
-                //display
-                Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
-                        Constant.PREFS_PHY_PRAMS_INFO,bullKey),fields);
-                Util.setCheckBoxes(SharedPrefUtil.getValue(getApplicationContext(),
-                        Constant.PREFS_PHY_PRAMS_INFO,bullKey), checks);
+                    Intent goPrev = new Intent(getApplicationContext(), PhysicalParameter.class);
+                    goPrev.putExtra("bullKey",bullKey);
+                    startActivity(goPrev);
 
-                Toast.makeText(getApplicationContext(),"Saved!",Toast.LENGTH_SHORT).show();
+                    //display
+                    /*Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
+                            Constant.PREFS_PHY_PRAMS_INFO,bullKey),fields);
+                    Util.setCheckBoxes(SharedPrefUtil.getValue(getApplicationContext(),
+                            Constant.PREFS_PHY_PRAMS_INFO,bullKey), checks);*/
+
+                    Toast.makeText(getApplicationContext(),"Saved!",Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
+    }
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), PhysicalParameter.class);
+        goPrev.putExtra("bullKey", bullKey);
+        startActivity(goPrev);
     }
 }

@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                 }
 
-                                if(days<=30)
+                                if(days>30)
                                 {
 
                                     SharedPrefUtil.removeKey(getApplicationContext(),Constant.PREFS_GROUP_INFO,grpKey);
@@ -172,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
                                         }
                                     }
+                                    msg = "Deleted successfully";
                                 }
                                 else
                                 {
@@ -196,8 +197,8 @@ public class MainActivity extends AppCompatActivity {
                             SharedPrefUtil.saveGroup(getApplicationContext(),Constant.PREFS_MORPHOLOGY_COUNT_KEYS,
                                     Constant.KEY_MORPHOLOGY_COUNT_KEY,tmpMorphKeys);
                         }
-
-                        msg="Deleted successfully";
+                        if(msg==null)
+                            msg="Not enough history to delete";
                     }
                     catch(Exception e)
                     {

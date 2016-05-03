@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -87,6 +88,9 @@ public class NewGroup extends AppCompatActivity {
     {
         super.onResume();
 
+        //display
+        Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
+                Constant.PREFS_GROUP_INFO, key), fields);
 
         ranchName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -271,15 +275,15 @@ public class NewGroup extends AppCompatActivity {
                         && !validateState && !validatePhone
                         && !validateZip && !validateEmail) {
                     HashSet<String> data = new LinkedHashSet<String>();
-                    data.add(ranchName.getHint().toString().trim() + "=" + ranchName.getText().toString().trim());
-                    data.add(rancherName.getHint().toString().trim() + "=" + rancherName.getText().toString().trim());
-                    data.add(email.getHint().toString().trim() + "=" + email.getText().toString().trim());
-                    data.add(address1.getHint().toString().trim() + "=" + address1.getText().toString().trim());
-                    data.add(address2.getHint().toString().trim() + "=" + address2.getText().toString().trim());
-                    data.add(city.getHint().toString().trim() + "=" + city.getText().toString().trim());
-                    data.add(state.getHint().toString().trim() + "=" + state.getText().toString().trim());
-                    data.add(zip.getHint().toString().trim() + "=" + zip.getText().toString().trim());
-                    data.add(phone.getHint().toString().trim() + "=" + phone.getText().toString().trim());
+                    data.add(ranchName.getHint().toString().trim() + "=" + ranchName.getText().toString().trim().replace(",",";"));
+                    data.add(rancherName.getHint().toString().trim() + "=" + rancherName.getText().toString().trim().replace(",", ";"));
+                    data.add(email.getHint().toString().trim() + "=" + email.getText().toString().trim().replace(",", ";"));
+                    data.add(address1.getHint().toString().trim() + "=" + address1.getText().toString().trim().replace(",", ";"));
+                    data.add(address2.getHint().toString().trim() + "=" + address2.getText().toString().trim().replace(",", ";"));
+                    data.add(city.getHint().toString().trim() + "=" + city.getText().toString().trim().replace(",", ";"));
+                    data.add(state.getHint().toString().trim() + "=" + state.getText().toString().trim().replace(",", ";"));
+                    data.add(zip.getHint().toString().trim() + "=" + zip.getText().toString().trim().replace(",", ";"));
+                    data.add(phone.getHint().toString().trim() + "=" + phone.getText().toString().trim().replace(",",";"));
 
                     //capture timestamp
                     Date cDate = new Date();
@@ -313,9 +317,8 @@ public class NewGroup extends AppCompatActivity {
                                 Constant.KEY_GROUP, tmpkeySet);
                         SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GROUP_INFO, key, data);
                         Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_LONG).show();
-                        //display
-                        Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
-                                Constant.PREFS_GROUP_INFO, key), fields);
+                        Intent goPrev = new Intent(getApplicationContext(), Collections.class);
+                        startActivity(goPrev);
                     } else {
                         Toast.makeText(getApplicationContext(), "Oops! Unable to save due to internal error", Toast.LENGTH_LONG).show();
                     }
@@ -325,5 +328,13 @@ public class NewGroup extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), Collections.class);
+        startActivity(goPrev);
     }
 }

@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,21 +25,14 @@ import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
 public class MorphologyActivity extends AppCompatActivity {
 
     EditText field1 = null;
-    EditText limit1 = null;
+    EditText limit = null;
     EditText field2 = null;
-    EditText limit2 = null;
     EditText field3 = null;
-    EditText limit3 = null;
     EditText field4 = null;
-    EditText limit4 = null;
     EditText field5 = null;
-    EditText limit5 = null;
     EditText field6 = null;
-    EditText limit6 = null;
     EditText field7 = null;
-    EditText limit7 = null;
     EditText field8 = null;
-    EditText limit8 = null;
     Button btn  =null;
     LinkedHashSet<EditText> fields = null;
     HashSet<String> morphologyLabels = null;
@@ -49,44 +43,31 @@ public class MorphologyActivity extends AppCompatActivity {
 
         btn = (Button) findViewById(R.id.saveMorphology);
         field1 = (EditText) findViewById(R.id.morphfield1);
-        limit1 = (EditText) findViewById(R.id.morphLimit1);
+        limit = (EditText) findViewById(R.id.morphLimit);
         field2 = (EditText) findViewById(R.id.morphfield2);
-        limit2 = (EditText) findViewById(R.id.morphLimit2);
         field3 = (EditText) findViewById(R.id.morphField3);
-        limit3 = (EditText) findViewById(R.id.morphLimit3);
         field4 = (EditText) findViewById(R.id.morphField4);
-        limit4 = (EditText) findViewById(R.id.morphLimit4);
         field5 = (EditText) findViewById(R.id.morphField5);
-        limit5 = (EditText) findViewById(R.id.morphLimit5);
         field6 = (EditText) findViewById(R.id.morphField6);
-        limit6 = (EditText) findViewById(R.id.morphLimit6);
         field7 = (EditText) findViewById(R.id.morphField7);
-        limit7 = (EditText) findViewById(R.id.morphLimit7);
         field8 = (EditText) findViewById(R.id.morphField8);
-        limit8 = (EditText) findViewById(R.id.morphLimit8);
 
         fields = new LinkedHashSet<>();
 
         fields.add(field2);
-        fields.add(limit2);
 
         fields.add(field3);
-        fields.add(limit3);
 
         fields.add(field4);
-        fields.add(limit4);
 
         fields.add(field5);
-        fields.add(limit5);
 
         fields.add(field6);
-        fields.add(limit6);
 
         fields.add(field7);
-        fields.add(limit7);
 
         fields.add(field8);
-        fields.add(limit8);
+        fields.add(limit);
     }
 
     @Override
@@ -101,162 +82,121 @@ public class MorphologyActivity extends AppCompatActivity {
             Iterator<EditText> it = fields.iterator();
             for(String label: morphologyLabels)
             {
-                if(label.equalsIgnoreCase("Normal"))
+                String[] text = label.split("=");
+                if(label.contains("Limit="))
                 {
-                    limit1.setText(SharedPrefUtil.getSingleValue(getApplicationContext(), Constant.PREFS_FILE_MORPH_INFO, label));
+
+                    if(text!=null && text.length==2)
+                        limit.setText(text[1]);
                 }
-                else
+                else if(label.contains("Morphology Field 2"))
                 {
-                    if(it.hasNext())
-                    {
-                        EditText lbl = it.next();
-                        EditText lmt = it.next();
-                        if(lbl!=null && lmt!=null)
-                        {
-                            lbl.setText(label);
-                            lmt.setText(SharedPrefUtil.getSingleValue(getApplicationContext(), Constant.PREFS_FILE_MORPH_INFO, label));
-                        }
-                    }
+                    if(text!=null && text.length==2)
+                        field2.setText(text[1]);
                 }
+                else if(label.contains("Morphology Field 3"))
+                {
+                    if(text!=null && text.length==2)
+                        field3.setText(text[1]);
+                }
+                else if(label.contains("Morphology Field 4"))
+                {
+                    if(text!=null && text.length==2)
+                        field4.setText(text[1]);
+                }
+                else if(label.contains("Morphology Field 5"))
+                {
+                    if(text!=null && text.length==2)
+                        field5.setText(text[1]);
+                }
+                else if(label.contains("Morphology Field 6"))
+                {
+                    if(text!=null && text.length==2)
+                        field6.setText(text[1]);
+                }
+                else if(label.contains("Morphology Field 7"))
+                {
+                    if(text!=null && text.length==2)
+                        field7.setText(text[1]);
+                }
+                else if(label.contains("Morphology Field 8"))
+                {
+                    if(text!=null && text.length==2)
+                        field8.setText(text[1]);
+                }
+
             }
         }
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Boolean valid = true;
-                if(limit1.getText().toString().trim().length() == 0)
-                {
-                    valid = false;
-                }
-                if(valid && field2.getText().toString().trim().length()>0 && limit2.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field2.getText().toString().trim().length()==0 && limit2.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
-                if(valid && field3.getText().toString().trim().length()>0 && limit3.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field3.getText().toString().trim().length()==0 && limit3.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
-                if(valid && field4.getText().toString().trim().length()>0 && limit4.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field4.getText().toString().trim().length()==0 && limit4.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
-                if(valid && field5.getText().toString().trim().length()>0 && limit5.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field5.getText().toString().trim().length()==0 && limit5.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
-                if(valid && field6.getText().toString().trim().length()>0 && limit6.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field6.getText().toString().trim().length()==0 && limit6.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
-                if(valid && field7.getText().toString().trim().length()>0 && limit7.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field7.getText().toString().trim().length()==0 && limit7.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
-                if(valid && field8.getText().toString().trim().length()>0 && limit8.getText().toString().trim().length()==0)
-                {
-                    valid = false;
-                }
-                if(valid && field8.getText().toString().trim().length()==0 && limit8.getText().toString().trim().length()>0)
-                {
-                    valid = false;
-                }
 
-                if(valid)
-                {
+
+
                     HashSet<String> keys = new HashSet<String>();
-                    String key = field1.getText().toString().trim();
-                    String data = limit1.getText().toString().trim();
-                    keys.add(key);
-                    SharedPrefUtil.saveMorphologyLimits(getApplicationContext(), data, key);
 
-                    key = field2.getText().toString().trim();
-                    data = limit2.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    String key = field2.getText().toString().trim();
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 2="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
                     }
 
                     key = field3.getText().toString().trim();
-                    data = limit3.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 3="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
                     }
 
                     key = field4.getText().toString().trim();
-                    data = limit4.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 4="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
                     }
 
                     key = field5.getText().toString().trim();
-                    data = limit5.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 5="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
                     }
 
                     key = field6.getText().toString().trim();
-                    data = limit5.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 6="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
                     }
 
                     key = field7.getText().toString().trim();
-                    data = limit7.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 7="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
                     }
 
                     key = field8.getText().toString().trim();
-                    data = limit8.getText().toString().trim();
-                    if(key.length()>0 && data.length()>0)
+                    if(key.length()>0)
                     {
+                        key = "Morphology Field 8="+ key;
                         keys.add(key);
-                        SharedPrefUtil.saveMorphologyLimits(getApplicationContext(),data, key);
+                    }
+
+                    key = limit.getText().toString().trim();
+                    if(key.length()>0)
+                    {
+                        key = "Limit="+ key;
+                        keys.add(key);
                     }
 
                     SharedPrefUtil.saveMorphologyKeys(getApplicationContext(),keys);
                     Toast.makeText(getApplicationContext(),"Saved!",Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Validation Errors",Toast.LENGTH_LONG).show();
-                }
+                    Intent goPrev = new Intent(getApplicationContext(), SettingsActivity.class);
+                    startActivity(goPrev);
+
             }
         });
 

@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -128,24 +129,26 @@ public class Classification extends AppCompatActivity {
                         data.add(tgbtn1.getText().toString().trim() + "=" + tgbtn1.getCurrentTextColor());
                         data.add(tgbtn2.getText().toString().trim() + "=" + tgbtn2.getCurrentTextColor());
                         data.add(tgbtn3.getText().toString().trim() + "=" + tgbtn3.getCurrentTextColor());
-                        data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim());
+                        data.add(comments.getHint().toString().trim() + "=" + comments.getText().
+                                toString().trim().replace(",", ";"));
 
                         //save to shared pref
                         SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_CLASSIFICATION_INFO, bullKey, data);
 
+                        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+                        goPrev.putExtra("bullKey", bullKey);
+                        startActivity(goPrev);
+
                         //display fields
-                        Util.setFields(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_CLASSIFICATION_INFO,
+                        /*Util.setFields(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_CLASSIFICATION_INFO,
                                 bullKey), fields);
                         //display toggle buttons
                         Util.setToggleButtons(SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_CLASSIFICATION_INFO,
-                                bullKey), tgBtns);
+                                bullKey), tgBtns);*/
 
                         Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
                     }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),"Classification has to be selected!",Toast.LENGTH_SHORT).show();
-                    }
+
                 }
             });
         }
@@ -153,5 +156,13 @@ public class Classification extends AppCompatActivity {
         {
             Toast.makeText(getApplicationContext(),"Invalid data entered",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void onBackPressed()
+    {
+        super.onBackPressed();
+        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+        goPrev.putExtra("bullKey", bullKey);
+        startActivity(goPrev);
     }
 }
