@@ -71,6 +71,7 @@ class MotilityInfoViewController: UIViewController {
     }
     
     override func viewWillDisappear(animated: Bool) {
+        bull.pinInBackground();
         
         
     }

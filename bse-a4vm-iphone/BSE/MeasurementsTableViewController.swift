@@ -54,6 +54,7 @@ class MeasurementsTableViewController: UITableViewController {
     
     
     override func viewWillDisappear(animated: Bool) {
+        bull.pinInBackground();
        
     }
     
@@ -105,7 +106,7 @@ class MeasurementsTableViewController: UITableViewController {
             var temp2 : Float = Float (temp!)
             temp1=temp1*2
             temp2=temp2*2
-            if((temp>30 || temp<8) || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
+            if((temp>20 || temp<1) || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
             {
                 let alert = UIAlertController(title: "WARNING! Frame Score", message: " This field can not be more than 20 and less than 1 (only increments of .5), do you wish to continue anyway or change it?", preferredStyle: .Alert)
                 

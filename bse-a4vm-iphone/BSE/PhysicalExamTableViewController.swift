@@ -283,6 +283,7 @@ InguinalNormal.setOn(true, animated: true)
         }
     }
     override func viewWillDisappear(animated: Bool) {
+        bull.pinInBackground();
         
     }
 

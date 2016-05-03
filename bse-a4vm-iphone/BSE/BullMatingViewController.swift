@@ -93,6 +93,7 @@ class BullMatingViewController: UIViewController , UIPickerViewDataSource, UIPic
     
     
     override func viewWillDisappear(animated: Bool) {
+        bull.pinInBackground();
            }
     
     @IBAction func Save(sender: AnyObject) {

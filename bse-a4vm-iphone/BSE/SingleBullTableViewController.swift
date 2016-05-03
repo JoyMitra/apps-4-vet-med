@@ -35,7 +35,9 @@ class SingleBullTableViewController: UITableViewController {
     override func viewWillAppear(_animated: Bool) {
     viewDidLoad() // to reload selected cell
     }
-    
+    override func viewWillDisappear(animated: Bool) {
+        }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         user = PFUser.currentUser();
@@ -67,14 +69,30 @@ class SingleBullTableViewController: UITableViewController {
                 = 1.0;
             Cell1.contentView.layer.borderColor=UIColor.blueColor().CGColor;
         }
-            if (bull["lot"] as! String != "" && bull["breed"] as! String != "" && string1 != string2 )
+            if(bull["AgeMonth"] != nil || bull["AgeYear"] != nil )
+            {
+                if (bull["AgeMonth"] as! String != "" || bull["AgeYear"] as! String != "" )
+                {
+                    let image = UIImage(named: "Blue");
+                    Button1.setImage(image, forState: .Normal);
+                    Cell1.contentView.layer.borderWidth
+                        = 1.0;
+                    Cell1.contentView.layer.borderColor=UIColor.blueColor().CGColor;
+                }
+            }
+            if (bull["lot"] as! String != "" && bull["breed"] as! String != "")
         {
+            if(bull["AgeMonth"]  != nil && bull["AgeYear"] != nil  )
+            {
+            if(bull["AgeMonth"] as! String != "" && bull["AgeYear"] as! String != "")
+            {
             let image = UIImage(named: "Green");
             Button1.setImage(image, forState: .Normal);
             Cell1.contentView.layer.borderWidth
                 = 1.0;
             Cell1.contentView.layer.borderColor=UIColor.greenColor().CGColor;
-            
+                }
+                }
             }
         }
         if(bull["seasonsUsed"] != nil || bull["lastSeasonPerformance"] != nil || bull["matingDescription"] != nil || bull["singleOrMultiSire"] != nil)

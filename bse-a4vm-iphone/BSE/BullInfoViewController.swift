@@ -173,6 +173,7 @@ class BullInfoViewController: UIViewController {
     //Called before navigating back. This will save all necessary data.
 
     override func viewWillDisappear(animated: Bool) {
+        bull.pinInBackground();
         }
 
     @IBAction func Save(sender: AnyObject) {

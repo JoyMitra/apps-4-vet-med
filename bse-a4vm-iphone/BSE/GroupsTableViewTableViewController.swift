@@ -10,10 +10,18 @@ import UIKit
 
 import Parse
 
-class GroupsTableViewTableViewController: UITableViewController {
+
+class GroupsTableViewTableViewController: UITableViewController{
     
     var ranchersArray = [PFObject]();
-
+    var group : PFObject!
+    var temp : PFObject!
+    var temp1 = 0;
+    var temp2 = 0;
+    var flag = false;
+    //var task : BFTask
+    func GroupsTableViewTableViewController()
+    {}
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,59 +39,53 @@ class GroupsTableViewTableViewController: UITableViewController {
       
     }
 
-    @IBAction func Delete30(sender: AnyObject) {
-        let alert = UIAlertController(title: "WARNING!", message: "This will permenently delete data prior to 30 days", preferredStyle: .Alert)
-        
-        
-        //3. Grab the value from the text field, and print it when the user clicks OK.
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            for var i = 0; i < self.ranchersArray.count; i++
-            {
-                let today = self.ranchersArray[i]["madeAt"] as! NSDate!
-                let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
-                    .Month,
-                    value: 1,
-                    toDate: today,
-                    options: NSCalendarOptions(rawValue: 0))
-                let current = NSDate();
-                
-                let compareResult = tomorrow!.compare(current)
-                if compareResult == NSComparisonResult.OrderedAscending {
-                    self.ranchersArray[i].unpinInBackground()
-                    self.ranchersArray[i].deleteInBackground()
-                    
-                }
-                
-                                            }
-            if let nav = self.navigationController{
-                nav.popViewControllerAnimated(true)
-            }
-            
-        }))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action) -> Void in
-        }))
-        // 4. Present the alert.
-        self.presentViewController(alert, animated: true, completion: nil)
-        
-        
-
-    }
+    
+    @IBOutlet var asd: UITableView!
+    @IBOutlet var newGroupCell: UITableViewCell!
+    @IBOutlet var Add: UIView!
     @IBAction func Delete(sender: AnyObject) {
         let alert = UIAlertController(title: "WARNING!", message: "This will permenently delete all of the data", preferredStyle: .Alert)
         
         
         //3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+           /* var task = [BFTask] (count:self.ranchersArray.count, repeatedValue: self.ranchersArray[0].unpinInBackground())
+            //var bool = [BooleanType] (count: self.ranchersArray.count, repeatedValue: false);
             for var i = 0; i < self.ranchersArray.count; i++
             {
-                self.ranchersArray[i].unpinInBackground()
-                self.ranchersArray[i].deleteInBackground()
-            }
-            if let nav = self.navigationController{
-                nav.popViewControllerAnimated(true)
+            
+            task[i] = self.ranchersArray[i].unpinInBackground()
+            }*/
+          //  self.flag = true;
+           // self.asd.userInteractionEnabled = false;
+            for var i = 0; i < self.ranchersArray.count; i++
+            {
+            self.ranchersArray[i].unpinInBackgroundWithBlock({(success: Bool, error: NSError?) -> Void in
+                
+                //self.group = self.ranchersArray[i];
+              /*  if(success)
+                {self.temp1++;}
+                               */
+            });
+            
+            
             }
             
+           // self.group.pinInBackground();
+            
+            
+                if let nav = self.navigationController{
+                    // for var i = 0; i < self.ranchersArray.count; i++
+                    // {task[i].waitUntilFinished();}
+                    nav.popViewControllerAnimated(true)
+                    
+                }
+            
+
+
         }))
+        
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action) -> Void in
         }))
         // 4. Present the alert.
@@ -162,6 +164,19 @@ class GroupsTableViewTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        let query1 = PFQuery(className:"Bull");
+        
+        query1.fromLocalDatastore();
+        query1.orderByAscending("bullID");
+       // query1.whereKey("group", equalTo: self.group);
+        
+        
+        
+        query1.findObjectsInBackgroundWithBlock { (bulls: [PFObject]?, error: NSError?) -> Void in
+            
+            
+        };
+
         let query = PFQuery(className:"RanchInfo");
         
         query.fromLocalDatastore();
@@ -170,15 +185,17 @@ class GroupsTableViewTableViewController: UITableViewController {
         query.findObjectsInBackgroundWithBlock { (ranchers: [PFObject]?, error: NSError?) -> Void in
             
             if let ranchers = ranchers as [PFObject]!
-            {
+           {
                 self.ranchersArray = ranchers as [PFObject];
                 self.tableView.reloadData();
                 
             }
             else
             {
+                self.tableView.reloadData();
                 print("Didn't find anything?")
             }
+            self.temp2=self.ranchersArray.count;
             
         };
     }
@@ -228,9 +245,12 @@ class GroupsTableViewTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         
         if(segue.identifier == "editGroups"){
+            
+            
             let existingGroupVC = segue.destinationViewController as! ExistingGroupViewController;
             
             existingGroupVC.group = self.ranchersArray[ self.tableView!.indexPathForSelectedRow!.row - 1];
+            
         }
     }
 
