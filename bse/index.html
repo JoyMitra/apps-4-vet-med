@@ -1,5 +1,4 @@
 <h1 id="bull-soundness-evaluation-bse-a4vm">Bull Soundness Evaluation (BSE-A4VM)</h1>
-<h2 id="contents">Contents</h2>
 <ul>
 <li><a href="#GenInfo">General Information</a></li>
 <li><a href="#Setup">Initial Setup</a></li>
@@ -23,15 +22,15 @@
 <h1 id="GenInfo">
 General Information
 </h1>
-BSE-A4VM app aids veterinarians to collect data while examining bulls. It allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
+BSE-A4VM mobile apps aid veterinarians to collect data while examining bulls. They allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
 <h3>
 Download the app from:
 </h3>
 <ul>
-<li><a href="https://itunes.apple.com/us/app/bull-soundness-evaluation/id1099677800?mt=8">for iPhone</a></li>
-<li><a href="https://play.google.com/store/apps/details?id=edu.ksu.cis.bse_a4m_android&hl=en">for Android</a></li>
+<li><a href="https://itunes.apple.com/us/app/bull-soundness-evaluation/id1099677800?mt=8">for iPhone</a> <em>TODO: Add link to app page on iStore</em></li>
+<li><a href="https://play.google.com/store/apps/details?id=edu.ksu.cis.bse_a4m_android&amp;hl=en">for Android</a></li>
 </ul>
-<p><em>For most part, these mobile apps do not require network access.</em> They will require access to the email client on the phone when the user decides to email the collected data.</p>
+<p><em>For most part, these mobile apps do not require network access.</em> They will require access to the email client on the phone when the user decides to email the collected data for purposes of aggregation and reporting.</p>
 <p>Since the mobile app has consistent look and feel on both Android and iPhone platforms, the rest of this documentation will describe the app with no specific reference to the platform. When screen shots are provided for illustration, screen shots from both iPhone app (left) and Android app (right) will be provided.</p>
 <h1 id="Setup">
 Initial Setup
@@ -64,7 +63,7 @@ Initial Setup
 <h1 id="HomeScreen">
 Home Screen
 </h1>
-<p>To open the app, click on BSE app icon <img src="img/icon-image.png?raw=true" width="40" height="40" /> on your phone. This will open the home screen of the app. From here, you can navigate to the <em>Groups</em> page and the <em>Settings</em> page.</p>
+<p>To open the app, click on BSE app icon on your phone. This will open the home screen of the app. From here, you can navigate to the <em>Groups</em> page and the <em>Settings</em> page.</p>
 <table>
  <tr>
   <td>
@@ -87,7 +86,7 @@ Groups
 <h3 id="Dashboard">
 View Dashboard
 </h3>
-<p>From the home screen, you can get to the <em>Dashboard</em> by clicking on the <em>Groups</em> button. The dashboard allows you to view the list of groups on the phone and create new groups. <em>TODO: Use realistic names for ranch and ower, e.g., Dodge City Ranch.</em></p>
+<p>From the home screen, you can get to the <em>Dashboard</em> by clicking on the <em>Groups</em> button. The dashboard allows you to view the list of groups on the phone and create new groups.</p>
 <table>
  <tr>
   <td>
@@ -121,7 +120,7 @@ Edit a Group
 <table>
  <tr>
   <td>
-<img src="img/screenshots/iPhone/SingleGroup.PNG" width="200" height="400" />
+<img src="img/screenshots/iPhone/SingleGroup.PNG?raw=true" width="200" height="400" />
 </td>
   <td>
 <img src="img/screenshots/Android/Grp.png?raw=true" width="200" height="400" />
@@ -208,7 +207,7 @@ Sex &amp; Mating Information
 Physical Parameters
 </h3>
 <p>This screen has two buttons. One will take the user to the <em>Measurements</em> screen and the other will take the user to the <em>Physical Exam</em> screen. In these screens, you can enter data in the fields. Again, there will be hints about the type of valid data, and the app will notify you of invalid data by highlighting corresponding fields in red. Also, remember to click the <em>Save</em> button before your navigate away from the screens.</p>
-<p>Each field is associated with a check box to indicate &quot;normal&quot; or not. Check this boxes when you do not want to enter a description but want to record the corresponding parameter is normal. If you do not provide any description and not check the corresponding bos, then the app will record the parameter as abnormal. <em>TODO: Joydeep/Shubh, please confirm the parameter is recorded as abnormal</em> If you wish to record all parameters as normal, then you can use the <em>Select all as Normal</em> check box at the bottom of the screen to mark all parameters as normal -- this will check the check boxes associated with all parameters. Unchecking this check box will uncheck the check boxes associated with all the parameters on the screen.</p>
+<p>Each field is associated with a check box to indicate &quot;normal&quot; or not. Check this boxes when you do not want to enter a description but want to record the corresponding parameter is normal. If you do not provide any description and not check the corresponding bos, then the app will record the parameter as abnormal. If you wish to record all parameters as normal, then you can use the <em>Select all as Normal</em> check box at the bottom of the screen to mark all parameters as normal -- this will check the check boxes associated with all parameters. Unchecking this check box will uncheck the check boxes associated with all the parameters on the screen.</p>
 <table>
  <tr>
   <td>
@@ -247,8 +246,8 @@ Morphology Dashboard
 </ol>
 <p>Upon clicking <em>Add New Semen Collection</em>, you will be presented with a page full of buttons (up to eight buttons). These buttons represent the Morphology information you had setup in the <em>Settings</em> section of the app. You can gather tally data for various morphology features by clicking on the corresponding button.</p>
 <p>During collection, when you switch buttons, the app will generate a unique sound alert . Similarly, when the tally count reaches the limit/threshold for a morphology feature, the app will generate a unique sound alert.</p>
-<p>For each semen collection, you can view the total count and the break down via the <em>Morphology Count</em> screen by selecting a specific sample. If needed, you can modify (only increase) the recorded count in this screen.</p>
-<p>In terms of work flow, we recommend that you create a new semen collection instead of modifying an existing collection.</p>
+<p>For each semen collection, you can view the total count and the break down via the <em>Morphology Count</em> screen by selecting a specific sample. If needed, you can modify the recorded count in this screen by clicking on the edit morphology button at the bottom of the screen.</p>
+<p>If you change the morphology configuration while collecting morphology counts for a particular group, those changes will not be reflected for that group. If you want to collect morphology counts based on the modified configuration then we suggest that you create a new group.</p>
 <table>
  <tr>
   <td>
@@ -264,6 +263,14 @@ Morphology Dashboard
 </td>
   <td>
 <img src="img/screenshots/Android/MorphCount.png?raw=true" width="200" height="400" />
+</td>
+ </tr>
+ <tr>
+  <td>
+<img src="img/screenshots/iPhone/EditMorphCount.PNG?raw=true" width="200" height="400" />
+</td>
+  <td>
+<img src="img/screenshots/Android/EditMorphCount.png?raw=true" width="200" height="400" />
 </td>
  </tr>
 </table>

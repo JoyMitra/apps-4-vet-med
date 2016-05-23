@@ -181,9 +181,9 @@ Upon clicking _Add New Semen Collection_, you will be presented with a page full
 
 During collection, when you switch buttons, the app will generate a unique sound alert .  Similarly, when the tally count reaches the limit/threshold for a morphology feature, the app will generate a unique sound alert.
 
-For each semen collection, you can view the total count and the break down via the _Morphology Count_ screen by selecting a specific sample.  If needed, you can modify (only increase) the recorded count in this screen.
+For each semen collection, you can view the total count and the break down via the _Morphology Count_ screen by selecting a specific sample.  If needed, you can modify the recorded count in this screen by clicking on the edit morphology button at the bottom of the screen.
 
-In terms of work flow, we recommend that you create a new semen collection instead of modifying an existing collection.
+If you change the morphology configuration while collecting morphology counts for a particular group, those changes will not be reflected for that group. If you want to collect morphology counts based on the modified configuration then we suggest that you create a new group.
 
 <table>
  <tr>
@@ -193,6 +193,10 @@ In terms of work flow, we recommend that you create a new semen collection inste
  <tr>
   <td><img src="img/screenshots/iPhone/MorphInfo.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/MorphCount.png?raw=true" width="200" height="400" /></td>
+ </tr>
+ <tr>
+  <td><img src="img/screenshots/iPhone/EditMorphCount.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/Android/EditMorphCount.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
 
