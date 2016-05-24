@@ -22,7 +22,7 @@
 <h1 id="GenInfo">General Information</h1>
 BSE-A4VM mobile apps aid veterinarians to collect data while examining bulls. They allows for the collection of nearly 100+ fields about bulls and the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
 <h3>Download the app from:</h3>
-* [for iPhone](https://itunes.apple.com/us/app/bull-soundness-evaluation/id1099677800?mt=8) *TODO: Add link to app page on iStore*
+* [for iPhone](https://itunes.apple.com/us/app/bull-soundness-evaluation/id1099677800?mt=8)
 * [for Android](https://play.google.com/store/apps/details?id=edu.ksu.cis.bse_a4m_android&hl=en)
 
 _For most part, these mobile apps do not require network access._  They will require access to the email client on the phone when the user decides to email the collected data for purposes of aggregation and reporting.
@@ -61,7 +61,7 @@ To open the app, click on BSE app icon on your phone.  This will open the home s
 </table>
 
 <h3 id="Cleanup">Clean Up</h3>
-The app saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  This deletion is permanent and cannot be undone.  You can also delete data corresponding to each group (from the groups page *TODO: is this true for both apps?*. It is recommended that you periodically delete old data to prevent the app from occupying the storage space on your phone.
+The app saves the collected data on the phone until you delete it.  So, to delete all data collected prior to 30 days, click on _Delete 30+ day old data_.  This deletion is permanent and cannot be undone. It is recommended that you periodically delete old data to prevent the app from occupying the storage space on your phone.
 
 <h1 id="Groups">Groups</h1>
 A _group_ is a group of bulls along with their examination data.  Each ranch/location/owner can have multiple groups, e.g., one group for each day of the visit to the ranch, one group for the morning batch of bulls and one group for the afternoon batch of bulls.
@@ -181,9 +181,9 @@ Upon clicking _Add New Semen Collection_, you will be presented with a page full
 
 During collection, when you switch buttons, the app will generate a unique sound alert .  Similarly, when the tally count reaches the limit/threshold for a morphology feature, the app will generate a unique sound alert.
 
-For each semen collection, you can view the total count and the break down via the _Morphology Count_ screen by selecting a specific sample.  If needed, you can modify the recorded count in this screen by clicking on the edit morphology button at the bottom of the screen.
+For each semen collection, you can view the total count and the break down via the _Morphology Count_ screen by selecting a specific sample.  If needed, you can modify the recorded count in this screen by clicking on the _Edit Morphology_ button at the bottom of the screen.
 
-If you change the morphology configuration while collecting morphology counts for a particular group, those changes will not be reflected for that group. If you want to collect morphology counts based on the modified configuration then we suggest that you create a new group.
+If you change the _Morphology Setting_ while collecting morphology counts for a particular group, those changes will not be reflected for that group. If you want to collect morphology counts based on the modified _Morphology Setting_ then we suggest that you create a new group.
 
 <table>
  <tr>
