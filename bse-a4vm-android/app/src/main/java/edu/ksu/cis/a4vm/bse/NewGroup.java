@@ -251,12 +251,10 @@ public class NewGroup extends AppCompatActivity {
                                        {
                                            @Override
                                            public void onFocusChange(View v, boolean hasFocus) {
-                                               if(Util.isEmailValid(email.getText().toString().trim()))
-                                               {
+                                               if (Util.isEmailValid(email.getText().toString().trim())) {
                                                    email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                    validateEmail = false;
-                                               }
-                                               else{
+                                               } else {
                                                    validateEmail = true;
                                                    email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                    Toast.makeText(getApplicationContext(), "Invalid Email", Toast.LENGTH_SHORT).show();
@@ -274,54 +272,77 @@ public class NewGroup extends AppCompatActivity {
                         && !validateAddr1 && !validateCity
                         && !validateState && !validatePhone
                         && !validateZip && !validateEmail) {
-                    HashSet<String> data = new LinkedHashSet<String>();
-                    data.add(ranchName.getHint().toString().trim() + "=" + ranchName.getText().toString().trim().replace(",",";"));
-                    data.add(rancherName.getHint().toString().trim() + "=" + rancherName.getText().toString().trim().replace(",", ";"));
-                    data.add(email.getHint().toString().trim() + "=" + email.getText().toString().trim().replace(",", ";"));
-                    data.add(address1.getHint().toString().trim() + "=" + address1.getText().toString().trim().replace(",", ";"));
-                    data.add(address2.getHint().toString().trim() + "=" + address2.getText().toString().trim().replace(",", ";"));
-                    data.add(city.getHint().toString().trim() + "=" + city.getText().toString().trim().replace(",", ";"));
-                    data.add(state.getHint().toString().trim() + "=" + state.getText().toString().trim().replace(",", ";"));
-                    data.add(zip.getHint().toString().trim() + "=" + zip.getText().toString().trim().replace(",", ";"));
-                    data.add(phone.getHint().toString().trim() + "=" + phone.getText().toString().trim().replace(",",";"));
+                    if(ranchName.getText().toString().trim().length()>0 && rancherName.getText().toString().trim().length()>0
+                            && email.getText().toString().trim().length()>0 && address1.getText().toString().trim().length()>0
+                            && city.getText().toString().trim().length()>0
+                            && state.getText().toString().trim().length()>0 && zip.getText().toString().trim().length()>0
+                            && zip.getText().toString().trim().length()>0 && phone.getText().toString().trim().length()>0)
+                    {
+                        HashSet<String> data = new LinkedHashSet<String>();
+                        data.add(ranchName.getHint().toString().trim() + "=" + ranchName.getText().toString().trim().replace(",",";"));
+                        data.add(rancherName.getHint().toString().trim() + "=" + rancherName.getText().toString().trim().replace(",", ";"));
+                        data.add(email.getHint().toString().trim() + "=" + email.getText().toString().trim().replace(",", ";"));
+                        data.add(address1.getHint().toString().trim() + "=" + address1.getText().toString().trim().replace(",", ";"));
+                        data.add(address2.getHint().toString().trim() + "=" + address2.getText().toString().trim().replace(",", ";"));
+                        data.add(city.getHint().toString().trim() + "=" + city.getText().toString().trim().replace(",", ";"));
+                        data.add(state.getHint().toString().trim() + "=" + state.getText().toString().trim().replace(",", ";"));
+                        data.add(zip.getHint().toString().trim() + "=" + zip.getText().toString().trim().replace(",", ";"));
+                        data.add(phone.getHint().toString().trim() + "=" + phone.getText().toString().trim().replace(",",";"));
 
-                    //capture timestamp
-                    Date cDate = new Date();
-                    String fDate = new SimpleDateFormat("dd-MM-yyyy hh.mm.ss").format(cDate);
+                        //capture timestamp
+                        Date cDate = new Date();
+                        String fDate = new SimpleDateFormat("dd-MM-yyyy hh.mm.ss").format(cDate);
 
-                    data.add("TimeStamp=" + fDate);
+                        data.add("TimeStamp=" + fDate);
 
-                    //persist ranchInfo
-                    final HashSet<String> keySet = (HashSet<String>) SharedPrefUtil.getValue(
-                            getApplicationContext(), Constant.PREFS_GROUP_INFO, Constant.KEY_GROUP);
+                        //persist ranchInfo
+                        final HashSet<String> keySet = (HashSet<String>) SharedPrefUtil.getValue(
+                                getApplicationContext(), Constant.PREFS_GROUP_INFO, Constant.KEY_GROUP);
 
                     /*
                         creating a copy of keySet because if sets retrieved from a shared pref file
                         is modified, it could lead to unexpected behavior.
                     */
-                    Set<String> tmpkeySet = null;
-                    if (keySet != null && key != null) {
-                        Iterator<String> it = keySet.iterator();
-                        tmpkeySet = new HashSet<String>();
-                        while (it.hasNext()) {
-                            tmpkeySet.add(it.next());
-                        }
-                        tmpkeySet.add(key);
-                    } else if (key != null) {
-                        tmpkeySet = new HashSet<String>();
-                        tmpkeySet.add(key);
+                        Set<String> tmpkeySet = null;
+                        if (keySet != null && key != null) {
+                            Iterator<String> it = keySet.iterator();
+                            tmpkeySet = new HashSet<String>();
+                            while (it.hasNext()) {
+                                tmpkeySet.add(it.next());
+                            }
+                            tmpkeySet.add(key);
+                        } else if (key != null) {
+                            tmpkeySet = new HashSet<String>();
+                            tmpkeySet.add(key);
 
+                        }
+                        if (tmpkeySet != null && key != null) {
+                            SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GROUP_INFO,
+                                    Constant.KEY_GROUP, tmpkeySet);
+                            SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GROUP_INFO, key, data);
+                            //saving morph config for group
+                            HashSet<String> grpMorphConfig = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
+                                    Constant.PREFS_GRP_MORPH_CONFIG,key);
+                            if(grpMorphConfig==null)
+                            {
+                                HashSet<String> currMorphConfig = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
+                                        Constant.PREFS_FILE_MORPH_INFO,Constant.KEY_MORPHOLOGY);
+                                SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GRP_MORPH_CONFIG, key, currMorphConfig);
+                                Toast.makeText(getApplicationContext(), "Saved configuration!", Toast.LENGTH_LONG).show();
+                            }
+
+                            Toast.makeText(getApplicationContext(), "Saved group!", Toast.LENGTH_LONG).show();
+                            Intent goPrev = new Intent(getApplicationContext(), Collections.class);
+                            startActivity(goPrev);
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Oops! Unable to save due to internal error", Toast.LENGTH_LONG).show();
+                        }
                     }
-                    if (tmpkeySet != null && key != null) {
-                        SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GROUP_INFO,
-                                Constant.KEY_GROUP, tmpkeySet);
-                        SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_GROUP_INFO, key, data);
-                        Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_LONG).show();
+                    else {
                         Intent goPrev = new Intent(getApplicationContext(), Collections.class);
                         startActivity(goPrev);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Oops! Unable to save due to internal error", Toast.LENGTH_LONG).show();
                     }
+
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Fix fields marked in red before saving!", Toast.LENGTH_SHORT).show();

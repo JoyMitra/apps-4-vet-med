@@ -1,5 +1,7 @@
 package edu.ksu.cis.a4vm.bse.Constants;
 
+import java.util.ArrayList;
+
 /**
  * Created by Joy on 2/22/16.
  */
@@ -16,6 +18,7 @@ public class Constant {
     public static String PREFS_MOTILITY_INFO = "motility_info_file";
     public static String PREFS_CLASSIFICATION_INFO = "classify_info_file";
     public static String PREFS_COMMENTS_INFO = "comments_info_file";
+    public static String PREFS_GRP_MORPH_CONFIG = "group_morphology_settings";
     public static String KEY_VET = "vetinfoKey";
     public static String KEY_MORPHOLOGY = "morphologyKeys";
     public static String KEY_GROUP = "groupKeys";
@@ -46,39 +49,28 @@ public class Constant {
             "animal_tag," +
             "animal_tattoo," +
             "animal_other," +
-            "bodyPartInfo_bodyParts_0_description," +
-            "bodyPartInfo_bodyParts_0_name," +
-            "bodyPartInfo_bodyParts_0_normal," +
-            "bodyPartInfo_bodyParts_10_description," +
-            "bodyPartInfo_bodyParts_10_name," +
-            "bodyPartInfo_bodyParts_10_normal," +
-            "bodyPartInfo_bodyParts_1_description," +
-            "bodyPartInfo_bodyParts_1_name," +
-            "bodyPartInfo_bodyParts_1_normal," +
-            "bodyPartInfo_bodyParts_2_description," +
-            "bodyPartInfo_bodyParts_2_name," +
-            "bodyPartInfo_bodyParts_2_normal," +
-            "bodyPartInfo_bodyParts_3_description," +
-            "bodyPartInfo_bodyParts_3_name," +
-            "bodyPartInfo_bodyParts_3_normal," +
-            "bodyPartInfo_bodyParts_4_description," +
-            "bodyPartInfo_bodyParts_4_name," +
-            "bodyPartInfo_bodyParts_4_normal," +
-            "bodyPartInfo_bodyParts_5_description," +
-            "bodyPartInfo_bodyParts_5_name," +
-            "bodyPartInfo_bodyParts_5_normal," +
-            "bodyPartInfo_bodyParts_6_description," +
-            "bodyPartInfo_bodyParts_6_name," +
-            "bodyPartInfo_bodyParts_6_normal," +
-            "bodyPartInfo_bodyParts_7_description," +
-            "bodyPartInfo_bodyParts_7_name," +
-            "bodyPartInfo_bodyParts_7_normal," +
-            "bodyPartInfo_bodyParts_8_description," +
-            "bodyPartInfo_bodyParts_8_name," +
-            "bodyPartInfo_bodyParts_8_normal," +
-            "bodyPartInfo_bodyParts_9_description," +
-            "bodyPartInfo_bodyParts_9_name," +
-            "bodyPartInfo_bodyParts_9_normal," +
+            "bodyPartInfo_bodyParts_eyes_description," +
+            "bodyPartInfo_bodyParts_eyes_normal," +
+            "bodyPartInfo_bodyParts_scrotum_description," +
+            "bodyPartInfo_bodyParts_scrotum_normal," +
+            "bodyPartInfo_bodyParts_feet_description," +
+            "bodyPartInfo_bodyParts_feet_normal," +
+            "bodyPartInfo_bodyParts_Legs_description," +
+            "bodyPartInfo_bodyParts_Legs_normal," +
+            "bodyPartInfo_bodyParts_Testicles_description," +
+            "bodyPartInfo_bodyParts_Testicles_normal," +
+            "bodyPartInfo_bodyParts_AccessorySexGlands_description," +
+            "bodyPartInfo_bodyParts_AccessorySexGlands_normal," +
+            "bodyPartInfo_bodyParts_Inguinal_description," +
+            "bodyPartInfo_bodyParts_Inguinal_normal," +
+            "bodyPartInfo_bodyParts_ScrotalShape_description," +
+            "bodyPartInfo_bodyParts_ScrotalShape_normal," +
+            "bodyPartInfo_bodyParts_epidydimides_description," +
+            "bodyPartInfo_bodyParts_epidydimides_normal," +
+            "bodyPartInfo_bodyParts_Penis_description," +
+            "bodyPartInfo_bodyParts_Penis_normal," +
+            "bodyPartInfo_bodyParts_Prepuce_description," +
+            "bodyPartInfo_bodyParts_Prepuce_normal," +
             "collectionNumber," +
             "completed," +
             "datePerformed," +
@@ -90,7 +82,7 @@ public class Constant {
             "matingInfo_seasonsUsed," +
             "matingInfo_sirePastureType," +
             "morphologyInfo_comments," +
-            "morphologyInfo_morphologyMeasurements_0_count," +
+            /*"morphologyInfo_morphologyMeasurements_0_count," +
             "morphologyInfo_morphologyMeasurements_0_morphologyChoice_label," +
             "morphologyInfo_morphologyMeasurements_1_count," +
             "morphologyInfo_morphologyMeasurements_1_morphologyChoice_label," +
@@ -105,7 +97,7 @@ public class Constant {
             "morphologyInfo_morphologyMeasurements_6_count," +
             "morphologyInfo_morphologyMeasurements_6_morphologyChoice_label," +
             "morphologyInfo_morphologyMeasurements_7_count," +
-            "morphologyInfo_morphologyMeasurements_7_morphologyChoice_label," +
+            "morphologyInfo_morphologyMeasurements_7_morphologyChoice_label," +*/
             "motilityInfo_comments," +
             "motilityInfo_grossMotilityCategory," +
             "motilityInfo_individualMotility," +
@@ -138,8 +130,10 @@ public class Constant {
             "veterinarian_address_zip," +
             "veterinarian_clinicName," +
             "veterinarian_firstName," +
-            "veterinarian_lastName";
+            "veterinarian_lastName," +
+            "morphology_count_threshold,";
 
+    public static ArrayList<String> morphHeaders = null;
     public static int sum = 0;
     public static String mfield1 = "Morphology Field 1";
     public static String mfield2 = "Morphology Field 2";

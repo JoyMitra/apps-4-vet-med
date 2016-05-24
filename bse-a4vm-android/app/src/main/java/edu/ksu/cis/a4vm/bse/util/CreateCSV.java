@@ -3,6 +3,8 @@ package edu.ksu.cis.a4vm.bse.util;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Set;
 
 import edu.ksu.cis.a4vm.bse.Constants.Constant;
@@ -27,7 +29,12 @@ public class CreateCSV {
             final Set<String> groupInfo = SharedPrefUtil.getValue(ctx,Constant.PREFS_GROUP_INFO,groupKey);
 
 
-
+                //Constant.headers = Constant.CSV_HEADING.split(",");
+                Constant.morphHeaders = new ArrayList(100);
+                for(int i=0;i<100;i++)
+                {
+                    Constant.morphHeaders.add("");
+                }
                 if(bullKeys!=null && !bullKeys.isEmpty())
                 {
                     rows = new ArrayList<ArrayList>();
@@ -57,17 +64,37 @@ public class CreateCSV {
                                             }
                                             final Set<String> LabelCounts = SharedPrefUtil.getValue(ctx,
                                                     Constant.PREFS_BULL_MORPHOLOGY_INFO, key);
-                                            if(LabelCounts!=null && !LabelCounts.isEmpty())
+                                            ArrayList<String> morphHeaders = new ArrayList<String>(LabelCounts);
+                                            Collections.sort(morphHeaders);
+                                            if(morphHeaders!=null && !morphHeaders.isEmpty())
                                             {
-                                                int i=54;
-                                                for(String item: LabelCounts)
+                                                int i=77;
+                                                for(String item: morphHeaders)
                                                 {
                                                     String[] arrItems = item.split("=");
-                                                    if(!"Timestamp".equalsIgnoreCase(arrItems[0]))
+                                                    if(!"Timestamp".equalsIgnoreCase(arrItems[0]) && !"Threshold".equalsIgnoreCase(arrItems[0]))
                                                     {
-                                                        row.set(i,arrItems[1]);
-                                                        row.set(i+1,arrItems[0]);
-                                                        i = i+2;
+                                                        //Constant.headers[i+1] = arrItems[0];
+
+                                                        if(!Constant.morphHeaders.contains(arrItems[0]))
+                                                        {
+                                                            String lb = arrItems[0].substring(0,1).toUpperCase() + arrItems[0].substring(1);
+                                                            Constant.morphHeaders.set(i-77,"morphology_" + lb + "_count");
+                                                            row.set(i, arrItems[1].substring(0,arrItems[1].trim().indexOf("(")));
+                                                        }
+                                                        else
+                                                        {
+                                                            String lb = arrItems[0].substring(0,1).toUpperCase() + arrItems[0].substring(1);
+                                                            int k = Constant.morphHeaders.indexOf("morphology_" + lb + "_count");
+                                                            row.set(77+k, arrItems[1].substring(0,arrItems[1].trim().indexOf("(")));
+
+                                                        }
+
+                                                        i = i+1;
+                                                    }
+                                                    else if("Threshold".equalsIgnoreCase(arrItems[0]))
+                                                    {
+                                                        row.set(76,arrItems[1]);
                                                     }
                                                 }
                                             }
@@ -77,23 +104,23 @@ public class CreateCSV {
                                                 {
                                                     String[] split_item = item.split("=");
                                                     if(split_item!=null && split_item.length==2 && "Ranch Name".equalsIgnoreCase(split_item[0]))
-                                                        row.set(91,split_item[1]);
+                                                        row.set(64,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Rancher Name".equalsIgnoreCase(split_item[0]))
-                                                        row.set(89,split_item[1]);
+                                                        row.set(62,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Email".equalsIgnoreCase(split_item[0]))
-                                                        row.set(85,split_item[1]);
+                                                        row.set(58,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Address1".equalsIgnoreCase(split_item[0]))
-                                                        row.set(82,split_item[1]);
+                                                        row.set(55,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Address2".equalsIgnoreCase(split_item[0]))
-                                                        row.set(83,split_item[1]);
+                                                        row.set(56,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "City".equalsIgnoreCase(split_item[0]))
-                                                        row.set(84,split_item[1]);
+                                                        row.set(57,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "State".equalsIgnoreCase(split_item[0]))
-                                                        row.set(87,split_item[1]);
+                                                        row.set(60,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Zip".equalsIgnoreCase(split_item[0]))
-                                                        row.set(88,split_item[1]);
+                                                        row.set(61,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Phone".equalsIgnoreCase(split_item[0]))
-                                                        row.set(86,split_item[1]);
+                                                        row.set(59,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Timestamp".equalsIgnoreCase(split_item[0])) {
                                                         uuid = split_item[1];
                                                     }
@@ -149,7 +176,7 @@ public class CreateCSV {
                                                         row.set(9,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 &&
                                                             "Timestamp".equalsIgnoreCase(split_item[0]))
-                                                        row.set(45,split_item[1]);
+                                                        row.set(34,split_item[1]);
                                                 }
                                                 uuid = uuid + " " + id;
                                                 age = ageYr + " Years " + ageMth + " Months";
@@ -164,25 +191,25 @@ public class CreateCSV {
                                                     String[] split_item = item.split("=");
                                                     if(split_item!=null && split_item.length==2 && "First Name".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(101,split_item[1]);
+                                                        row.set(74,split_item[1]);
                                                         uuid = uuid + " " + split_item[1];
                                                     }
                                                     else if(split_item!=null && split_item.length==2 && "Last Name".equalsIgnoreCase(split_item[0]))
-                                                        row.set(102,split_item[1]);
+                                                        row.set(75,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Clinic name".equalsIgnoreCase(split_item[0]))
-                                                        row.set(100,split_item[1]);
+                                                        row.set(73,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Address1".equalsIgnoreCase(split_item[0]))
-                                                        row.set(93,split_item[1]);
+                                                        row.set(66,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Address2".equalsIgnoreCase(split_item[0]))
-                                                        row.set(94,split_item[1]);
+                                                        row.set(67,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "City".equalsIgnoreCase(split_item[0]))
-                                                        row.set(95,split_item[1]);
+                                                        row.set(68,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "State".equalsIgnoreCase(split_item[0]))
-                                                        row.set(98,split_item[1]);
+                                                        row.set(71,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Zip".equalsIgnoreCase(split_item[0]))
-                                                        row.set(99,split_item[1]);
+                                                        row.set(72,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "Email".equalsIgnoreCase(split_item[0]))
-                                                        row.set(96,split_item[1]);
+                                                        row.set(69,split_item[1]);
                                                 }
                                             }
 
@@ -195,18 +222,18 @@ public class CreateCSV {
                                                     String[] split_item = item.split("=");
                                                     if(split_item!=null && split_item.length==2 &&
                                                             "Breeding Season Used".equalsIgnoreCase(split_item[0]))
-                                                        row.set(51,split_item[1]);
+                                                        row.set(40,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 &&
                                                             "Performance Description".equalsIgnoreCase(split_item[0]))
-                                                        row.set(50,split_item[1]);
+                                                        row.set(39,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 &&
                                                             "Other Comments".equalsIgnoreCase(split_item[0]))
-                                                        row.set(48,split_item[1]);
+                                                        row.set(37,split_item[1]);
                                                     else if(split_item!=null && split_item.length==2 && "GOOD".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx, split_item[1]))
-                                                                row.set(49,split_item[0]);
+                                                                row.set(38,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -219,7 +246,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(49,split_item[0]);
+                                                                row.set(38,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -232,7 +259,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(49,split_item[0]);
+                                                                row.set(38,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -244,7 +271,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(49,split_item[0]);
+                                                                row.set(38,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -256,7 +283,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(52,split_item[0]);
+                                                                row.set(41,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -268,7 +295,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(52,split_item[0]);
+                                                                row.set(41,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -280,7 +307,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(52,split_item[0]);
+                                                                row.set(41,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -301,18 +328,16 @@ public class CreateCSV {
                                                             && "Eyes Description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(10,split_item[1]);
-                                                        row.set(11,split_item[0]);
                                                         if(!"True".equalsIgnoreCase(row.get(12)))
-                                                            row.set(12,"False");
+                                                            row.set(11,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Eyes Description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(12,"True");
+                                                        row.set(11,"True");
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Feet Description".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(13,split_item[1]);
-                                                        row.set(14,split_item[0]);
+                                                        row.set(14,split_item[1]);
                                                         if(!"True".equalsIgnoreCase(row.get(15)))
                                                             row.set(15,"False");
                                                     }
@@ -326,73 +351,67 @@ public class CreateCSV {
                                                             && "Legs Description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(16,split_item[1]);
-                                                        row.set(17,split_item[0]);
                                                         if(!"True".equalsIgnoreCase(row.get(18)))
-                                                            row.set(18,"False");
+                                                            row.set(17,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Legs Description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(18,"True");
+                                                        row.set(17,"True");
 
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Testicles Description".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(19,split_item[1]);
-                                                        row.set(20,split_item[0]);
+                                                        row.set(18,split_item[1]);
                                                         if(!"True".equalsIgnoreCase(row.get(21)))
-                                                            row.set(21,"False");
+                                                            row.set(19,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Testicles Description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(21,"True");
+                                                        row.set(19,"True");
 
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Accessory Sex glands description".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(22,split_item[1]);
-                                                        row.set(23,split_item[0]);
+                                                        row.set(20,split_item[1]);
                                                         if(!"True".equalsIgnoreCase(row.get(24)))
-                                                            row.set(24,"False");
+                                                            row.set(21,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Accessory Sex glands description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(24,"True");
+                                                        row.set(21,"True");
 
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Inguinal Rings Description".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(25,split_item[1]);
-                                                        row.set(26,split_item[0]);
+                                                        row.set(22,split_item[1]);
                                                         if(!"True".equalsIgnoreCase(row.get(27)))
-                                                            row.set(27,"True");
+                                                            row.set(23,"True");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Inguinal Rings Description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(27,"True");
+                                                        row.set(23,"True");
 
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Scrotal Shape description".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(28,split_item[1]);
-                                                        row.set(29,split_item[0]);
+                                                        row.set(24,split_item[1]);
                                                         if(!"True".equalsIgnoreCase(row.get(30)))
-                                                            row.set(30,"False");
+                                                            row.set(25,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Scrotal Shape description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(30,"True");
+                                                        row.set(25,"True");
 
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Epidydimides description".equalsIgnoreCase(split_item[0]))
                                                     {
-                                                        row.set(31,split_item[1]);
-                                                        row.set(32,split_item[0]);
+                                                        row.set(26,split_item[1]);
                                                         if(!"True".equalsIgnoreCase(row.get(33)))
-                                                            row.set(33,"False");
+                                                            row.set(27,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Epidydimides description".equalsIgnoreCase(split_item[1]))
-                                                        row.set(33,"True");
+                                                        row.set(27,"True");
                                                 }
                                             }
 
@@ -404,34 +423,34 @@ public class CreateCSV {
                                                     String[] split_item = item.split("=");
                                                     if (split_item != null && split_item.length == 2
                                                             && "Scrotal circumference (cm)".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(81, split_item[1]);
+                                                        row.set(54, split_item[1]);
                                                     }
                                                     else if (split_item != null && split_item.length == 2
                                                             && "Body Condition(0-9)".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(74, split_item[1]);
+                                                        row.set(47, split_item[1]);
                                                     }
                                                     else if (split_item != null && split_item.length == 2
                                                             && "Pelvic X measure (cm)".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(79, split_item[1]);
+                                                        row.set(52, split_item[1]);
                                                     }
                                                     else if (split_item != null && split_item.length == 2
                                                             && "Pelvic Y measure (cm)".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(80, split_item[1]);
+                                                        row.set(53, split_item[1]);
                                                     }
                                                     else if (split_item != null && split_item.length == 2
                                                             && "Frame score (1-20)".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(76, split_item[1]);
+                                                        row.set(49, split_item[1]);
                                                     }
                                                     else if (split_item != null && split_item.length == 2
                                                             && "Hip Height (cm)".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(77, split_item[1]);
+                                                        row.set(50, split_item[1]);
                                                     }
                                                     else if (split_item != null && split_item.length == 2
                                                             && "Other measurement".equalsIgnoreCase(split_item[0])) {
-                                                        row.set(75, split_item[1]);
+                                                        row.set(48, split_item[1]);
                                                     }
 
-                                                    row.set(78, "cm");
+                                                    row.set(51, "cm");
 
                                                 }
                                             }
@@ -444,17 +463,17 @@ public class CreateCSV {
                                                     String[] split_item = item.split("=");
                                                     if(split_item!=null && split_item.length==2 &&
                                                             "Individual Motility".equalsIgnoreCase(split_item[0]))
-                                                        row.set(72,split_item[1]);
+                                                        row.set(45,split_item[1]);
 
                                                     else if(split_item!=null && split_item.length==2 &&
                                                             "Motility %".equalsIgnoreCase(split_item[0]))
-                                                        row.set(73,split_item[1]);
+                                                        row.set(46,split_item[1]);
 
                                                     else if(split_item!=null && split_item.length==2 && "Poor".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(71,split_item[0]);
+                                                                row.set(44,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -467,7 +486,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(71,split_item[0]);
+                                                                row.set(44,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -480,7 +499,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(71,split_item[0]);
+                                                                row.set(44,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -493,7 +512,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(71,split_item[0]);
+                                                                row.set(44,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -514,7 +533,7 @@ public class CreateCSV {
                                                     String[] split_item = item.split("=");
                                                     if(split_item!=null && split_item.length==2 &&
                                                             "Comments and Other Info".equalsIgnoreCase(split_item[0]))
-                                                        row.set(47,split_item[1]);
+                                                        row.set(36,split_item[1]);
 
 
                                                     else if(split_item!=null && split_item.length==2
@@ -522,7 +541,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(46,split_item[0]);
+                                                                row.set(35,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -536,7 +555,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(46,split_item[0]);
+                                                                row.set(35,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -550,7 +569,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(46,split_item[0]);
+                                                                row.set(35,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -563,7 +582,7 @@ public class CreateCSV {
                                                     {
                                                         try{
                                                             if(Util.valueOfColor(ctx,split_item[1]))
-                                                                row.set(46,split_item[0]);
+                                                                row.set(35,split_item[0]);
                                                         }
                                                         catch(NumberFormatException ne)
                                                         {
@@ -574,7 +593,7 @@ public class CreateCSV {
                                                     }
                                                 }
                                             }
-                                            row.set(92,uuid);
+                                            row.set(65,uuid);
                                             rows.add(row);
                                         }
                                     }

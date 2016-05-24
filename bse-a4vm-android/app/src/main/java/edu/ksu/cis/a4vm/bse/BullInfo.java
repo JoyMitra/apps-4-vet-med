@@ -105,80 +105,90 @@ public class BullInfo extends AppCompatActivity {
                             || idBrand.getText().toString().trim().length() > 0) {
 
 
-                        if (Integer.valueOf(ageYrs.getText().toString().trim()) <= 25 ||
-                                Integer.valueOf(ageMths.getText().toString().trim()) <= 18) {
-                            //save bull info
-                            HashSet<String> data = new LinkedHashSet<String>();
-                            data.add(idTag.getHint().toString().trim() + "=" + idTag.getText().toString().trim().replace(",", ";"));
-                            data.add(idTattoo.getHint().toString().trim() + "=" + idTattoo.getText().toString().trim().replace(",", ";"));
-                            data.add(idRfid.getHint().toString().trim() + "=" + idRfid.getText().toString().trim().replace(",", ";"));
-                            data.add(idBrand.getHint().toString().trim() + "=" + idBrand.getText().toString().trim().replace(",", ";"));
-                            data.add(dob.getHint().toString().trim() + "=" + dob.getText().toString().trim().replace(",", ";"));
-                            data.add(ageYrs.getHint().toString().trim() + "=" + ageYrs.getText().toString().trim().replace(",", ";"));
-                            data.add(ageMths.getHint().toString().trim() + "=" + ageMths.getText().toString().trim().replace(",", ";"));
-                            data.add(lot.getHint().toString().trim() + "=" + lot.getText().toString().trim().replace(",", ";"));
-                            data.add(breed.getHint().toString().trim() + "=" + breed.getText().toString().trim().replace(",", ";"));
-                            data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim().replace(",", ";"));
+                        if(Integer.valueOf(ageYrs.getText().toString().trim()) == 0
+                                && Integer.valueOf(ageMths.getText().toString().trim())==0)
+                        {
+                            Toast.makeText(getApplicationContext(), "Age cannot be 0!", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                        {
+                            if (Integer.valueOf(ageYrs.getText().toString().trim()) <= 25 &&
+                                    Integer.valueOf(ageMths.getText().toString().trim()) <= 18) {
+                                //save bull info
+                                HashSet<String> data = new LinkedHashSet<String>();
+                                data.add(idTag.getHint().toString().trim() + "=" + idTag.getText().toString().trim().replace(",", ";"));
+                                data.add(idTattoo.getHint().toString().trim() + "=" + idTattoo.getText().toString().trim().replace(",", ";"));
+                                data.add(idRfid.getHint().toString().trim() + "=" + idRfid.getText().toString().trim().replace(",", ";"));
+                                data.add(idBrand.getHint().toString().trim() + "=" + idBrand.getText().toString().trim().replace(",", ";"));
+                                data.add(dob.getHint().toString().trim() + "=" + dob.getText().toString().trim().replace(",", ";"));
+                                data.add(ageYrs.getHint().toString().trim() + "=" + ageYrs.getText().toString().trim().replace(",", ";"));
+                                data.add(ageMths.getHint().toString().trim() + "=" + ageMths.getText().toString().trim().replace(",", ";"));
+                                data.add(lot.getHint().toString().trim() + "=" + lot.getText().toString().trim().replace(",", ";"));
+                                data.add(breed.getHint().toString().trim() + "=" + breed.getText().toString().trim().replace(",", ";"));
+                                data.add(comments.getHint().toString().trim() + "=" + comments.getText().toString().trim().replace(",", ";"));
 
-                            //capture timestamp
-                            Date cDate = new Date();
-                            String fDate = new SimpleDateFormat("dd-MM-yyyy hh.mm.ss").format(cDate);
+                                //capture timestamp
+                                Date cDate = new Date();
+                                String fDate = new SimpleDateFormat("dd-MM-yyyy hh.mm.ss").format(cDate);
 
-                            data.add("TimeStamp=" + fDate);
+                                data.add("TimeStamp=" + fDate);
 
-                            //persist VetInfo
-                            if (bullKey != null) {
-                                //saving key
-                                final Set<String> keySet = SharedPrefUtil.getValue(getApplicationContext(),
-                                        Constant.PREFS_BULL_INFO, Constant.KEY_BULL);
+                                //persist VetInfo
+                                if (bullKey != null) {
+                                    //saving key
+                                    final Set<String> keySet = SharedPrefUtil.getValue(getApplicationContext(),
+                                            Constant.PREFS_BULL_INFO, Constant.KEY_BULL);
                                 /*
                                 creating a copy of keySet because if sets retrieved from a shared pref file
                                 is modified, it could lead to unexpected behavior.
                                  */
-                                Set<String> keySet1 = null;
-                                if (keySet != null) {
-                                    keySet1 = new HashSet<String>();
-                                    Iterator<String> it = keySet.iterator();
-                                    while (it.hasNext()) {
-                                        keySet1.add(it.next());
-                                    }
-                                    if (!keySet1.contains(bullKey)) {
+                                    Set<String> keySet1 = null;
+                                    if (keySet != null) {
+                                        keySet1 = new HashSet<String>();
+                                        Iterator<String> it = keySet.iterator();
+                                        while (it.hasNext()) {
+                                            keySet1.add(it.next());
+                                        }
+                                        if (!keySet1.contains(bullKey)) {
+                                            keySet1.add(bullKey);
+                                        }
+                                    } else {
+                                        keySet1 = new HashSet<String>();
                                         keySet1.add(bullKey);
+
                                     }
-                                } else {
-                                    keySet1 = new HashSet<String>();
-                                    keySet1.add(bullKey);
 
-                                }
+                                    if (keySet1 != null && bullKey != null) {
+                                        SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_INFO,
+                                                Constant.KEY_BULL, keySet1);
 
-                                if (keySet1 != null && bullKey != null) {
-                                    SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_INFO,
-                                            Constant.KEY_BULL, keySet1);
+                                        //saving data
+                                        SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_INFO, bullKey, data);
+                                        Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
 
-                                    //saving data
-                                    SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_INFO, bullKey, data);
-                                    Toast.makeText(getApplicationContext(), "Saved!", Toast.LENGTH_SHORT).show();
-
-                                    //display
-                                    Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
-                                    goPrev.putExtra("bullKey", bullKey);
-                                    startActivity(goPrev);
+                                        //display
+                                        Intent goPrev = new Intent(getApplicationContext(), BullExam.class);
+                                        goPrev.putExtra("bullKey", bullKey);
+                                        startActivity(goPrev);
                                     /*Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
                                             Constant.PREFS_BULL_INFO, bullKey), fields);*/
+                                    } else {
+                                        Toast.makeText(getApplicationContext(), "Oops! could not save due to internal app error.", Toast.LENGTH_SHORT).show();
+                                    }
+
                                 } else {
-                                    Toast.makeText(getApplicationContext(), "Oops! could not save due to internal app error.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Oops! something went wrong. Please try again", Toast.LENGTH_SHORT).show();
                                 }
 
+
                             } else {
-                                Toast.makeText(getApplicationContext(), "Oops! something went wrong. Please try again", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Date or DOB not filled correctly", Toast.LENGTH_LONG).show();
+                                ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                             }
-
-
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Date or DOB not filled correctly", Toast.LENGTH_LONG).show();
-                            ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                            ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         }
+
+
 
                     } else {
                         Toast.makeText(getApplicationContext(), "At least one ID field should be filled", Toast.LENGTH_LONG).show();

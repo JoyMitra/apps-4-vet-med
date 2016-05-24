@@ -1,9 +1,12 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -16,9 +19,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.jar.Manifest;
 
 import edu.ksu.cis.a4vm.bse.Constants.Constant;
 import edu.ksu.cis.a4vm.bse.util.CreateCSV;
+import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
 
 /**
  * Created by Joydeep Mitra on 3/11/16.
@@ -31,6 +37,13 @@ public class EditCollections extends AppCompatActivity {
 
     public String grpId = null;
     public String ranchInfo = null;
+    // Storage Permissions
+    private static final int REQUEST_EXTERNAL_STORAGE = 1;
+    private static String[] PERMISSIONS_STORAGE = {
+            android.Manifest.permission.READ_EXTERNAL_STORAGE,
+            android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+    int permission = -1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +59,7 @@ public class EditCollections extends AppCompatActivity {
         TextView tvBull = (TextView) findViewById(R.id.editBulls);
         TextView tvExport = (TextView) findViewById(R.id.export);
         TextView tvEditGrp = (TextView) findViewById(R.id.editGrp);
+        permission = ActivityCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
         //TextView tvDelete = (TextView) findViewById(R.id.deleteGrp);
         if (ranchInfo!=null)
         {
@@ -79,21 +93,38 @@ public class EditCollections extends AppCompatActivity {
             public void onClick(View v) {
                 File file;
                 File root = Environment.getExternalStorageDirectory();
-                if (root.canWrite()){
+                if (permission != PackageManager.PERMISSION_GRANTED) {
+                    // We don't have permission so prompt the user
+                    ActivityCompat.requestPermissions(
+                            EditCollections.this,
+                            PERMISSIONS_STORAGE,
+                            REQUEST_EXTERNAL_STORAGE
+                    );
+                }
+                //if (root.canWrite()){
                     File dir = new File (root.getAbsolutePath() + "/bull_collections");
                     dir.mkdirs();
                     file   =   new File(dir, "Data.csv");
-                    FileOutputStream out   =   null;
                     try {
+                        if(!file.exists())
+                        {
+                            file.createNewFile();
+                        }
+                        FileOutputStream out   =   null;
+
                         out = new FileOutputStream(file);
-                    } catch (FileNotFoundException e) {
-                        Log.e(Constant.CSV_MSG,"CSV File not found");
-                        e.printStackTrace();
-                    }
-                    try {
+
                         String head = Constant.CSV_HEADING;
-                        out.write(head.getBytes());
+
                         ArrayList<ArrayList> list = CreateCSV.getData(getApplicationContext(),grpId);
+                        if(Constant.morphHeaders!=null)
+                        {
+                            for(int i=0;i<Constant.morphHeaders.size();i++)
+                            {
+                                    head = head + Constant.morphHeaders.get(i) + ",";
+                            }
+                        }
+                        out.write(head.getBytes());
                         if(list!=null)
                         {
                             for(int i=0;i<list.size();i++)
@@ -113,27 +144,24 @@ public class EditCollections extends AppCompatActivity {
 
                             }
                         }
+                        out.close();
+
                     } catch (IOException e) {
                         Log.e(Constant.CSV_MSG,"File writing error");
                         e.printStackTrace();
                     }
-                    try {
-                        out.close();
-                    } catch (IOException e) {
-                        Log.e(Constant.CSV_MSG,"File closing error");
-                        e.printStackTrace();
-                    }
+
 
                     Intent sendIntent = new Intent(Intent.ACTION_SEND);
                     sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Exported file");
                     sendIntent.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(file));
                     sendIntent.setType("text/html");
                     startActivityForResult(sendIntent, 119);
-                }
-                else
+                //}
+                /*else
                 {
                     Toast.makeText(getApplicationContext(),"Failed to mount dir!",Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
 

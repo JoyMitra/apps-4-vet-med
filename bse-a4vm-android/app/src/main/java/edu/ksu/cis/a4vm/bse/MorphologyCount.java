@@ -36,6 +36,7 @@ import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
 public class MorphologyCount extends AppCompatActivity {
 
     private String morphKey = null;
+    private String grpKey = null;
     //private Set<String> labels = null;
     private Set<String> initVals = null;
     private HashSet<String> morphologyLabels = null;
@@ -79,6 +80,8 @@ public class MorphologyCount extends AppCompatActivity {
         setContentView(R.layout.activity_morphology_count);
 
         morphKey = getIntent().getStringExtra("morphKey");
+        if(morphKey!=null)
+            grpKey = (morphKey.split("_"))[0];
 
     }
 
@@ -86,12 +89,14 @@ public class MorphologyCount extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
-        final MediaPlayer btnChangeSound = MediaPlayer.create(getApplicationContext(),R.raw.button_changed);
+        final MediaPlayer btnChangeSound = MediaPlayer.create(getApplicationContext(), R.raw.button_changed);
         final MediaPlayer limitRchdSound = MediaPlayer.create(getApplicationContext(), R.raw.limit_reached);
         initVals = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_BULL_MORPHOLOGY_INFO, morphKey);
+        /*morphologyLabels = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
+                Constant.PREFS_FILE_MORPH_INFO,Constant.KEY_MORPHOLOGY);*/
         morphologyLabels = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
-                Constant.PREFS_FILE_MORPH_INFO,Constant.KEY_MORPHOLOGY);
+                Constant.PREFS_GRP_MORPH_CONFIG,grpKey);
         TableLayout table = new TableLayout(this);
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -349,9 +354,9 @@ public class MorphologyCount extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     //SharedPrefUtil.saveGroup(getApplicationContext(),Constant.PREFS_BULL_MORPHOLOGY_INFO,morphKey,morphologyCounts);
-                    Intent goToEditCounts = new Intent(getApplicationContext(),EditMorphologyCounts.class);
-                    goToEditCounts.putExtra("morphKey", morphKey);
-                    startActivity(goToEditCounts);
+                    Intent gotoEditCount = new Intent(getApplicationContext(), EditMorphologyCounts.class);
+                    gotoEditCount.putExtra("morphKey", morphKey);
+                    startActivity(gotoEditCount);
                 }
             });
         }
@@ -396,6 +401,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -415,7 +421,8 @@ public class MorphologyCount extends AppCompatActivity {
         }
 
         if(btn2!=null)
-        {tv.setText("Total Count:"+Constant.sum);
+        {
+            tv.setText("Total Count:"+Constant.sum);
             btn2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -456,6 +463,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -513,6 +521,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -570,6 +579,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -627,6 +637,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -684,6 +695,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -741,6 +753,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -798,6 +811,7 @@ public class MorphologyCount extends AppCompatActivity {
                         else if(Constant.sum == limit)
                         {
                             limitRchdSound.start();
+                            Constant.sum++;
                         }
 
 
@@ -842,6 +856,7 @@ public class MorphologyCount extends AppCompatActivity {
                 morphologyCounts.add("TimeStamp="+fDate);
             }
             //saving count
+            morphologyCounts.add("Threshold="+this.limit);
             SharedPrefUtil.saveGroup(getApplicationContext(),Constant.PREFS_BULL_MORPHOLOGY_INFO,morphKey,morphologyCounts);
             //saving key
             final Set<String> keySet = SharedPrefUtil.getValue(getApplicationContext(), Constant.PREFS_MORPHOLOGY_COUNT_KEYS,

@@ -3,13 +3,15 @@ package edu.ksu.cis.a4vm.bse;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.HashSet;
@@ -30,6 +32,14 @@ public class EditMorphologyCounts extends AppCompatActivity {
     EditText et6 = null;
     EditText et7 = null;
     EditText et8 = null;
+    TextView tv1 = null;
+    TextView tv2 = null;
+    TextView tv3 = null;
+    TextView tv4 = null;
+    TextView tv5 = null;
+    TextView tv6 = null;
+    TextView tv7 = null;
+    TextView tv8 = null;
     int NormalCount = 0;
     double NormalProp = 0.0;
     int Lb2Count = 0;
@@ -46,8 +56,9 @@ public class EditMorphologyCounts extends AppCompatActivity {
     double Lb7Prop = 0.0;
     int Lb8Count = 0;
     double Lb8Prop = 0.0;
-    Double limit = 100.0;
+    Double limit = 150.0;
     String key = null;
+    String grpKey = null;
     public boolean valid = true;
 
     @Override
@@ -61,8 +72,12 @@ public class EditMorphologyCounts extends AppCompatActivity {
     {
         super.onResume();
         key = getIntent().getStringExtra("morphKey");
+        if(key!=null)
+            grpKey = (key.split("_"))[0];
+        /*fields = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
+                Constant.PREFS_FILE_MORPH_INFO, Constant.KEY_MORPHOLOGY);*/
         fields = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
-                Constant.PREFS_FILE_MORPH_INFO, Constant.KEY_MORPHOLOGY);
+                Constant.PREFS_GRP_MORPH_CONFIG,grpKey);
         morphInfo = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_BULL_MORPHOLOGY_INFO, key);
         TableLayout table = new TableLayout(this);
@@ -145,9 +160,12 @@ public class EditMorphologyCounts extends AppCompatActivity {
 
         row = new TableRow(this);
         et1 = new EditText(this);
-        et1.setText("Normal:" + NormalCount);
-        row.addView(et1, cellLp);
-        table.addView(row, rowLp);
+        et1.setText(""+NormalCount);
+        tv1 = new TextView(this);
+        tv1.setText("Normal");
+        row.addView(tv1);
+        row.addView(et1);
+        table.addView(row);
         setContentView(table);
         if(fields!=null)
         {
@@ -163,45 +181,55 @@ public class EditMorphologyCounts extends AppCompatActivity {
             {
                 String label = it.next();
                 String text[] = label.split("=");
+                String txt = null;
+                if(text!=null && text.length==2)
+                {
+                    txt = text[1];
+                }
                 if(label.contains("Morphology Field 2"))
                 {
                     et2 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et2.setText(text[1]+ ":"+ Lb2Count);
-                    }
-                    et2.setHeight(300);
+
+                    et2.setText(""+Lb2Count);
+                    et2.setHeight(150);
+                    tv2 = new TextView(this);
+                    tv2.setText(txt);
+                    tv2.setHeight(150);
+                    row2.addView(tv2);
                     row2.addView(et2);
                 }
                 else if(label.contains("Morphology Field 4"))
                 {
                     et4 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et4.setText(text[1]+ ":"+ Lb4Count);
-                    }
-                    et4.setHeight(300);
+                    et4.setHeight(150);
+                    et4.setText(""+Lb4Count);
+                    tv4 = new TextView(this);
+                    tv4.setText(txt);
+                    tv4.setHeight(150);
+                    row3.addView(tv4);
                     row3.addView(et4);
                 }
                 else if(label.contains("Morphology Field 6"))
                 {
                     et6 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et6.setText(text[1]+ ":"+ Lb6Count);
-                    }
-                    et6.setHeight(300);
+                    et6.setHeight(150);
+                    et6.setText(""+Lb6Count);
+                    tv6 = new TextView(this);
+                    tv6.setText(txt);
+                    tv6.setHeight(150);
+                    row4.addView(tv6);
                     row4.addView(et6);
                 }
                 else if(label.contains("Morphology Field 8"))
                 {
                     et8 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et8.setText(text[1]+ ":"+ Lb8Count);
-                    }
                     //btn = new EditText(this);
-                    et8.setHeight(300);
+                    et8.setHeight(150);
+                    et8.setText(""+Lb8Count);
+                    tv8 = new TextView(this);
+                    tv8.setText(txt);
+                    tv8.setHeight(150);
+                    row5.addView(tv8);
                     row5.addView(et8);
                     //row5.addView(btn);
                 }
@@ -212,6 +240,12 @@ public class EditMorphologyCounts extends AppCompatActivity {
             {
                 String label = it.next();
                 String text[] = label.split("=");
+                String txt = null;
+                if(text!=null && text.length==2)
+                {
+                    txt = text[1];
+
+                }
                 if(label.contains("Limit"))
                 {
                     if(text!=null && text.length==2)
@@ -222,31 +256,34 @@ public class EditMorphologyCounts extends AppCompatActivity {
                 else if(label.contains("Morphology Field 3"))
                 {
                     et3 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et3.setText(text[1] + ":"+ Lb3Count);
-                    }
-                    et3.setHeight(300);
+                    et3.setText(""+Lb3Count);
+                    et3.setHeight(150);
+                    tv3 = new TextView(this);
+                    tv3.setText(txt);
+                    tv3.setHeight(150);
+                    row2.addView(tv3);
                     row2.addView(et3);
                 }
                 else if(label.contains("Morphology Field 5"))
                 {
                     et5 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et5.setText(text[1]+ ":"+ Lb5Count);
-                    }
-                    et5.setHeight(300);
+                    et5.setHeight(150);
+                    et5.setText("" + Lb5Count);
+                    tv5 = new TextView(this);
+                    tv5.setText(txt);
+                    tv5.setHeight(150);
+                    row3.addView(tv5);
                     row3.addView(et5);
                 }
                 else if(label.contains("Morphology Field 7"))
                 {
                     et7 = new EditText(this);
-                    if(text!=null && text.length==2)
-                    {
-                        et7.setText(text[1]+ ":"+ Lb7Count);
-                    }
-                    et7.setHeight(300);
+                    et7.setHeight(150);
+                    et7.setText(""+Lb7Count);
+                    tv7 = new TextView(this);
+                    tv7.setText(txt);
+                    tv7.setHeight(150);
+                    row4.addView(tv7);
                     row4.addView(et7);
                 }
 
@@ -259,202 +296,294 @@ public class EditMorphologyCounts extends AppCompatActivity {
             table.addView(row5,rowLp);
 
         }
-        
-        et1.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et1.getText().toString().trim();
-                if(entry.contains(":") && entry.split(":").length==2)
-                {
-                    String[] texts = entry.split(":");
-                    NormalCount = Integer.valueOf(texts[1]);
-                    if(NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit)
-                    {
-                        Toast.makeText(getApplicationContext(),"Total count cannot be greater than set limit",Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    }
-                    else
-                        valid = true;
+
+        if(et1!=null)
+        {
+            et1.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-            }
-        });
 
-        et2.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et2.getText().toString().trim();
-                if(entry.contains(":") && entry.split(":").length==2)
-                {
-                    String[] texts = entry.split(":");
-                    Lb2Count = Integer.valueOf(texts[1]);
-                    if(NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit)
-                    {
-                        Toast.makeText(getApplicationContext(),"Total count cannot be greater than set limit",Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    }
-                    else
-                        valid = true;
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
 
                 }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-            }
-        });
 
-        et3.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et3.getText().toString().trim();
-                if (entry.contains(":") && entry.split(":").length == 2) {
-                    String[] texts = entry.split(":");
-                    Lb3Count = Integer.valueOf(texts[1]);
-                    if (NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
-                        Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    } else
-                        valid = true;
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et1.getText().toString().trim();
 
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-            }
-        });
-
-        et4.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et4.getText().toString().trim();
-                if (entry.contains(":") && entry.split(":").length == 2) {
-                    String[] texts = entry.split(":");
-                    Lb4Count = Integer.valueOf(texts[1]);
-                    if (NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
-                        Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    } else
-                        valid = true;
-
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-            }
-        });
-
-        et5.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et5.getText().toString().trim();
-                if (entry.contains(":") && entry.split(":").length == 2) {
-                    String[] texts = entry.split(":");
-                    Lb5Count = Integer.valueOf(texts[1]);
-                    if (NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
-                        Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    } else
-                        valid = true;
-
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-
-            }
-        });
-
-        et6.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et6.getText().toString().trim();
-                if (entry.contains(":") && entry.split(":").length == 2) {
-                    String[] texts = entry.split(":");
-                    Lb6Count = Integer.valueOf(texts[1]);
-                    if (NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
-                        Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    } else
-                        valid = true;
-
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-            }
-        });
-
-        et7.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                String entry = et7.getText().toString().trim();
-                if(entry.contains(":") && entry.split(":").length==2)
-                {
-                    String[] texts = entry.split(":");
-                    Lb7Count = Integer.valueOf(texts[1]);
-                    if(NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit)
-                    {
-                        Toast.makeText(getApplicationContext(),"Total count cannot be greater than set limit",Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    }
-                    else
-                        valid = true;
-
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                    valid = false;
-                }
-            }
-        });
-
-        et8.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                try{
-                    String entry = et8.getText().toString().trim();
-                    if(entry.contains(":") && entry.split(":").length==2)
-                    {
-                        String[] texts = entry.split(":");
-                        Lb8Count = Integer.valueOf(texts[1]);
-                        if(NormalCount + Lb2Count + Lb3Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit)
-                        {
-                            Toast.makeText(getApplicationContext(),"Total count cannot be greater than set limit",Toast.LENGTH_SHORT).show();
+                        try {
+                            NormalCount = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
                             valid = false;
                         }
-                        else
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
                             valid = true;
 
-                    }
-                    else
-                    {
-                        Toast.makeText(getApplicationContext(),"Invalid input! edit only value",Toast.LENGTH_SHORT).show();
-                        valid = false;
-                    }
+
                 }
-                catch(Exception e)
-                {
-                    Toast.makeText(getApplicationContext(),"App failed!",Toast.LENGTH_SHORT).show();
+            });
+        }
+
+
+        if(et2!=null)
+        {
+            et2.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
                 }
 
-            }
-        });
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et2.getText().toString().trim();
+
+                        try {
+                            Lb2Count = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        }
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
+                            valid = true;
+
+                }
+            });
+        }
+
+
+        if(et3!=null)
+        {
+            et3.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et3.getText().toString().trim();
+                        try {
+                            Lb3Count = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        }
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
+                            valid = true;
+
+
+                }
+            });
+
+        }
+
+        if(et4!=null)
+        {
+            et4.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et4.getText().toString().trim();
+
+                        try {
+                            Lb4Count = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        }
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
+                            valid = true;
+
+
+                }
+            });
+        }
+
+        if(et5!=null)
+        {
+            et5.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et5.getText().toString().trim();
+
+                        try {
+                            Lb5Count = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        }
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
+                            valid = true;
+
+
+                }
+            });
+
+        }
+
+        if(et6!=null)
+        {
+            et6.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et6.getText().toString().trim();
+
+                        try {
+                            Lb6Count = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        }
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
+                            valid = true;
+
+
+                }
+            });
+
+        }
+
+        if(et7!=null)
+        {
+            et7.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    String entry = et7.getText().toString().trim();
+
+                        try {
+                            Lb7Count = Integer.valueOf(entry);
+                        } catch (NumberFormatException ne) {
+                            ne.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        }
+                        if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                            Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                            valid = false;
+                        } else
+                            valid = true;
+
+
+                }
+            });
+
+        }
+
+        if(et8!=null)
+        {
+            et8.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                }
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    try {
+                        String entry = et8.getText().toString().trim();
+
+                            try {
+                                Lb8Count = Integer.valueOf(entry);
+                            } catch (NumberFormatException ne) {
+                                ne.printStackTrace();
+                                Toast.makeText(getApplicationContext(), "Only numeric values allowed", Toast.LENGTH_SHORT).show();
+                                valid = false;
+                            }
+                            if (NormalCount + Lb2Count + Lb3Count + Lb4Count + Lb5Count + Lb6Count + Lb7Count + Lb8Count > limit) {
+                                Toast.makeText(getApplicationContext(), "Total count cannot be greater than set limit", Toast.LENGTH_SHORT).show();
+                                valid = false;
+                            } else
+                                valid = true;
+
+
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "App failed!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
 
     }
 
@@ -466,12 +595,20 @@ public class EditMorphologyCounts extends AppCompatActivity {
         HashSet<String> editVals = new HashSet<String>();
         if(et1!=null)
         {
-            if(et1.getText().toString().trim().contains(":") && et1.getText().toString().trim().split(":").length==2)
+            String text = et1.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et1.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et1.getText().toString().trim().replace(":","=") + "(" + String.format("%.2f",prop) + "%)");
+                try{
+                    Double count = Double.valueOf(text);
+                    Double prop = (count/limit)*150.0;
+                    editVals.add(tv1.getText().toString().trim() + "=" + text + "(" + String.format("%.2f",prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
+
             }
             else
                 valid = false;
@@ -480,12 +617,22 @@ public class EditMorphologyCounts extends AppCompatActivity {
         }
         if(et2!=null)
         {
-            if(et2.getText().toString().trim().contains(":") && et2.getText().toString().trim().split(":").length==2)
+            String text = et2.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et2.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et2.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv2.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
+
             }
             else
                 valid = false;
@@ -494,12 +641,20 @@ public class EditMorphologyCounts extends AppCompatActivity {
 
         if(et3!=null)
         {
-            if(et3.getText().toString().trim().contains(":") && et3.getText().toString().trim().split(":").length==2)
+            String text = et3.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et3.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et3.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv3.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
             }
             else
                 valid = false;
@@ -508,12 +663,20 @@ public class EditMorphologyCounts extends AppCompatActivity {
         }
         if(et4!=null)
         {
-            if(et4.getText().toString().trim().contains(":") && et4.getText().toString().trim().split(":").length==2)
+            String text = et4.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et4.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et4.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv4.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
             }
             else
                 valid = false;
@@ -522,12 +685,20 @@ public class EditMorphologyCounts extends AppCompatActivity {
         }
         if(et5!=null)
         {
-            if(et5.getText().toString().trim().contains(":") && et5.getText().toString().trim().split(":").length==2)
+            String text = et5.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et5.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et5.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv5.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
             }
             else
                 valid = false;
@@ -536,12 +707,20 @@ public class EditMorphologyCounts extends AppCompatActivity {
         }
         if(et6!=null)
         {
-            if(et6.getText().toString().trim().contains(":") && et6.getText().toString().trim().split(":").length==2)
+            String text = et6.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et6.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et6.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv6.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
             }
             else
                 valid = false;
@@ -550,12 +729,20 @@ public class EditMorphologyCounts extends AppCompatActivity {
         }
         if(et7!=null)
         {
-            if(et7.getText().toString().trim().contains(":") && et7.getText().toString().trim().split(":").length==2)
+            String text = et7.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et7.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et7.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv7.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
             }
             else
                 valid = false;
@@ -564,12 +751,25 @@ public class EditMorphologyCounts extends AppCompatActivity {
         }
         if(et8!=null)
         {
-            if(et8.getText().toString().trim().contains(":") && et8.getText().toString().trim().split(":").length==2)
+            String text = et8.getText().toString().trim();
+            if(text.length()>0)
             {
-                String[] text = et8.getText().toString().trim().split(":");
-                Double count = Double.valueOf(text[1]);
-                Double prop = (count/limit)*100.0;
-                editVals.add(et8.getText().toString().trim().replace(":", "=") + "(" + String.format("%.2f",prop) + "%)");
+                try {
+                    Double count = Double.valueOf(text);
+
+                    Double prop = (count / limit) * 150.0;
+                    editVals.add(tv8.getText().toString().trim() + "=" + text + "(" + String.format("%.2f", prop) + "%)");
+                }
+                catch(NumberFormatException ne)
+                {
+                    ne.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Only numeric values allowed",Toast.LENGTH_SHORT).show();
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"Oops! unexpected error occured",Toast.LENGTH_SHORT).show();
+                }
             }
             else
                 valid = false;
@@ -577,7 +777,11 @@ public class EditMorphologyCounts extends AppCompatActivity {
 
         }
         if(valid && key!=null)
-            SharedPrefUtil.saveGroup(getApplicationContext(),Constant.PREFS_BULL_MORPHOLOGY_INFO,key,editVals);
+        {
+            SharedPrefUtil.saveGroup(getApplicationContext(), Constant.PREFS_BULL_MORPHOLOGY_INFO, key, editVals);
+            Toast.makeText(getApplicationContext(),"Saved!",Toast.LENGTH_SHORT).show();
+        }
+
         else
             Toast.makeText(getApplicationContext(),"Could not save invalid data",Toast.LENGTH_SHORT).show();
 

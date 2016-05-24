@@ -140,7 +140,17 @@ public class MeasurementsTable extends AppCompatActivity {
             public void onClick(View v) {
                 if (valid1 && valid2 && valid3 && valid4 && valid5 && valid6 && valid8) {
                     LinkedHashSet<String> data = new LinkedHashSet<String>();
-                    data.add(field1.getHint().toString().trim() + "=" + field1.getText().toString().trim().replace(",", ";"));
+                    String text = field1.getText().toString().trim();
+                    if(text.length() > 0 && text.contains("."))
+                    {
+                        String[] txtparts = text.split("\\.");
+                        if(txtparts!=null && txtparts[1].length()>1)
+                        {
+                            text = text.substring(0,text.indexOf(".")+2);
+                        }
+
+                    }
+                    data.add(field1.getHint().toString().trim() + "=" + text.replace(",", ";"));
                     data.add(field2.getHint().toString().trim() + "=" + field2.getText().toString().trim().replace(",", ";"));
                     data.add(field3.getHint().toString().trim() + "=" + field3.getText().toString().trim().replace(",", ";"));
                     data.add(field4.getHint().toString().trim() + "=" + field4.getText().toString().trim().replace(",", ";"));
@@ -197,15 +207,37 @@ public class MeasurementsTable extends AppCompatActivity {
                         if (text.length() == 0 || (Float.valueOf(text) >= 0.0 && Float.valueOf(text) < 61.0)) {
                             field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                             valid1 = true;
-                        } else {
+                        }
+
+                        else {
                             field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                             valid1 = false;
                             Toast.makeText(getApplicationContext(), "Value must be between 0-60", Toast.LENGTH_SHORT).show();
                         }
+                        /*if(valid1)
+                        {
+                            if(text.length() > 0 && text.contains("."))
+                            {
+                                String[] txtparts = text.split("\\.");
+                                if(txtparts!=null && txtparts[1].length()>1)
+                                {
+                                    field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                                    valid1 = false;
+                                    Toast.makeText(getApplicationContext(), "Precision more than 1 decimal place not allowed", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        }*/
+
                     } catch (NumberFormatException ne) {
                         field1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         valid1 = false;
-                        Toast.makeText(getApplicationContext(), "Invalid entry", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Number expected", Toast.LENGTH_SHORT).show();
+                    }
+                    catch (Exception e)
+                    {
+                        e.printStackTrace();
+                        Toast.makeText(getApplicationContext(), e.toString() + " Unexpected error due to invalid entry", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
