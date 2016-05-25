@@ -40,7 +40,9 @@ class BullInfoViewController: UIViewController {
         age  = String(Y);
         bull ["AgeYear"] = age;
         Years.text = age;
-        Datelabel.text = (bull["AgeMonth"] as? String)! + "Months " + (bull["AgeYear"] as? String)! + "Years"
+        
+        Datelabel.text = (bull["AgeYear"] as? String)! + " Years" + (bull["AgeMonth"] as? String)! + " Months";
+        
         bull.pinInBackground();
     }
     

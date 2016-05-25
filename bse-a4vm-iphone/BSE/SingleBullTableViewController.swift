@@ -328,7 +328,7 @@ if(bull["grossType"] as! String != "" && bull["individualMotility"]as! String !=
         
         else if (segue.identifier == "viewSemenQuality"){
             let semenQuality = segue.destinationViewController as! MorphologyTableViewController;
-            
+            semenQuality.group = self.group;
             semenQuality.bull = self.bull;
         }
         

@@ -123,7 +123,7 @@ class BullMatingViewController: UIViewController , UIPickerViewDataSource, UIPic
         bull.pinInBackground();
 
     }
-    @IBAction func singleMultiIndexCHanged(sender: UISegmentedControl) {
+    @IBAction func singleMultiIndexCHanged(sender: AnyObject) {
         switch singleMuti.selectedSegmentIndex
         {
         case 0:

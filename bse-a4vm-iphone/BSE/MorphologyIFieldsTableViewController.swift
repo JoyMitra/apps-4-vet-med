@@ -86,11 +86,11 @@ class MorphologyIFieldsTableViewController: UITableViewController, UITextFieldDe
             user["m7"] = m7.text;
         }
         
-        if(m1.text != nil){
+        if(m8.text != nil){
             user["m8"] = m8.text;
         }
-        if(m1.text != nil){
-            user["m9"] = m8.text;
+        if(m9.text != nil){
+            user["m9"] = m9.text;
         }
         if(TH1.text != nil){
             user["th1"] = TH1.text

@@ -34,7 +34,7 @@ class SemenCounterViewController: UIViewController {
     var totalCount = 0.0;
     var sound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-03", ofType: "wav")!);
     var audioplayer = AVAudioPlayer()
-    var sound2 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-01a", ofType: "wav")!);
+    var sound2 = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("beep-01a", ofType: "mp3")!);
     var audioplayer2 = AVAudioPlayer()
     var title1 : String = "";
     var title2 : String = "";
@@ -50,7 +50,7 @@ class SemenCounterViewController: UIViewController {
     
     var bull : PFObject!;
     var collection : PFObject!;
-    
+    var group: PFObject!;
     var user : PFUser!;
     
     var button1 : UIButton!;
@@ -135,74 +135,74 @@ class SemenCounterViewController: UIViewController {
         self.title = "Total Count: " + String(totalCount);
 
         
-        if let _ = user["m1"]{
-            title1 = user["m1"] as! String;
+        if let _ = group["m1"]{
+            title1 = group["m1"] as! String;
         }
-        if let _ = user["m2"]{
-            title2 = user["m2"] as! String;
+        if let _ = group["m2"]{
+            title2 = group["m2"] as! String;
         }
-        if let _ = user["m2"]{
-            title3 = user["m3"] as! String;
+        if let _ = group["m2"]{
+            title3 = group["m3"] as! String;
         }
-        if let _ = user["m4"]{
-            title4 = user["m4"] as! String;
+        if let _ = group["m4"]{
+            title4 = group["m4"] as! String;
         }
-        if let _ = user["m5"]{
-            title5 = user["m5"] as! String;
+        if let _ = group["m5"]{
+            title5 = group["m5"] as! String;
         }
-        if let _ = user["m6"]{
-            title6 = user["m6"] as! String;
+        if let _ = group["m6"]{
+            title6 = group["m6"] as! String;
         }
-        if let _ = user["m7"]{
-            title7 = user["m7"] as! String;
+        if let _ = group["m7"]{
+            title7 = group["m7"] as! String;
         }
-        if let _ = user["m8"]{
-            title8 = user["m8"] as! String;
+        if let _ = group["m8"]{
+            title8 = group["m8"] as! String;
         }
-        if let _ = user["m9"]{
-            title9 = user["m9"] as! String;
+        if let _ = group["m9"]{
+            title9 = group["m9"] as! String;
         }
         
         if(title1 != ""){
-            title1 = user["m1"] as! String;
+            title1 = group["m1"] as! String;
             button1 = UIButton(frame: CGRectMake(10, 68, buttonWidth+buttonWidth+10, buttonHeight));
             button1.backgroundColor = UIColor.blueColor();
             button1.setTitle(title1 + ": " + String(Int(button1Count)) +  " :" + String(Int(button1P*100)/100) + "%", forState: UIControlState.Normal)
             button1.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button1.addTarget(self, action: "pressed1:", forControlEvents: UIControlEvents.TouchUpInside)
+            button1.addTarget(self, action: #selector(SemenCounterViewController.pressed1(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button1.tag = 20;
             self.view.addSubview(button1);
         }
         
         if(title2 != ""){
-            title2 = user["m2"] as! String;
+            title2 = group["m2"] as! String;
             button2 = UIButton(frame: CGRectMake(10, buttonHeight + 78, buttonWidth, buttonHeight));
             button2.backgroundColor = UIColor.blueColor();
             button2.setTitle(title2 + ": " + String(Int(button2Count)) +  " :" + String(Int(button2P*100)/100) + "%", forState: UIControlState.Normal)
             button2.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button2.addTarget(self, action: "pressed2:", forControlEvents: UIControlEvents.TouchUpInside)
+            button2.addTarget(self, action: #selector(SemenCounterViewController.pressed2(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button2.tag = 21;
             self.view.addSubview(button2);
         }
         
         if(title3 != ""){
-            title3 = user["m3"] as! String;
+            title3 = group["m3"] as! String;
             button3 = UIButton(frame: CGRectMake(10 + (width / 2), buttonHeight + 78, buttonWidth, buttonHeight));
             button3.backgroundColor = UIColor.greenColor();
             button3.setTitle(title3 + ": " + String(Int(button3Count)) +  " :" + String(Int(button3P*100)/100) + "%", forState: UIControlState.Normal)
             button3.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button3.addTarget(self, action: "pressed3:", forControlEvents: UIControlEvents.TouchUpInside)
+            button3.addTarget(self, action: #selector(SemenCounterViewController.pressed3(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button3.tag = 22;
             self.view.addSubview(button3);
         }
 
         if(title4 != ""){
-            title3 = user["m4"] as! String;
+            title4 = group["m4"] as! String;
             button4 = UIButton(frame: CGRectMake(10, (buttonHeight * 2) + 88, buttonWidth, buttonHeight));
             button4.backgroundColor = UIColor.redColor();
             button4.setTitle(title4 + ": " + String(Int(button4Count)) +  " :" + String(Int(button4P*100)/100) + "%", forState: UIControlState.Normal)
             button4.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button4.addTarget(self, action: "pressed4:", forControlEvents: UIControlEvents.TouchUpInside)
+            button4.addTarget(self, action: #selector(SemenCounterViewController.pressed4(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button4.tag = 23;
             self.view.addSubview(button4);
         }
@@ -212,7 +212,7 @@ class SemenCounterViewController: UIViewController {
             button5.backgroundColor = UIColor.orangeColor();
             button5.setTitle(title5 + ": " + String(Int(button5Count)) +  " :" + String(Int(button5P*100)/100) + "%", forState: UIControlState.Normal)
             button5.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button5.addTarget(self, action: "pressed5:", forControlEvents: UIControlEvents.TouchUpInside)
+            button5.addTarget(self, action: #selector(SemenCounterViewController.pressed5(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button5.tag = 24;
             self.view.addSubview(button5);
         }
@@ -222,7 +222,7 @@ class SemenCounterViewController: UIViewController {
             button6.backgroundColor = UIColor.purpleColor();
             button6.setTitle(title6 + ": " + String(Int(button6Count)) +  " :" + String(Int(button6P*100)/100) + "%", forState: UIControlState.Normal)
             button6.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button6.addTarget(self, action: "pressed6:", forControlEvents: UIControlEvents.TouchUpInside)
+            button6.addTarget(self, action: #selector(SemenCounterViewController.pressed6(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button6.tag = 25;
             self.view.addSubview(button6);
         }
@@ -230,10 +230,10 @@ class SemenCounterViewController: UIViewController {
         
         if(title7 != ""){
             button7 = UIButton(frame: CGRectMake(10 + (width / 2), (buttonHeight * 3) + 98, buttonWidth, buttonHeight));
-            button7.backgroundColor = UIColor.yellowColor();
+            button7.backgroundColor = UIColor.cyanColor();
             button7.setTitle(title7 + ": " + String(Int(button7Count)) +  " :" + String(Int(button7P*100)/100) + "%", forState: UIControlState.Normal)
             button7.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button7.addTarget(self, action: "pressed7:", forControlEvents: UIControlEvents.TouchUpInside)
+            button7.addTarget(self, action: #selector(SemenCounterViewController.pressed7(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button7.tag = 26;
             self.view.addSubview(button7);
         }
@@ -244,7 +244,7 @@ class SemenCounterViewController: UIViewController {
             button8.backgroundColor = UIColor.grayColor();
             button8.setTitle(title7 + ": " + String(Int(button8Count)) +  " :" + String(Int(button8P*100)/100) + "%", forState: UIControlState.Normal)
             button8.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button8.addTarget(self, action: "pressed8:", forControlEvents: UIControlEvents.TouchUpInside)
+            button8.addTarget(self, action: #selector(SemenCounterViewController.pressed8(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button8.tag = 27;
             self.view.addSubview(button8);
         }
@@ -255,7 +255,7 @@ class SemenCounterViewController: UIViewController {
             button9.backgroundColor = UIColor.blackColor();
             button9.setTitle(title8 + ": " + String(Int(button9Count)) +  " :" + String(Int(button9P*100)/100) + "%", forState: UIControlState.Normal)
             button9.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping;
-            button9.addTarget(self, action: "pressed9:", forControlEvents: UIControlEvents.TouchUpInside)
+            button9.addTarget(self, action: #selector(SemenCounterViewController.pressed9(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             button9.tag = 28;
             self.view.addSubview(button9);
         }
@@ -266,7 +266,7 @@ class SemenCounterViewController: UIViewController {
         edit.backgroundColor = UIColor.whiteColor();
         edit.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         edit.setTitle( "Edit Fields", forState: UIControlState.Normal)
-        edit.addTarget(self, action: "pressededit:", forControlEvents: UIControlEvents.TouchUpInside)
+        edit.addTarget(self, action: #selector(SemenCounterViewController.pressededit(_:)), forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(edit);
 
         // Do any additional setup after loading the view.
@@ -315,8 +315,8 @@ class SemenCounterViewController: UIViewController {
         {audioplayer2.play()}
         
         
-        button1Count++;
-        totalCount++;
+        button1Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -395,8 +395,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 2 && temp != 0)
         {audioplayer2.play()}
         
-        button2Count++;
-        totalCount++;
+        button2Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -476,8 +476,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 3 && temp != 0)
         {audioplayer2.play()}
         
-        button3Count++;
-        totalCount++;
+        button3Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -556,8 +556,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 4 && temp != 0)
         {audioplayer2.play()}
         
-        button4Count++;
-        totalCount++;
+        button4Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -637,8 +637,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 5 && temp != 0)
         {audioplayer2.play()}
     
-        button5Count++;
-        totalCount++;
+        button5Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -717,8 +717,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 6 && temp != 0)
         {audioplayer2.play()}
         
-        button6Count++;
-        totalCount++;
+        button6Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -797,8 +797,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 7 && temp != 0)
         {audioplayer2.play()}
         
-        button7Count++;
-        totalCount++;
+        button7Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -877,8 +877,8 @@ class SemenCounterViewController: UIViewController {
         if(temp != 8 && temp != 0)
         {audioplayer2.play()}
         
-        button8Count++;
-        totalCount++;
+        button8Count += 1;
+        totalCount += 1;
         button1P = button1Count/totalCount * 100;
         button2P = button2Count/totalCount * 100;
         button3P = button3Count/totalCount * 100;
@@ -958,8 +958,8 @@ class SemenCounterViewController: UIViewController {
             if(temp != 9 && temp != 0)
             {audioplayer2.play()}
             
-            button9Count++;
-            totalCount++;
+            button9Count += 1;
+            totalCount += 1;
             button1P = button1Count/totalCount * 100;
             button2P = button2Count/totalCount * 100;
             button3P = button3Count/totalCount * 100;

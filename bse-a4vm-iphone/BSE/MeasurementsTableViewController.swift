@@ -102,11 +102,11 @@ class MeasurementsTableViewController: UITableViewController {
         if(frameScore.text != "")
         {
             let temp  = Float(frameScore.text!)
-            var temp1:Int = Int (temp!)
-            var temp2 : Float = Float (temp!)
-            temp1=temp1*2
-            temp2=temp2*2
-            if((temp>20 || temp<1) || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
+            var temp1: Float = Float (temp!)
+            temp1=temp1*10
+            let temp2 : Int = Int (temp1)
+            
+            if((temp>20 || temp<1) )
             {
                 let alert = UIAlertController(title: "WARNING! Frame Score", message: " This field can not be more than 20 and less than 1 (only increments of .5), do you wish to continue anyway or change it?", preferredStyle: .Alert)
                 
@@ -127,6 +127,10 @@ class MeasurementsTableViewController: UITableViewController {
                 
                 
             }
+            if ( Float (temp2) != temp1 )
+            {
+                self.frameScore.text = String(Float(Int(temp!*10))/10);
+            }
             
             
         }
@@ -136,13 +140,14 @@ class MeasurementsTableViewController: UITableViewController {
         if(pelvicY.text != "")
         {
             let temp  = Float(pelvicY.text!)
-            var temp1:Int = Int (temp!)
-            var temp2 : Float = Float (temp!)
+            var temp1: Float = Float (temp!)
             temp1=temp1*10
-            temp2=temp2*10
-            if((temp>30 || temp<8) || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
+            let temp2 : Int = Int (temp1)
+            
+            
+            if((temp>30 || temp<8))
             {
-                let alert = UIAlertController(title: "WARNING! Pelvic Y Measure", message: " This field can not be more than 30 and less than 8 (only increments of .5), do you wish to continue anyway or change it?", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "WARNING! Pelvic Y Measure", message: " This field can not be more than 30 and less than 8 (only increments of .1), do you wish to continue anyway or change it?", preferredStyle: .Alert)
                 
                 //2. Add the text field. You can configure it however you need.
                 alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
@@ -161,7 +166,10 @@ class MeasurementsTableViewController: UITableViewController {
                 
                 
             }
-            
+            if ( Float (temp2) != temp1 )
+            {
+                self.pelvicY.text = String(Float(Int(temp!*10))/10);
+            }
             
         }
 
@@ -170,13 +178,13 @@ class MeasurementsTableViewController: UITableViewController {
         if(pelvicX.text != "")
         {
             let temp  = Float(pelvicX.text!)
-            var temp1:Int = Int (temp!)
-            var temp2 : Float = Float (temp!)
+            var temp1: Float = Float (temp!)
             temp1=temp1*10
-            temp2=temp2*10
-            if((temp>30 || temp<8) || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
+            let temp2 : Int = Int (temp1)
+
+            if((temp>30 || temp<8) )
             {
-                let alert = UIAlertController(title: "WARNING! Pelvic X Measure", message: " This field can not be more than 30 and less than 8 (only increments of .5), do you wish to continue anyway or change it?", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "WARNING! Pelvic X Measure", message: " This field can not be more than 30 and less than 8 (only increments of .1), do you wish to continue anyway or change it?", preferredStyle: .Alert)
                 
                 //2. Add the text field. You can configure it however you need.
                 alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
@@ -195,7 +203,11 @@ class MeasurementsTableViewController: UITableViewController {
                 
                 
             }
-            
+            if ( Float (temp2) != temp1 )
+            {
+                self.pelvicX.text = String(Float(Int(temp!*10))/10);
+            }
+
             
         }
 
@@ -204,13 +216,13 @@ class MeasurementsTableViewController: UITableViewController {
         if(bodyCondition.text != "")
         {
             let temp  = Float(bodyCondition.text!)
-            var temp1:Int = Int (temp!)
-            var temp2 : Float = Float (temp!)
+            var temp1: Float = Float (temp!)
             temp1=temp1*10
-            temp2=temp2*10
-            if(temp>9 || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
+            let temp2 : Int = Int (temp1)
+            
+            if(temp>9 )
             {
-                let alert = UIAlertController(title: "WARNING! Body Circumference ", message: " This field can not be more than 9 (only increments of .5), do you wish to continue anyway or change it?", preferredStyle: .Alert)
+                let alert = UIAlertController(title: "WARNING! Body Circumference ", message: " This field can not be more than 9 (only increments of .1), do you wish to continue anyway or change it?", preferredStyle: .Alert)
                 
                 //2. Add the text field. You can configure it however you need.
                 alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
@@ -229,7 +241,11 @@ class MeasurementsTableViewController: UITableViewController {
                 
                 
             }
-            
+            if ( Float (temp2) != temp1 )
+            {
+                self.bodyCondition.text = String(Float(Int(temp!*10))/10);
+            }
+
             
         }
 
@@ -240,11 +256,12 @@ class MeasurementsTableViewController: UITableViewController {
         if(scrotalCircumference.text != "")
         {
             let temp  = Float(scrotalCircumference.text!)
-            var temp1:Int = Int (temp!)
-            var temp2 : Float = Float (temp!)
+            var temp1: Float = Float (temp!)
             temp1=temp1*10
-            temp2=temp2*10
-            if(temp>60 || ( Float (temp1) != temp2  && Float(temp1) + 1 != temp2))
+            let temp2 : Int = Int (temp1)
+            
+
+            if(temp>60 )
             {
                 let alert = UIAlertController(title: "WARNING! Scrotal Circumference", message: " This field can not be more than 60cm (only increments of .5), do you wish to continue anyway or change it?", preferredStyle: .Alert)
                 
@@ -265,7 +282,11 @@ class MeasurementsTableViewController: UITableViewController {
                 
                 
             }
-            
+            if ( Float (temp2) != temp1 )
+            {
+                self.scrotalCircumference.text = String(Float(Int(temp!*10))/10);
+            }
+
             
         }
 

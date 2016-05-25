@@ -20,7 +20,7 @@ class ExistingGroupViewController: UIViewController {
     var bulls = [PFObject]();
     var lines = [String]();
     
-    var header = "animal_age,animal_ageType,animal_brand,animal_breed,animal_dateOfBirth,animal_lotNumber,animal_rfid,animal_tag,animal_tattoo,animal_other,bodyPartInfo_bodyParts_Eye_description,bodyPartInfo_bodyParts_Eye_normal,bodyPartInfo_bodyParts_Feet_description,bodyPartInfo_bodyParts_Feet_normal,bodyPartInfo_bodyParts_Legs_description,bodyPartInfo_bodyParts_Legs_normal,bodyPartInfo_bodyParts_Testicle_description,bodyPartInfo_bodyParts_Testicle_normal,bodyPartInfo_bodyParts_Accessory_description,bodyPartInfo_bodyParts_Accessory_normal,bodyPartInfo_bodyParts_Inguinal_description,bodyPartInfo_bodyParts_Inguinal_normal,bodyPartInfo_bodyParts_Scrotal_description,bodyPartInfo_bodyParts_Scrotal_normal,bodyPartInfo_bodyParts_Epidydimides_description,bodyPartInfo_bodyParts_Epidydimides_normal,bodyPartInfo_bodyParts_Penis_description,bodyPartInfo_bodyParts_Penis_normal,bodyPartInfo_bodyParts_Prepuce_description,bodyPartInfo_bodyParts_Prepuce_normal,bodyPartInfo_bodyParts_Scrotum_description,bodyPartInfo_bodyParts_Scrotum_normal,collectionNumber,completed,datePerformed,generalInfo_classification,generalInfo_comments,matingInfo_comments,matingInfo_performance,matingInfo_performanceDescription,matingInfo_seasonsUsed,matingInfo_sirePastureType,morphologyInfo_comments,morphologyInfo_morphologyMeasurements_0_count,morphologyInfo_morphologyMeasurements_0_morphologyChoice_label,morphologyInfo_morphologyMeasurements_1_count,morphologyInfo_morphologyMeasurements_1_morphologyChoice_label,morphologyInfo_morphologyMeasurements_2_count,morphologyInfo_morphologyMeasurements_2_morphologyChoice_label,morphologyInfo_morphologyMeasurements_3_count,morphologyInfo_morphologyMeasurements_3_morphologyChoice_label,morphologyInfo_morphologyMeasurements_4_count,morphologyInfo_morphologyMeasurements_4_morphologyChoice_label,morphologyInfo_morphologyMeasurements_5_count,morphologyInfo_morphologyMeasurements_5_morphologyChoice_label,morphologyInfo_morphologyMeasurements_6_count,morphologyInfo_morphologyMeasurements_6_morphologyChoice_label,morphologyInfo_morphologyMeasurements_7_count,morphologyInfo_morphologyMeasurements_7_morphologyChoice_label,morphologyInfo_morphologyMeasurements_8_count,morphologyInfo_morphologyMeasurements_8_morphologyChoice_label,motilityInfo_comments,motilityInfo_grossMotilityCategory,motilityInfo_individualMotility,motilityInfo_motilityPercent,physicalInfo_bodyCondition,physicalInfo_comments,physicalInfo_frameScore,physicalInfo_hipHeight,physicalInfo_hipHeightUnits,physicalInfo_pelvicXMeasure,physicalInfo_pelvicYMeasure,physicalInfo_scrotalCircumference,rancher_address_address1,rancher_address_address2,rancher_address_city,rancher_address_email,rancher_address_phone,rancher_address_state,rancher_address_zip,rancher_firstName,rancher_lastName,rancher_ranchName,uuid,veterinarian_address_address1,veterinarian_address_address2,veterinarian_address_city,veterinarian_address_email,veterinarian_address_phone,veterinarian_address_state,veterinarian_address_zip,veterinarian_clinicName,veterinarian_firstName,veterinarian_lastName\n";
+    var header = "animal_age,animal_ageType,animal_brand,animal_breed,animal_dateOfBirth,animal_lotNumber,animal_rfid,animal_tag,animal_tattoo,animal_other,bodyPartInfo_bodyParts_Eye_description,bodyPartInfo_bodyParts_Eye_normal,bodyPartInfo_bodyParts_Feet_description,bodyPartInfo_bodyParts_Feet_normal,bodyPartInfo_bodyParts_Legs_description,bodyPartInfo_bodyParts_Legs_normal,bodyPartInfo_bodyParts_Testicle_description,bodyPartInfo_bodyParts_Testicle_normal,bodyPartInfo_bodyParts_Accessory_description,bodyPartInfo_bodyParts_Accessory_normal,bodyPartInfo_bodyParts_Inguinal_description,bodyPartInfo_bodyParts_Inguinal_normal,bodyPartInfo_bodyParts_Scrotal_description,bodyPartInfo_bodyParts_Scrotal_normal,bodyPartInfo_bodyParts_Epidydimides_description,bodyPartInfo_bodyParts_Epidydimides_normal,bodyPartInfo_bodyParts_Penis_description,bodyPartInfo_bodyParts_Penis_normal,bodyPartInfo_bodyParts_Prepuce_description,bodyPartInfo_bodyParts_Prepuce_normal,bodyPartInfo_bodyParts_Scrotum_description,bodyPartInfo_bodyParts_Scrotum_normal,collectionNumber,completed,datePerformed,generalInfo_classification,generalInfo_comments,matingInfo_comments,matingInfo_performance,matingInfo_performanceDescription,matingInfo_seasonsUsed,matingInfo_sirePastureType,morphologyInfo_comments,motilityInfo_comments,motilityInfo_grossMotilityCategory,motilityInfo_individualMotility,motilityInfo_motilityPercent,physicalInfo_bodyCondition,physicalInfo_comments,physicalInfo_frameScore,physicalInfo_hipHeight,physicalInfo_hipHeightUnits,physicalInfo_pelvicXMeasure,physicalInfo_pelvicYMeasure,physicalInfo_scrotalCircumference,rancher_address_address1,rancher_address_address2,rancher_address_city,rancher_address_email,rancher_address_phone,rancher_address_state,rancher_address_zip,rancher_firstName,rancher_lastName,rancher_ranchName,uuid,veterinarian_address_address1,veterinarian_address_address2,veterinarian_address_city,veterinarian_address_email,veterinarian_address_phone,veterinarian_address_state,veterinarian_address_zip,veterinarian_clinicName,veterinarian_firstName,veterinarian_lastName";
     
     var finalCSVLine = "";
     
@@ -112,6 +112,79 @@ class ExistingGroupViewController: UIViewController {
     @IBAction func exportData(sender: AnyObject) {
         
         //Export data here
+        if (group["th1"] != nil)
+        {
+            if(group["th1"] as? String != "")
+            {
+                header += ",morphology_count_threshold_" ;
+            }
+        }
+        if (group["m1"] != nil)
+        {
+            if(group["m1"] as? String != "")
+            {
+        header += ",morphology_" + (group["m1"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+            }
+            }
+        if (group["m2"] != nil)
+        {
+            if(group["m2"] as? String != "")
+            {
+            header += ",morphology_" + (group["m2"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+            }
+            }
+        if (group["m3"] != nil)
+        {
+            if(group["m3"] as? String != "")
+            {
+            header += ",morphology_" + (group["m3"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+            }
+            }
+        if (group["m4"] != nil)
+        {
+            if(group["m4"] as? String != "")
+            {
+            header += ",morphology_" + (group["m4"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+            }
+            }
+        if (group["m5"] != nil)
+        {
+            if(group["m5"] as? String != "")
+            {
+            header += ",morphology_" + (group["m5"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+            }
+            }
+        if (group["m6"] != nil)
+        {
+            if(group["m6"] as? String != "")
+            {
+            header += ",morphology_" + (group["m6"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+            } }
+        if (group["m7"] != nil)
+        {
+            if(group["m7"] as? String != "")
+            {
+            header += ",morphology_" + (group["m7"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+        
+            }
+        }
+        if (group["m8"] != nil)
+        {
+            if(group["m8"] as? String != "")
+            {
+            header += ",morphology_" + (group["m8"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+        
+            }
+        }
+        if (group["m9"] != nil)
+        {
+            if(group["m9"] as? String != "")
+            {
+                header += ",morphology_" + (group["m9"] as? String)!.capitalizedStringWithLocale(NSLocale.currentLocale()) + "_count";
+                
+            }
+        }
+        header += "\n";
         lines.append(header);
                let query = PFQuery(className: "Bull");
         query.fromLocalDatastore();
@@ -602,10 +675,10 @@ class ExistingGroupViewController: UIViewController {
             
             if(bull["seasonsUsed"] != nil){
                 line += (bull["seasonsUsed"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                line += ",,";//added for not pasture type
+                line += ",";//added for not pasture type
             }
             else {
-                line += ",,";
+                line += ",";
             }
             
             if(bull["singleOrMultiSire"] != nil){
@@ -616,189 +689,10 @@ class ExistingGroupViewController: UIViewController {
                 line += ",";
             }
             
-            //line += ",";//Morphology comments
+            line += ",";//Morphology comments
             
             //Morphology Value
             //Morphology Fields
-            
-            let query = PFQuery(className: "Collection");
-            query.fromLocalDatastore();
-            query.whereKey("bull", equalTo: bull);
-            query.orderByDescending("createdAt1");
-            var collections = [PFObject]();
-            do{
-                try collections = query.findObjects();
-                if(collections.count > 0){
-                    
-                    if(collections[0]["m1"] != nil){
-                        let temp = collections[0]["m1"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title1"] != nil){
-                        line += (collections[0]["title1"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m2"] != nil){
-                        let temp = collections[0]["m2"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title2"] != nil){
-                        line += (collections[0]["title2"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m3"] != nil){
-                        let temp = collections[0]["m3"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title3"] != nil){
-                        line += (collections[0]["title3"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m4"] != nil){
-                        let temp = collections[0]["m4"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title4"] != nil){
-                        line += (collections[0]["title4"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m5"] != nil){
-                        let temp = collections[0]["m5"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title5"] != nil){
-                        line += (collections[0]["title5"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m6"] != nil){
-                        let temp = collections[0]["m6"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title6"] != nil){
-                        line += (collections[0]["title6"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m7"] != nil){
-                        let temp = collections[0]["m7"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title7"] != nil){
-                        line += (collections[0]["title7"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["m8"] != nil){
-                        let temp = collections[0]["m8"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title8"] != nil){
-                        line += (collections[0]["title8"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-                    if(collections[0]["m9"] != nil){
-                        let temp = collections[0]["m9"] as! Int;
-                        line += String(temp);
-                        line += ",";
-                        
-                    }
-                    else {
-                        line += ",";
-                    }
-                    
-                    if(collections[0]["title9"] != nil){
-                        line += (collections[0]["title9"] as! String).stringByReplacingOccurrencesOfString(",", withString: ";", options: NSStringCompareOptions.LiteralSearch, range: nil);
-                        line += ",";
-                    }
-                    else{
-                        line += ",";
-                    }
-
-                }
-                else {
-                    line += ",,,,,,,,,,,,,,,,,,";
-                }
-
-            } catch {
-                line += ",,,,,,,,,,,,,,,,,,";
-            }
             
             line += ",";//Motility Info Comments
             
@@ -1077,8 +971,109 @@ class ExistingGroupViewController: UIViewController {
                 
             }
             else {
+                line += "";
+            }
+            
+            let query = PFQuery(className: "Collection");
+            query.fromLocalDatastore();
+            query.whereKey("bull", equalTo: bull);
+            query.orderByDescending("createdAt1");
+            var collections = [PFObject]();
+            do{
+                try collections = query.findObjects();
+                if (group["th1"] != nil)
+                {
+                    if(group["th"] as? String != "")
+                    {
+                        line += ",";
+                        let temp = group["th1"] as! String;
+                        line += String(temp);
+                    }
+                }
+                
+                if(collections.count > 0){
+                    
+                    if(collections[0]["m1"] != nil && group["m1"] != nil) {
+                        if(group["m1"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m1"] as! Int;
+                        line += String(temp);
+                        }
+                        
+                    }
+                    
+                    if(collections[0]["m2"] != nil && group["m2"] != nil){
+                        if(group["m2"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m2"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    if(collections[0]["m3"] != nil && group["m3"] != nil){
+                        if(group["m3"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m3"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    if(collections[0]["m4"] != nil && group["m4"] != nil){
+                        if(group["m4"] as? String != "")
+                        {
+                        line += ",";
+                            let temp = collections[0]["m4"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    if(collections[0]["m5"] != nil && group["m5"] != nil){
+                        if(group["m5"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m5"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    if(collections[0]["m6"] != nil && group["m6"] != nil){
+                        if(group["m6"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m6"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    if(collections[0]["m7"] != nil && group["m7"] != nil){
+                        if(group["m7"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m7"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    
+                    if(collections[0]["m8"] != nil && group["m8"] != nil){
+                        if(group["m8"] as? String != "")
+                        {
+                        line += ",";
+                        let temp = collections[0]["m8"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                    if(collections[0]["m9"] != nil && group["m9"] != nil){
+                        if(group["m9"] as? String != "")
+                        {
+                        line += ",";
+                        
+                        let temp = collections[0]["m9"] as! Int;
+                        line += String(temp);
+                        }
+                    }
+                }
+            } catch {
                 
             }
+
             line += "\n";
             lines.append(line);
             line = "";

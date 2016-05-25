@@ -14,7 +14,7 @@ class MorphologyTableViewController: UITableViewController {
     
     var bull : PFObject!;
     var collections = [PFObject]();
-    
+    var group: PFObject!;
     var globalCollection : PFObject!;
     
     @IBOutlet var individualMotility: UITextField!
@@ -186,6 +186,7 @@ class MorphologyTableViewController: UITableViewController {
             let semenCounter = segue.destinationViewController as! SemenCounterViewController;
             
             semenCounter.collection = self.globalCollection;
+            semenCounter.group = self.group;
         }
         
         else if (segue.identifier == "showCounter"){
@@ -193,6 +194,7 @@ class MorphologyTableViewController: UITableViewController {
             //existing bull
             let semenCounter = segue.destinationViewController as! SemenCounterViewController;
             
+            semenCounter.group = self.group;
             semenCounter.collection = self.collections[ self.tableView!.indexPathForSelectedRow!.row - 1];
             
             

@@ -48,6 +48,7 @@
 		ADCF2FA81BF19C2A0083F1A0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA61BF19C2A0083F1A0 /* libsqlite3.dylib */; };
 		ADCF2FA91BF19C2A0083F1A0 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA71BF19C2A0083F1A0 /* libz.1.dylib */; };
 		C8B2DA2A444389970923717D /* Pods_BSE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3D7CF92E6CCB1196724909 /* Pods_BSE.framework */; };
+		CA4D70C51CF2AF5D00CE8B3F /* beep-01a.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CA4D70C41CF2AF5D00CE8B3F /* beep-01a.mp3 */; };
 		CA53E1F61CC87E1500EC4438 /* EditMorphology.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53E1F51CC87E1500EC4438 /* EditMorphology.swift */; };
 		CA5C5CFF1C5926930092CAF2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5C5CFE1C5926930092CAF2 /* Media.xcassets */; };
 		CA5D92291CB2E97F00CCCCAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5D92271CB2E97F00CCCCAD /* Main.storyboard */; };
@@ -64,7 +65,6 @@
 		CA5EE7421CA59A49000ECBA6 /* Icon-98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5EE73A1CA59A49000ECBA6 /* Icon-98@2x.png */; };
 		CA5EE7441CA59B45000ECBA6 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = CA5EE7431CA59B45000ECBA6 /* AppIcon.appiconset */; };
 		CAA7710E1C7A853800CF4FE5 /* beep-03.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAA7710D1C7A853800CF4FE5 /* beep-03.wav */; };
-		CAA771101C7A9B7E00CF4FE5 /* beep-01a.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAA7710F1C7A9B7E00CF4FE5 /* beep-01a.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +135,7 @@
 		ADCF2FA41BF199680083F1A0 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		ADCF2FA61BF19C2A0083F1A0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
 		ADCF2FA71BF19C2A0083F1A0 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		CA4D70C41CF2AF5D00CE8B3F /* beep-01a.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beep-01a.mp3"; sourceTree = "<group>"; };
 		CA53E1F51CC87E1500EC4438 /* EditMorphology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMorphology.swift; sourceTree = "<group>"; };
 		CA5C5CFE1C5926930092CAF2 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		CA5D92281CB2E97F00CCCCAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,7 +152,6 @@
 		CA5EE73A1CA59A49000ECBA6 /* Icon-98@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-98@2x.png"; sourceTree = "<group>"; };
 		CA5EE7431CA59B45000ECBA6 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
 		CAA7710D1C7A853800CF4FE5 /* beep-03.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-03.wav"; sourceTree = "<group>"; };
-		CAA7710F1C7A9B7E00CF4FE5 /* beep-01a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-01a.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,7 +267,7 @@
 				CA5EE7431CA59B45000ECBA6 /* AppIcon.appiconset */,
 				CA5EE7311CA596EF000ECBA6 /* Small.png */,
 				CA5C5CFE1C5926930092CAF2 /* Media.xcassets */,
-				CAA7710F1C7A9B7E00CF4FE5 /* beep-01a.wav */,
+				CA4D70C41CF2AF5D00CE8B3F /* beep-01a.mp3 */,
 				CAA7710D1C7A853800CF4FE5 /* beep-03.wav */,
 				ADCF2F5E1BF168C50083F1A0 /* Assets.xcassets */,
 				CA5D92271CB2E97F00CCCCAD /* Main.storyboard */,
@@ -442,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCF2F621BF168C50083F1A0 /* LaunchScreen.storyboard in Resources */,
+				CA4D70C51CF2AF5D00CE8B3F /* beep-01a.mp3 in Resources */,
 				ADCF2F5F1BF168C50083F1A0 /* Assets.xcassets in Resources */,
 				CA5EE73C1CA59A49000ECBA6 /* Icon-27.5@2x.png in Resources */,
 				CA5C5CFF1C5926930092CAF2 /* Media.xcassets in Resources */,
@@ -452,7 +453,6 @@
 				CA5EE7421CA59A49000ECBA6 /* Icon-98@2x.png in Resources */,
 				CA5EE73E1CA59A49000ECBA6 /* Icon-29@3x.png in Resources */,
 				CA5EE7321CA596EF000ECBA6 /* Small.png in Resources */,
-				CAA771101C7A9B7E00CF4FE5 /* beep-01a.wav in Resources */,
 				CA5EE72E1CA5968B000ECBA6 /* Large.png in Resources */,
 				CAA7710E1C7A853800CF4FE5 /* beep-03.wav in Resources */,
 				CA5EE73F1CA59A49000ECBA6 /* Icon-40@2x.png in Resources */,

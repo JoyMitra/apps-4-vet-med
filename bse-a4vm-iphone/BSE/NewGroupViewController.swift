@@ -11,6 +11,7 @@ import UIKit
 import Parse
 
 class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerViewDataSource, UIPickerViewDelegate{
+    var user : PFUser!;
     var data = [ "Alaska",
         "Alabama",
         "Arkansas",
@@ -98,7 +99,7 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        user = PFUser.currentUser();
         ranchName.delegate = self;
         firstName.delegate = self;
         picker.delegate=self
@@ -279,7 +280,46 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
         ranchInfo["zip"] = zip.text;
         ranchInfo["phone"] = phone.text;
         ranchInfo["madeAt"] = NSDate();
-        
+            if(user["m1"] != nil)
+            {
+            ranchInfo["m1"] = user["m1"] as? String;
+            }
+            if(user["m2"] != nil)
+            {
+                ranchInfo["m2"] = user["m2"] as? String;
+            }
+            if(user["m3"] != nil)
+            {
+             ranchInfo["m3"] = user["m3"] as? String;
+            }
+            if(user["m4"] != nil)
+            {
+                ranchInfo["m4"] = user["m4"] as? String;
+            }
+            if(user["m5"] != nil)
+            {
+                ranchInfo["m5"] = user["m5"] as? String;
+            }
+            if(user["m6"] != nil)
+            {
+                ranchInfo["m6"] = user["m6"] as? String;
+            }
+            if(user["m7"] != nil)
+            {
+                ranchInfo["m7"] = user["m7"] as? String;
+            }
+            if(user["m8"] != nil)
+            {
+                ranchInfo["m8"] = user["m8"] as? String;
+            }
+            if(user["m9"] != nil)
+                {
+                ranchInfo["m9"] = user["m9"] as? String;
+            }
+            if(user["th1"] != nil)
+            {
+                    ranchInfo["th1"] = user["th1"] as? String;
+            }
         ranchInfo.pinInBackgroundWithBlock({(success: Bool, error: NSError?) -> Void in
             
             self.group = ranchInfo;

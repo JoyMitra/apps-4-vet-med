@@ -75,7 +75,7 @@ class ClassificationViewController: UIViewController {
             bull["classification"] = "Deferred";
         case 2 :
             bull["classification"] = "Questionable";
-        case 4 :
+        case 3 :
             bull["classification"] = "Unsatisfactory";
         default :
             break;
