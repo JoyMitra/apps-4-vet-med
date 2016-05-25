@@ -165,7 +165,7 @@ Each field is associated with a check box to indicate "normal" or not.  Check th
   <td><img src="img/screenshots/Android/Measurements.png?raw=true" width="200" height="400" /></td>
  </tr>
  <tr>
-  <td><img src="img/screenshots/iPhone/phyInfo.PNG" width="200" height="400" /></td>
+  <td><img src="img/screenshots/iPhone/PhyExam.PNG?raw=true" width="200" height="400" /></td>
   <td><img src="img/screenshots/Android/PhyExam.png?raw=true" width="200" height="400" /></td>
  </tr>
 </table>
