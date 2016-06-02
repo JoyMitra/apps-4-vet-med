@@ -71,14 +71,16 @@ public class Collections extends AppCompatActivity{
         {
             ranchNames = new LinkedHashSet<>();
             orderedItems = new LinkedHashSet<>();
+            String dispStr = null;
             for(String item : items)
             {
                 Set<String> groups = null;
                 groups = SharedPrefUtil.getValue(getApplicationContext(),Constant.PREFS_GROUP_INFO,item);
                 if(groups != null)
                 {
-                    String name = null;
-                    String datetime = null;
+                    String name = "<>";
+                    String rname = "<>";
+                    String datetime = "<>";
                     for(String group : groups)
                     {
                         String[] entry = group.split("=");
@@ -86,17 +88,19 @@ public class Collections extends AppCompatActivity{
                         {
                             name = entry[1];
                         }
+                        if(entry != null && entry.length==2 && entry[0].equalsIgnoreCase("Rancher Name"))
+                        {
+                            rname = entry[1];
+                        }
                         if(entry != null && entry.length==2 && entry[0].equalsIgnoreCase("TimeStamp"))
                         {
                             datetime = entry[1];
                         }
-                        if(name!=null && datetime!=null)
-                        {
-                            ranchNames.add(datetime + ":" + name);
-                            break;
-                        }
+                        dispStr = datetime + ":" + name + "/" + rname;
+
 
                     }
+                    ranchNames.add(dispStr);
                     orderedItems.add(item);
                 }
 

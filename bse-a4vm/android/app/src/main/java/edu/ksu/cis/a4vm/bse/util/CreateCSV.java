@@ -178,7 +178,7 @@ public class CreateCSV {
                                                             "Timestamp".equalsIgnoreCase(split_item[0]))
                                                         row.set(34,split_item[1]);
                                                 }
-                                                uuid = uuid + " " + id;
+                                                uuid = uuid + "-" + id;
                                                 age = ageYr + " Years " + ageMth + " Months";
                                                 row.set(0,age);
 
@@ -192,7 +192,7 @@ public class CreateCSV {
                                                     if(split_item!=null && split_item.length==2 && "First Name".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(74,split_item[1]);
-                                                        uuid = uuid + " " + split_item[1];
+                                                        uuid = uuid + "-" + split_item[1];
                                                     }
                                                     else if(split_item!=null && split_item.length==2 && "Last Name".equalsIgnoreCase(split_item[0]))
                                                         row.set(75,split_item[1]);
@@ -323,12 +323,36 @@ public class CreateCSV {
                                             {
                                                 for(String item : phyParamsInfo)
                                                 {
+                                                    if(!"True".equalsIgnoreCase(row.get(11)))
+                                                        row.set(11,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(13)))
+                                                        row.set(13,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(15)))
+                                                        row.set(15,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(17)))
+                                                        row.set(17,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(19)))
+                                                        row.set(19,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(21)))
+                                                        row.set(21,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(23)))
+                                                        row.set(23,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(25)))
+                                                        row.set(25,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(27)))
+                                                        row.set(27,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(29)))
+                                                        row.set(29,"False");
+                                                    if(!"True".equalsIgnoreCase(row.get(31)))
+                                                        row.set(31,"False");
+
+
                                                     String[] split_item = item.split("=");
                                                     if(split_item!=null && split_item.length==2
                                                             && "Eyes Description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(10,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(12)))
+                                                        if(!"True".equalsIgnoreCase(row.get(11)))
                                                             row.set(11,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
@@ -351,7 +375,7 @@ public class CreateCSV {
                                                             && "Legs Description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(16,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(18)))
+                                                        if(!"True".equalsIgnoreCase(row.get(17)))
                                                             row.set(17,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
@@ -362,7 +386,7 @@ public class CreateCSV {
                                                             && "Testicles Description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(18,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(21)))
+                                                        if(!"True".equalsIgnoreCase(row.get(19)))
                                                             row.set(19,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
@@ -373,7 +397,7 @@ public class CreateCSV {
                                                             && "Accessory Sex glands description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(20,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(24)))
+                                                        if(!"True".equalsIgnoreCase(row.get(21)))
                                                             row.set(21,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
@@ -384,7 +408,7 @@ public class CreateCSV {
                                                             && "Inguinal Rings Description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(22,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(27)))
+                                                        if(!"True".equalsIgnoreCase(row.get(23)))
                                                             row.set(23,"True");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
@@ -395,7 +419,7 @@ public class CreateCSV {
                                                             && "Scrotal Shape description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(24,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(30)))
+                                                        if(!"True".equalsIgnoreCase(row.get(25)))
                                                             row.set(25,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
@@ -406,12 +430,45 @@ public class CreateCSV {
                                                             && "Epidydimides description".equalsIgnoreCase(split_item[0]))
                                                     {
                                                         row.set(26,split_item[1]);
-                                                        if(!"True".equalsIgnoreCase(row.get(33)))
+                                                        if(!"True".equalsIgnoreCase(row.get(27)))
                                                             row.set(27,"False");
                                                     }
                                                     else if(split_item!=null && split_item.length==2
                                                             && "Epidydimides description".equalsIgnoreCase(split_item[1]))
                                                         row.set(27,"True");
+
+                                                    else if(split_item!=null && split_item.length==2
+                                                            && "Penis description".equalsIgnoreCase(split_item[0]))
+                                                    {
+                                                        row.set(28,split_item[1]);
+                                                        if(!"True".equalsIgnoreCase(row.get(29)))
+                                                            row.set(29,"False");
+                                                    }
+                                                    else if(split_item!=null && split_item.length==2
+                                                            && "Penis description".equalsIgnoreCase(split_item[1]))
+                                                        row.set(29,"True");
+
+                                                    else if(split_item!=null && split_item.length==2
+                                                            && "Prepuce description".equalsIgnoreCase(split_item[0]))
+                                                    {
+                                                        row.set(30,split_item[1]);
+                                                        if(!"True".equalsIgnoreCase(row.get(31)))
+                                                            row.set(31,"False");
+                                                    }
+                                                    else if(split_item!=null && split_item.length==2
+                                                            && "Prepuce description".equalsIgnoreCase(split_item[1]))
+                                                        row.set(31,"True");
+
+                                                    else if(split_item!=null && split_item.length==2
+                                                            && "Scrotum description".equalsIgnoreCase(split_item[0]))
+                                                    {
+                                                        row.set(12,split_item[1]);
+                                                        if(!"True".equalsIgnoreCase(row.get(13)))
+                                                            row.set(13,"False");
+                                                    }
+                                                    else if(split_item!=null && split_item.length==2
+                                                            && "Scrotum description".equalsIgnoreCase(split_item[1]))
+                                                        row.set(13,"True");
                                                 }
                                             }
 
@@ -593,7 +650,7 @@ public class CreateCSV {
                                                     }
                                                 }
                                             }
-                                            row.set(65,uuid);
+                                            row.set(65,uuid.replace(" ","-"));
                                             rows.add(row);
                                         }
                                     }

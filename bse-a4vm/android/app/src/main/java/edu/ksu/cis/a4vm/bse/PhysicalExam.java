@@ -33,6 +33,9 @@ public class PhysicalExam extends AppCompatActivity {
     private EditText field6 = null;
     private EditText field7 = null;
     private EditText field8 = null;
+    private EditText field10 = null;
+    private EditText field11 = null;
+    private EditText field12 = null;
 
     private CheckBox check1 = null;
     private CheckBox check2 = null;
@@ -43,6 +46,9 @@ public class PhysicalExam extends AppCompatActivity {
     private CheckBox check7 = null;
     private CheckBox check8 = null;
     private CheckBox check9 = null;
+    private CheckBox check10 = null;
+    private CheckBox check11 = null;
+    private CheckBox check12 = null;
 
     private Button saveBtn = null;
 
@@ -63,6 +69,9 @@ public class PhysicalExam extends AppCompatActivity {
         field6 = (EditText) findViewById(R.id.field6);
         field7 = (EditText) findViewById(R.id.field7);
         field8 = (EditText) findViewById(R.id.field8);
+        field10 = (EditText) findViewById(R.id.field10);
+        field11 = (EditText) findViewById(R.id.field11);
+        field12 = (EditText) findViewById(R.id.field12);
 
         fields = new LinkedHashSet<EditText>();
         fields.add(field1);
@@ -73,6 +82,9 @@ public class PhysicalExam extends AppCompatActivity {
         fields.add(field6);
         fields.add(field7);
         fields.add(field8);
+        fields.add(field10);
+        fields.add(field11);
+        fields.add(field12);
 
         check1 = (CheckBox) findViewById(R.id.checkbox1);
         check2 = (CheckBox) findViewById(R.id.checkbox2);
@@ -83,6 +95,9 @@ public class PhysicalExam extends AppCompatActivity {
         check7 = (CheckBox) findViewById(R.id.checkbox7);
         check8 = (CheckBox) findViewById(R.id.checkbox8);
         check9 = (CheckBox) findViewById(R.id.checkbox9);
+        check10 = (CheckBox) findViewById(R.id.checkbox10);
+        check11 = (CheckBox) findViewById(R.id.checkbox11);
+        check12 = (CheckBox) findViewById(R.id.checkbox12);
 
         checks = new LinkedHashSet<CheckBox>();
         checks.add(check1);
@@ -93,6 +108,9 @@ public class PhysicalExam extends AppCompatActivity {
         checks.add(check6);
         checks.add(check7);
         checks.add(check8);
+        checks.add(check10);
+        checks.add(check11);
+        checks.add(check12);
         checks.add(check9);
 
         saveBtn = (Button) findViewById(R.id.savePhyExam);
@@ -128,11 +146,7 @@ public class PhysicalExam extends AppCompatActivity {
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(field1.getText().toString().trim().length()>0 || field2.getText().toString().trim().length()>0
-                        || field3.getText().toString().trim().length()>0 || field4.getText().toString().trim().length()>0
-                        || field5.getText().toString().trim().length()>0 || field6.getText().toString().trim().length()>0
-                        || field7.getText().toString().trim().length()>0 || field8.getText().toString().trim().length()>0)
-                {
+
                     LinkedHashSet<String> data = new LinkedHashSet<String>();
                     data.add(field1.getHint().toString().trim()+"="+field1.getText().toString().trim().replace(",",";"));
                     data.add(field2.getHint().toString().trim()+"="+field2.getText().toString().trim().replace(",", ";"));
@@ -142,6 +156,9 @@ public class PhysicalExam extends AppCompatActivity {
                     data.add(field6.getHint().toString().trim()+"="+field6.getText().toString().trim().replace(",", ";"));
                     data.add(field7.getHint().toString().trim()+"="+field7.getText().toString().trim().replace(",", ";"));
                     data.add(field8.getHint().toString().trim()+"=" +field8.getText().toString().trim().replace(",",";"));
+                    data.add(field10.getHint().toString().trim()+"=" +field10.getText().toString().trim().replace(",",";"));
+                    data.add(field11.getHint().toString().trim()+"=" +field11.getText().toString().trim().replace(",",";"));
+                    data.add(field12.getHint().toString().trim()+"=" +field12.getText().toString().trim().replace(",",";"));
                     if(check1.isChecked())
                         data.add(Integer.toString(check1.getId()).trim()+"="+field1.getHint().toString().trim());
                     if(check2.isChecked())
@@ -158,6 +175,12 @@ public class PhysicalExam extends AppCompatActivity {
                         data.add(Integer.toString(check7.getId()).trim()+"="+field7.getHint().toString().trim());
                     if(check8.isChecked())
                         data.add(Integer.toString(check8.getId()).trim()+"="+field8.getHint().toString().trim());
+                    if(check10.isChecked())
+                        data.add(Integer.toString(check10.getId()).trim()+"="+field10.getHint().toString().trim());
+                    if(check11.isChecked())
+                        data.add(Integer.toString(check11.getId()).trim()+"="+field11.getHint().toString().trim());
+                    if(check12.isChecked())
+                        data.add(Integer.toString(check12.getId()).trim()+"="+field12.getHint().toString().trim());
                     if(check9.isChecked())
                         data.add(Integer.toString(check9.getId()).trim()+"="+"true");
 
@@ -175,7 +198,7 @@ public class PhysicalExam extends AppCompatActivity {
                             Constant.PREFS_PHY_PRAMS_INFO,bullKey), checks);*/
 
                     Toast.makeText(getApplicationContext(),"Saved!",Toast.LENGTH_SHORT).show();
-                }
+               // }
 
             }
         });

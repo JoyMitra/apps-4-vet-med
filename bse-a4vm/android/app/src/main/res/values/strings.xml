@@ -71,7 +71,9 @@
     <string name="phyExam6">Inguinal Rings Description</string>
     <string name="phyExam7">Scrotal Shape description</string>
     <string name="phyExam8">Epidydimides description</string>
-    <string name="phyExam9">Penis description</string>
+    <string name="phyExam10">Penis description</string>
+    <string name="phyExam11">Prepuce description</string>
+    <string name="phyExam12">Scrotum description</string>
     <string name="motilityField1">Individual Motility</string>
     <string name="motilityField2">Motility %</string>
     <string name="motilityCategory">Motility Gross Category</string>

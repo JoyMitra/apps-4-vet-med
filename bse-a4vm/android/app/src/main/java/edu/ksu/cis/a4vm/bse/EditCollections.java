@@ -63,8 +63,8 @@ public class EditCollections extends AppCompatActivity {
         //TextView tvDelete = (TextView) findViewById(R.id.deleteGrp);
         if (ranchInfo!=null)
         {
-            name = ranchInfo.substring(0,ranchInfo.indexOf(":"));
-            dateColleted = ranchInfo.substring(ranchInfo.indexOf(":")+1,ranchInfo.length());
+            dateColleted = ranchInfo.substring(0,ranchInfo.indexOf(":"));
+            name = ranchInfo.substring(ranchInfo.indexOf(":")+1,ranchInfo.length());
         }
         tvRanch.setText(name);
         tvDate.setText(dateColleted);

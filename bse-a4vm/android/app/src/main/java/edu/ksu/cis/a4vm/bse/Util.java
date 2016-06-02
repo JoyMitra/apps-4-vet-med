@@ -257,7 +257,7 @@ public class Util
     public static boolean isEmailValid(String email)
     {
         org.apache.commons.validator.routines.EmailValidator emv = org.apache.commons.validator.routines.EmailValidator.getInstance();
-        if(emv.isValid(email))
+        if(email.length()==0 || emv.isValid(email))
         {
             return true;
         }

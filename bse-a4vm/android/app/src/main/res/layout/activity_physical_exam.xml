@@ -139,12 +139,54 @@
                 android:layout_toRightOf="@id/field8"
                 android:layout_below="@id/field7"
                 android:layout_marginRight="20dp"/>
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/field10"
+                android:hint="@string/phyExam10"
+                android:layout_below="@id/field8"
+                android:layout_alignParentLeft="true" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkbox10"
+                android:layout_toRightOf="@id/field10"
+                android:layout_below="@id/field8"
+                android:layout_marginRight="20dp"/>
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/field11"
+                android:hint="@string/phyExam11"
+                android:layout_below="@id/field10"
+                android:layout_alignParentLeft="true" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkbox11"
+                android:layout_toRightOf="@id/field11"
+                android:layout_below="@id/field10"
+                android:layout_marginRight="20dp"/>
+            <EditText
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/field12"
+                android:hint="@string/phyExam12"
+                android:layout_below="@id/field11"
+                android:layout_alignParentLeft="true" />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkbox12"
+                android:layout_toRightOf="@id/field12"
+                android:layout_below="@id/field11"
+                android:layout_marginRight="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/field9"
                 android:text="Select all as normal"
-                android:layout_below="@id/field8"
+                android:layout_below="@id/field12"
                 android:layout_alignParentLeft="true"
                 android:layout_marginTop="10dp"/>
             <CheckBox
@@ -152,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/checkbox9"
                 android:layout_toRightOf="@id/field9"
-                android:layout_below="@id/field8"
+                android:layout_below="@id/field12"
                 android:layout_marginRight="20dp"/>
 
 

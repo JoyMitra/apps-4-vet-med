@@ -96,7 +96,7 @@ public class NewGroup extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
-                    if (ranchName.getText().toString().trim().length() > 0) {
+                    if (ranchName.getText().toString().trim().length() >= 0) {
                         ranchName.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                         validateRanch = false;
                     } else {
@@ -114,12 +114,10 @@ public class NewGroup extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
-                    if (rancherName.getText().toString().trim().length() > 0) {
+                    if (rancherName.getText().toString().trim().length() >= 0) {
                         validatelRancher = false;
                         rancherName.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
-                    }
-                    else
-                    {
+                    } else {
                         validatelRancher = true;
                         rancherName.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         Toast.makeText(getApplicationContext(), "Rancher name cannot be empty", Toast.LENGTH_SHORT).show();
@@ -134,7 +132,7 @@ public class NewGroup extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
-                    if (address1.getText().toString().trim().length() > 0) {
+                    if (address1.getText().toString().trim().length() >= 0) {
                         address1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                         validateAddr1 = false;
                     }
@@ -153,7 +151,7 @@ public class NewGroup extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
-                    if (city.getText().toString().trim().length() > 0) {
+                    if (city.getText().toString().trim().length() >= 0) {
                         city.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                         validateCity = false;
                     } else {
@@ -177,7 +175,7 @@ public class NewGroup extends AppCompatActivity {
                                                        state.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                        validateState = true;
                                                    } catch (NumberFormatException ne) {
-                                                       if (state.getText().toString().trim().length() == 2) {
+                                                       if (state.getText().toString().trim().length()==0 || state.getText().toString().trim().length() == 2) {
                                                            state.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                            validateState = false;
                                                        }
@@ -205,7 +203,13 @@ public class NewGroup extends AppCompatActivity {
                                                          Integer.valueOf(zip.getText().toString().trim()) > 0) {
                                                      zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                      validateZip = false;
-                                                 } else {
+                                                 }
+                                                 else if(zip.getText().toString().trim().length() == 0)
+                                                 {
+                                                     zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                                                     validateZip = false;
+                                                 }
+                                                 else {
                                                      zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                      validateZip = true;
                                                      Toast.makeText(getApplicationContext(), "Zip must be a 5 digit number", Toast.LENGTH_SHORT).show();
@@ -237,7 +241,13 @@ public class NewGroup extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "invalid phone", Toast.LENGTH_SHORT).show();
                         }
 
-                    } else {
+                    }
+                    else if(phone.getText().toString().trim().length() == 0)
+                    {
+                        phone.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+                        validatePhone = false;
+                    }
+                    else {
                         validatePhone = true;
                         phone.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         Toast.makeText(getApplicationContext(), "invalid phone", Toast.LENGTH_SHORT).show();
@@ -272,11 +282,11 @@ public class NewGroup extends AppCompatActivity {
                         && !validateAddr1 && !validateCity
                         && !validateState && !validatePhone
                         && !validateZip && !validateEmail) {
-                    if(ranchName.getText().toString().trim().length()>0 && rancherName.getText().toString().trim().length()>0
-                            && email.getText().toString().trim().length()>0 && address1.getText().toString().trim().length()>0
+                    if(ranchName.getText().toString().trim().length()>0 || rancherName.getText().toString().trim().length()>0
+                            /*&& email.getText().toString().trim().length()>0 && address1.getText().toString().trim().length()>0
                             && city.getText().toString().trim().length()>0
                             && state.getText().toString().trim().length()>0 && zip.getText().toString().trim().length()>0
-                            && zip.getText().toString().trim().length()>0 && phone.getText().toString().trim().length()>0)
+                            && zip.getText().toString().trim().length()>0 && phone.getText().toString().trim().length()>0*/)
                     {
                         HashSet<String> data = new LinkedHashSet<String>();
                         data.add(ranchName.getHint().toString().trim() + "=" + ranchName.getText().toString().trim().replace(",",";"));

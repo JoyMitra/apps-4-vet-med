@@ -105,15 +105,11 @@ public class BullInfo extends AppCompatActivity {
                             || idBrand.getText().toString().trim().length() > 0) {
 
 
-                        if(Integer.valueOf(ageYrs.getText().toString().trim()) == 0
-                                && Integer.valueOf(ageMths.getText().toString().trim())==0)
-                        {
-                            Toast.makeText(getApplicationContext(), "Age cannot be 0!", Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        {
-                            if (Integer.valueOf(ageYrs.getText().toString().trim()) <= 25 &&
-                                    Integer.valueOf(ageMths.getText().toString().trim()) <= 18) {
+
+                            if ((ageYrs.getText().toString().trim().length()==0 ||
+                                    Integer.valueOf(ageYrs.getText().toString().trim()) <= 25) &&
+                                    (ageMths.getText().toString().trim().length()==0 ||
+                                    Integer.valueOf(ageMths.getText().toString().trim()) <= 18)) {
                                 //save bull info
                                 HashSet<String> data = new LinkedHashSet<String>();
                                 data.add(idTag.getHint().toString().trim() + "=" + idTag.getText().toString().trim().replace(",", ";"));
@@ -186,7 +182,7 @@ public class BullInfo extends AppCompatActivity {
                                 ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                 ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                             }
-                        }
+
 
 
 
@@ -201,10 +197,13 @@ public class BullInfo extends AppCompatActivity {
                     }
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
+
                     Toast.makeText(getApplicationContext(), "Please correct the fields marked red", Toast.LENGTH_LONG).show();
                     ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                     ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                     dob.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+
+
                 }
             }
         });
@@ -279,8 +278,13 @@ public class BullInfo extends AppCompatActivity {
                         } else
                             ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                     } catch (NumberFormatException ne) {
-                        ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                        Toast.makeText(getApplicationContext(), "Age cannot be non-number", Toast.LENGTH_SHORT).show();
+                        if(year.length()>0){
+                            ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            Toast.makeText(getApplicationContext(), "Age cannot be non-number", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                            ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+
                     } catch (Exception e) {
                         ageYrs.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         Toast.makeText(getApplicationContext(), "Invalid age", Toast.LENGTH_SHORT).show();
@@ -323,8 +327,14 @@ public class BullInfo extends AppCompatActivity {
                         } else
                             ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                     } catch (NumberFormatException ne) {
-                        ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
-                        Toast.makeText(getApplicationContext(), "Age cannot be non-number", Toast.LENGTH_SHORT).show();
+                        if(year.length()>0)
+                        {
+                            ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
+                            Toast.makeText(getApplicationContext(), "Age cannot be non-number", Toast.LENGTH_SHORT).show();
+                        }
+                        else
+                            ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
+
                     } catch (Exception e) {
                         ageMths.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                         Toast.makeText(getApplicationContext(), "Invalid age", Toast.LENGTH_SHORT).show();
