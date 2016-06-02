@@ -267,10 +267,13 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
     
     
     @IBAction func saveClicked(sender: AnyObject) {
-        if(ranchName.text != "" && firstName.text != "" && lastName.text != "" && address1.text != "" && city.text != "" && state.text != "" && zip.text != "" && phone.text != "" && lastName.text!.lowercaseString.characters.contains("@") && zip.text?.characters.count == 5 && phone.text?.characters.count == 10)
+        if(ranchName.text != "" || firstName.text != "" || lastName.text != "")
         {
         let ranchInfo = PFObject(className:"RanchInfo")
+            
         ranchInfo["ranchName"] = ranchName.text;
+            
+        
         ranchInfo["firstName"] = firstName.text;
         ranchInfo["email"] = lastName.text;
         ranchInfo["address1"] = address1.text;

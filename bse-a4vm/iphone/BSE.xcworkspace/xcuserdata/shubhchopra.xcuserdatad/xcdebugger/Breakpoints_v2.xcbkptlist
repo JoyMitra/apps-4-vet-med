@@ -26,7 +26,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "485674686.508314"
+                  timestampString = "486458248.847029"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -41,7 +41,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "485674686.509008"
+                  timestampString = "486458248.847268"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -56,7 +56,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "485674686.509222"
+                  timestampString = "486458248.847441"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -71,7 +71,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "485674686.509405"
+                  timestampString = "486458248.847615"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -456,7 +456,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "877"
@@ -472,23 +472,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "878"
-            endingLineNumber = "878"
-            landmarkName = "startExport()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "879"
@@ -504,7 +488,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "880"
@@ -520,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "881"
-            endingLineNumber = "881"
+            startingLineNumber = "894"
+            endingLineNumber = "894"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -536,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "882"
-            endingLineNumber = "882"
+            startingLineNumber = "885"
+            endingLineNumber = "885"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -552,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "896"
-            endingLineNumber = "896"
+            startingLineNumber = "903"
+            endingLineNumber = "903"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -568,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "887"
-            endingLineNumber = "887"
+            startingLineNumber = "912"
+            endingLineNumber = "912"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -584,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "905"
-            endingLineNumber = "905"
+            startingLineNumber = "921"
+            endingLineNumber = "921"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -600,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "914"
-            endingLineNumber = "914"
+            startingLineNumber = "930"
+            endingLineNumber = "930"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -616,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "923"
-            endingLineNumber = "923"
+            startingLineNumber = "1081"
+            endingLineNumber = "1081"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -632,11 +616,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "932"
-            endingLineNumber = "932"
+            startingLineNumber = "1086"
+            endingLineNumber = "1086"
             landmarkName = "startExport()"
             landmarkType = "5">
          </BreakpointContent>
@@ -648,43 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1083"
-            endingLineNumber = "1083"
-            landmarkName = "startExport()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1088"
-            endingLineNumber = "1088"
-            landmarkName = "startExport()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1117"
-            endingLineNumber = "1117"
+            startingLineNumber = "1115"
+            endingLineNumber = "1115"
             landmarkName = "saveAndExport(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -936,11 +888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1118"
-            endingLineNumber = "1118"
+            startingLineNumber = "1116"
+            endingLineNumber = "1116"
             landmarkName = "saveAndExport(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -952,7 +904,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1117"
+            endingLineNumber = "1117"
+            landmarkName = "saveAndExport(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/ExistingGroupViewController.swift"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1119"
@@ -968,55 +936,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1121"
-            endingLineNumber = "1121"
-            landmarkName = "saveAndExport(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1131"
-            endingLineNumber = "1131"
-            landmarkName = "saveAndExport(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1128"
-            endingLineNumber = "1128"
-            landmarkName = "saveAndExport(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1129"
@@ -1032,11 +952,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1130"
-            endingLineNumber = "1130"
+            startingLineNumber = "1126"
+            endingLineNumber = "1126"
             landmarkName = "saveAndExport(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1048,7 +968,55 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1127"
+            endingLineNumber = "1127"
+            landmarkName = "saveAndExport(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/ExistingGroupViewController.swift"
+            timestampString = "486526589.546184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1128"
+            endingLineNumber = "1128"
+            landmarkName = "saveAndExport(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/ExistingGroupViewController.swift"
+            timestampString = "486526589.546184"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1132"
+            endingLineNumber = "1132"
+            landmarkName = "saveAndExport(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/ExistingGroupViewController.swift"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1134"
@@ -1064,11 +1032,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1136"
-            endingLineNumber = "1136"
+            startingLineNumber = "1135"
+            endingLineNumber = "1135"
             landmarkName = "saveAndExport(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1080,7 +1048,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "1137"
@@ -1096,27 +1064,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
+            timestampString = "486526589.546184"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1139"
-            endingLineNumber = "1139"
-            landmarkName = "saveAndExport(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/ExistingGroupViewController.swift"
-            timestampString = "485714159.883451"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1147"
-            endingLineNumber = "1147"
+            startingLineNumber = "1145"
+            endingLineNumber = "1145"
             landmarkName = "saveAndExport(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -1912,7 +1864,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ViewController.swift"
-                  timestampString = "485674686.595022"
+                  timestampString = "486458248.924357"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "209"
@@ -1927,7 +1879,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ViewController.swift"
-                  timestampString = "485674686.595195"
+                  timestampString = "486458248.924554"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "210"
@@ -2056,7 +2008,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.600124"
+                  timestampString = "486458248.929479"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "119"
@@ -2071,7 +2023,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.600291"
+                  timestampString = "486458248.92966"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "122"
@@ -2456,7 +2408,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.616624"
+                  timestampString = "486458248.947171"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -2471,7 +2423,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.616794"
+                  timestampString = "486458248.947351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
@@ -2504,7 +2456,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.617793"
+                  timestampString = "486458248.948451"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
@@ -2519,7 +2471,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.617965"
+                  timestampString = "486458248.948624"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "97"
@@ -2552,7 +2504,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.620374"
+                  timestampString = "486458248.949736"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
@@ -2567,7 +2519,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.620576"
+                  timestampString = "486458248.949913"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
@@ -2664,7 +2616,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.624868"
+                  timestampString = "486458248.954069"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "143"
@@ -2679,7 +2631,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "485674686.625042"
+                  timestampString = "486458248.95438"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
@@ -2760,11 +2712,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2776,11 +2728,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "315"
-            endingLineNumber = "315"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2792,11 +2744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "318"
-            endingLineNumber = "318"
+            startingLineNumber = "326"
+            endingLineNumber = "326"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2808,11 +2760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
+            startingLineNumber = "327"
+            endingLineNumber = "327"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2820,15 +2772,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "330"
-            endingLineNumber = "330"
+            startingLineNumber = "338"
+            endingLineNumber = "338"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -2836,15 +2788,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "380"
-            endingLineNumber = "380"
+            startingLineNumber = "388"
+            endingLineNumber = "388"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -3337,11 +3289,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -3353,39 +3305,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -3401,11 +3321,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -3945,7 +3897,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.664184"
+                  timestampString = "486458248.989505"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -3960,7 +3912,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.664373"
+                  timestampString = "486458248.989696"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4009,11 +3961,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4025,11 +3977,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481399838.425327"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
             <Locations>
@@ -4041,7 +3993,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.667619"
+                  timestampString = "486458248.99307"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "178"
@@ -4056,7 +4008,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.667802"
+                  timestampString = "486458248.993243"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "178"
@@ -4073,11 +4025,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
             <Locations>
@@ -4089,7 +4041,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.669205"
+                  timestampString = "486458248.994351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
@@ -4104,7 +4056,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.669431"
+                  timestampString = "486458248.994527"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
@@ -4121,11 +4073,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
             <Locations>
@@ -4169,11 +4121,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4201,7 +4153,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.672092"
+                  timestampString = "486458248.996273"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -4216,7 +4168,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.672311"
+                  timestampString = "486458248.996445"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
@@ -4233,11 +4185,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481399838.425327"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
             <Locations>
@@ -4249,7 +4201,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.673461"
+                  timestampString = "486458248.997534"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "185"
@@ -4264,7 +4216,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.673696"
+                  timestampString = "486458248.997709"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "187"
@@ -4281,11 +4233,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4297,11 +4249,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "485660901.617498"
+            timestampString = "486452355.750645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4313,11 +4265,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "485660901.617498"
+            timestampString = "486452355.750645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "317"
+            endingLineNumber = "317"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4329,11 +4281,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4345,11 +4297,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4361,11 +4313,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481398768.395149"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "tableView(_:didDeselectRowAtIndexPath:)"
             landmarkType = "5">
             <Locations>
@@ -4377,7 +4329,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.678314"
+                  timestampString = "486458249.003588"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
@@ -4392,7 +4344,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.678489"
+                  timestampString = "486458249.003765"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "158"
@@ -4521,7 +4473,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.683125"
+                  timestampString = "486458249.009419"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -4536,7 +4488,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.683308"
+                  timestampString = "486458249.009594"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -4551,7 +4503,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.68348"
+                  timestampString = "486458249.009764"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -4566,7 +4518,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.683658"
+                  timestampString = "486458249.009935"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -4581,7 +4533,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.683831"
+                  timestampString = "486458249.010107"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -4614,7 +4566,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.685903"
+                  timestampString = "486458249.012194"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4629,7 +4581,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.686091"
+                  timestampString = "486458249.012431"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4662,7 +4614,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.687145"
+                  timestampString = "486458249.014604"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4677,7 +4629,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.687333"
+                  timestampString = "486458249.014782"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4710,7 +4662,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.688391"
+                  timestampString = "486458249.01591"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4725,7 +4677,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.688566"
+                  timestampString = "486458249.01609"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4758,7 +4710,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.689664"
+                  timestampString = "486458249.017194"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4773,7 +4725,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.689839"
+                  timestampString = "486458249.017364"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4790,11 +4742,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481404345.143621"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4806,11 +4758,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481404345.882709"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4822,11 +4774,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481404347.079773"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4838,11 +4790,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "481404347.707765"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4870,7 +4822,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.69371"
+                  timestampString = "486458249.022529"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4885,7 +4837,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.693889"
+                  timestampString = "486458249.022708"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4918,7 +4870,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.694954"
+                  timestampString = "486458249.023859"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4933,7 +4885,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.695134"
+                  timestampString = "486458249.024036"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4966,7 +4918,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.696173"
+                  timestampString = "486458249.025086"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -4981,7 +4933,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.696363"
+                  timestampString = "486458249.025265"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5014,7 +4966,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.697479"
+                  timestampString = "486458249.026397"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5029,7 +4981,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.697651"
+                  timestampString = "486458249.026573"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5062,7 +5014,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.698622"
+                  timestampString = "486458249.027648"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5077,7 +5029,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.698798"
+                  timestampString = "486458249.027822"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5110,7 +5062,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.699926"
+                  timestampString = "486458249.028916"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5125,7 +5077,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "485674686.700103"
+                  timestampString = "486458249.029087"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
@@ -5142,11 +5094,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -5158,11 +5110,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -5174,87 +5126,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "183"
-            endingLineNumber = "183"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "181"
-            endingLineNumber = "181"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "190"
@@ -5270,7 +5142,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "191"
@@ -5286,11 +5158,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -5302,11 +5174,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -5318,11 +5190,91 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "194"
-            endingLineNumber = "194"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7287,11 +7239,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7303,11 +7255,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "viewDidAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7315,127 +7267,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483938620.864643"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
-            landmarkName = "pressed1(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "336"
-            endingLineNumber = "336"
-            landmarkName = "pressed1(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "352"
-            endingLineNumber = "352"
+            startingLineNumber = "340"
+            endingLineNumber = "340"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7447,11 +7287,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "321"
-            endingLineNumber = "321"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "pressed1(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "360"
+            endingLineNumber = "360"
+            landmarkName = "pressed1(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7463,11 +7335,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "396"
-            endingLineNumber = "396"
+            startingLineNumber = "404"
+            endingLineNumber = "404"
             landmarkName = "pressed2(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7479,11 +7351,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "398"
-            endingLineNumber = "398"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
             landmarkName = "pressed2(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7495,11 +7367,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "399"
-            endingLineNumber = "399"
+            startingLineNumber = "407"
+            endingLineNumber = "407"
             landmarkName = "pressed2(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7511,11 +7383,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "400"
-            endingLineNumber = "400"
+            startingLineNumber = "408"
+            endingLineNumber = "408"
             landmarkName = "pressed2(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7523,47 +7395,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "338"
-            endingLineNumber = "338"
-            landmarkName = "pressed1(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
-            landmarkName = "pressed1(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "483937335.392829"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
             endingLineNumber = "346"
+            landmarkName = "pressed1(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "350"
+            endingLineNumber = "350"
+            landmarkName = "pressed1(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
             landmarkName = "pressed1(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7911,11 +7783,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250076.422658"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7927,11 +7799,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250077.606697"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7943,11 +7815,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250078.226518"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7959,11 +7831,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250079.266785"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -7975,7 +7847,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250079.886404"
+            timestampString = "486526042.842308"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/GroupsTableViewTableViewController.swift"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
@@ -7991,27 +7879,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250080.470084"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "tableView(_:cellForRowAtIndexPath:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250090.254767"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "261"
+            endingLineNumber = "261"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8023,11 +7895,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250091.142112"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8039,11 +7911,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250091.940188"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8055,11 +7927,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250103.633532"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8071,11 +7943,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250104.399444"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8087,11 +7959,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250158.869528"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
             <Locations>
@@ -8103,7 +7975,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.744984"
+                  timestampString = "486458249.067636"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "200"
@@ -8118,7 +7990,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "485674686.745164"
+                  timestampString = "486458249.067813"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "200"
@@ -8135,11 +8007,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250160.083465"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "viewWillAppear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8151,11 +8023,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/GroupsTableViewTableViewController.swift"
-            timestampString = "484250285.78012"
+            timestampString = "486526042.842308"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
             landmarkName = "prepareForSegue(_:sender:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8339,7 +8211,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
@@ -8359,39 +8231,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251213.50346"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251214.626484"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251216.79228"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "190"
@@ -8407,7 +8247,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251217.740323"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "192"
@@ -8423,11 +8279,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251218.864173"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8439,11 +8295,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251220.246279"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8455,23 +8311,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251221.058335"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251222.912006"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -8487,39 +8327,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251224.004136"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251225.048221"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251226.653961"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "216"
@@ -8535,11 +8343,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251227.961945"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8551,11 +8359,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251300.983635"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8567,11 +8375,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251303.861368"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8583,11 +8391,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251820.812914"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8599,11 +8407,75 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/EditMorphology.swift"
-            timestampString = "484251821.922702"
+            timestampString = "486458246.851582"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "222"
-            endingLineNumber = "222"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "250"
+            endingLineNumber = "250"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "247"
+            endingLineNumber = "247"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
             landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8631,11 +8503,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/SemenCounterViewController.swift"
-            timestampString = "485659026.069595"
+            timestampString = "486453918.793175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "641"
-            endingLineNumber = "641"
+            startingLineNumber = "649"
+            endingLineNumber = "649"
             landmarkName = "pressed5(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8647,11 +8519,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "485660651.562311"
+            timestampString = "486452355.750645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8663,11 +8535,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "485660901.617498"
+            timestampString = "486452355.750645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8679,11 +8551,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "485660901.617498"
+            timestampString = "486452355.750645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "287"
-            endingLineNumber = "287"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8813,6 +8685,598 @@
             startingLineNumber = "208"
             endingLineNumber = "208"
             landmarkName = "Pelvicx(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486452703.42093"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486453918.793175"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
+            landmarkName = "pressed1(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457583.382313"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457583.979566"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457584.575517"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457585.07818"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457598.575795"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457604.323625"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457615.065197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457618.301097"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457620.561015"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457622.515436"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457668.577998"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/SemenCounterViewController.swift"
+            timestampString = "486457669.210299"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/EditMorphology.swift"
+            timestampString = "486458246.851582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "viewWillDisappear(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

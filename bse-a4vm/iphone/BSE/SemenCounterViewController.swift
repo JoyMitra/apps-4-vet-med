@@ -67,9 +67,50 @@ class SemenCounterViewController: UIViewController {
 
   
     override func viewDidAppear(animated: Bool) {
-      //  super.viewDidLoad()
+        super.viewDidLoad()
         
         user = PFUser.currentUser();
+        
+        if let _ = collection["totalCount"] {
+            totalCount = collection["totalCount"] as! Double;
+            
+        }
+         if(th != 0)
+        {
+            let TP = (totalCount / Double(th) ) * 100 ;
+            self.title = "Total Count: " + String(Int(totalCount)) + " :"+String(Int(TP*100)/100) + "%";
+         }
+        else
+        { self.title = "Total Count: " + String(Int(totalCount))}
+        
+        if let _ = collection["m1"]{
+            button1Count = collection["m1"] as! Double;
+        }
+        if let _ = collection["m2"]{
+            button2Count = collection["m2"] as! Double;
+        }
+        if let _ = collection["m3"]{
+            button3Count = collection["m3"] as! Double;
+        }
+        if let _ = collection["m4"]{
+            button4Count = collection["m4"] as! Double;
+        }
+        if let _ = collection["m5"]{
+            button5Count = collection["m5"] as! Double;
+        }
+        if let _ = collection["m6"]{
+            button6Count = collection["m6"] as! Double;
+        }
+        if let _ = collection["m7"]{
+            button7Count = collection["m7"] as! Double;
+        }
+        if let _ = collection["m8"]{
+            button8Count = collection["m8"] as! Double;
+        }
+        if let _ = collection["m9"]{
+            button9Count = collection["m9"] as! Double;
+        }
+
         if(totalCount != 0)
         {
         button1P = button1Count/totalCount * 100;
@@ -97,45 +138,12 @@ class SemenCounterViewController: UIViewController {
         }
         catch{}
     
-            if let _ = collection["m1"]{
-            button1Count = collection["m1"] as! Double;
-        }
-        if let _ = collection["m2"]{
-            button2Count = collection["m2"] as! Double;
-        }
-        if let _ = collection["m3"]{
-            button3Count = collection["m3"] as! Double;
-        }
-        if let _ = collection["m4"]{
-            button4Count = collection["m4"] as! Double;
-        }
-        if let _ = collection["m5"]{
-            button5Count = collection["m5"] as! Double;
-        }
-        if let _ = collection["m6"]{
-            button6Count = collection["m6"] as! Double;
-        }
-        if let _ = collection["m7"]{
-            button7Count = collection["m7"] as! Double;
-        }
-        if let _ = collection["m8"]{
-            button8Count = collection["m8"] as! Double;
-        }
-        if let _ = collection["m9"]{
-            button9Count = collection["m9"] as! Double;
-        }
         
-        if let _ = collection["totalCount"] {
-            totalCount = collection["totalCount"] as! Double;
-        }
         if let _ = user["th1"] {
             let temp = user["th1"] as! String;
             th = Int(temp)!
         }
-        self.title = "Total Count: " + String(totalCount);
-
-        
-        if let _ = group["m1"]{
+               if let _ = group["m1"]{
             title1 = group["m1"] as! String;
         }
         if let _ = group["m2"]{

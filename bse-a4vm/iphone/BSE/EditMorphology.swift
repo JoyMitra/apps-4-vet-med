@@ -185,41 +185,68 @@ var user : PFUser!;
     }
     override func viewWillDisappear(animated: Bool) {
         
+        if(title1 != ""){
+
         if (tf1.text != ""){
         collection["m1"] = Double(tf1.text!);
             totalCount = totalCount - button1Count + Double(tf1.text!)!;
         }
+        }
+        if(title2 != ""){
+
         if (tf2.text != ""){
         collection["m2"] =  Double(tf2.text!);
             totalCount = totalCount - button2Count + Double(tf2.text!)!;
         }
+        }
+        if(title3 != ""){
+
         if (tf3.text != ""){
         collection["m3"] =  Double(tf3.text!);
             totalCount = totalCount - button3Count + Double(tf3.text!)!;
         }
+        }
+        if(title4 != ""){
+
         if (tf4.text != ""){
         collection["m4"] =  Double(tf4.text!);
             totalCount = totalCount - button4Count + Double(tf4.text!)!;
         }
+        }
+        if(title5 != ""){
+
         if (tf5.text != ""){
         collection["m5"] =  Double(tf5.text!);
             totalCount = totalCount - button5Count + Double(tf5.text!)!;
         }
+        }
+        if(title6 != ""){
+
         if (tf6.text != ""){
         collection["m6"] =  Double(tf6.text!);
             totalCount = totalCount - button6Count + Double(tf6.text!)!;
         }
+        }
+        if(title7 != ""){
+
         if (tf7.text != ""){
         collection["m7"] =  Double(tf7.text!);
             totalCount = totalCount - button7Count + Double(tf7.text!)!;
         }
+        }
+        if(title8 != ""){
+
         if (tf8.text != ""){
         collection["m8"] =  Double(tf8.text!);
             totalCount = totalCount - button8Count + Double(tf8.text!)!;
         }
+        }
+        if(title9 != ""){
+
         if (tf9.text != ""){
             collection["m9"] =  Double(tf9.text!);
             totalCount = totalCount - button9Count + Double(tf9.text!)!;
+        }
         }
         collection["totalCount"] = totalCount;
         collection.pinInBackground();

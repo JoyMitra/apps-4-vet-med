@@ -874,11 +874,9 @@ class ExistingGroupViewController: UIViewController {
                 let myDateFor = NSDateFormatter();
                 
                 myDateFor.dateFormat = "yyyy-MM-dd HH:mm";
-                line += myDateFor.stringFromDate(date);
-                line += " ";
-                line += bull["bullID"] as! String;
-                line += " ";
-                line += user["firstName"] as! String;
+                let temp = myDateFor.stringFromDate(date) + "-" + (bull["bullID"] as! String) + "-" + (user["firstName"] as! String);
+                line += temp.stringByReplacingOccurrencesOfString(" ", withString: "-", options: NSStringCompareOptions.LiteralSearch, range: nil);
+                
                 line += ",";
             }
             else { line += "," ;}

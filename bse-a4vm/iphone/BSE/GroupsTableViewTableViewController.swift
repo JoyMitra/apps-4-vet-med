@@ -131,8 +131,20 @@ class GroupsTableViewTableViewController: UITableViewController{
         if (self.ranchersArray.count != 0 && indexPath.row > 0){
             
             let ranchName = self.ranchersArray[indexPath.row - 1]["ranchName"] as! String;
-            cell.existingGroupName.text = ranchName;
+            let rancher = self.ranchersArray[indexPath.row - 1]["firstName"] as! String;
             
+            if(ranchName != "" && rancher != "")
+            {
+            cell.existingGroupName.text = ranchName + "/" + rancher;
+            }
+            else if (rancher == "" && ranchName != "")
+            {
+            cell.existingGroupName.text = ranchName + "/<>";
+            }
+            else if (rancher != "" && ranchName == "")
+            {
+                cell.existingGroupName.text =  "<>/" + rancher;
+            }
             let myDateFormatter = NSDateFormatter();
             
             myDateFormatter.dateFormat = "yyyy-MM-dd HH:mm";
