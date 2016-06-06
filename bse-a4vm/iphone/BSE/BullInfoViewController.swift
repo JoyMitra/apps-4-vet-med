@@ -221,6 +221,9 @@ class BullInfoViewController: UIViewController {
             bull["infoComments"] = Comment.text;
         }
         
+        if (bull["AgeMonth"] != nil)
+        {
+        
         if(Int((bull["AgeMonth"] as? String)!)!>18)
         {
             let alert = UIAlertController(title: "WARNING! Bull Age", message: " This field can not be more than 18, do you wish to continue anyway or change it?", preferredStyle: .Alert)
@@ -240,6 +243,7 @@ class BullInfoViewController: UIViewController {
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
         
+        }
         }
         bull.pinInBackground();
         if let nav = self.navigationController{
