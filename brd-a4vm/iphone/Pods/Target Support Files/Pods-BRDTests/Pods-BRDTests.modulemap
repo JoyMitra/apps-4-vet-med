@@ -1,6 +1,0 @@
-framework module Pods_BRDTests {
-  umbrella header "Pods-BRDTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
