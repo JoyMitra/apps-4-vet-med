@@ -16,9 +16,47 @@ class BCIResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         source.calculateEverything()
-        resultsTextView.text = String(source.differenceInReturnToOwnership)
-
-        // Do any additional setup after loading the view.
+        
+        let differenceInReturnString = String(abs(source.differenceInReturnToOwnership))
+        let differenceInReturn = source.differenceInReturnToOwnership
+        let saleWeightTxA = String(source.saleWeightTxA)
+        let saleWeightTxB = String(source.saleWeightTxB)
+        let grossIncomeTxA = String(source.grossIncomeTxA)
+        let grossIncomeTxB = String(source.grossIncomeTxB)
+        let returnToOwnershipTxA = String(source.returnToOwnershipAndManagementTxA)
+        let returnToOwndershipTxB = String(source.returnToOwnershipAndManagementTxB)
+        let costOfTreamtmentTxA = String(source.costOfTreatmentPerHeadTxA)
+        let costOfTreamtmentTxB = String(source.costOfTreatmentPerHeadTxB)
+        
+        
+        var drugComparisonString = ""
+        if differenceInReturn.isSignMinus {
+            drugComparisonString = "Drug 1 is better\n"
+        } else {
+            drugComparisonString = "Drug 2 is better\n"
+        }
+        let detailsString = "Difference in return to Ownership: " + differenceInReturnString + "\n" +
+                            "Sale weight for Tx A: " + saleWeightTxA + "\n" +
+                            "Sale weight for Tx B: " + saleWeightTxB + "\n" +
+                            "Gross income Tx A: " + grossIncomeTxA + "\n" +
+                            "Gross income Tx A: " + grossIncomeTxB + "\n" +
+                            "Return to ownership and mgt w/ Tx A: " + returnToOwnershipTxA + "\n" +
+                            "Return to ownership and mgt w/ Tx A: " + returnToOwndershipTxB + "\n" +
+                            "Cost of treatment with Tx A: " + costOfTreamtmentTxA + "\n" +
+                            "Cost of treatment with Tx A: " + costOfTreamtmentTxB
+        
+        let resultString = drugComparisonString + "\n" + detailsString
+        
+        let boldFont = UIFont(name: "Helvetica-Bold", size: 16)
+        let attributedString = NSMutableAttributedString(string:detailsString)
+        let range = (resultString as NSString).rangeOfString(differenceInReturnString)
+        let boldedRange = (resultString as NSString).rangeOfString(drugComparisonString)
+        attributedString.addAttributes([kCTFontAttributeName as String:boldFont!], range: boldedRange)
+        if differenceInReturn.isSignMinus {
+            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor() , range: range)
+        }
+        resultsTextView.attributedText = attributedString
+        
     }
 
     override func didReceiveMemoryWarning() {
