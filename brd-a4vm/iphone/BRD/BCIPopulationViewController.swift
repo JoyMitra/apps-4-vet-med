@@ -16,7 +16,13 @@ class BCIPopulationViewController: UIViewController {
     @IBOutlet var arrivalWeightField: UITextField!
     @IBOutlet var daysOnFeedField: UITextField!
     @IBOutlet var adgField: UITextField!
-    var retain: Bool! = false
+    var morbidity: String!
+    var cog: String!
+    var price: String!
+    var weight: String!
+    var dof: String!
+    var adg: String!
+    let source = BCIDataSource.sharedInstance
     
     
     override func viewDidLoad() {
@@ -35,20 +41,30 @@ class BCIPopulationViewController: UIViewController {
     }
     
     @IBAction func nextStepAction() {
-        let morbidity: String = morbidityField.text!
-        let cog: String = costOfGainField.text!
-        let price: String = priceReceivedPerSaleField.text!
-        let cot: String = arrivalWeightField.text!
-        let dof: String = daysOnFeedField.text!
-        let adg: String = adgField.text!
+        morbidity = morbidityField.text!
+        cog = costOfGainField.text!
+        price = priceReceivedPerSaleField.text!
+        weight = arrivalWeightField.text!
+        dof = daysOnFeedField.text!
+        adg = adgField.text!
         
-        if morbidity.isBlank || cog.isBlank || price.isBlank || cot.isBlank || cog.isBlank || dof.isBlank || adg.isBlank {
+        if morbidity.isBlank || cog.isBlank || price.isBlank || weight.isBlank || cog.isBlank || dof.isBlank || adg.isBlank {
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized , preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
+            returnValues()
             self.performSegueWithIdentifier("goToDrug1", sender: self)
         }
+    }
+    
+    func returnValues() {
+        source.m = Double(morbidity)
+        source.cog = Double(cog)
+        source.sp = Double(price)
+        source.pw = Double(weight)
+        source.days = Double(dof)
+        source.ahc = Double(adg)
     }
 
     /*

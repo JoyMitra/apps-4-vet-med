@@ -16,6 +16,12 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var cfrField: UITextField!
     @IBOutlet var costOfTreatmentField: UITextField!
     @IBOutlet var chronicPercentageField: UITextField!
+    var drugName: String!
+    var tpf: String!
+    var cfr: String!
+    var cot: String!
+    var chronic: String!
+    let source = BCIDataSource.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +36,28 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func compareButtonAction(sender: AnyObject) {
-        let drugName: String = drugNameField.text!
-        let tpf: String = tpfField.text!
-        let cfr: String = cfrField.text!
-        let cot: String = costOfTreatmentField.text!
-        let chronic: String = chronicPercentageField.text!
+        drugName = drugNameField.text!
+        tpf = tpfField.text!
+        cfr = cfrField.text!
+        cot = costOfTreatmentField.text!
+        chronic = chronicPercentageField.text!
         
         if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank {
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized, preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
+            returnValues()
             self.performSegueWithIdentifier("showResults", sender: self)
         }
     }
     
+    func returnValues() {
+        source.tfpb = Double(tpf)
+        source.cfrb = Double(cfr)
+        source.ctb1 = Double(cot)
+        source.cpb = Double(chronic)
+    }
 
     /*
     // MARK: - Navigation

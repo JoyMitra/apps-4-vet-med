@@ -9,9 +9,14 @@
 import UIKit
 
 class BCIResultsViewController: UIViewController {
-
+    
+    let source = BCIDataSource.sharedInstance
+    @IBOutlet weak var resultsTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        source.calculateEverything()
+        resultsTextView.text = String(source.differenceInReturnToOwnership)
 
         // Do any additional setup after loading the view.
     }

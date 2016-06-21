@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1BB2A900BDFD2C8CFA1C646C /* Pods_BRDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA042313A3C26BB43A8DE2D7 /* Pods_BRDUITests.framework */; };
+		2865C6641D199EE400FCC4E4 /* BCIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */; };
 		287422AF1D0F988300927E06 /* BCIAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422AE1D0F988300927E06 /* BCIAppDelegate.swift */; };
 		287422B11D0F988300927E06 /* BCIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422B01D0F988300927E06 /* BCIViewController.swift */; };
 		287422B41D0F988300927E06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287422B21D0F988300927E06 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0B69B1192C13709248F96F31 /* Pods-BRDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRDUITests/Pods-BRDUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDataSource.swift; sourceTree = "<group>"; };
 		287422AB1D0F988300927E06 /* BRD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287422AE1D0F988300927E06 /* BCIAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCIAppDelegate.swift; sourceTree = "<group>"; };
 		287422B01D0F988300927E06 /* BCIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCIViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				287422DF1D10DD8500927E06 /* BCIResultsViewController.swift */,
 				287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */,
 				287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */,
+				2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */,
 				289994511D19983F0083359E /* BCIStringExtension.swift */,
 				2899944F1D19974B0083359E /* Localizable.strings */,
 				287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */,
@@ -451,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2865C6641D199EE400FCC4E4 /* BCIDataSource.swift in Sources */,
 				287422E61D11BAA200927E06 /* BCIPopulationViewController.swift in Sources */,
 				287422E41D11BA9700927E06 /* BCIDrug2ViewController.swift in Sources */,
 				287422E01D10DD8500927E06 /* BCIResultsViewController.swift in Sources */,

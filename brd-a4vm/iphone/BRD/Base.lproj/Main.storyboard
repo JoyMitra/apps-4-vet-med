@@ -433,6 +433,9 @@ Cost of treatment with TxB/head $5.12
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultsTextView" destination="ZIr-uB-fe2" id="lTp-pX-UeE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbN-HS-yJI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

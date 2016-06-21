@@ -15,6 +15,12 @@ class BCIDrug1ViewController: UIViewController {
     @IBOutlet var cfrField: UITextField!
     @IBOutlet var costOfTreamentField: UITextField!
     @IBOutlet var chronicPercentageField: UITextField!
+    var drugName: String!
+    var tpf: String!
+    var cfr: String!
+    var cot: String!
+    var chronic: String!
+    let source = BCIDataSource.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +34,27 @@ class BCIDrug1ViewController: UIViewController {
     }
     
     @IBAction func nextStepAction() {
-        let drugName: String = drugNameField.text!
-        let tpf: String = tpfField.text!
-        let cfr: String = cfrField.text!
-        let cot: String = costOfTreamentField.text!
-        let chronic: String = chronicPercentageField.text!
+        drugName = drugNameField.text!
+        tpf = tpfField.text!
+        cfr = cfrField.text!
+        cot = costOfTreamentField.text!
+        chronic = chronicPercentageField.text!
         
         if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank {
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized, preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
+            returnValues()
             self.performSegueWithIdentifier("goToDrug2", sender: self)
         }
+    }
+    
+    func returnValues() {
+        source.tfpa = Double(tpf)
+        source.cfra = Double(cfr)
+        source.cta1 = Double(cot)
+        source.cpa = Double(chronic)
     }
 
     /*
