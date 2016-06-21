@@ -173,7 +173,7 @@
                     <navigationItem key="navigationItem" title="Population Parameters" id="TY1-jS-u7I">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Lax-dg-vnS">
                             <connections>
-                                <segue destination="dNU-GM-ggw" kind="show" id="ynt-8R-ABl"/>
+                                <action selector="nextStepAction" destination="W6b-ne-XnW" id="75U-yZ-LBh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -184,6 +184,7 @@
                         <outlet property="daysOnFeedField" destination="vhw-lK-beb" id="nz4-Uk-1ae"/>
                         <outlet property="morbidityField" destination="hG3-Km-erU" id="eOs-na-F7M"/>
                         <outlet property="priceReceivedPerSaleField" destination="oRx-zY-AZu" id="7FO-dg-xT8"/>
+                        <segue destination="dNU-GM-ggw" kind="show" identifier="goToDrug1" id="4wQ-eQ-hfV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48b-YB-q0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -263,7 +264,7 @@
                     <navigationItem key="navigationItem" title="Drug 1" id="YNF-Ws-yqT">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="aS0-Ex-cB4">
                             <connections>
-                                <segue destination="lyH-9S-3we" kind="show" id="jqg-am-5FF"/>
+                                <action selector="nextStepAction" destination="dNU-GM-ggw" id="wSw-FE-dAT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -273,6 +274,7 @@
                         <outlet property="costOfTreamentField" destination="mP2-up-BBn" id="m1I-aS-mok"/>
                         <outlet property="drugNameField" destination="egb-l1-dQK" id="Euo-zz-IUp"/>
                         <outlet property="tpfField" destination="ZhH-8x-VpF" id="7ES-LN-gsH"/>
+                        <segue destination="lyH-9S-3we" kind="show" identifier="goToDrug2" id="mfI-XG-YmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vf9-gm-hNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
