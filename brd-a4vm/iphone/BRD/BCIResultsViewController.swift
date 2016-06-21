@@ -29,13 +29,7 @@ class BCIResultsViewController: UIViewController {
         let costOfTreamtmentTxB = String(source.costOfTreatmentPerHeadTxB)
         
         
-        var drugComparisonString = ""
-        if differenceInReturn.isSignMinus {
-            drugComparisonString = "Drug 1 is better\n"
-        } else {
-            drugComparisonString = "Drug 2 is better\n"
-        }
-        let detailsString = "Difference in return to Ownership: " + differenceInReturnString + "\n" +
+        let resultString = "Difference in return to Ownership: " + differenceInReturnString + "\n" +
                             "Sale weight for Tx A: " + saleWeightTxA + "\n" +
                             "Sale weight for Tx B: " + saleWeightTxB + "\n" +
                             "Gross income Tx A: " + grossIncomeTxA + "\n" +
@@ -45,17 +39,15 @@ class BCIResultsViewController: UIViewController {
                             "Cost of treatment with Tx A: " + costOfTreamtmentTxA + "\n" +
                             "Cost of treatment with Tx A: " + costOfTreamtmentTxB
         
-        let resultString = drugComparisonString + "\n" + detailsString
         
-        let boldFont = UIFont(name: "Helvetica-Bold", size: 16)
-        let attributedString = NSMutableAttributedString(string:detailsString)
-        let range = (resultString as NSString).rangeOfString(differenceInReturnString)
-        let boldedRange = (resultString as NSString).rangeOfString(drugComparisonString)
-        attributedString.addAttributes([kCTFontAttributeName as String:boldFont!], range: boldedRange)
         if differenceInReturn.isSignMinus {
+            let attributedString = NSMutableAttributedString(string:resultString)
+            let range = (resultString as NSString).rangeOfString(differenceInReturnString)
             attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor() , range: range)
+            resultsTextView.attributedText = attributedString
+            return
         }
-        resultsTextView.attributedText = attributedString
+        resultsTextView.text = resultString
         
     }
 
