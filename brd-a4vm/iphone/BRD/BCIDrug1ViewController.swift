@@ -10,18 +10,15 @@ import UIKit
 
 class BCIDrug1ViewController: UIViewController {
 
-    @IBOutlet weak var drugNameField: UITextField!
-    @IBOutlet weak var tpfField: UITextField!
-    @IBOutlet weak var cfrField: UITextField!
-    @IBOutlet weak var costOfTreamentField: UITextField!
-    @IBOutlet weak var chronicPercentageField: UITextField!
-    var retain: Bool! = false
+    @IBOutlet var drugNameField: UITextField!
+    @IBOutlet var tpfField: UITextField!
+    @IBOutlet var cfrField: UITextField!
+    @IBOutlet var costOfTreamentField: UITextField!
+    @IBOutlet var chronicPercentageField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (retain == true) {
-            fillButtonAction(self)
-        }
+
         // Do any additional setup after loading the view.
     }
 
@@ -30,21 +27,19 @@ class BCIDrug1ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func fillButtonAction(sender: AnyObject) {
-        if (retain == true) {
-            retain = false
-            drugNameField.text = ""
-            tpfField.text = ""
-            cfrField.text = ""
-            costOfTreamentField.text = ""
-            chronicPercentageField.text = ""
+    @IBAction func nextStepAction() {
+        let drugName: String = drugNameField.text!
+        let tpf: String = tpfField.text!
+        let cfr: String = cfrField.text!
+        let cot: String = costOfTreamentField.text!
+        let chronic: String = chronicPercentageField.text!
+        
+        if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank {
+            let alertView = UIAlertController(title: "Error", message: "Please fill out all text field!", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+            self.presentViewController(alertView, animated: true, completion: nil)
         } else {
-            retain = true
-            drugNameField.text = "Some kind of drug"
-            tpfField.text = "3%"
-            cfrField.text = "15%"
-            costOfTreamentField.text = "$150"
-            chronicPercentageField.text = "22.1%"
+            self.performSegueWithIdentifier("goToDrug2", sender: self)
         }
     }
 

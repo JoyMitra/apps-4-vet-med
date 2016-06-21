@@ -8,21 +8,18 @@
 
 import UIKit
 
-class BCIDrug2ViewController: UIViewController {
+class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
 
     
-    @IBOutlet weak var drugNameField: UITextField!
-    @IBOutlet weak var tpfField: UITextField!
-    @IBOutlet weak var cfrField: UITextField!
-    @IBOutlet weak var costOfTreatmentField: UITextField!
-    @IBOutlet weak var chronicPercentageField: UITextField!
-    var retain: Bool! = false
+    @IBOutlet var drugNameField: UITextField!
+    @IBOutlet var tpfField: UITextField!
+    @IBOutlet var cfrField: UITextField!
+    @IBOutlet var costOfTreatmentField: UITextField!
+    @IBOutlet var chronicPercentageField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (retain == true) {
-            fillButtonAction(self)
-        }
+        
         // Do any additional setup after loading the view.
     }
 
@@ -31,24 +28,22 @@ class BCIDrug2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func fillButtonAction(sender: AnyObject) {
-        if (retain == true) {
-            retain = false
-            drugNameField.text = ""
-            tpfField.text = ""
-            cfrField.text = ""
-            costOfTreatmentField.text = ""
-            chronicPercentageField.text = ""
+    
+    @IBAction func compareButtonAction(sender: AnyObject) {
+        let drugName: String = drugNameField.text!
+        let tpf: String = tpfField.text!
+        let cfr: String = cfrField.text!
+        let cot: String = costOfTreatmentField.text!
+        let chronic: String = chronicPercentageField.text!
+        
+        if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank {
+            let alertView = UIAlertController(title: "Error", message: "Please fill out all text field!", preferredStyle: .Alert)
+            alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
+            self.presentViewController(alertView, animated: true, completion: nil)
         } else {
-            retain = true
-            drugNameField.text = "Another kind of drug"
-            tpfField.text = "5%"
-            cfrField.text = "30%"
-            costOfTreatmentField.text = "$10"
-            chronicPercentageField.text = "50.1%"
+            self.performSegueWithIdentifier("showResults", sender: self)
         }
     }
-
     
 
     /*
@@ -61,4 +56,15 @@ class BCIDrug2ViewController: UIViewController {
     }
     */
 
+}
+
+extension String {
+    
+    var isBlank: Bool {
+        get {
+            let trimmed = stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            return trimmed.isEmpty
+        }
+    }
+    
 }
