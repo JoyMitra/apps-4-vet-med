@@ -1,3 +1,21 @@
-This document should contain the build instructions for the project.
+#Bovine Respiratory Disease
+This is a decision making app used to compare two different drugs. Outcomes vary according to the population and the estimated drug specific values.
 
-Refer to https://bitbucket.org/rvprasad/clinical-scenarios/src/28cc51d55b5343f192462ae2e616d96dd86ea672/simple-communication-patterns/Readme.md?at=master&fileviewer=file-view-default or https://github.com/santoslab/apps-4-vet-med/tree/master/bse-a4vm/ for examples.
+#How to use it
+1. Start by click the green "Start" button
+2. Enter population specigic parameters
+3. Enter values for Drug 1
+4. Enter values for Drug 2
+5. Click Compare to compare the two drugs
+6. The Results page shows which is better and why?
+
+#How to build it
+######Prerequisites:
+- Git
+- [CocoaPods] (http://stackoverflow.com/questions/20755044/how-to-install-cocoa-pods)
+
+######Steps:
+1. Clone this repo by running `git clone git@github.com:santoslab/apps-4-vet-med.git`
+2. run `pod install`
+3. open `BRD.xcworkspace`
+4. Build and voila!
