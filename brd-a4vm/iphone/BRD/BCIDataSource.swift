@@ -11,6 +11,13 @@ import UIKit
 class BCIDataSource {
     static let sharedInstance = BCIDataSource()
     
+    //Dictionaries to be updated later
+    var populationDictionary: [String:String!] = [:]
+    var drug1Dictionary: [String:String!] = [:]
+    var drug2Dictionary: [String:String!] = [:]
+    var drug1Name: String!
+    var drug2Name: String!
+    
     //POPULATION AND DRUG PARAMETERS
     var pw: Double!   //D5: Arrival Weight (lb) [PW]
     var cog: Double! //D6: Cost of Gain ($/lb. gain) [CoG]

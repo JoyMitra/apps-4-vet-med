@@ -66,6 +66,11 @@ class BCIResultsViewController: UIViewController {
     
     
     @IBAction func resetButtonAction(sender: AnyObject) {
+        // Reset previously saved values
+        let appDomain = NSBundle.mainBundle().bundleIdentifier!
+        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+
+        
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
 

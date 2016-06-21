@@ -23,12 +23,12 @@ class BCIPopulationViewController: UIViewController {
     var dof: String!
     var adg: String!
     let source = BCIDataSource.sharedInstance
-    
+    let kPopulationKey = "populationParameters"
+    let drug1Segue = "goToDrug1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        self.loadLocalValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,8 +54,22 @@ class BCIPopulationViewController: UIViewController {
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
             returnValues()
-            self.performSegueWithIdentifier("goToDrug1", sender: self)
+            self.performSegueWithIdentifier(drug1Segue, sender: self)
         }
+    }
+    
+    func loadLocalValues() {
+        let userDataStore = NSUserDefaults.standardUserDefaults()
+        let populationDictionary = userDataStore.objectForKey(kPopulationKey)
+        if let dict = populationDictionary as? [String:String!] {
+            morbidityField.text = dict["m"]!
+            costOfGainField.text = dict["cog"]!
+            priceReceivedPerSaleField.text = dict["sp"]!
+            arrivalWeightField.text = dict["pw"]!
+            daysOnFeedField.text = dict["days"]!
+            adgField.text = dict["ahc"]!
+        }
+        
     }
     
     func returnValues() {
@@ -65,6 +79,15 @@ class BCIPopulationViewController: UIViewController {
         source.pw = Double(weight)
         source.days = Double(dof)
         source.ahc = Double(adg)
+        let populationDictionary = ["m": morbidity,
+                            "cog": cog,
+                            "sp": price,
+                            "pw": weight,
+                            "days": dof,
+                            "ahc": adg]
+        source.populationDictionary = populationDictionary
+        let userDataStore = NSUserDefaults.standardUserDefaults()
+        userDataStore.setObject(populationDictionary, forKey: kPopulationKey)
     }
 
     /*

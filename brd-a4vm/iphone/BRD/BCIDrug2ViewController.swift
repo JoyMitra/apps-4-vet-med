@@ -22,11 +22,12 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
     var cot: String!
     var chronic: String!
     let source = BCIDataSource.sharedInstance
+    let kDrug2Parameters = "kDrug2Parameters"
+    let resultsSegue = "showResults"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        self.loadLocalValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,15 +49,37 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
             returnValues()
-            self.performSegueWithIdentifier("showResults", sender: self)
+            self.performSegueWithIdentifier(resultsSegue, sender: self)
         }
     }
     
+    func loadLocalValues() {
+        let userDataStore = NSUserDefaults.standardUserDefaults()
+        let drug2Dictionary = userDataStore.objectForKey(kDrug2Parameters)
+        if let dict = drug2Dictionary as? [String:String!] {
+            drugNameField.text = dict["drug2Name"]!
+            tpfField.text = dict["tpfb"]!
+            cfrField.text = dict["cfrb"]!
+            costOfTreatmentField.text = dict["ctb1"]!
+            chronicPercentageField.text = dict["cpb"]!
+        }
+        
+    }
+    
     func returnValues() {
+        source.drug2Name = drugName
         source.tfpb = Double(tpf)
         source.cfrb = Double(cfr)
         source.ctb1 = Double(cot)
         source.cpb = Double(chronic)
+        let drug2Dictionary = ["drug2Name": drugName,
+                               "tpfb": tpf,
+                               "cfrb": cfr,
+                               "ctb1": cot,
+                               "cpb": chronic]
+        source.drug1Dictionary = drug2Dictionary
+        let userDataStore = NSUserDefaults.standardUserDefaults()
+        userDataStore.setObject(drug2Dictionary, forKey:kDrug2Parameters)
     }
 
     /*

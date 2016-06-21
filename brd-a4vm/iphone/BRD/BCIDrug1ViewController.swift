@@ -21,11 +21,12 @@ class BCIDrug1ViewController: UIViewController {
     var cot: String!
     var chronic: String!
     let source = BCIDataSource.sharedInstance
+    let kDrug1Parameters = "drug1Parameters"
+    let drug2Segue = "goToDrug2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.loadLocalValues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,15 +47,37 @@ class BCIDrug1ViewController: UIViewController {
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
             returnValues()
-            self.performSegueWithIdentifier("goToDrug2", sender: self)
+            self.performSegueWithIdentifier(drug2Segue, sender: self)
         }
     }
     
+    func loadLocalValues() {
+        let userDataStore = NSUserDefaults.standardUserDefaults()
+        let drug1Dictionary = userDataStore.objectForKey(kDrug1Parameters)
+        if let dict = drug1Dictionary as? [String:String!] {
+            drugNameField.text = dict["drug1Name"]!
+            tpfField.text = dict["tpfa"]!
+            cfrField.text = dict["cfra"]!
+            costOfTreamentField.text = dict["cta1"]!
+            chronicPercentageField.text = dict["cpa"]!
+        }
+        
+    }
+    
     func returnValues() {
+        source.drug1Name = drugName
         source.tfpa = Double(tpf)
         source.cfra = Double(cfr)
         source.cta1 = Double(cot)
         source.cpa = Double(chronic)
+        let drug1Dictionary = ["drug1Name": drugName,
+                                    "tpfa": tpf,
+                                    "cfra": cfr,
+                                    "cta1": cot,
+                                    "cpa": chronic]
+        source.drug1Dictionary = drug1Dictionary
+        let userDataStore = NSUserDefaults.standardUserDefaults()
+        userDataStore.setObject(drug1Dictionary, forKey: kDrug1Parameters)
     }
 
     /*
