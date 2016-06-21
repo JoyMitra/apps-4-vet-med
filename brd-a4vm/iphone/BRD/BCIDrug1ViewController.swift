@@ -35,7 +35,7 @@ class BCIDrug1ViewController: UIViewController {
         let chronic: String = chronicPercentageField.text!
         
         if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank {
-            let alertView = UIAlertController(title: "Error", message: "Please fill out all text field!", preferredStyle: .Alert)
+            let alertView = UIAlertController(title: "Error", message: "emptyFields".localized, preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {

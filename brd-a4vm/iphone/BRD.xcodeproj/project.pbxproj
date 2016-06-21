@@ -20,6 +20,8 @@
 		287422E21D11BA8F00927E06 /* BCIDrug1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */; };
 		287422E41D11BA9700927E06 /* BCIDrug2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */; };
 		287422E61D11BAA200927E06 /* BCIPopulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */; };
+		289994501D19974B0083359E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2899944F1D19974B0083359E /* Localizable.strings */; };
+		289994521D19983F0083359E /* BCIStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289994511D19983F0083359E /* BCIStringExtension.swift */; };
 		8111F4C79F6145F5003746B9 /* Pods_BRDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4EC9D38C4CEA69FBFF6C4E /* Pods_BRDTests.framework */; };
 		E1346B7CA25C47F8D3BB189B /* Pods_BRD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E927F21CD2305FAE5E126E1 /* Pods_BRD.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDrug1ViewController.swift; sourceTree = "<group>"; };
 		287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDrug2ViewController.swift; sourceTree = "<group>"; };
 		287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIPopulationViewController.swift; sourceTree = "<group>"; };
+		2899944F1D19974B0083359E /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		289994511D19983F0083359E /* BCIStringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIStringExtension.swift; sourceTree = "<group>"; };
 		381874B49DA7A661575370C2 /* Pods-BRDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRDTests/Pods-BRDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRD/Pods-BRD.debug.xcconfig"; sourceTree = "<group>"; };
 		3E927F21CD2305FAE5E126E1 /* Pods_BRD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +143,8 @@
 				287422DF1D10DD8500927E06 /* BCIResultsViewController.swift */,
 				287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */,
 				287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */,
+				289994511D19983F0083359E /* BCIStringExtension.swift */,
+				2899944F1D19974B0083359E /* Localizable.strings */,
 				287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */,
 				287422B21D0F988300927E06 /* Main.storyboard */,
 				287422B81D0F988300927E06 /* Assets.xcassets */,
@@ -295,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				287422BC1D0F988300927E06 /* LaunchScreen.storyboard in Resources */,
+				289994501D19974B0083359E /* Localizable.strings in Resources */,
 				287422B91D0F988300927E06 /* Assets.xcassets in Resources */,
 				287422B41D0F988300927E06 /* Main.storyboard in Resources */,
 			);
@@ -449,6 +456,7 @@
 				287422E01D10DD8500927E06 /* BCIResultsViewController.swift in Sources */,
 				287422B71D0F988300927E06 /* BRD.xcdatamodeld in Sources */,
 				287422E21D11BA8F00927E06 /* BCIDrug1ViewController.swift in Sources */,
+				289994521D19983F0083359E /* BCIStringExtension.swift in Sources */,
 				287422B11D0F988300927E06 /* BCIViewController.swift in Sources */,
 				287422AF1D0F988300927E06 /* BCIAppDelegate.swift in Sources */,
 			);
