@@ -43,7 +43,7 @@ class BCIPopulationViewController: UIViewController {
         let adg: String = adgField.text!
         
         if morbidity.isBlank || cog.isBlank || price.isBlank || cot.isBlank || cog.isBlank || dof.isBlank || adg.isBlank {
-            let alertView = UIAlertController(title: "Error", message: "Please fill out all text field!", preferredStyle: .Alert)
+            let alertView = UIAlertController(title: "Error", message: "emptyFields".localized , preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
         } else {
