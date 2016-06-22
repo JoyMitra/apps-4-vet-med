@@ -427,7 +427,7 @@ Cost of treatment with TxB/head $5.12
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="kvg-WV-r2R">
-                        <barButtonItem key="rightBarButtonItem" title="Reset" id="J4v-mc-ggA">
+                        <barButtonItem key="rightBarButtonItem" title="Restart" id="J4v-mc-ggA">
                             <connections>
                                 <action selector="resetButtonAction:" destination="dgd-y8-bau" id="3sc-83-O3P"/>
                             </connections>
