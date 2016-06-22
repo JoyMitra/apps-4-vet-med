@@ -29,7 +29,6 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadLocalValues()
-        self.addRightView()
         self.morbidityField.delegate = self
         self.costOfGainField.delegate = self
         self.priceReceivedPerSaleField.delegate = self
@@ -140,14 +139,6 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         textField.layer.borderColor = UIColor.grayColor().CGColor
         textField.layer.borderWidth = 0
         textField.layer.cornerRadius = 5
-    }
-    
-    
-    func addRightView() {
-        morbidityField.rightViewMode = .Always
-        priceReceivedPerSaleField.leftViewMode = .Always
-        morbidityField.rightView = UIImageView(image: UIImage(named: "percentage"))
-        priceReceivedPerSaleField.leftView = UIImageView(image: UIImage(named: "usd"))
     }
 
 
