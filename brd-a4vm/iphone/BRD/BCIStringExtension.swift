@@ -9,7 +9,17 @@
 import UIKit
 
 extension String {
+
+    // Localize string
     var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: NSBundle.mainBundle(), value: "", comment: "")
+    }
+    
+    // Check if string is blank
+    var isBlank: Bool {
+        get {
+            let trimmed = stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+            return trimmed.isEmpty
+        }
     }
 }
