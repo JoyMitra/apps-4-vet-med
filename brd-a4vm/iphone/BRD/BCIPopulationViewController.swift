@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BCIPopulationViewController: UIViewController {
+class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var morbidityField: UITextField!
     @IBOutlet var costOfGainField: UITextField!
@@ -29,6 +29,12 @@ class BCIPopulationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadLocalValues()
+        self.morbidityField.delegate = self
+        self.costOfGainField.delegate = self
+        self.priceReceivedPerSaleField.delegate = self
+        self.arrivalWeightField.delegate = self
+        self.daysOnFeedField.delegate = self
+        self.adgField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,6 +55,13 @@ class BCIPopulationViewController: UIViewController {
         adg = adgField.text!
         
         if morbidity.isBlank || cog.isBlank || price.isBlank || weight.isBlank || cog.isBlank || dof.isBlank || adg.isBlank {
+            textFieldDidEndEditing(morbidityField)
+            textFieldDidEndEditing(costOfGainField)
+            textFieldDidEndEditing(arrivalWeightField)
+            textFieldDidEndEditing(costOfGainField)
+            textFieldDidEndEditing(adgField)
+            textFieldDidEndEditing(daysOnFeedField)
+            textFieldDidEndEditing(priceReceivedPerSaleField)
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized , preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
@@ -89,6 +102,45 @@ class BCIPopulationViewController: UIViewController {
         let userDataStore = NSUserDefaults.standardUserDefaults()
         userDataStore.setObject(populationDictionary, forKey: kPopulationKey)
     }
+    
+    // Focus on the field
+    func textFieldDidBeginEditing(textField: UITextField) {
+        highlightSelectedTextField(textField)
+    }
+    
+    // Check when editing ends and update accordingly
+    func textFieldDidEndEditing(textField: UITextField) {
+        let whitespace = NSCharacterSet.whitespaceCharacterSet()
+        if(textField.text!.stringByTrimmingCharactersInSet(whitespace) == ""){
+            errorHighlightTextField(textField)
+        }
+        else{
+            removeErrorHighlightTextField(textField)
+        }
+    }
+
+    // Textfield focus - show gray border
+    func highlightSelectedTextField(textfield: UITextField){
+        textfield.layer.borderColor = UIColor.grayColor().CGColor
+        textfield.layer.borderWidth = 1
+        textfield.layer.cornerRadius = 5
+    }
+    
+    // Text Field is empty - show red border
+    func errorHighlightTextField(textField: UITextField){
+        textField.layer.borderColor = UIColor.redColor().CGColor
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+    }
+    
+    // Text Field is NOT empty - show gray border with 0 border width
+    // Reset
+    func removeErrorHighlightTextField(textField: UITextField){
+        textField.layer.borderColor = UIColor.grayColor().CGColor
+        textField.layer.borderWidth = 0
+        textField.layer.cornerRadius = 5
+    }
+
 
     /*
     // MARK: - Navigation

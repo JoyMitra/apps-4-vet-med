@@ -28,6 +28,11 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadLocalValues()
+        self.drugNameField.delegate = self
+        self.tpfField.delegate = self
+        self.cfrField.delegate = self
+        self.costOfTreatmentField.delegate = self
+        self.chronicPercentageField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,6 +49,11 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
         chronic = chronicPercentageField.text!
         
         if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank {
+            textFieldDidEndEditing(drugNameField)
+            textFieldDidEndEditing(tpfField)
+            textFieldDidEndEditing(cfrField)
+            textFieldDidEndEditing(costOfTreatmentField)
+            textFieldDidEndEditing(chronicPercentageField)
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized, preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
@@ -82,25 +92,42 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
         userDataStore.setObject(drug2Dictionary, forKey:kDrug2Parameters)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Focus on the field
+    func textFieldDidBeginEditing(textField: UITextField) {
+        highlightSelectedTextField(textField)
     }
-    */
-
-}
-
-extension String {
     
-    var isBlank: Bool {
-        get {
-            let trimmed = stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
-            return trimmed.isEmpty
+    // Check when editing ends and update accordingly
+    func textFieldDidEndEditing(textField: UITextField) {
+        let whitespace = NSCharacterSet.whitespaceCharacterSet()
+        if(textField.text!.stringByTrimmingCharactersInSet(whitespace) == ""){
+            errorHighlightTextField(textField)
+        }
+        else{
+            removeErrorHighlightTextField(textField)
         }
     }
     
+    // Textfield focus - show gray border
+    func highlightSelectedTextField(textfield: UITextField){
+        textfield.layer.borderColor = UIColor.grayColor().CGColor
+        textfield.layer.borderWidth = 1
+        textfield.layer.cornerRadius = 5
+    }
+    
+    // Text Field is empty - show red border
+    func errorHighlightTextField(textField: UITextField){
+        textField.layer.borderColor = UIColor.redColor().CGColor
+        textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 5
+    }
+    
+    // Text Field is NOT empty - show gray border with 0 border width
+    // Reset
+    func removeErrorHighlightTextField(textField: UITextField){
+        textField.layer.borderColor = UIColor.grayColor().CGColor
+        textField.layer.borderWidth = 0
+        textField.layer.cornerRadius = 5
+    }
+
 }
