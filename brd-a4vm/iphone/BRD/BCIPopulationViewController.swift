@@ -25,6 +25,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     let source = BCIDataSource.sharedInstance
     let kPopulationKey = "populationParameters"
     let drug1Segue = "goToDrug1"
+    var isSatisfied: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,14 +55,17 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         dof = daysOnFeedField.text!
         adg = adgField.text!
         
-        if morbidity.isBlank || cog.isBlank || price.isBlank || weight.isBlank || cog.isBlank || dof.isBlank || adg.isBlank {
-            textFieldDidEndEditing(morbidityField)
-            textFieldDidEndEditing(costOfGainField)
-            textFieldDidEndEditing(arrivalWeightField)
-            textFieldDidEndEditing(costOfGainField)
-            textFieldDidEndEditing(adgField)
-            textFieldDidEndEditing(daysOnFeedField)
-            textFieldDidEndEditing(priceReceivedPerSaleField)
+    
+        textFieldDidEndEditing(morbidityField)
+        textFieldDidEndEditing(costOfGainField)
+        textFieldDidEndEditing(arrivalWeightField)
+        textFieldDidEndEditing(daysOnFeedField)
+        textFieldDidEndEditing(priceReceivedPerSaleField)
+        textFieldDidEndEditing(adgField)
+
+        
+        if morbidity.isBlank || cog.isBlank || price.isBlank || weight.isBlank || cog.isBlank || dof.isBlank || adg.isBlank ||
+            !isSatisfied {
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized , preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
@@ -117,6 +121,50 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         else{
             removeErrorHighlightTextField(textField)
         }
+        
+        switch(textField) {
+        case costOfGainField:
+            let input = Double(costOfGainField.text!)
+            if (input >= 0.1 && input <= 10) {
+                removeErrorHighlightTextField(textField)
+            } else {
+                errorHighlightTextField(textField)
+            }
+            break
+        case arrivalWeightField:
+            let input = Int(arrivalWeightField.text!)
+            if (input >= 100 && input <= 1200) {
+                removeErrorHighlightTextField(textField)
+            } else {
+                errorHighlightTextField(textField)
+            }
+            break
+        case daysOnFeedField:
+            let input = Int(daysOnFeedField.text!)
+            if (input >= 1 && input <= 400) {
+                removeErrorHighlightTextField(textField)
+            } else {
+                errorHighlightTextField(textField)
+            }
+            break
+        case priceReceivedPerSaleField:
+            let input = Double(priceReceivedPerSaleField.text!)
+            if (input >= 0.1 && input <= 40) {
+                removeErrorHighlightTextField(textField)
+            } else {
+                errorHighlightTextField(textField)
+            }
+            break
+        case adgField:
+            let input = Double(adgField.text!)
+            if (input >= 0.1 && input <= 5) {
+                removeErrorHighlightTextField(textField)
+            } else {
+                errorHighlightTextField(textField)
+            }
+            break
+        default: break
+        }
     }
 
     // Textfield focus - show gray border
@@ -131,6 +179,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         textField.layer.borderColor = UIColor.redColor().CGColor
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
+        isSatisfied = false
     }
     
     // Text Field is NOT empty - show gray border with 0 border width
@@ -139,6 +188,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         textField.layer.borderColor = UIColor.grayColor().CGColor
         textField.layer.borderWidth = 0
         textField.layer.cornerRadius = 5
+        isSatisfied = true
     }
 
 
