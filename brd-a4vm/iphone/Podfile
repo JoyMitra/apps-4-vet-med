@@ -6,7 +6,6 @@ target 'BRD' do
   use_frameworks!
 
   # Pods for BRD
-  pod 'IQKeyboardManagerSwift', '4.0.3'
 
   target 'BRDTests' do
     inherit! :search_paths
