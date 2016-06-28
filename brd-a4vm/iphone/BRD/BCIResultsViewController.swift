@@ -51,6 +51,10 @@ class BCIResultsViewController: UIViewController {
         
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        source.reset()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

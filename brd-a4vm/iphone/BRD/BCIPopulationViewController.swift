@@ -25,6 +25,8 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     let source = BCIDataSource.sharedInstance
     let kPopulationKey = "populationParameters"
     let drug1Segue = "goToDrug1"
+    let doubleFormat = ".2"
+    let intFormat = "0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,12 +81,12 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         let userDataStore = NSUserDefaults.standardUserDefaults()
         let populationDictionary = userDataStore.objectForKey(kPopulationKey)
         if let dict = populationDictionary as? [String:String!] {
-            morbidityField.text = dict["m"]!
-            costOfGainField.text = dict["cog"]!
-            priceReceivedPerSaleField.text = dict["sp"]!
-            arrivalWeightField.text = dict["pw"]!
-            daysOnFeedField.text = dict["days"]!
-            adgField.text = dict["ahc"]!
+            morbidityField.text = Double(dict["m"]!)?.format(doubleFormat)
+            costOfGainField.text = Double(dict["cog"]!)?.format(doubleFormat)
+            priceReceivedPerSaleField.text = Double(dict["sp"]!)?.format(doubleFormat)
+            arrivalWeightField.text = Int(dict["pw"]!)?.format(intFormat)
+            daysOnFeedField.text = Int(dict["days"]!)?.format(intFormat)
+            adgField.text = Double(dict["ahc"]!)?.format(doubleFormat)
         }
         
     }
@@ -105,6 +107,25 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         source.populationDictionary = populationDictionary
         let userDataStore = NSUserDefaults.standardUserDefaults()
         userDataStore.setObject(populationDictionary, forKey: kPopulationKey)
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if string.isEmpty {
+            return true
+        }
+        
+        if let input = textField.text {
+            let numberFormatter = NSNumberFormatter()
+            let range = input.rangeOfString(numberFormatter.decimalSeparator)
+            if let r = range {
+                let endIndex = input.startIndex.advancedBy(input.startIndex.distanceTo(r.endIndex))
+                let decimals = input.substringFromIndex(endIndex)
+                return decimals.characters.count < 2
+            }
+        }
+        
+        return true
     }
     
     // Focus on the field
@@ -200,6 +221,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         textField.layer.cornerRadius = 5
         textField.isSatisfied = true
     }
+
 
 
     /*
