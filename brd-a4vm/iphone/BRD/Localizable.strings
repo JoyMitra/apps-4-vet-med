@@ -6,4 +6,4 @@
   Copyright © 2016 Beef Cattle Institute. All rights reserved.
 */
 
-"emptyFields" = "Please fill out all text fields";
+"emptyFields" = "Please make sure all text fields are filled in and are within reasonable constraints.";

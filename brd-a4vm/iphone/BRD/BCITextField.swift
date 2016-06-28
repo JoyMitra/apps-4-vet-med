@@ -8,14 +8,23 @@
 
 import UIKit
 
-class BCITextField: UITextField {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+class BCITextField: UITextField, UITextFieldDelegate {
+    var isSatisfied: Bool = false
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        delegate = self
     }
-    */
+    required override init(frame: CGRect) {
+        super.init(frame: frame)
+        delegate = self
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+    }
 
 }

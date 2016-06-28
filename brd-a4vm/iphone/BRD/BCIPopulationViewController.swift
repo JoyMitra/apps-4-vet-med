@@ -10,12 +10,12 @@ import UIKit
 
 class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
 
-    @IBOutlet var morbidityField: UITextField!
-    @IBOutlet var costOfGainField: UITextField!
-    @IBOutlet var priceReceivedPerSaleField: UITextField!
-    @IBOutlet var arrivalWeightField: UITextField!
-    @IBOutlet var daysOnFeedField: UITextField!
-    @IBOutlet var adgField: UITextField!
+    @IBOutlet var morbidityField: BCITextField!
+    @IBOutlet var costOfGainField: BCITextField!
+    @IBOutlet var priceReceivedPerSaleField: BCITextField!
+    @IBOutlet var arrivalWeightField: BCITextField!
+    @IBOutlet var daysOnFeedField: BCITextField!
+    @IBOutlet var adgField: BCITextField!
     var morbidity: String!
     var cog: String!
     var price: String!
@@ -25,7 +25,6 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     let source = BCIDataSource.sharedInstance
     let kPopulationKey = "populationParameters"
     let drug1Segue = "goToDrug1"
-    var isSatisfied: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +64,8 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
 
         
         if morbidity.isBlank || cog.isBlank || price.isBlank || weight.isBlank || cog.isBlank || dof.isBlank || adg.isBlank ||
-            !isSatisfied {
+            !morbidityField.isSatisfied || !costOfGainField.isSatisfied || !arrivalWeightField.isSatisfied ||
+            !daysOnFeedField.isSatisfied || !priceReceivedPerSaleField.isSatisfied || !adgField.isSatisfied {
             let alertView = UIAlertController(title: "Error", message: "emptyFields".localized , preferredStyle: .Alert)
             alertView.addAction(UIAlertAction(title: "Okay", style: .Default, handler: nil))
             self.presentViewController(alertView, animated: true, completion: nil)
@@ -109,58 +109,68 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     
     // Focus on the field
     func textFieldDidBeginEditing(textField: UITextField) {
-        highlightSelectedTextField(textField)
+        let myTextField = textField as! BCITextField
+        highlightSelectedTextField(myTextField)
     }
     
     // Check when editing ends and update accordingly
     func textFieldDidEndEditing(textField: UITextField) {
+        let myTextField = textField as! BCITextField
         let whitespace = NSCharacterSet.whitespaceCharacterSet()
         if(textField.text!.stringByTrimmingCharactersInSet(whitespace) == ""){
-            errorHighlightTextField(textField)
+            errorHighlightTextField(myTextField)
         }
         else{
-            removeErrorHighlightTextField(textField)
+            removeErrorHighlightTextField(myTextField)
         }
         
         switch(textField) {
+        case morbidityField:
+            let input = Double(morbidityField.text!)
+            if (input >= 0 && input <= 100) {
+                removeErrorHighlightTextField(myTextField)
+            } else {
+                errorHighlightTextField(myTextField)
+            }
+            break
         case costOfGainField:
             let input = Double(costOfGainField.text!)
             if (input >= 0.1 && input <= 10) {
-                removeErrorHighlightTextField(textField)
+                removeErrorHighlightTextField(myTextField)
             } else {
-                errorHighlightTextField(textField)
+                errorHighlightTextField(myTextField)
             }
             break
         case arrivalWeightField:
             let input = Int(arrivalWeightField.text!)
             if (input >= 100 && input <= 1200) {
-                removeErrorHighlightTextField(textField)
+                removeErrorHighlightTextField(myTextField)
             } else {
-                errorHighlightTextField(textField)
+                errorHighlightTextField(myTextField)
             }
             break
         case daysOnFeedField:
             let input = Int(daysOnFeedField.text!)
             if (input >= 1 && input <= 400) {
-                removeErrorHighlightTextField(textField)
+                removeErrorHighlightTextField(myTextField)
             } else {
-                errorHighlightTextField(textField)
+                errorHighlightTextField(myTextField)
             }
             break
         case priceReceivedPerSaleField:
             let input = Double(priceReceivedPerSaleField.text!)
             if (input >= 0.1 && input <= 40) {
-                removeErrorHighlightTextField(textField)
+                removeErrorHighlightTextField(myTextField)
             } else {
-                errorHighlightTextField(textField)
+                errorHighlightTextField(myTextField)
             }
             break
         case adgField:
             let input = Double(adgField.text!)
             if (input >= 0.1 && input <= 5) {
-                removeErrorHighlightTextField(textField)
+                removeErrorHighlightTextField(myTextField)
             } else {
-                errorHighlightTextField(textField)
+                errorHighlightTextField(myTextField)
             }
             break
         default: break
@@ -168,27 +178,27 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     }
 
     // Textfield focus - show gray border
-    func highlightSelectedTextField(textfield: UITextField){
+    func highlightSelectedTextField(textfield: BCITextField){
         textfield.layer.borderColor = UIColor.grayColor().CGColor
         textfield.layer.borderWidth = 1
         textfield.layer.cornerRadius = 5
     }
     
     // Text Field is empty - show red border
-    func errorHighlightTextField(textField: UITextField){
+    func errorHighlightTextField(textField: BCITextField){
         textField.layer.borderColor = UIColor.redColor().CGColor
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 5
-        isSatisfied = false
+        textField.isSatisfied = false
     }
     
     // Text Field is NOT empty - show gray border with 0 border width
     // Reset
-    func removeErrorHighlightTextField(textField: UITextField){
+    func removeErrorHighlightTextField(textField: BCITextField){
         textField.layer.borderColor = UIColor.grayColor().CGColor
         textField.layer.borderWidth = 0
         textField.layer.cornerRadius = 5
-        isSatisfied = true
+        textField.isSatisfied = true
     }
 
 
