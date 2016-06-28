@@ -24,6 +24,8 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
     let source = BCIDataSource.sharedInstance
     let kDrug2Parameters = "kDrug2Parameters"
     let resultsSegue = "showResults"
+    let doubleFormat = ".2"
+    let intFormat = "0"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,10 +74,10 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
         let drug2Dictionary = userDataStore.objectForKey(kDrug2Parameters)
         if let dict = drug2Dictionary as? [String:String!] {
             drugNameField.text = dict["drug2Name"]!
-            tpfField.text = dict["tpfb"]!
-            cfrField.text = dict["cfrb"]!
-            costOfTreatmentField.text = dict["ctb1"]!
-            chronicPercentageField.text = dict["cpb"]!
+            tpfField.text = Double(dict["tpfb"]!)?.format(doubleFormat)
+            cfrField.text = Double(dict["cfrb"]!)?.format(doubleFormat)
+            costOfTreatmentField.text = Double(dict["ctb1"]!)?.format(doubleFormat)
+            chronicPercentageField.text = Double(dict["cpb"]!)?.format(doubleFormat)
         }
         
     }
@@ -150,6 +152,27 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        if string.isEmpty {
+            return true
+        }
+        
+        if let input = textField.text {
+            let numberFormatter = NSNumberFormatter()
+            let range = input.rangeOfString(numberFormatter.decimalSeparator)
+            if let r = range {
+                let endIndex = input.startIndex.advancedBy(input.startIndex.distanceTo(r.endIndex))
+                let decimals = input.substringFromIndex(endIndex)
+                return decimals.characters.count < 2
+            }
+        }
+        
+        return true
+    }
+    
     
     // Textfield focus - show gray border
     func highlightSelectedTextField(textfield: BCITextField){
