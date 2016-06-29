@@ -12,12 +12,14 @@ class BCIResultsViewController: UIViewController {
     
     let source = BCIDataSource.sharedInstance
     @IBOutlet weak var resultsTextView: UITextView!
+    let doubleFormat = ".2"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         source.calculateEverything()
         
-        let differenceInReturnString = String(abs(source.differenceInReturnToOwnership))
+        let differenceInReturnString = abs(source.differenceInReturnToOwnership).format(doubleFormat)
         let differenceInReturn = source.differenceInReturnToOwnership
         let saleWeightTxA = String(source.saleWeightTxA)
         let saleWeightTxB = String(source.saleWeightTxB)
@@ -28,25 +30,15 @@ class BCIResultsViewController: UIViewController {
         let costOfTreamtmentTxA = String(source.costOfTreatmentPerHeadTxA)
         let costOfTreamtmentTxB = String(source.costOfTreatmentPerHeadTxB)
         
-        
-        let resultString = "Difference in return to Ownership: " + differenceInReturnString + "\n" +
-                            "Sale weight for Tx A: " + saleWeightTxA + "\n" +
-                            "Sale weight for Tx B: " + saleWeightTxB + "\n" +
-                            "Gross income Tx A: " + grossIncomeTxA + "\n" +
-                            "Gross income Tx A: " + grossIncomeTxB + "\n" +
-                            "Return to ownership and mgt w/ Tx A: " + returnToOwnershipTxA + "\n" +
-                            "Return to ownership and mgt w/ Tx A: " + returnToOwndershipTxB + "\n" +
-                            "Cost of treatment with Tx A: " + costOfTreamtmentTxA + "\n" +
-                            "Cost of treatment with Tx A: " + costOfTreamtmentTxB
-        
+        var bestDrugName = ""
+        var resultString = ""
         
         if differenceInReturn.isSignMinus {
-            let attributedString = NSMutableAttributedString(string:resultString)
-            let range = (resultString as NSString).rangeOfString(differenceInReturnString)
-            attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor() , range: range)
-            resultsTextView.attributedText = attributedString
-            return
+            bestDrugName = source.drug1Name
+        } else {
+            bestDrugName = source.drug2Name
         }
+        resultString = "Treatment " + bestDrugName + " shows $" + differenceInReturnString + "/head advantage"
         resultsTextView.text = resultString
         
     }
