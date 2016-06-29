@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BB2A900BDFD2C8CFA1C646C /* Pods_BRDUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA042313A3C26BB43A8DE2D7 /* Pods_BRDUITests.framework */; };
+		0831E820AAC7A8912B08A592 /* libPods-BRDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DD348BBF1C7EE0C1F52F72 /* libPods-BRDUITests.a */; };
 		283B4C161D22E9FF001D60FF /* BCITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C151D22E9FF001D60FF /* BCITextField.swift */; };
+		283B4C1A1D242B22001D60FF /* BCIDrugsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */; };
+		283B4C1D1D242CC9001D60FF /* BCIAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */; };
+		283B4C251D243565001D60FF /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1F1D243565001D60FF /* MLPAutoCompleteTextField.m */; };
+		283B4C261D243565001D60FF /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C241D243565001D60FF /* NSString+Levenshtein.m */; };
 		2865C6641D199EE400FCC4E4 /* BCIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */; };
 		287422AF1D0F988300927E06 /* BCIAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422AE1D0F988300927E06 /* BCIAppDelegate.swift */; };
 		287422B11D0F988300927E06 /* BCIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422B01D0F988300927E06 /* BCIViewController.swift */; };
@@ -24,8 +28,8 @@
 		287422E61D11BAA200927E06 /* BCIPopulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */; };
 		289994501D19974B0083359E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2899944F1D19974B0083359E /* Localizable.strings */; };
 		289994521D19983F0083359E /* BCIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289994511D19983F0083359E /* BCIExtensions.swift */; };
-		8111F4C79F6145F5003746B9 /* Pods_BRDTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4EC9D38C4CEA69FBFF6C4E /* Pods_BRDTests.framework */; };
-		E1346B7CA25C47F8D3BB189B /* Pods_BRD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E927F21CD2305FAE5E126E1 /* Pods_BRD.framework */; };
+		459A111D48231A73E9BB4DAF /* libPods-BRDTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E1B58E12A94F2AA7273D83 /* libPods-BRDTests.a */; };
+		5AC4D7B9AE718184212FB67D /* libPods-BRD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052BF958824E7DC5F076998B /* libPods-BRD.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +50,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052BF958824E7DC5F076998B /* libPods-BRD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B69B1192C13709248F96F31 /* Pods-BRDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRDUITests/Pods-BRDUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		283B4C151D22E9FF001D60FF /* BCITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCITextField.swift; sourceTree = "<group>"; };
+		283B4C171D242B22001D60FF /* BRD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRD-Bridging-Header.h"; sourceTree = "<group>"; };
+		283B4C181D242B22001D60FF /* BCIDrugsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIDrugsDataSource.h; sourceTree = "<group>"; };
+		283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIDrugsDataSource.m; sourceTree = "<group>"; };
+		283B4C1B1D242CC9001D60FF /* BCIAutoCompleteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIAutoCompleteObject.h; sourceTree = "<group>"; };
+		283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIAutoCompleteObject.m; sourceTree = "<group>"; };
+		283B4C1E1D243565001D60FF /* MLPAutoCompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextField.h; sourceTree = "<group>"; };
+		283B4C1F1D243565001D60FF /* MLPAutoCompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPAutoCompleteTextField.m; sourceTree = "<group>"; };
+		283B4C201D243565001D60FF /* MLPAutoCompleteTextFieldDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDataSource.h; sourceTree = "<group>"; };
+		283B4C211D243565001D60FF /* MLPAutoCompleteTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompleteTextFieldDelegate.h; sourceTree = "<group>"; };
+		283B4C221D243565001D60FF /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
+		283B4C231D243565001D60FF /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
+		283B4C241D243565001D60FF /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
 		2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDataSource.swift; sourceTree = "<group>"; };
 		287422AB1D0F988300927E06 /* BRD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BRD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		287422AE1D0F988300927E06 /* BCIAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCIAppDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +88,11 @@
 		289994511D19983F0083359E /* BCIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIExtensions.swift; sourceTree = "<group>"; };
 		381874B49DA7A661575370C2 /* Pods-BRDTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRDTests/Pods-BRDTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRD/Pods-BRD.debug.xcconfig"; sourceTree = "<group>"; };
-		3E927F21CD2305FAE5E126E1 /* Pods_BRD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F57A93EE9C611BA5A5BFA66 /* Pods-BRDUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRDUITests/Pods-BRDUITests.release.xcconfig"; sourceTree = "<group>"; };
 		93509D5CB47EE8F4AA50CCB9 /* Pods-BRD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRD.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRD/Pods-BRD.release.xcconfig"; sourceTree = "<group>"; };
-		AF4EC9D38C4CEA69FBFF6C4E /* Pods_BRDTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRDTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FB4BC62D1F45A2B3A56803 /* Pods-BRDTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BRDTests/Pods-BRDTests.release.xcconfig"; sourceTree = "<group>"; };
-		CA042313A3C26BB43A8DE2D7 /* Pods_BRDUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BRDUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E1B58E12A94F2AA7273D83 /* libPods-BRDTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRDTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0DD348BBF1C7EE0C1F52F72 /* libPods-BRDUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRDUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1346B7CA25C47F8D3BB189B /* Pods_BRD.framework in Frameworks */,
+				5AC4D7B9AE718184212FB67D /* libPods-BRD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8111F4C79F6145F5003746B9 /* Pods_BRDTests.framework in Frameworks */,
+				459A111D48231A73E9BB4DAF /* libPods-BRDTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB2A900BDFD2C8CFA1C646C /* Pods_BRDUITests.framework in Frameworks */,
+				0831E820AAC7A8912B08A592 /* libPods-BRDUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,11 +126,25 @@
 		0C3734C1D32E91FF357ED3AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3E927F21CD2305FAE5E126E1 /* Pods_BRD.framework */,
-				AF4EC9D38C4CEA69FBFF6C4E /* Pods_BRDTests.framework */,
-				CA042313A3C26BB43A8DE2D7 /* Pods_BRDUITests.framework */,
+				052BF958824E7DC5F076998B /* libPods-BRD.a */,
+				D9E1B58E12A94F2AA7273D83 /* libPods-BRDTests.a */,
+				E0DD348BBF1C7EE0C1F52F72 /* libPods-BRDUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		283B4C271D24356D001D60FF /* MLPAutoCompleteTextField */ = {
+			isa = PBXGroup;
+			children = (
+				283B4C1E1D243565001D60FF /* MLPAutoCompleteTextField.h */,
+				283B4C1F1D243565001D60FF /* MLPAutoCompleteTextField.m */,
+				283B4C201D243565001D60FF /* MLPAutoCompleteTextFieldDataSource.h */,
+				283B4C211D243565001D60FF /* MLPAutoCompleteTextFieldDelegate.h */,
+				283B4C221D243565001D60FF /* MLPAutoCompletionObject.h */,
+				283B4C231D243565001D60FF /* NSString+Levenshtein.h */,
+				283B4C241D243565001D60FF /* NSString+Levenshtein.m */,
+			);
+			name = MLPAutoCompleteTextField;
 			sourceTree = "<group>";
 		};
 		287422A21D0F988300927E06 = {
@@ -142,21 +172,27 @@
 		287422AD1D0F988300927E06 /* BRD */ = {
 			isa = PBXGroup;
 			children = (
+				283B4C271D24356D001D60FF /* MLPAutoCompleteTextField */,
 				287422AE1D0F988300927E06 /* BCIAppDelegate.swift */,
 				287422B01D0F988300927E06 /* BCIViewController.swift */,
 				287422DF1D10DD8500927E06 /* BCIResultsViewController.swift */,
 				287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */,
+				287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */,
 				287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */,
 				2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */,
 				289994511D19983F0083359E /* BCIExtensions.swift */,
+				283B4C181D242B22001D60FF /* BCIDrugsDataSource.h */,
+				283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */,
+				283B4C1B1D242CC9001D60FF /* BCIAutoCompleteObject.h */,
+				283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */,
 				283B4C151D22E9FF001D60FF /* BCITextField.swift */,
 				2899944F1D19974B0083359E /* Localizable.strings */,
-				287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */,
 				287422B21D0F988300927E06 /* Main.storyboard */,
 				287422B81D0F988300927E06 /* Assets.xcassets */,
 				287422BA1D0F988300927E06 /* LaunchScreen.storyboard */,
 				287422BD1D0F988300927E06 /* Info.plist */,
 				287422B51D0F988300927E06 /* BRD.xcdatamodeld */,
+				283B4C171D242B22001D60FF /* BRD-Bridging-Header.h */,
 			);
 			path = BRD;
 			sourceTree = "<group>";
@@ -460,11 +496,15 @@
 				2865C6641D199EE400FCC4E4 /* BCIDataSource.swift in Sources */,
 				287422E61D11BAA200927E06 /* BCIPopulationViewController.swift in Sources */,
 				287422E41D11BA9700927E06 /* BCIDrug2ViewController.swift in Sources */,
+				283B4C261D243565001D60FF /* NSString+Levenshtein.m in Sources */,
 				287422E01D10DD8500927E06 /* BCIResultsViewController.swift in Sources */,
 				283B4C161D22E9FF001D60FF /* BCITextField.swift in Sources */,
+				283B4C1D1D242CC9001D60FF /* BCIAutoCompleteObject.m in Sources */,
 				287422B71D0F988300927E06 /* BRD.xcdatamodeld in Sources */,
 				287422E21D11BA8F00927E06 /* BCIDrug1ViewController.swift in Sources */,
 				289994521D19983F0083359E /* BCIExtensions.swift in Sources */,
+				283B4C251D243565001D60FF /* MLPAutoCompleteTextField.m in Sources */,
+				283B4C1A1D242B22001D60FF /* BCIDrugsDataSource.m in Sources */,
 				287422B11D0F988300927E06 /* BCIViewController.swift in Sources */,
 				287422AF1D0F988300927E06 /* BCIAppDelegate.swift in Sources */,
 			);
@@ -611,11 +651,14 @@
 			baseConfigurationReference = 3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BRD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BCI.BRD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BRD/BRD-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -624,11 +667,13 @@
 			baseConfigurationReference = 93509D5CB47EE8F4AA50CCB9 /* Pods-BRD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BRD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BCI.BRD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BRD/BRD-Bridging-Header.h";
 			};
 			name = Release;
 		};

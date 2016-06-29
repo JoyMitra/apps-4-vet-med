@@ -8,10 +8,10 @@
 
 import UIKit
 
-class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
+class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoCompleteTextFieldDelegate {
 
     
-    @IBOutlet var drugNameField: BCITextField!
+    @IBOutlet var drugNameField: MLPAutoCompleteTextField!
     @IBOutlet var tpfField: BCITextField!
     @IBOutlet var cfrField: BCITextField!
     @IBOutlet var costOfTreatmentField: BCITextField!
@@ -35,6 +35,15 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
         self.cfrField.delegate = self
         self.costOfTreatmentField.delegate = self
         self.chronicPercentageField.delegate = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.drugNameField.borderStyle = UITextBorderStyle.RoundedRect
+        self.drugNameField.backgroundColor = .clearColor()
+        self.drugNameField.applyBoldEffectToAutoCompleteSuggestions = true;
+        self.drugNameField.autoCompleteTableBackgroundColor = .whiteColor()
+        self.drugNameField.autoCompleteTableBorderColor = .grayColor()
+        self.drugNameField.autoCompleteTableCornerRadius = 5.0;
     }
 
     override func didReceiveMemoryWarning() {
@@ -100,52 +109,62 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
 
     // Focus on the field
     func textFieldDidBeginEditing(textField: UITextField) {
-        let myTextField = textField as! BCITextField
-        highlightSelectedTextField(myTextField)
+        if textField == drugNameField {
+            let myTextField = textField as! MLPAutoCompleteTextField
+            highlightSelectedTextField(myTextField)
+        } else {
+            let myTextField = textField as! BCITextField
+            highlightSelectedTextField(myTextField)
+        }
     }
     
     // Check when editing ends and update accordingly
     func textFieldDidEndEditing(textField: UITextField) {
-        let myTextField = textField as! BCITextField
+        var myTextField: AnyObject?
+        if textField == drugNameField {
+            myTextField = textField as! MLPAutoCompleteTextField
+        } else {
+            myTextField = textField as! BCITextField
+        }
         let whitespace = NSCharacterSet.whitespaceCharacterSet()
         if(textField.text!.stringByTrimmingCharactersInSet(whitespace) == ""){
-            errorHighlightTextField(myTextField)
+            errorHighlightTextField(myTextField!)
         }
         else{
-            removeErrorHighlightTextField(myTextField)
+            removeErrorHighlightTextField(myTextField!)
         }
         
         switch(textField) {
         case tpfField:
             let input = Double(tpfField.text!)
             if (input >= 0 && input <= 100) {
-                removeErrorHighlightTextField(myTextField)
+                removeErrorHighlightTextField(myTextField!)
             } else {
-                errorHighlightTextField(myTextField)
+                errorHighlightTextField(myTextField!)
             }
             break
         case cfrField:
             let input = Double(cfrField.text!)
             if (input >= 0 && input <= 100) {
-                removeErrorHighlightTextField(myTextField)
+                removeErrorHighlightTextField(myTextField!)
             } else {
-                errorHighlightTextField(myTextField)
+                errorHighlightTextField(myTextField!)
             }
             break
         case costOfTreatmentField:
             let input = Double(costOfTreatmentField.text!)
             if (input >= 0 && input <= 50) {
-                removeErrorHighlightTextField(myTextField)
+                removeErrorHighlightTextField(myTextField!)
             } else {
-                errorHighlightTextField(myTextField)
+                errorHighlightTextField(myTextField!)
             }
             break
         case chronicPercentageField:
             let input = Double(chronicPercentageField.text!)
             if (input >= 0 && input <= 100) {
-                removeErrorHighlightTextField(myTextField)
+                removeErrorHighlightTextField(myTextField!)
             } else {
-                errorHighlightTextField(myTextField)
+                errorHighlightTextField(myTextField!)
             }
             break
         default: break
@@ -173,29 +192,63 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    
-    // Textfield focus - show gray border
-    func highlightSelectedTextField(textfield: BCITextField){
-        textfield.layer.borderColor = UIColor.grayColor().CGColor
-        textfield.layer.borderWidth = 1
-        textfield.layer.cornerRadius = 5
+    func autoCompleteTextField(textField: MLPAutoCompleteTextField, didSelectAutoCompleteString selectedString: String, withAutoCompleteObject selectedObject: MLPAutoCompletionObject, forRowAtIndexPath indexPath: NSIndexPath) {
+        if selectedString != "" {
+            print("selected string \(selectedString) from autocomplete menu")
+        }
     }
     
+    
+    // Textfield focus - show gray border
+    func highlightSelectedTextField(textfield: AnyObject)
+    {
+        if textfield as! UITextField == drugNameField {
+            let myTextField = textfield as! MLPAutoCompleteTextField
+            myTextField.layer.borderColor = UIColor.grayColor().CGColor
+            myTextField.layer.borderWidth = 1
+            myTextField.layer.cornerRadius = 5
+        } else {
+            let myTextField = textfield as! BCITextField
+            myTextField.layer.borderColor = UIColor.grayColor().CGColor
+            myTextField.layer.borderWidth = 1
+            myTextField.layer.cornerRadius = 5
+        }
+    }
+    
+    
     // Text Field is empty - show red border
-    func errorHighlightTextField(textField: BCITextField){
-        textField.layer.borderColor = UIColor.redColor().CGColor
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 5
-        textField.isSatisfied = false
+    func errorHighlightTextField(textField: AnyObject){
+        if textField as! UITextField == drugNameField {
+            let myTextField = textField as! MLPAutoCompleteTextField
+            myTextField.layer.borderColor = UIColor.redColor().CGColor
+            myTextField.layer.borderWidth = 1
+            myTextField.layer.cornerRadius = 5
+            myTextField.isSatisfied = false
+        } else {
+            let myTextField = textField as! BCITextField
+            myTextField.layer.borderColor = UIColor.redColor().CGColor
+            myTextField.layer.borderWidth = 1
+            myTextField.layer.cornerRadius = 5
+            myTextField.isSatisfied = false
+        }
     }
     
     // Text Field is NOT empty - show gray border with 0 border width
     // Reset
-    func removeErrorHighlightTextField(textField: BCITextField){
-        textField.layer.borderColor = UIColor.grayColor().CGColor
-        textField.layer.borderWidth = 0
-        textField.layer.cornerRadius = 5
-        textField.isSatisfied = true
+    func removeErrorHighlightTextField(textField: AnyObject){
+        if textField as! UITextField == drugNameField {
+            let myTextField = textField as! MLPAutoCompleteTextField
+            myTextField.layer.borderColor = UIColor.grayColor().CGColor
+            myTextField.layer.borderWidth = 0
+            myTextField.layer.cornerRadius = 5
+            myTextField.isSatisfied = true
+        } else {
+            let myTextField = textField as! BCITextField
+            myTextField.layer.borderColor = UIColor.grayColor().CGColor
+            myTextField.layer.borderWidth = 0
+            myTextField.layer.cornerRadius = 5
+            myTextField.isSatisfied = true
+        }
     }
 
 }

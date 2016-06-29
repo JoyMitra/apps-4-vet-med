@@ -263,7 +263,7 @@
             </objects>
             <point key="canvasLocation" x="1852" y="353"/>
         </scene>
-        <!--Drug 1-->
+        <!--Auto Complete Delegate-->
         <scene sceneID="51T-hc-VMz">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="dNU-GM-ggw" customClass="BCIDrug1ViewController" customModule="BRD" customModuleProvider="target" sceneMemberID="viewController">
@@ -337,13 +337,18 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egb-l1-dQK" customClass="BCITextField" customModule="BRD" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egb-l1-dQK" customClass="MLPAutoCompleteTextField">
                                                 <rect key="frame" x="20" y="62" width="260" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="TQ0-Vx-s84"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
+                                                <connections>
+                                                    <outlet property="autoCompleteDataSource" destination="gjp-oZ-AKl" id="3aF-HM-4Yo"/>
+                                                    <outlet property="autoCompleteDelegate" destination="dNU-GM-ggw" id="Eyp-4e-Qem"/>
+                                                    <outlet property="delegate" destination="dNU-GM-ggw" id="t5A-SW-zOU"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -408,6 +413,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vf9-gm-hNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gjp-oZ-AKl" customClass="BCIDrugsDataSource"/>
             </objects>
             <point key="canvasLocation" x="2578" y="353"/>
         </scene>
@@ -429,7 +435,7 @@
             </objects>
             <point key="canvasLocation" x="281" y="1013"/>
         </scene>
-        <!--Drug 2-->
+        <!--Auto Complete Delegate-->
         <scene sceneID="ojU-ne-Gxo">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="lyH-9S-3we" customClass="BCIDrug2ViewController" customModule="BRD" customModuleProvider="target" sceneMemberID="viewController">
@@ -447,13 +453,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-YT-d7e">
                                         <rect key="frame" x="0.0" y="0.0" width="603" height="736"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-pp-M0c" customClass="BCITextField" customModule="BRD" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-pp-M0c" customClass="MLPAutoCompleteTextField">
                                                 <rect key="frame" x="23" y="62" width="260" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="L9d-g2-rRj"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
+                                                <connections>
+                                                    <outlet property="autoCompleteDataSource" destination="GkA-5D-VV2" id="LYy-Gu-cnT"/>
+                                                    <outlet property="autoCompleteDelegate" destination="lyH-9S-3we" id="kmY-ou-nVo"/>
+                                                    <outlet property="delegate" destination="lyH-9S-3we" id="rLI-h4-jgw"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aox-ou-7kD" customClass="BCITextField" customModule="BRD" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="129" width="70" height="30"/>
@@ -574,6 +585,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1gT-l1-ahp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="GkA-5D-VV2" customClass="BCIDrugsDataSource"/>
             </objects>
             <point key="canvasLocation" x="3262" y="353"/>
         </scene>
