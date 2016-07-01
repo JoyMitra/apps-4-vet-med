@@ -42,7 +42,6 @@ class BCIDrug1ViewController: UIViewController,UITextFieldDelegate, MLPAutoCompl
     override func viewDidLayoutSubviews() {
         self.drugNameField.borderStyle = UITextBorderStyle.RoundedRect
         self.drugNameField.backgroundColor = .clearColor()
-        self.drugNameField.applyBoldEffectToAutoCompleteSuggestions = true;
         self.drugNameField.autoCompleteTableBackgroundColor = .whiteColor()
         self.drugNameField.autoCompleteTableBorderColor = .grayColor()
         self.drugNameField.autoCompleteTableCornerRadius = 5.0;
