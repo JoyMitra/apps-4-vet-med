@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <!-- Beef Cattle Institute Logo Image -->
+
+    <ImageView
+        android:id="@+id/bciLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/bci_logo"
+        android:contentDescription="@string/bci_logo_content_description"
+        />
+
+    <!-- Welcome text and directions to navigate to next page -->
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/welcome"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/helpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:text="@string/welcome_message"
+        android:textSize="18sp"
+        />
+
+    <!-- The continue to population parameters page button -->
+
+    <Button
+        android:id="@+id/mainPageNextButton"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="0.10"
+        android:paddingTop="10dp"
+        android:text="@string/continue_main"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:drawableBottom="@drawable/ic_trending_flat_white_24dp"
+        android:drawablePadding="-10sp"
+        android:background="@drawable/my_button_purple"
+        />
+
+    <!-- Filler space for design purposes -->
+
+    <TextView
+        android:id="@+id/emptySpaceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.25"
+        />
+
+</LinearLayout>

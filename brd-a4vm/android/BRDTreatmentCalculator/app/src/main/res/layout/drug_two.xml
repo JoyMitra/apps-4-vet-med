@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <!-- Navigation for previous and next buttons -->
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.25"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/drugTwoPageBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/back"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:background="@drawable/my_button_blue"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:id="@+id/drugTwoPageNextButton"
+            android:text="@string/next"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:background="@drawable/my_button_green"
+            />
+
+    </GridLayout>
+
+    <!-- A scrollable view of required fields for the drug one parameters -->
+
+    <ScrollView
+        android:id="@+id/drugTwoPageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/drugTwoNameLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name_of_drug_2"
+                android:textSize="24sp"
+                />
+
+            <AutoCompleteTextView
+                android:id="@+id/drugTwoNameTextView"
+                android:layout_width="165sp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                />
+
+            <TextView
+                android:id="@+id/drugTwoTreatmentFailurePercentLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/treatment_failure_percent"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/drugTwoTreatmentFailurePercentEditText"
+                android:layout_width="275sp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/percent_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/drugTwoCaseFatalityRiskLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/case_fatality_rate"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:layout_width="195sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/drugTwoCaseFatalityRiskEditText"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/percent_placeholder"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/drugTwoCostOfTreatmentLabelTextView"
+                android:text="@string/cost_of_treatment"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:layout_width="195sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/drugTwoCostOfTreatmentEditText"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/cost_of_treatment_placeholder"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/drugTwoChronicPercentLabelTextView"
+                android:text="@string/chronic_percentage"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:layout_width="210sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/drugTwoChronicPercentEditText"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/percent_placeholder"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <!-- Navigation for previous and reset buttons -->
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.25"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/resultsPageBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/back"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:background="@drawable/my_button_blue"
+            />
+
+        <Button
+            android:id="@+id/resultsPageResetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/restart"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:background="@drawable/my_button_red"
+            />
+
+    </GridLayout>
+
+    <!-- A scrollable view of the calculated results -->
+
+    <ScrollView
+        android:id="@+id/resultsPageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/resultsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/results"
+            android:textSize="24sp"
+            />
+
+    </ScrollView>
+
+</LinearLayout>
