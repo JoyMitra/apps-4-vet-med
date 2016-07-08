@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BSE</string>
+    <string name="app_name">Bull Soundness Evaluation</string>
     <string name="Collections">Groups</string>
     <string name="Settings">Settings</string>
     <string name="Delete">Delete 30+ day old data</string>
