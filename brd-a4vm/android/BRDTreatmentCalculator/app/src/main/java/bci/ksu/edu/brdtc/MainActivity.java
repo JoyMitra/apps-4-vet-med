@@ -323,25 +323,30 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void getAndDisplayResults(){
         float results = calculator.calcDifferenceInReturnToOAM(drugOne, drugTwo, population);
         StringBuilder sb = new StringBuilder();
-        sb.append("Treatment");
-        sb.append(System.getProperty("line.separator"));
+        String betterDrug;
+        String notAsGoodDrug;
+        sb.append("Drug ");
         if (results < 0) {
-            sb.append(drugOne.getName());
+            betterDrug = drugOne.getName();
+            notAsGoodDrug = drugTwo.getName();
+            sb.append(betterDrug);
             results *= -1;
         } else {
-            sb.append(drugTwo.getName());
+            betterDrug = drugTwo.getName();
+            notAsGoodDrug = drugOne.getName();
+            sb.append(betterDrug);
         }
-        sb.append(System.getProperty("line.separator"));
-        sb.append("Shows");
-        sb.append(System.getProperty("line.separator"));
-        sb.append("$");
+        sb.append(" ");
+        sb.append("shows");
+        sb.append(" $");
         if (String.valueOf(results).startsWith("0")) {
             sb.append("0");
         }
         sb.append(df.format(results));
-        sb.append("/hd");
-        sb.append(System.getProperty("line.separator"));
-        sb.append("Advantage");
+        sb.append("/head");
+        sb.append(" advantage over Drug ");
+        sb.append(notAsGoodDrug);
+        sb.append(" using the information you provided");
         String resultsText = sb.toString();
         mResultsTextView.setText("");
         mResultsTextView.append(resultsText);
@@ -495,7 +500,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         String json = sb.toString();
         Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Drug>>(){}.getType();
-
         return gson.fromJson(json, listType);
     }
 
