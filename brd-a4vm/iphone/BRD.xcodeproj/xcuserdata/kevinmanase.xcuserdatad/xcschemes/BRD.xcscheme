@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "287422AA1D0F988300927E06"
-               BuildableName = "BRD.app"
+               BuildableName = "BRD Tx Eval.app"
                BlueprintName = "BRD"
                ReferencedContainer = "container:BRD.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "287422AA1D0F988300927E06"
-            BuildableName = "BRD.app"
+            BuildableName = "BRD Tx Eval.app"
             BlueprintName = "BRD"
             ReferencedContainer = "container:BRD.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "287422AA1D0F988300927E06"
-            BuildableName = "BRD.app"
+            BuildableName = "BRD Tx Eval.app"
             BlueprintName = "BRD"
             ReferencedContainer = "container:BRD.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "287422AA1D0F988300927E06"
-            BuildableName = "BRD.app"
+            BuildableName = "BRD Tx Eval.app"
             BlueprintName = "BRD"
             ReferencedContainer = "container:BRD.xcodeproj">
          </BuildableReference>
