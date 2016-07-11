@@ -2,6 +2,7 @@
 <resources>
     <string-array name="drug_names">
         <!-- Oxytetracycline -->
+        <item>Oxytetracycline</item>
         <item>Terramycin</item>
         <item>Liquamycin</item>
         <item>Agrimycin</item>
@@ -12,42 +13,54 @@
         <item>Tetradure 300</item>
 
         <!-- Erythromycin -->
+        <item>Erythromycin</item>
         <item>Erythro-200</item>
         <item>Erythromycin-200</item>
         <item>Gallimycin-200</item>
 
         <!-- Tylosin -->
+        <item>Tylosin</item>
         <item>Tylan</item>
         <item>Tylosin Injection</item>
 
         <!-- Ceftoifur -->
+        <item>Ceftoifur</item>
         <item>Naxcel</item>
 
         <!-- Tilmicosin -->
+        <item>Tilmicosin</item>
         <item>Micotil 300</item>
 
         <!-- Florfenicol -->
+        <item>Florfenicol</item>
         <item>Nuflor</item>
 
         <!-- Gamithromycin -->
+        <item>Gamithromycin</item>
         <item>Zactran</item>
 
         <!-- Tulathromycin -->
+        <item>Tulathromycin</item>
         <item>Draxxin</item>
 
         <!-- Enrofloxacin -->
+        <item>Enrofloxacin</item>
         <item>Baytril</item>
 
         <!-- Ceftiofur Hydrocloride -->
+        <item>Ceftiofur Hydrocloride</item>
         <item>Excenel</item>
 
         <!-- Ceftiofur Sodium -->
+        <item>Ceftiofur Sodium</item>
         <item>Naxcel</item>
 
         <!-- Sulfadimethoxine -->
+        <item>Sulfadimethoxine</item>
         <item>Albon</item>
 
         <!-- Tildipirosin -->
+        <item>Tildipirosin</item>
         <item>Zubrevo</item>
 
     </string-array>
