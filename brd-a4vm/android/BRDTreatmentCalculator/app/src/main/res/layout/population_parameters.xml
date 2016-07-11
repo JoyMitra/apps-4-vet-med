@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <!-- Navigation for previous and next buttons -->
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.25"
+        android:paddingTop="5dp">
+
+        <Button
+            android:id="@+id/popParamPageBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/back"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:background="@drawable/my_button_blue"
+            />
+
+        <Button
+            android:id="@+id/popParamPageNextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="@string/next"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:background="@drawable/my_button_green"
+            />
+
+    </GridLayout>
+
+    <!-- A scrollable view of required fields for the population parameters one -->
+
+    <ScrollView
+        android:id="@+id/popParamPageScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/morbidityLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/morbidity"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/morbidityEditText"
+                android:layout_width="105sp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/percent_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/costOfGainLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cost_of_gain"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/costOfGainEditText"
+                android:layout_width="135sp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/cost_of_gain_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/priceReceivedAtSaleLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price_received_at_sale"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/priceReceivedAtSaleEditText"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/dollar_sign_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/arrivalWeightLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/arrival_weight"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/arrivalWeightEditText"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/weight_placeholder"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/daysOnFeedLabelTextView"
+                android:text="@string/days_on_feed"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/daysOnFeedEditText"
+                android:layout_width="145sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/days_on_feed_placeholder"
+                />
+
+            <TextView
+                android:id="@+id/adgHealthyCattleLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/adg_healthy_cattle"
+                android:textSize="24sp"
+                android:paddingTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/adgHealthyCattleEditText"
+                android:layout_width="205sp"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edit_text_style"
+                android:textSize="20sp"
+                android:hint="@string/adg_placeholder"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="drug_names">
+        <!-- Oxytetracycline -->
+        <item>Terramycin</item>
+        <item>Liquamycin</item>
+        <item>Agrimycin</item>
+        <item>Oxytet</item>
+        <item>LA-200</item>
+        <item>Procure</item>
+        <item>Biocor</item>
+        <item>Tetradure 300</item>
+
+        <!-- Erythromycin -->
+        <item>Erythro-200</item>
+        <item>Erythromycin-200</item>
+        <item>Gallimycin-200</item>
+
+        <!-- Tylosin -->
+        <item>Tylan</item>
+        <item>Tylosin Injection</item>
+
+        <!-- Ceftoifur -->
+        <item>Naxcel</item>
+
+        <!-- Tilmicosin -->
+        <item>Micotil 300</item>
+
+        <!-- Florfenicol -->
+        <item>Nuflor</item>
+
+        <!-- Gamithromycin -->
+        <item>Zactran</item>
+
+        <!-- Tulathromycin -->
+        <item>Draxxin</item>
+
+        <!-- Enrofloxacin -->
+        <item>Baytril</item>
+
+        <!-- Ceftiofur Hydrocloride -->
+        <item>Excenel</item>
+
+        <!-- Ceftiofur Sodium -->
+        <item>Naxcel</item>
+
+        <!-- Sulfadimethoxine -->
+        <item>Albon</item>
+
+        <!-- Tildipirosin -->
+        <item>Zubrevo</item>
+
+    </string-array>
+</resources>

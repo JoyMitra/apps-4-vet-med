@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">BRD Treatment Calculator</string>
+    <string name="bci_logo_content_description">Official BCI Logo</string>
+    <string name="welcome">Welcome</string>
+    <string name="welcome_message">Please click the button below to get started</string>
+    <string name="continue_main">Continue</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="morbidity">Morbidity</string>
+    <string name="cost_of_gain">Cost of Gain</string>
+    <string name="price_received_at_sale">Price Received At Sale</string>
+    <string name="arrival_weight">Arrival Weight</string>
+    <string name="days_on_feed">Days on Feed</string>
+    <string name="adg_healthy_cattle">ADG Healthy Cattle</string>
+    <string name="name_of_drug_1">Name of Drug 1</string>
+    <string name="treatment_failure_percent">Treatment Failure Percent</string>
+    <string name="case_fatality_rate">Case Fatality Rate</string>
+    <string name="cost_of_treatment">Cost of Treatment</string>
+    <string name="chronic_percentage">Chronic Percentage</string>
+    <string name="name_of_drug_2">Name of Drug 2</string>
+    <string name="results">Results: </string>
+    <string name="restart">Restart</string>
+    <string name="percent_placeholder"><i>0-100%</i></string>
+    <string name="cost_of_gain_placeholder"><i>$/lbs./head</i></string>
+    <string name="adg_placeholder"><i>lbs./head/day</i></string>
+    <string name="days_on_feed_placeholder"><i>1-400</i></string>
+    <string name="cost_of_treatment_placeholder"><i>$/head</i></string>
+    <string name="dollar_sign_placeholder"><i>$</i></string>
+    <string name="weight_placeholder"><i>lbs.</i></string>
+</resources>
