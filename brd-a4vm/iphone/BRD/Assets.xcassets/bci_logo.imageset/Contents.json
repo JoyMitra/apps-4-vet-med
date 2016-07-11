@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "year_of_ox.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "year_of_ox-1.png",
+      "filename" : "bci_logo.jpg",
       "scale" : "2x"
     },
     {
