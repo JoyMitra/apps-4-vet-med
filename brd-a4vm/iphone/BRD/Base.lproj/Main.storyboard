@@ -9,7 +9,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BCIViewController" customModule="BRD_Tx_Eval" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BCIViewController" customModule="BRD_Tx_Evaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -61,15 +61,86 @@
                                     <constraint firstAttribute="height" constant="202" id="xGF-Gn-j2t"/>
                                 </constraints>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYG-8j-O1s">
+                                <rect key="frame" x="45" y="517" width="510" height="75"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Author:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Kevin Manase ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Team:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Robert Larson, Brad White, Venkatesh Prasad Ranganath, AJ Cabanatuan ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Afiiliation:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Kansas State University ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Website:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" http://apps-4-vet-med.github.io/brd">
+                                        <attributes>
+                                            <color key="NSColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6AQ-Tf-C9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3vM-kK-Ucy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EYG-8j-O1s" secondAttribute="bottom" constant="8" id="3yi-kw-iFO"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="leading" secondItem="9wG-mm-cUx" secondAttribute="leading" id="68U-fu-QYD"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="trailing" secondItem="0cc-ME-Pk4" secondAttribute="trailing" id="8zD-Xt-f15"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9wG-mm-cUx" secondAttribute="trailing" constant="25" id="BjC-iq-wef"/>
+                            <constraint firstItem="EYG-8j-O1s" firstAttribute="top" secondItem="VA1-rj-AXV" secondAttribute="bottom" constant="24" id="Crl-xv-mqz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EYG-8j-O1s" secondAttribute="trailing" constant="25" id="EHC-AN-Mnt"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="top" secondItem="0cc-ME-Pk4" secondAttribute="bottom" constant="53" id="F4j-LD-7qd"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="leading" secondItem="0cc-ME-Pk4" secondAttribute="leading" id="FQX-YO-84r"/>
+                            <constraint firstItem="EYG-8j-O1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="Nfj-Lu-Yyn"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="trailing" secondItem="9wG-mm-cUx" secondAttribute="trailing" id="PQo-uM-1gy"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="top" secondItem="9wG-mm-cUx" secondAttribute="top" constant="32" id="cXP-Cf-gJj"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="top" secondItem="9wG-mm-cUx" secondAttribute="bottom" constant="-7" id="eTv-dJ-MYw"/>
@@ -92,7 +163,7 @@
         <!--Population Parameters-->
         <scene sceneID="6aW-Za-fXY">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="W6b-ne-XnW" customClass="BCIPopulationViewController" customModule="BRD_Tx_Eval" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="W6b-ne-XnW" customClass="BCIPopulationViewController" customModule="BRD_Tx_Evaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h3M-WV-kg1"/>
                         <viewControllerLayoutGuide type="bottom" id="Gqf-7V-UU7"/>
@@ -110,12 +181,12 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-Xg-1IK">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-Km-erU" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-Km-erU" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="62" width="77" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$/lb/head" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-Xf-szd" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$/lb/head" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-Xf-szd" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="132" width="97" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -138,12 +209,12 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$/lb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRx-zY-AZu" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$/lb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRx-zY-AZu" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="199" width="95" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8M-ni-FOb" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8M-ni-FOb" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="271" width="68" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="68" id="qPs-6y-YA2"/>
@@ -151,7 +222,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="days" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-lK-beb" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="days" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-lK-beb" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="338" width="97" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -174,7 +245,7 @@
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb/head/day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-7w-PsX" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb/head/day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-7w-PsX" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="405" width="97" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -266,7 +337,7 @@
         <!--Auto Complete Delegate-->
         <scene sceneID="51T-hc-VMz">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dNU-GM-ggw" customClass="BCIDrug1ViewController" customModule="BRD_Tx_Eval" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dNU-GM-ggw" customClass="BCIDrug1ViewController" customModule="BRD_Tx_Evaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="33g-cf-Bq0"/>
                         <viewControllerLayoutGuide type="bottom" id="wFl-PV-pyF"/>
@@ -281,7 +352,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vOg-oM-Msa">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-8x-VpF" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-8x-VpF" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="132" width="70" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="qD7-Xj-bmH"/>
@@ -307,12 +378,12 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-qn-Wqy" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-qn-Wqy" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="199" width="70" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mP2-up-BBn" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mP2-up-BBn" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="266" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="cQe-Xa-CqI"/>
@@ -332,7 +403,7 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-Bb-mef" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-Bb-mef" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="333" width="70" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -438,7 +509,7 @@
         <!--Auto Complete Delegate-->
         <scene sceneID="ojU-ne-Gxo">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="lyH-9S-3we" customClass="BCIDrug2ViewController" customModule="BRD_Tx_Eval" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="lyH-9S-3we" customClass="BCIDrug2ViewController" customModule="BRD_Tx_Evaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ITw-AL-11k"/>
                         <viewControllerLayoutGuide type="bottom" id="i8g-jJ-oaz"/>
@@ -466,7 +537,7 @@
                                                     <outlet property="delegate" destination="lyH-9S-3we" id="rLI-h4-jgw"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aox-ou-7kD" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aox-ou-7kD" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="129" width="70" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="l3v-d7-xGJ"/>
@@ -474,12 +545,12 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abv-5f-Za3" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abv-5f-Za3" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="196" width="70" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-g2-i7c" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-g2-i7c" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="263" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="sex-2A-WBL"/>
@@ -487,7 +558,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-sR-JdX" customClass="BCITextField" customModule="BRD_Tx_Eval" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-sR-JdX" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="330" width="70" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -592,7 +663,7 @@
         <!--Results-->
         <scene sceneID="2xI-Sh-jTY">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dgd-y8-bau" customClass="BCIResultsViewController" customModule="BRD_Tx_Eval" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dgd-y8-bau" customClass="BCIResultsViewController" customModule="BRD_Tx_Evaluation" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Use-1x-Pzp"/>
                         <viewControllerLayoutGuide type="bottom" id="zvU-lv-062"/>
