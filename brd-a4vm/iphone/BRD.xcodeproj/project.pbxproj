@@ -66,7 +66,7 @@
 		283B4C231D243565001D60FF /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
 		283B4C241D243565001D60FF /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
 		2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDataSource.swift; sourceTree = "<group>"; };
-		287422AB1D0F988300927E06 /* BRD Tx Eval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRD Tx Eval.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		287422AB1D0F988300927E06 /* BRD Tx Evaluation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRD Tx Evaluation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		287422AE1D0F988300927E06 /* BCIAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCIAppDelegate.swift; sourceTree = "<group>"; };
 		287422B01D0F988300927E06 /* BCIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCIViewController.swift; sourceTree = "<group>"; };
 		287422B31D0F988300927E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		287422AC1D0F988300927E06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				287422AB1D0F988300927E06 /* BRD Tx Eval.app */,
+				287422AB1D0F988300927E06 /* BRD Tx Evaluation.app */,
 				287422C21D0F988300927E06 /* BRDTests.xctest */,
 				287422CD1D0F988300927E06 /* BRDUITests.xctest */,
 			);
@@ -248,7 +248,7 @@
 			);
 			name = BRD;
 			productName = BRD;
-			productReference = 287422AB1D0F988300927E06 /* BRD Tx Eval.app */;
+			productReference = 287422AB1D0F988300927E06 /* BRD Tx Evaluation.app */;
 			productType = "com.apple.product-type.application";
 		};
 		287422C11D0F988300927E06 /* BRDTests */ = {
@@ -656,7 +656,7 @@
 				INFOPLIST_FILE = BRD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BCI.BRD;
-				PRODUCT_NAME = "BRD Tx Eval";
+				PRODUCT_NAME = "BRD Tx Evaluation";
 				SWIFT_OBJC_BRIDGING_HEADER = "BRD/BRD-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -672,7 +672,7 @@
 				INFOPLIST_FILE = BRD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BCI.BRD;
-				PRODUCT_NAME = "BRD Tx Eval";
+				PRODUCT_NAME = "BRD Tx Evaluation";
 				SWIFT_OBJC_BRIDGING_HEADER = "BRD/BRD-Bridging-Header.h";
 			};
 			name = Release;
