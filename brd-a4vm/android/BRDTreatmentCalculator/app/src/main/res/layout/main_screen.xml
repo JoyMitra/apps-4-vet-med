@@ -21,8 +21,10 @@
         android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:padding="10dp"
         android:text="@string/welcome"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         />
@@ -31,10 +33,12 @@
         android:id="@+id/helpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="20dp"
         android:text="@string/welcome_message"
+        android:textAlignment="center"
         android:textSize="18sp"
         />
 
@@ -61,7 +65,7 @@
         android:id="@+id/emptySpaceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.25"
+        android:layout_weight="0.10"
         />
 
 </LinearLayout>
