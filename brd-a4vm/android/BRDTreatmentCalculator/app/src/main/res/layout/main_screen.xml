@@ -47,9 +47,9 @@
     <Button
         android:id="@+id/mainPageNextButton"
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:layout_weight="0.10"
-        android:paddingTop="10dp"
+        android:paddingTop="5sp"
         android:text="@string/continue_main"
         android:textColor="@color/white"
         android:textAlignment="center"
