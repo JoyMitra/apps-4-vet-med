@@ -31,14 +31,17 @@ class BCIResultsViewController: UIViewController {
         let costOfTreamtmentTxB = String(source.costOfTreatmentPerHeadTxB)
         
         var bestDrugName = ""
+        var otherDrugName = ""
         var resultString = ""
         
         if differenceInReturn.isSignMinus {
             bestDrugName = source.drug1Name
+            otherDrugName = source.drug2Name
         } else {
             bestDrugName = source.drug2Name
+            otherDrugName = source.drug1Name
         }
-        resultString = "Treatment " + bestDrugName + " shows $" + differenceInReturnString + "/head advantage"
+        resultString = "Drug " + bestDrugName + " shows $" + differenceInReturnString + "/head advantage over Drug " + otherDrugName + "using the information provided."
         resultsTextView.text = resultString
         
     }

@@ -112,6 +112,20 @@
       @"Excenel",
       @"Naxcel",
       @"Albon",
+      @"Zubrevo",
+      @"Oxytetracycline",
+      @"Erythromycin",
+      @"Tylosin",
+      @"Ceftoifur",
+      @"Tilmicosin",
+      @"Florfenicol",
+      @"Gamithromycin",
+      @"Tulathromycin",
+      @"Enrofloxacin",
+      @"Ceftiofur Hydrocloride",
+      @"Ceftiofur Sodium",
+      @"Sulfadimethoxine",
+      @"Tildipirosin",
       ];
     
     return drugs;
