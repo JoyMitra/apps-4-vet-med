@@ -9,6 +9,21 @@
 import UIKit
 
 import Parse
+extension String {
+    var isPhoneNumber: Bool {
+        do {
+            let detector = try NSDataDetector(types: NSTextCheckingType.PhoneNumber.rawValue)
+            let matches = detector.matchesInString(self, options: [], range: NSMakeRange(0, self.characters.count))
+            if let res = matches.first {
+                return res.resultType == .PhoneNumber && res.range.location == 0 && res.range.length == self.characters.count
+            } else {
+                return false
+            }
+        } catch {
+            return false
+        }
+    }
+}
 
 class ViewController: UIViewController {
 var ranchersArray = [PFObject]();
@@ -161,7 +176,12 @@ var ranchersArray = [PFObject]();
             self.getName();
             
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
         
+
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -195,6 +215,11 @@ var ranchersArray = [PFObject]();
             }
             self.lastName();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+        
+        
+        }))
+        
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -227,6 +252,12 @@ var ranchersArray = [PFObject]();
             }
             self.add1();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -260,6 +291,12 @@ var ranchersArray = [PFObject]();
             }
             self.clinicName();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -293,6 +330,12 @@ var ranchersArray = [PFObject]();
             }
             self.add2();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -321,6 +364,12 @@ var ranchersArray = [PFObject]();
             }
             self.city();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -355,6 +404,12 @@ var ranchersArray = [PFObject]();
             }
             self.state();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -388,13 +443,25 @@ var ranchersArray = [PFObject]();
             }
             self.phone();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
         
         
     }
-    func phone(){
+    func validate(value: String) -> Bool {
+        let PHONE_REGEX =  "[(]?\\d{3}[-.)]?\\d{3}[-.]?\\d{4}"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluateWithObject(value)
+        return result
+    }
+       func phone(){
         
         //1. Create the alert controller.
         var alert = UIAlertController(title: "Enter your Phone", message: "Please set the Phone Number", preferredStyle: .Alert)
@@ -407,7 +474,8 @@ var ranchersArray = [PFObject]();
         
         //3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            if(alert.textFields![0].text == "" || alert.textFields![0].text?.characters.count != 10 )
+            if(!(alert.textFields![0].text! ).isPhoneNumber)
+                
             {
                 alert.title = "Incorrect Phone number"
                 self.presentViewController(alert, animated: true, completion: nil)
@@ -422,6 +490,12 @@ var ranchersArray = [PFObject]();
             }
             self.zip();
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
+        
+
         
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
@@ -459,7 +533,12 @@ var ranchersArray = [PFObject]();
             }
             
         }))
+        alert.addAction(UIAlertAction(title: "Not now", style: .Default, handler: { (action) -> Void in
+            
+            
+        }))
         
+
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
         

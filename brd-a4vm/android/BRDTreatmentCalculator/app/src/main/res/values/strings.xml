@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">BRD Treatment Calculator</string>
+    <string name="app_name">BRD Tx Evaluation</string>
     <string name="bci_logo_content_description">Official BCI Logo</string>
     <string name="welcome">Welcome</string>
-    <string name="welcome_message">Please click the button below to get started</string>
-    <string name="continue_main">Continue</string>
+    <string name="welcome_message">This application is used to help compare drugs for treating
+        Bovine Respiratory Disease. You will first be asked to enter population specific parameters,
+        next the two drugs, then you\'ll be able to compare and see the results.</string>
+    <string name="continue_main">Start</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
     <string name="morbidity">Morbidity</string>

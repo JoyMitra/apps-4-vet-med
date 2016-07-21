@@ -164,7 +164,7 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
         if(phone.text != "")
         {
             
-            if(phone.text?.characters.count != 10)
+            if( !validate(phone.text!))
             {
                 let alert = UIAlertController(title: "Incorrect phone", message: " The Phone number address you have input is wrong", preferredStyle: .Alert)
                 
@@ -232,6 +232,12 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
         
         return result
         
+    }
+    func validate(value: String) -> Bool {
+        let PHONE_REGEX = "[(]?\\d{3}[-.)]?\\d{3}[-.]?\\d{4}"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        let result =  phoneTest.evaluateWithObject(value)
+        return result
     }
 
     @IBAction func Email(sender: AnyObject) {

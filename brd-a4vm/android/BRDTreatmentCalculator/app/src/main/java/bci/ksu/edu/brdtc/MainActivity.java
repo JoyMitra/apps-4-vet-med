@@ -457,7 +457,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             fileOutputStream.write(data.getBytes());
             fileOutputStream.close();
-            Log.d(LOG_CAT, "Successfully Saved To File");
         } catch (IOException ex) {
             ex.printStackTrace();
         }
@@ -476,7 +475,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             fileOutputStream.write(data.getBytes());
             fileOutputStream.close();
-            Log.d(LOG_CAT, "Successfully Saved To File");
         } catch (IOException ex) {
             ex.printStackTrace();
         }

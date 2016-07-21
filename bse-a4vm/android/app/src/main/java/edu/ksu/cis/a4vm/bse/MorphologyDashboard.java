@@ -28,10 +28,11 @@ public class MorphologyDashboard extends AppCompatActivity {
 
     private Button btn = null;
     private ListView lv = null;
-    private String bullKey = null;
-    private String morphKey = null;
+    public String bullKey = null;
+    public String morphKey = null;
     private Set<String> collectedTotals = null;
     private Set<String> collectedKeys = null;
+    public String testMsg = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,7 @@ public class MorphologyDashboard extends AppCompatActivity {
 
         btn = (Button)findViewById(R.id.addMorphology);
         lv= (ListView) findViewById(R.id.morphCollection);
+        bullKey = getIntent().getStringExtra("bullKey");
 
     }
 
@@ -48,7 +50,7 @@ public class MorphologyDashboard extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
-        bullKey = getIntent().getStringExtra("bullKey");
+
 
         final Set<String> keys = SharedPrefUtil.getValue(getApplicationContext(),
                 Constant.PREFS_MORPHOLOGY_COUNT_KEYS, Constant.KEY_MORPHOLOGY_COUNT_KEY);
@@ -68,10 +70,12 @@ public class MorphologyDashboard extends AppCompatActivity {
             collectedKeys = new LinkedHashSet<String>();
             for(String key: keys)
             {
+                //testMsg = "looping keys";
                 String[] elems = key.split("_");
                 if(elems.length==3 && (elems[0].trim()+"_"+elems[1].trim()).equalsIgnoreCase(bullKey))
                 {
                     //int total = 0;
+                    testMsg = "building listview";
                     String dateTime = null;
                     Set<String> morphologyCounts = SharedPrefUtil.getValue(getApplicationContext(),
                             Constant.PREFS_BULL_MORPHOLOGY_INFO, key);
