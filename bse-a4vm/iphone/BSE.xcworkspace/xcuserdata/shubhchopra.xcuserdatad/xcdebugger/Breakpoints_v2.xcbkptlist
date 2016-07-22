@@ -1800,11 +1800,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "490542609.196933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "clinicName()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1816,11 +1816,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "490542609.196933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
             landmarkName = "getName()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1832,11 +1832,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "489711669.395973"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
             landmarkName = "getEmail()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1848,11 +1848,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "490542609.196933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "233"
+            endingLineNumber = "233"
             landmarkName = "clinicName()"
             landmarkType = "5">
             <Locations>
@@ -1896,11 +1896,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "490542609.196933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "clinicName()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1912,11 +1912,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "490542609.196933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "clinicName()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1928,11 +1928,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "490542609.196933"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "clinicName()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1948,9 +1948,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "SameBullID(_:bullType:)"
-            landmarkType = "5">
+            endingLineNumber = "111">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1964,9 +1962,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "SameBullID(_:bullType:)"
-            landmarkType = "5">
+            endingLineNumber = "113">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1980,9 +1976,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "SameBullID(_:bullType:)"
-            landmarkType = "5">
+            endingLineNumber = "117">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1996,9 +1990,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
-            endingLineNumber = "119"
-            landmarkName = "SameBullID(_:bullType:)"
-            landmarkType = "5">
+            endingLineNumber = "119">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2044,9 +2036,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "346">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2060,9 +2050,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "344"
-            endingLineNumber = "344"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "344">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2076,9 +2064,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "343"
-            endingLineNumber = "343"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "343">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2092,9 +2078,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "342"
-            endingLineNumber = "342"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "342">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2108,9 +2092,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "346">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2124,9 +2106,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "346">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2140,9 +2120,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "346">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2156,9 +2134,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "346">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2300,9 +2276,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "349"
-            endingLineNumber = "349"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "349">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2316,9 +2290,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "353"
-            endingLineNumber = "353"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "353">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2332,9 +2304,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "357"
-            endingLineNumber = "357"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "357">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2348,9 +2318,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "361"
-            endingLineNumber = "361"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "361">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2364,9 +2332,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "151">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2380,9 +2346,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "getBullID()"
-            landmarkType = "5">
+            endingLineNumber = "86">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2396,9 +2360,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "getBullID()"
-            landmarkType = "5">
+            endingLineNumber = "89">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2444,9 +2406,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "getBullID()"
-            landmarkType = "5">
+            endingLineNumber = "94">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2492,9 +2452,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "getBullID()"
-            landmarkType = "5">
+            endingLineNumber = "102">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2540,9 +2498,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
-            endingLineNumber = "139"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "139">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2556,9 +2512,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "140">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2572,9 +2526,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "141">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2588,9 +2540,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "142">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2604,9 +2554,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "143">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2652,9 +2600,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "345"
-            endingLineNumber = "345"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "345">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2668,9 +2614,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "347"
-            endingLineNumber = "347"
-            landmarkName = "createBull(_:bulltype:)"
-            landmarkType = "5">
+            endingLineNumber = "347">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2684,9 +2628,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "232">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2700,9 +2642,7 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "241"
-            endingLineNumber = "241"
-            landmarkName = "getBullType(_:)"
-            landmarkType = "5">
+            endingLineNumber = "241">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -4249,11 +4189,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "486452355.750645"
+            timestampString = "489709683.767231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4265,11 +4205,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "486452355.750645"
+            timestampString = "489709683.767231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "317"
-            endingLineNumber = "317"
+            startingLineNumber = "323"
+            endingLineNumber = "323"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -4361,11 +4301,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/ViewController.swift"
-            timestampString = "481407865.824829"
+            timestampString = "489711669.395973"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "isValidEmail(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -8519,43 +8459,43 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "486452355.750645"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "284"
-            endingLineNumber = "284"
-            landmarkName = "saveClicked(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "486452355.750645"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "286"
-            endingLineNumber = "286"
-            landmarkName = "saveClicked(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSE/NewGroupViewController.swift"
-            timestampString = "486452355.750645"
+            timestampString = "489709683.767231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "290"
             endingLineNumber = "290"
+            landmarkName = "saveClicked(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/NewGroupViewController.swift"
+            timestampString = "489709683.767231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "292"
+            endingLineNumber = "292"
+            landmarkName = "saveClicked(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/NewGroupViewController.swift"
+            timestampString = "489709683.767231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "saveClicked(_:)"
             landmarkType = "5">
          </BreakpointContent>

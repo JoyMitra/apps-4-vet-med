@@ -41,7 +41,7 @@ class BCIResultsViewController: UIViewController {
             bestDrugName = source.drug2Name
             otherDrugName = source.drug1Name
         }
-        resultString = "Drug " + bestDrugName + " shows $" + differenceInReturnString + "/head advantage over Drug " + otherDrugName + "using the information provided."
+        resultString = "Drug " + bestDrugName + " shows $" + differenceInReturnString + "/head advantage over Drug " + otherDrugName + " using the information provided."
         resultsTextView.text = resultString
         
     }

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VA1-rj-AXV">
-                                <rect key="frame" x="45" y="453" width="510" height="40"/>
+                                <rect key="frame" x="45" y="408" width="510" height="40"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bhT-Gm-h20"/>
@@ -37,9 +37,12 @@
                                     <segue destination="W6b-ne-XnW" kind="show" id="2gZ-mq-DXY"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-ME-Pk4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cc-ME-Pk4">
                                 <rect key="frame" x="45" y="312" width="510" height="88"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="ZIN-sg-DoN"/>
+                                </constraints>
                                 <string key="text">This application is supposed help compare drugs for treating Bovine Respiratory Disease. You will first be asked to enter population specific parameters, next the two drugs, then you'll be able to compare and see the results.</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -54,16 +57,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bci_logo" translatesAutoresizingMaskIntoConstraints="NO" id="6AQ-Tf-C9f">
-                                <rect key="frame" x="199" y="64" width="202" height="202"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="pjp-j1-QRi"/>
-                                    <constraint firstAttribute="height" constant="202" id="xGF-Gn-j2t"/>
-                                </constraints>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYG-8j-O1s">
-                                <rect key="frame" x="45" y="517" width="510" height="75"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYG-8j-O1s">
+                                <rect key="frame" x="45" y="462" width="510" height="130"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="cd8-Ud-qe9"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Author:">
                                         <attributes>
@@ -128,6 +127,13 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bci_logo" translatesAutoresizingMaskIntoConstraints="NO" id="6AQ-Tf-C9f">
+                                <rect key="frame" x="199" y="64" width="202" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202" id="pjp-j1-QRi"/>
+                                    <constraint firstAttribute="height" constant="202" id="xGF-Gn-j2t"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,9 +142,9 @@
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="leading" secondItem="9wG-mm-cUx" secondAttribute="leading" id="68U-fu-QYD"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="trailing" secondItem="0cc-ME-Pk4" secondAttribute="trailing" id="8zD-Xt-f15"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9wG-mm-cUx" secondAttribute="trailing" constant="25" id="BjC-iq-wef"/>
-                            <constraint firstItem="EYG-8j-O1s" firstAttribute="top" secondItem="VA1-rj-AXV" secondAttribute="bottom" constant="24" id="Crl-xv-mqz"/>
+                            <constraint firstItem="EYG-8j-O1s" firstAttribute="top" secondItem="VA1-rj-AXV" secondAttribute="bottom" constant="14" id="Crl-xv-mqz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EYG-8j-O1s" secondAttribute="trailing" constant="25" id="EHC-AN-Mnt"/>
-                            <constraint firstItem="VA1-rj-AXV" firstAttribute="top" secondItem="0cc-ME-Pk4" secondAttribute="bottom" constant="53" id="F4j-LD-7qd"/>
+                            <constraint firstItem="VA1-rj-AXV" firstAttribute="top" secondItem="0cc-ME-Pk4" secondAttribute="bottom" constant="8" id="F4j-LD-7qd"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="leading" secondItem="0cc-ME-Pk4" secondAttribute="leading" id="FQX-YO-84r"/>
                             <constraint firstItem="EYG-8j-O1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="Nfj-Lu-Yyn"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="trailing" secondItem="9wG-mm-cUx" secondAttribute="trailing" id="PQo-uM-1gy"/>
@@ -672,7 +678,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-uB-fe2">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-uB-fe2">
                                 <rect key="frame" x="20" y="64" width="560" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">According to the calculation,  Drug 1 (The name of the drug) is better than Drug 2 (The name of the other drug) because the difference in return to ownership is negative. 
