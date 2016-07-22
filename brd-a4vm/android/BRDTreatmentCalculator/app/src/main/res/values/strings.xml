@@ -1,26 +1,34 @@
 <resources>
     <string name="app_name">BRD Tx Evaluation</string>
     <string name="bci_logo_content_description">Official BCI Logo</string>
-    <string name="welcome">Welcome</string>
+    <string name="welcome"><b>Welcome</b></string>
+    <string name="population_parameters_header"><b>Population Parameters</b></string>
+    <string name="drug_1_header"><b>Drug 1</b></string>
+    <string name="drug_2_header"><b>Drug 2</b></string>
+    <string name="results_header"><b>Results</b></string>
     <string name="welcome_message">This application is used to help compare drugs for treating
         Bovine Respiratory Disease. You will first be asked to enter population specific parameters,
-        next the two drugs, then you\'ll be able to compare and see the results.</string>
-    <string name="continue_main">Start</string>
+        next the two drugs, then you\'ll be able to compare and see the results</string>
+    <string name="continue_main"><b>Start</b></string>
+    <string name="attributions">Author: A.J. Cabanatuan\n
+        Team: Robert Larson, Brad White, Venkatesh Prasad Ranganath, Kevin Manase\n
+        Affiliation: Kansas State University\n
+        Website: http://apps-4-vet-med.github.io/brd</string>
     <string name="back">Back</string>
     <string name="next">Next</string>
-    <string name="morbidity">Morbidity</string>
-    <string name="cost_of_gain">Cost of Gain</string>
-    <string name="price_received_at_sale">Price Received At Sale</string>
-    <string name="arrival_weight">Arrival Weight</string>
-    <string name="days_on_feed">Days on Feed</string>
-    <string name="adg_healthy_cattle">ADG Healthy Cattle</string>
-    <string name="name_of_drug_1">Name of Drug 1</string>
-    <string name="treatment_failure_percent">Treatment Failure Percent</string>
-    <string name="case_fatality_rate">Case Fatality Rate</string>
-    <string name="cost_of_treatment">Cost of Treatment</string>
-    <string name="chronic_percentage">Chronic Percentage</string>
-    <string name="name_of_drug_2">Name of Drug 2</string>
-    <string name="results">Results: </string>
+    <string name="morbidity"><b>Morbidity</b></string>
+    <string name="cost_of_gain"><b>Cost of Gain</b></string>
+    <string name="price_received_at_sale"><b>Price Received At Sale</b></string>
+    <string name="arrival_weight"><b>Arrival Weight</b></string>
+    <string name="days_on_feed"><b>Days on Feed</b></string>
+    <string name="adg_healthy_cattle"><b>ADG Healthy Cattle</b></string>
+    <string name="name_of_drug_1"><b>Name of Drug 1</b></string>
+    <string name="treatment_failure_percent"><b>Treatment Failure Percent</b></string>
+    <string name="case_fatality_rate"><b>Case Fatality Rate</b></string>
+    <string name="cost_of_treatment"><b>Cost of Treatment</b></string>
+    <string name="chronic_percentage"><b>Chronic Percentage</b></string>
+    <string name="name_of_drug_2"><b>Name of Drug 2</b></string>
+    <string name="results"><b>Results: </b></string>
     <string name="restart">Restart</string>
     <string name="percent_placeholder"><i>0-100%</i></string>
     <string name="cost_of_gain_placeholder"><i>$/lbs./head</i></string>

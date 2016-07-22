@@ -1,48 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="1">
 
     <!-- Navigation for previous and next buttons -->
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:orientation="horizontal"
-        android:layout_weight="0.25">
+    <ImageButton
+        android:id="@+id/drugOnePageBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ic_arrow_back_white"
+        android:background="@drawable/my_button_blue"
+        android:contentDescription="@string/back"
+        />
 
-        <ImageButton
-            android:id="@+id/drugOnePageBackButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:src="@drawable/ic_arrow_back_white"
-            android:background="@drawable/my_button_blue"
-            android:contentDescription="@string/back"
-            android:clickable="true"
-            />
-
-        <ImageButton
-            android:id="@+id/drugOnePageNextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:src="@drawable/ic_arrow_forward_white"
-            android:background="@drawable/my_button_green"
-            android:contentDescription="@string/next"
-            android:clickable="true"
-            />
-
-    </GridLayout>
+    <ImageButton
+        android:id="@+id/drugOnePageNextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_arrow_forward_white"
+        android:background="@drawable/my_button_green"
+        android:contentDescription="@string/next"
+        />
 
     <!-- A scrollable view of required fields for the drug one parameters -->
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.75"
-        android:fillViewport="false">
+        android:paddingTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,4 +140,4 @@
 
     </ScrollView>
 
-</LinearLayout>
+</RelativeLayout>

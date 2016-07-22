@@ -49,14 +49,11 @@
         android:layout_width="match_parent"
         android:layout_height="25dp"
         android:layout_weight="0.10"
-        android:paddingTop="5sp"
         android:text="@string/continue_main"
         android:textColor="@color/white"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:drawableBottom="@drawable/ic_trending_flat_white_24dp"
-        android:drawablePadding="-10sp"
-        android:background="@drawable/my_button_purple"
+        android:background="@drawable/my_button_green"
         />
 
     <!-- Filler space for design purposes -->
@@ -66,6 +63,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="0.10"
+        android:layout_gravity="center"
+        android:paddingTop="10dp"
+        android:text="@string/attributions"
+        android:textSize="8sp"
+        android:textAlignment="center"
         />
 
 </LinearLayout>

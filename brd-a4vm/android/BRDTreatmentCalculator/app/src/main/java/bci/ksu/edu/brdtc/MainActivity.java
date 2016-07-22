@@ -1,6 +1,7 @@
 package bci.ksu.edu.brdtc;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -41,6 +43,7 @@ import bci.ksu.edu.brdtc.predicates.InvalidBoundsPredicate;
 import bci.ksu.edu.brdtc.predicates.NullFieldPredicate;
 import bci.ksu.edu.brdtc.predicates.PriceReceivedAtSalePredicate;
 import bci.ksu.edu.brdtc.predicates.ValidatePredicate;
+import bci.ksu.edu.brdtc.util.FileReadAndWrite;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
@@ -51,14 +54,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     // All Buttons
     private Button mMainPageNextButton;
-    private Button mPopParamPageNextButton;
-    private Button mPopParamPageBackButton;
-    private Button mDrugOnePageNextButton;
-    private Button mDrugOnePageBackButton;
-    private Button mDrugTwoPageNextButton;
-    private Button mDrugTwoPageBackButton;
-    private Button mResultsPageResetButton;
-    private Button mResultsPageBackButton;
+    private ImageButton mPopParamPageNextButton;
+    private ImageButton mPopParamPageBackButton;
+    private ImageButton mDrugOnePageNextButton;
+    private ImageButton mDrugOnePageBackButton;
+    private ImageButton mDrugTwoPageNextButton;
+    private ImageButton mDrugTwoPageBackButton;
+    private ImageButton mResultsPageResetButton;
+    private ImageButton mResultsPageBackButton;
 
     // Population parameters
     private EditText mMorbidityEditText;
@@ -110,14 +113,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         // Buttons
         mMainPageNextButton = (Button) findViewById(R.id.mainPageNextButton);
-        mPopParamPageNextButton = (Button) findViewById(R.id.popParamPageNextButton);
-        mPopParamPageBackButton = (Button) findViewById(R.id.popParamPageBackButton);
-        mDrugOnePageNextButton = (Button) findViewById(R.id.drugOnePageNextButton);
-        mDrugOnePageBackButton = (Button) findViewById(R.id.drugOnePageBackButton);
-        mDrugTwoPageNextButton = (Button) findViewById(R.id.drugTwoPageNextButton);
-        mDrugTwoPageBackButton = (Button) findViewById(R.id.drugTwoPageBackButton);
-        mResultsPageResetButton = (Button) findViewById(R.id.resultsPageResetButton);
-        mResultsPageBackButton = (Button) findViewById(R.id.resultsPageBackButton);
+        mPopParamPageNextButton = (ImageButton) findViewById(R.id.popParamPageNextButton);
+        mPopParamPageBackButton = (ImageButton) findViewById(R.id.popParamPageBackButton);
+        mDrugOnePageNextButton = (ImageButton) findViewById(R.id.drugOnePageNextButton);
+        mDrugOnePageBackButton = (ImageButton) findViewById(R.id.drugOnePageBackButton);
+        mDrugTwoPageNextButton = (ImageButton) findViewById(R.id.drugTwoPageNextButton);
+        mDrugTwoPageBackButton = (ImageButton) findViewById(R.id.drugTwoPageBackButton);
+        mResultsPageResetButton = (ImageButton) findViewById(R.id.resultsPageResetButton);
+        mResultsPageBackButton = (ImageButton) findViewById(R.id.resultsPageBackButton);
 
         // Population Widgets
         mMorbidityEditText = (EditText) findViewById(R.id.morbidityEditText);
@@ -175,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         return adapter;
     }
 
+    @Override
     public void onClick(View view) {
         List<EditText> editTexts = new ArrayList<>();
         List<EditText> percentRestrictedTexts = new ArrayList<>();
@@ -210,6 +214,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 viewFlipper.showNext();
                 break;
             case R.id.popParamPageBackButton :
+                hideSoftKeyboard();
                 viewFlipper.showPrevious();
                 break;
             case R.id.drugOnePageNextButton :
@@ -230,6 +235,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 viewFlipper.showNext();
                 break;
             case R.id.drugOnePageBackButton :
+                hideSoftKeyboard();
                 viewFlipper.showPrevious();
                 break;
             case R.id.drugTwoPageNextButton :
@@ -248,27 +254,29 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 setDrugTwoParameters();
                 getAndDisplayResults();
                 setNormalBackground(editTexts);
+                hideSoftKeyboard();
                 saveDrugsToFile("drugs.txt");
-
+                savePopulationToFile("population.txt");
                 viewFlipper.showNext();
                 break;
             case R.id.drugTwoPageBackButton :
+                hideSoftKeyboard();
                 viewFlipper.showPrevious();
                 break;
             case R.id.resultsPageResetButton :
-                savePopulationToFile("population.txt");
                 setupParameters();
                 mResultsTextView.setText(R.string.results);
                 viewFlipper.showNext();
                 break;
             case R.id.resultsPageBackButton :
+                hideSoftKeyboard();
                 mResultsTextView.setText(R.string.results);
                 viewFlipper.showPrevious();
                 break;
         }
+        hideSoftKeyboard();
         editTexts.clear();
         percentRestrictedTexts.clear();
-        hideSoftKeyboard();
     }
 
     private void setPopulationParameters() {
@@ -447,75 +455,36 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         }
     }
 
-    //TODO: Remove duplicate code
     private void savePopulationToFile(String fileName) {
         File file = new File(getFilesDir(), fileName);
-
         Gson gson = new Gson();
         String data = gson.toJson(population);
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            fileOutputStream.write(data.getBytes());
-            fileOutputStream.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        FileReadAndWrite fileRaW = new FileReadAndWrite();
+        fileRaW.write(file, data);
     }
 
     private void saveDrugsToFile(String fileName) {
         File file = new File(getFilesDir(), fileName);
-
         List<Drug> drugs = new ArrayList<>();
         drugs.add(drugOne);
         drugs.add(drugTwo);
         Gson gson = new Gson();
         String data = gson.toJson(drugs);
-
-        try {
-            FileOutputStream fileOutputStream = new FileOutputStream(file);
-            fileOutputStream.write(data.getBytes());
-            fileOutputStream.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        FileReadAndWrite fileRaW = new FileReadAndWrite();
+        fileRaW.write(file, data);
     }
 
-    //TODO: Remove duplicate code
     private List<Drug> readDrugsFromFile(String fileName) {
-        StringBuilder sb = new StringBuilder();
-        try {
-            FileInputStream fis = openFileInput(fileName);
-            InputStreamReader isr = new InputStreamReader(fis);
-            BufferedReader bufferedReader = new BufferedReader(isr);
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                sb.append(line);
-            }
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        String json = sb.toString();
-        Gson gson = new Gson();
         Type listType = new TypeToken<ArrayList<Drug>>(){}.getType();
+        FileReadAndWrite fileRaW = new FileReadAndWrite();
+        String json = fileRaW.read(fileName, this);
+        Gson gson = new Gson();
         return gson.fromJson(json, listType);
     }
 
     private Population readPopulationFromFile(String fileName) {
-        StringBuilder sb = new StringBuilder();
-        try {
-            FileInputStream fis = openFileInput(fileName);
-            InputStreamReader isr = new InputStreamReader(fis);
-            BufferedReader bufferedReader = new BufferedReader(isr);
-            String line;
-            while ((line = bufferedReader.readLine()) != null) {
-                sb.append(line);
-            }
-
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        String json = sb.toString();
+        FileReadAndWrite fileRaW = new FileReadAndWrite();
+        String json = fileRaW.read(fileName, this);
         Gson gson = new Gson();
         return gson.fromJson(json, Population.class);
     }

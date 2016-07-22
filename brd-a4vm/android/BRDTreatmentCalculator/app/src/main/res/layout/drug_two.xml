@@ -10,29 +10,28 @@
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:orientation="horizontal"
-        android:layout_weight="0.25"
-        android:paddingTop="5dp">
+        android:layout_weight="0.25">
 
-        <Button
+        <ImageButton
             android:id="@+id/drugTwoPageBackButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/back"
-            android:textSize="28sp"
-            android:textColor="@color/white"
+            android:src="@drawable/ic_arrow_back_white"
             android:background="@drawable/my_button_blue"
+            android:contentDescription="@string/back"
+            android:clickable="true"
             />
 
-        <Button
+        <ImageButton
+            android:id="@+id/drugTwoPageNextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:id="@+id/drugTwoPageNextButton"
-            android:text="@string/next"
-            android:textSize="28sp"
-            android:textColor="@color/white"
+            android:src="@drawable/ic_arrow_forward_white"
             android:background="@drawable/my_button_green"
+            android:contentDescription="@string/next"
+            android:clickable="true"
             />
 
     </GridLayout>
@@ -43,8 +42,7 @@
         android:id="@+id/drugTwoPageScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.75"
-        android:paddingTop="10dp">
+        android:layout_weight="0.75">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,6 +59,7 @@
 
             <AutoCompleteTextView
                 android:id="@+id/drugTwoNameTextView"
+                android:labelFor="@id/drugTwoNameTextView"
                 android:layout_width="165sp"
                 android:layout_height="wrap_content"
                 android:inputType="text"
