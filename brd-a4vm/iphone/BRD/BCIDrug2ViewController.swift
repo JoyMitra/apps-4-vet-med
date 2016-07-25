@@ -29,7 +29,11 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load locally saved data if any
         self.loadLocalValues()
+        
+        // Set textfield delegates
         self.drugNameField.delegate = self
         self.tpfField.delegate = self
         self.cfrField.delegate = self
@@ -38,6 +42,8 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
     }
     
     override func viewDidLayoutSubviews() {
+        
+        // Autocomplete UI customization
         self.drugNameField.borderStyle = UITextBorderStyle.RoundedRect
         self.drugNameField.backgroundColor = .clearColor()
         self.drugNameField.autoCompleteTableBackgroundColor = .whiteColor()
@@ -52,12 +58,14 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
     
     
     @IBAction func compareButtonAction(sender: AnyObject) {
+        // Set variables according to user inputs
         drugName = drugNameField.text!
         tpf = tpfField.text!
         cfr = cfrField.text!
         cot = costOfTreatmentField.text!
         chronic = chronicPercentageField.text!
         
+        // Check again if everything is okay
         textFieldDidEndEditing(drugNameField)
         textFieldDidEndEditing(tpfField)
         textFieldDidEndEditing(cfrField)
@@ -65,6 +73,7 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
         textFieldDidEndEditing(chronicPercentageField)
 
         
+        // Another Check if any field is blank and all constraints are satisfied
         if drugName.isBlank || tpf.isBlank || cfr.isBlank || cot.isBlank || chronic.isBlank ||
             !tpfField.isSatisfied || !cfrField.isSatisfied || !costOfTreatmentField.isSatisfied ||
             !chronicPercentageField.isSatisfied {
@@ -77,6 +86,7 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
         }
     }
     
+    // Store variables provided by user locally
     func loadLocalValues() {
         let userDataStore = NSUserDefaults.standardUserDefaults()
         let drug2Dictionary = userDataStore.objectForKey(kDrug2Parameters)
@@ -90,6 +100,7 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
         
     }
     
+    // Return stored values to user
     func returnValues() {
         source.drug2Name = drugName
         source.tfpb = Double(tpf)
@@ -171,7 +182,7 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
         
     }
     
-    
+    // Limit decimal places to 2
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         if string.isEmpty {
@@ -191,6 +202,8 @@ class BCIDrug2ViewController: UIViewController, UITextFieldDelegate, MLPAutoComp
         return true
     }
     
+    
+    // Required autocomplete delegate
     func autoCompleteTextField(textField: MLPAutoCompleteTextField, didSelectAutoCompleteString selectedString: String, withAutoCompleteObject selectedObject: MLPAutoCompletionObject, forRowAtIndexPath indexPath: NSIndexPath) {
         if selectedString != "" {
             print("selected string \(selectedString) from autocomplete menu")
