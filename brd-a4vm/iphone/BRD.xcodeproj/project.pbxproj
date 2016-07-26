@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0831E820AAC7A8912B08A592 /* libPods-BRDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DD348BBF1C7EE0C1F52F72 /* libPods-BRDUITests.a */; };
-		283B4C161D22E9FF001D60FF /* BCITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C151D22E9FF001D60FF /* BCITextField.swift */; };
 		283B4C1A1D242B22001D60FF /* BCIDrugsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */; };
 		283B4C1D1D242CC9001D60FF /* BCIAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */; };
 		283B4C251D243565001D60FF /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1F1D243565001D60FF /* MLPAutoCompleteTextField.m */; };
@@ -51,7 +50,6 @@
 /* Begin PBXFileReference section */
 		052BF958824E7DC5F076998B /* libPods-BRD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BRD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B69B1192C13709248F96F31 /* Pods-BRDUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BRDUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BRDUITests/Pods-BRDUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		283B4C151D22E9FF001D60FF /* BCITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCITextField.swift; sourceTree = "<group>"; };
 		283B4C171D242B22001D60FF /* BRD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRD-Bridging-Header.h"; sourceTree = "<group>"; };
 		283B4C181D242B22001D60FF /* BCIDrugsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIDrugsDataSource.h; sourceTree = "<group>"; };
 		283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIDrugsDataSource.m; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 				283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */,
 				283B4C1B1D242CC9001D60FF /* BCIAutoCompleteObject.h */,
 				283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */,
-				283B4C151D22E9FF001D60FF /* BCITextField.swift */,
 				2899944F1D19974B0083359E /* Localizable.strings */,
 				287422B21D0F988300927E06 /* Main.storyboard */,
 				287422B81D0F988300927E06 /* Assets.xcassets */,
@@ -495,7 +492,6 @@
 				287422E41D11BA9700927E06 /* BCIDrug2ViewController.swift in Sources */,
 				283B4C261D243565001D60FF /* NSString+Levenshtein.m in Sources */,
 				287422E01D10DD8500927E06 /* BCIResultsViewController.swift in Sources */,
-				283B4C161D22E9FF001D60FF /* BCITextField.swift in Sources */,
 				283B4C1D1D242CC9001D60FF /* BCIAutoCompleteObject.m in Sources */,
 				287422B71D0F988300927E06 /* BRD.xcdatamodeld in Sources */,
 				287422E21D11BA8F00927E06 /* BCIDrug1ViewController.swift in Sources */,

@@ -14,7 +14,7 @@
 
 @implementation BCIAutoCompleteObject
 
-
+// Init with drug name (for delegate)
 - (id)initWithDrugName:(NSString *)name
 {
     self = [super init];
@@ -25,7 +25,7 @@
 }
 
 #pragma mark - MLPAutoCompletionObject Protocl
-
+// Get drug name
 - (NSString *)autocompleteString
 {
     return self.drugName;
