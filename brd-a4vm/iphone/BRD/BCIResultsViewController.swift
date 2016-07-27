@@ -19,7 +19,7 @@ class BCIResultsViewController: UIViewController {
         super.viewDidLoad()
         
         // Use the formulas provided
-        source.calculateEverything()
+        source.calculateEverything(test: false)
         
         let differenceInReturnString = abs(source.differenceInReturnToOwnership).format(doubleFormat) // Remove (-) sign for results string
         let differenceInReturn = source.differenceInReturnToOwnership // Save for the sign check below
