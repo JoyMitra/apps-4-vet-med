@@ -1,10 +1,8 @@
 package bci.ksu.edu.brdtc;
 
 import android.content.Context;
-import android.media.Image;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -21,12 +19,7 @@ import android.widget.ViewFlipper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.lang.reflect.Type;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -381,7 +374,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private int checkFields(List<EditText> editTexts, ValidatePredicate vp) {
         int numBadFields = 0;
         for (EditText editText : editTexts) {
-            if (vp.test(editText)) {
+            String input = editText.getText().toString();
+            if (vp.test(input)) {
                 editText.setBackgroundResource(R.drawable.invalid_field);
                 numBadFields++;
             } else {
@@ -392,7 +386,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     }
 
     private boolean existInvalidDrugParam(EditText editText, ValidatePredicate vp) {
-        if (vp.test(editText)) {
+        String input = editText.getText().toString();
+        if (vp.test(input)) {
             editText.setBackgroundResource(R.drawable.invalid_field);
             Toast.makeText(this, "INVALID DRUG PARAMETER!", Toast.LENGTH_SHORT).show();
             return true;
@@ -415,23 +410,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private boolean existInvalidPopulationParam(List<EditText> editTexts) {
         setNormalBackground(editTexts);
-        if (new CostOfGainPredicate().test(mCostOfGainEditText)) {
+        if (new CostOfGainPredicate().test(mCostOfGainEditText.getText().toString())) {
             Toast.makeText(this, "Invalid Cost of Gain", Toast.LENGTH_SHORT).show();
             mCostOfGainEditText.setBackgroundResource(R.drawable.invalid_field);
             return true;
-        } else if (new PriceReceivedAtSalePredicate().test(mPriceReceivedAtSaleEditText)) {
+        } else if (new PriceReceivedAtSalePredicate().test(mPriceReceivedAtSaleEditText.getText().toString())) {
             Toast.makeText(this, "Invalid Price Received At Sale", Toast.LENGTH_SHORT).show();
             mPriceReceivedAtSaleEditText.setBackgroundResource(R.drawable.invalid_field);
             return true;
-        } else if (new ArrivalWeightPredicate().test(mArrivalWeightEditText)) {
+        } else if (new ArrivalWeightPredicate().test(mArrivalWeightEditText.getText().toString())) {
             Toast.makeText(this, "Invalid Arrival Weight", Toast.LENGTH_SHORT).show();
             mArrivalWeightEditText.setBackgroundResource(R.drawable.invalid_field);
             return true;
-        } else if (new DaysOnFeedPredicate().test(mDaysOnFeedEditText)) {
+        } else if (new DaysOnFeedPredicate().test(mDaysOnFeedEditText.getText().toString())) {
             Toast.makeText(this, "Invalid Days on Feed", Toast.LENGTH_SHORT).show();
             mDaysOnFeedEditText.setBackgroundResource(R.drawable.invalid_field);
             return true;
-        } else if (new AdgHealthyCattlePredicate().test(mAdgHealthyCattleEditText)) {
+        } else if (new AdgHealthyCattlePredicate().test(mAdgHealthyCattleEditText.getText().toString())) {
             Toast.makeText(this, "Invalid Adg Healthy Cattle", Toast.LENGTH_SHORT).show();
             mAdgHealthyCattleEditText.setBackgroundResource(R.drawable.invalid_field);
             return true;
