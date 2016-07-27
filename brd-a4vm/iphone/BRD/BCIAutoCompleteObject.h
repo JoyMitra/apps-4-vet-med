@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface BCIAutoCompleteObject : NSObject
+
 - (id)initWithDrugName:(NSString *)name;
 
 @end

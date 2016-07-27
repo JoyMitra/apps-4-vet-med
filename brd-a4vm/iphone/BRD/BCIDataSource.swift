@@ -150,14 +150,16 @@ class BCIDataSource {
         differenceInReturnToOwnership = returnToOwnershipAndManagementTxB - returnToOwnershipAndManagementTxA;
     }
     
-    func calculateEverything() {
-        m = m/100
-        tfpa = tfpa/100
-        tfpb = tfpb/100
-        cfra = cfra/100
-        cfrb = cfrb/100
-        cpa = cpa/100
-        cpb = cpb/100
+    func calculateEverything(test isTest: Bool) {
+        if (!isTest) {
+            m = m/100
+            tfpa = tfpa/100
+            tfpb = tfpb/100
+            cfra = cfra/100
+            cfrb = cfrb/100
+            cpa = cpa/100
+            cpb = cpb/100
+        }
         calculatePurchasePrice()
         calculateNumbers()
         calculateAverageADG()

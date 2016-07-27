@@ -30,7 +30,11 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Load locally saved data if any
         self.loadLocalValues()
+        
+        // Set textfield delegates
         self.morbidityField.delegate = self
         self.costOfGainField.delegate = self
         self.priceReceivedPerSaleField.delegate = self
@@ -49,6 +53,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
     }
     
     @IBAction func nextStepAction() {
+        // Set variables according to user inputs
         morbidity = morbidityField.text!
         cog = costOfGainField.text!
         price = priceReceivedPerSaleField.text!
@@ -56,7 +61,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         dof = daysOnFeedField.text!
         adg = adgField.text!
         
-    
+        // Check again if everything is okay
         textFieldDidEndEditing(morbidityField)
         textFieldDidEndEditing(costOfGainField)
         textFieldDidEndEditing(arrivalWeightField)
@@ -64,7 +69,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         textFieldDidEndEditing(priceReceivedPerSaleField)
         textFieldDidEndEditing(adgField)
 
-        
+        // Another Check if any field is blank and all constraints are satisfied
         if morbidity.isBlank || cog.isBlank || price.isBlank || weight.isBlank || cog.isBlank || dof.isBlank || adg.isBlank ||
             !morbidityField.isSatisfied || !costOfGainField.isSatisfied || !arrivalWeightField.isSatisfied ||
             !daysOnFeedField.isSatisfied || !priceReceivedPerSaleField.isSatisfied || !adgField.isSatisfied {
@@ -77,6 +82,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    // Store variables provided by user locally
     func loadLocalValues() {
         let userDataStore = NSUserDefaults.standardUserDefaults()
         let populationDictionary = userDataStore.objectForKey(kPopulationKey)
@@ -91,6 +97,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         
     }
     
+    // Return stored values to user
     func returnValues() {
         source.m = Double(morbidity)
         source.cog = Double(cog)
@@ -109,6 +116,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         userDataStore.setObject(populationDictionary, forKey: kPopulationKey)
     }
     
+    // Limit decimal places to 2
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
         if string.isEmpty {

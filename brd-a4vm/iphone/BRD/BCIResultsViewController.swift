@@ -17,23 +17,18 @@ class BCIResultsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        source.calculateEverything()
         
-        let differenceInReturnString = abs(source.differenceInReturnToOwnership).format(doubleFormat)
-        let differenceInReturn = source.differenceInReturnToOwnership
-        let saleWeightTxA = String(source.saleWeightTxA)
-        let saleWeightTxB = String(source.saleWeightTxB)
-        let grossIncomeTxA = String(source.grossIncomeTxA)
-        let grossIncomeTxB = String(source.grossIncomeTxB)
-        let returnToOwnershipTxA = String(source.returnToOwnershipAndManagementTxA)
-        let returnToOwndershipTxB = String(source.returnToOwnershipAndManagementTxB)
-        let costOfTreamtmentTxA = String(source.costOfTreatmentPerHeadTxA)
-        let costOfTreamtmentTxB = String(source.costOfTreatmentPerHeadTxB)
+        // Use the formulas provided
+        source.calculateEverything(test: false)
+        
+        let differenceInReturnString = abs(source.differenceInReturnToOwnership).format(doubleFormat) // Remove (-) sign for results string
+        let differenceInReturn = source.differenceInReturnToOwnership // Save for the sign check below
         
         var bestDrugName = ""
         var otherDrugName = ""
         var resultString = ""
         
+        // If the number is negative, drug 1 is better
         if differenceInReturn.isSignMinus {
             bestDrugName = source.drug1Name
             otherDrugName = source.drug2Name
@@ -41,12 +36,15 @@ class BCIResultsViewController: UIViewController {
             bestDrugName = source.drug2Name
             otherDrugName = source.drug1Name
         }
-        resultString = "Drug " + bestDrugName + " shows $" + differenceInReturnString + "/head advantage over Drug " + otherDrugName + " using the information provided."
+        
+        // The text displayed at the results screen
+        resultString = "Drug \(bestDrugName) shows $ \(differenceInReturnString)/head advantage over Drug \(otherDrugName) using the information provided."
         resultsTextView.text = resultString
         
     }
 
     override func viewDidDisappear(animated: Bool) {
+        // Reset every calculation upon exit
         source.reset()
     }
     
