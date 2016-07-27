@@ -45,7 +45,7 @@ class BRD_Tx_EvaluationTests: XCTestCase {
             source.ctb1 = 25
             source.sp = 1.45
             source.ahc = 3.4
-            print("Variables set..........")
+            print("Variables set............")
         }
 
         // Calculates Sale Weight for Tx A / Tx B - Sold full price
