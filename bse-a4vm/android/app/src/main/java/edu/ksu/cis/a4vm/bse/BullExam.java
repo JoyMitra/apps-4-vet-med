@@ -1,5 +1,6 @@
 package edu.ksu.cis.a4vm.bse;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
@@ -42,7 +43,6 @@ public class BullExam extends AppCompatActivity {
         classificationBtn = (Button)findViewById(R.id.classification);
         commentsButton = (Button)findViewById(R.id.misc);
         morphBtn = (Button)findViewById(R.id.morphInfo);
-
     }
 
     public void onResume()
@@ -54,6 +54,9 @@ public class BullExam extends AppCompatActivity {
         {
             Boolean lotFilled = false;
             Boolean breedFilled = false;
+            Boolean ageYearFilled = false;
+            Boolean ageMthFilled = false;
+            Boolean dobFilled = false;
             for(String item: bullInfo)
             {
                 String[] arrItem = item.split("=");
@@ -65,9 +68,21 @@ public class BullExam extends AppCompatActivity {
                 {
                     breedFilled = true;
                 }
+                else if(arrItem!=null && arrItem.length==2 && arrItem[0].equalsIgnoreCase("Age(Years)"))
+                {
+                    ageYearFilled = true;
+                }
+                else if(arrItem!=null && arrItem.length==2 && arrItem[0].equalsIgnoreCase("Age(Months)"))
+                {
+                    ageMthFilled = true;
+                }
+                else if(arrItem!=null && arrItem.length==2 && arrItem[0].equalsIgnoreCase("yyyy-mm-dd"))
+                {
+                    dobFilled = true;
+                }
 
             }
-            if(lotFilled && breedFilled)
+            if(lotFilled && breedFilled && ageMthFilled && ageYearFilled && dobFilled)
             {
                 bullInfoBtn.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.all_fill));
             }
@@ -90,7 +105,7 @@ public class BullExam extends AppCompatActivity {
             {
                 String[] arrItem = item.split("=");
                 if(arrItem!=null && arrItem.length==2 && (arrItem[0].equalsIgnoreCase("Multi-sire")
-                        || arrItem[0].equalsIgnoreCase("Single-sire"))
+                        || arrItem[0].equalsIgnoreCase("Single-sire") || arrItem[0].equalsIgnoreCase("Not Used"))
                         && arrItem[1].equalsIgnoreCase(String.valueOf(ContextCompat.getColor(getApplicationContext(),
                                                         R.color.colorAccent))))
                 {

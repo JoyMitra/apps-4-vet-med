@@ -82,22 +82,6 @@ public class Constant {
             "matingInfo_seasonsUsed," +
             "matingInfo_sirePastureType," +
             "morphologyInfo_comments," +
-            /*"morphologyInfo_morphologyMeasurements_0_count," +
-            "morphologyInfo_morphologyMeasurements_0_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_1_count," +
-            "morphologyInfo_morphologyMeasurements_1_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_2_count," +
-            "morphologyInfo_morphologyMeasurements_2_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_3_count," +
-            "morphologyInfo_morphologyMeasurements_3_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_4_count," +
-            "morphologyInfo_morphologyMeasurements_4_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_5_count," +
-            "morphologyInfo_morphologyMeasurements_5_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_6_count," +
-            "morphologyInfo_morphologyMeasurements_6_morphologyChoice_label," +
-            "morphologyInfo_morphologyMeasurements_7_count," +
-            "morphologyInfo_morphologyMeasurements_7_morphologyChoice_label," +*/
             "motilityInfo_comments," +
             "motilityInfo_grossMotilityCategory," +
             "motilityInfo_individualMotility," +

@@ -234,7 +234,7 @@ public class VetInfoActivityTest extends ActivityInstrumentationTestCase2<Vetinf
     }
 
     @Test
-    public void saveVetInfoWithInvalidClinicFail(){
+    public void saveVetInfoWithOnlyNamePass(){
         Instrumentation.ActivityMonitor activityMonitor;
         activityMonitor = getInstrumentation().addMonitor(SettingsActivity.class.getName(), null, false);
         final Button saveBtn = (Button)vetinfoActivity.findViewById(R.id.vetInfoSave);
@@ -256,120 +256,28 @@ public class VetInfoActivityTest extends ActivityInstrumentationTestCase2<Vetinf
                 lastName.getOnFocusChangeListener().onFocusChange(lastName, false);
                 clinic.setText("");
                 clinic.getOnFocusChangeListener().onFocusChange(clinic, false);
-                addr1.setText("1211 Mosier Hall");
+                addr1.setText("");
                 addr2.setText("");
-                city.setText("Manhattan");
-                state.setText("KS");
-                zip.setText("66504");
-                email.setText("doe.Jane@ksu.edu");
+                city.setText("");
+                state.setText("");
+                zip.setText("");
+                email.setText(" ");
                 saveBtn.performClick();
                 assertEquals(clinic.getBackground().getConstantState(),
-                        ContextCompat.getDrawable(vetinfoActivity.getApplicationContext(), R.drawable.highlight).
+                        ContextCompat.getDrawable(vetinfoActivity.getApplicationContext(), R.drawable.focus_color).
                                 getConstantState());
                 HashSet<String> afterSave = (HashSet<String>) SharedPrefUtil.
                         getValue(vetinfoActivity.getApplicationContext(), Constant.PREFS_FILE_VET_INFO,Constant.KEY_VET);
                 String data = clinic.getHint().toString().trim() + "=" + clinic.getText().toString().trim().replace(",", ";");
                 if(afterSave!=null)
-                    assertFalse(afterSave.contains(data));
+                    assertTrue(afterSave.contains(data));
             }
         });
 
         SettingsActivity settingsActivity = (SettingsActivity)getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        assertNull(settingsActivity);
+        assertNotNull(settingsActivity);
     }
 
-    @Test
-    public void saveVetInfoWithInvalidAddress1Fail(){
-        Instrumentation.ActivityMonitor activityMonitor;
-        activityMonitor = getInstrumentation().addMonitor(SettingsActivity.class.getName(), null, false);
-        final Button saveBtn = (Button)vetinfoActivity.findViewById(R.id.vetInfoSave);
-        final EditText firstName = (EditText)vetinfoActivity.findViewById(R.id.firstName);
-        final EditText lastName = (EditText)vetinfoActivity.findViewById(R.id.lastName);
-        final EditText clinic = (EditText)vetinfoActivity.findViewById(R.id.clinic);
-        final EditText addr1 = (EditText)vetinfoActivity.findViewById(R.id.addr1);
-        final EditText addr2 = (EditText)vetinfoActivity.findViewById(R.id.addr2);
-        final EditText city = (EditText)vetinfoActivity.findViewById(R.id.city);
-        final EditText state = (EditText)vetinfoActivity.findViewById(R.id.state);
-        final EditText zip = (EditText)vetinfoActivity.findViewById(R.id.zip);
-        final EditText email = (EditText)vetinfoActivity.findViewById(R.id.email);
-        vetinfoActivity.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                firstName.setText("Jane");
-                firstName.getOnFocusChangeListener().onFocusChange(firstName, false);
-                lastName.setText("Doe");
-                lastName.getOnFocusChangeListener().onFocusChange(lastName, false);
-                clinic.setText("Doe's Clinic");
-                clinic.getOnFocusChangeListener().onFocusChange(clinic, false);
-                addr1.setText("   ");
-                addr1.getOnFocusChangeListener().onFocusChange(addr1, false);
-                addr2.setText("");
-                city.setText("Manhattan");
-                state.setText("KS");
-                zip.setText("66504");
-                email.setText("doe.Jane@ksu.edu");
-                saveBtn.performClick();
-                assertEquals(addr1.getBackground().getConstantState(),
-                        ContextCompat.getDrawable(vetinfoActivity.getApplicationContext(), R.drawable.highlight).
-                                getConstantState());
-                HashSet<String> afterSave = (HashSet<String>) SharedPrefUtil.
-                        getValue(vetinfoActivity.getApplicationContext(), Constant.PREFS_FILE_VET_INFO,Constant.KEY_VET);
-                String data = addr1.getHint().toString().trim() + "=" + addr1.getText().toString().trim().replace(",", ";");
-                if(afterSave!=null)
-                    assertFalse(afterSave.contains(data));
-            }
-        });
-
-        SettingsActivity settingsActivity = (SettingsActivity)getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        assertNull(settingsActivity);
-    }
-
-    @Test
-    public void saveVetInfoWithInvalidCityFail(){
-        Instrumentation.ActivityMonitor activityMonitor;
-        activityMonitor = getInstrumentation().addMonitor(SettingsActivity.class.getName(), null, false);
-        final Button saveBtn = (Button)vetinfoActivity.findViewById(R.id.vetInfoSave);
-        final EditText firstName = (EditText)vetinfoActivity.findViewById(R.id.firstName);
-        final EditText lastName = (EditText)vetinfoActivity.findViewById(R.id.lastName);
-        final EditText clinic = (EditText)vetinfoActivity.findViewById(R.id.clinic);
-        final EditText addr1 = (EditText)vetinfoActivity.findViewById(R.id.addr1);
-        final EditText addr2 = (EditText)vetinfoActivity.findViewById(R.id.addr2);
-        final EditText city = (EditText)vetinfoActivity.findViewById(R.id.city);
-        final EditText state = (EditText)vetinfoActivity.findViewById(R.id.state);
-        final EditText zip = (EditText)vetinfoActivity.findViewById(R.id.zip);
-        final EditText email = (EditText)vetinfoActivity.findViewById(R.id.email);
-        vetinfoActivity.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                firstName.setText("Jane");
-                firstName.getOnFocusChangeListener().onFocusChange(firstName, false);
-                lastName.setText("Doe");
-                lastName.getOnFocusChangeListener().onFocusChange(lastName, false);
-                clinic.setText("Doe's Clinic");
-                clinic.getOnFocusChangeListener().onFocusChange(clinic, false);
-                addr1.setText("1211 Mosier Hall");
-                addr1.getOnFocusChangeListener().onFocusChange(addr1, false);
-                addr2.setText("");
-                city.setText(" ");
-                city.getOnFocusChangeListener().onFocusChange(city, false);
-                state.setText("KS");
-                zip.setText("66504");
-                email.setText("doe.Jane@ksu.edu");
-                saveBtn.performClick();
-                assertEquals(city.getBackground().getConstantState(),
-                        ContextCompat.getDrawable(vetinfoActivity.getApplicationContext(), R.drawable.highlight).
-                                getConstantState());
-                HashSet<String> afterSave = (HashSet<String>) SharedPrefUtil.
-                        getValue(vetinfoActivity.getApplicationContext(), Constant.PREFS_FILE_VET_INFO,Constant.KEY_VET);
-                String data = city.getHint().toString().trim() + "=" + city.getText().toString().trim().replace(",", ";");
-                if(afterSave!=null)
-                    assertFalse(afterSave.contains(data));
-            }
-        });
-
-        SettingsActivity settingsActivity = (SettingsActivity)getInstrumentation().waitForMonitorWithTimeout(activityMonitor, 5000);
-        assertNull(settingsActivity);
-    }
 
     @Test
     public void saveVetInfoWithInvalidStateFail(){
@@ -449,7 +357,7 @@ public class VetInfoActivityTest extends ActivityInstrumentationTestCase2<Vetinf
                 city.getOnFocusChangeListener().onFocusChange(city, false);
                 state.setText("Kansas");
                 state.getOnFocusChangeListener().onFocusChange(state, false);
-                zip.setText("");
+                zip.setText("3");
                 zip.getOnFocusChangeListener().onFocusChange(zip, false);
                 email.setText("doe.Jane@ksu.edu");
                 saveBtn.performClick();

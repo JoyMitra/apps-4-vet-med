@@ -122,13 +122,12 @@ public class VetinfoActivity extends AppCompatActivity
                                                 @Override
                                                 public void onFocusChange(View v, boolean hasFocus) {
 
-                                                    if (clinic.getText().toString().trim().length() > 0) {
+                                                    if (clinic.getText().toString().trim().length() >= 0) {
                                                         clinic.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                         validateClinic = false;
                                                     } else {
                                                         clinic.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                         validateClinic = true;
-                                                        Toast.makeText(getApplicationContext(), "Clinic name cannot be empty", Toast.LENGTH_SHORT).show();
                                                     }
 
 
@@ -143,13 +142,12 @@ public class VetinfoActivity extends AppCompatActivity
                                                    @Override
                                                    public void onFocusChange(View v, boolean hasFocus) {
 
-                                                       if (addr1.getText().toString().trim().length() > 0) {
+                                                       if (addr1.getText().toString().trim().length() >= 0) {
                                                            addr1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                            validateAddr1 = false;
                                                        } else {
                                                            addr1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                            validateAddr1 = true;
-                                                           Toast.makeText(getApplicationContext(), "Address1 cannot be empty", Toast.LENGTH_SHORT).show();
                                                        }
 
 
@@ -164,13 +162,12 @@ public class VetinfoActivity extends AppCompatActivity
                                                   @Override
                                                   public void onFocusChange(View v, boolean hasFocus) {
 
-                                                      if (city.getText().toString().trim().length() > 0) {
+                                                      if (city.getText().toString().trim().length() >= 0) {
                                                           city.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                           validateCity = false;
                                                       } else {
                                                           city.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                           validateCity = true;
-                                                          Toast.makeText(getApplicationContext(), "city cannot be empty", Toast.LENGTH_SHORT).show();
                                                       }
 
 
@@ -190,7 +187,8 @@ public class VetinfoActivity extends AppCompatActivity
                                                            Float.valueOf(state.getText().toString());
                                                            state.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.highlight));
                                                        } catch (NumberFormatException ne) {
-                                                           if (state.getText().toString().trim().length() == 2) {
+                                                           if (state.getText().toString().trim().length() == 0
+                                                                   || state.getText().toString().trim().length() == 2) {
                                                                state.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                                validateState = false;
                                                            } else {
@@ -213,7 +211,8 @@ public class VetinfoActivity extends AppCompatActivity
                                                  public void onFocusChange(View v, boolean hasFocus) {
 
                                                      try {
-                                                         if (zip.getText().toString().trim().length() == 5 &&
+                                                         if ((zip.getText().toString().trim().length() == 0
+                                                                 || zip.getText().toString().trim().length() == 5) &&
                                                                  Integer.valueOf(zip.getText().toString().trim()) > 0) {
                                                              zip.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                              validateZip = false;
@@ -238,7 +237,8 @@ public class VetinfoActivity extends AppCompatActivity
                                                {
                                                    @Override
                                                    public void onFocusChange(View v, boolean hasFocus) {
-                                                       if (Util.isEmailValid(email.getText().toString().trim())) {
+                                                       if (email.getText().toString().trim().length()==0
+                                                               || Util.isEmailValid(email.getText().toString().trim())) {
                                                            email.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.focus_color));
                                                            validateEmail = false;
                                                        } else {

@@ -35,8 +35,8 @@ import edu.ksu.cis.a4vm.bse.util.SharedPrefUtil;
 
 public class MorphologyCount extends AppCompatActivity {
 
-    private String morphKey = null;
-    private String grpKey = null;
+    public String morphKey = null;
+    public String grpKey = null;
     //private Set<String> labels = null;
     private Set<String> initVals = null;
     private HashSet<String> morphologyLabels = null;
@@ -51,27 +51,28 @@ public class MorphologyCount extends AppCompatActivity {
     private Button btn8 = null;
     private TextView tv = null;
     Button btn = null;
+    String test = null;
 
     private String currentButton = null;
     TableRow row = null;
-    public int limit = 100;
+    public int limit = 1000000;
 
     int NormalCount = 0;
-    double NormalProp = 0.0;
+    double NormalProp = 0.00;
     int Lb2Count = 0;
-    double Lb2Prop = 0.0;
+    double Lb2Prop = 0.00;
     int Lb3Count = 0;
-    double Lb3Prop = 0.0;
+    double Lb3Prop = 0.00;
     int Lb4Count = 0;
-    double Lb4Prop = 0.0;
+    double Lb4Prop = 0.00;
     int Lb5Count = 0;
-    double Lb5Prop = 0.0;
+    double Lb5Prop = 0.00;
     int Lb6Count = 0;
-    double Lb6Prop = 0.0;
+    double Lb6Prop = 0.00;
     int Lb7Count = 0;
-    double Lb7Prop = 0.0;
+    double Lb7Prop = 0.00;
     int Lb8Count = 0;
-    double Lb8Prop = 0.0;
+    double Lb8Prop = 0.00;
 
 
     @Override
@@ -89,6 +90,7 @@ public class MorphologyCount extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
+        test = "Resume called...";
         final MediaPlayer btnChangeSound = MediaPlayer.create(getApplicationContext(), R.raw.button_changed);
         final MediaPlayer limitRchdSound = MediaPlayer.create(getApplicationContext(), R.raw.limit_reached);
         initVals = (HashSet<String>) SharedPrefUtil.getValue(getApplicationContext(),
@@ -121,7 +123,7 @@ public class MorphologyCount extends AppCompatActivity {
 
 
 
-        if(initVals!=null && morphologyLabels!=null)
+        if(initVals!=null)
         {
             for(String Val: initVals)
             {
@@ -131,7 +133,7 @@ public class MorphologyCount extends AppCompatActivity {
                     NormalCount = Integer.valueOf(values[1].trim().substring(0,values[1].trim().indexOf("(")));
                     NormalProp = Double.valueOf(values[1].trim().substring(values[1].trim().indexOf("(")+1,values[1].trim().indexOf("%")));
                 }
-                else
+                else if(morphologyLabels!=null)
                 {
                     for(String label: morphologyLabels)
                     {
@@ -183,7 +185,8 @@ public class MorphologyCount extends AppCompatActivity {
 
         row = new TableRow(this);
         btn1 = new Button(this);
-        btn1.setText("Normal:" + NormalCount + "(" + NormalProp + "%)");
+        btn1.setId(R.id.button1);
+        btn1.setText("Normal:" + NormalCount + "(" + String.format("%.2f",NormalProp) + "%)");
         btn1.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button));
         btn1.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
         row.addView(btn1, cellLp);
@@ -206,9 +209,10 @@ public class MorphologyCount extends AppCompatActivity {
                 if(label.contains("Morphology Field 2"))
                 {
                     btn2 = new Button(this);
+                    btn2.setId(R.id.button2);
                     if(text!=null && text.length==2)
                     {
-                        btn2.setText(text[1]+ ":"+ Lb2Count + "(" + Lb2Prop + "%)");
+                        btn2.setText(text[1]+ ":"+ Lb2Count + "(" + String.format("%.2f",Lb2Prop) + "%)");
                     }
                     btn2.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button2));
                     btn2.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -218,9 +222,10 @@ public class MorphologyCount extends AppCompatActivity {
                 else if(label.contains("Morphology Field 4"))
                 {
                     btn4 = new Button(this);
+                    btn4.setId(R.id.button4);
                     if(text!=null && text.length==2)
                     {
-                        btn4.setText(text[1]+ ":"+ Lb4Count + "(" + Lb4Prop + "%)");
+                        btn4.setText(text[1]+ ":"+ Lb4Count + "(" + String.format("%.2f",Lb4Prop) + "%)");
                     }
                     btn4.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button4));
                     btn4.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -230,9 +235,10 @@ public class MorphologyCount extends AppCompatActivity {
                 else if(label.contains("Morphology Field 6"))
                 {
                     btn6 = new Button(this);
+                    btn6.setId(R.id.button6);
                     if(text!=null && text.length==2)
                     {
-                        btn6.setText(text[1]+ ":"+ Lb6Count + "(" + Lb6Prop + "%)");
+                        btn6.setText(text[1]+ ":"+ Lb6Count + "(" + String.format("%.2f",Lb6Prop) + "%)");
                     }
                     btn6.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button6));
                     btn6.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -242,9 +248,10 @@ public class MorphologyCount extends AppCompatActivity {
                 else if(label.contains("Morphology Field 8"))
                 {
                     btn8 = new Button(this);
+                    btn8.setId(R.id.button8);
                     if(text!=null && text.length==2)
                     {
-                        btn8.setText(text[1]+ ":"+ Lb8Count + "(" + Lb8Prop + "%)");
+                        btn8.setText(text[1]+ ":"+ Lb8Count + "(" + String.format("%.2f",Lb8Prop) + "%)");
                     }
                     btn8.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button8));
                     btn8.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -270,9 +277,10 @@ public class MorphologyCount extends AppCompatActivity {
                 else if(label.contains("Morphology Field 3"))
                 {
                     btn3 = new Button(this);
+                    btn3.setId(R.id.button3);
                     if(text!=null && text.length==2)
                     {
-                        btn3.setText(text[1] + ":"+ Lb3Count + "(" + Lb3Prop + "%)");
+                        btn3.setText(text[1] + ":"+ Lb3Count + "(" + String.format("%.2f",Lb3Prop) + "%)");
                     }
                     btn3.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button3));
                     btn3.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -282,9 +290,10 @@ public class MorphologyCount extends AppCompatActivity {
                 else if(label.contains("Morphology Field 5"))
                 {
                     btn5 = new Button(this);
+                    btn5.setId(R.id.button5);
                     if(text!=null && text.length==2)
                     {
-                        btn5.setText(text[1]+ ":"+ Lb5Count + "(" + Lb5Prop + "%)");
+                        btn5.setText(text[1]+ ":"+ Lb5Count + "(" + String.format("%.2f",Lb5Prop) + "%)");
                     }
                     btn5.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button5));
                     btn5.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -294,9 +303,10 @@ public class MorphologyCount extends AppCompatActivity {
                 else if(label.contains("Morphology Field 7"))
                 {
                     btn7 = new Button(this);
+                    btn7.setId(R.id.button7);
                     if(text!=null && text.length==2)
                     {
-                        btn7.setText(text[1]+ ":"+ Lb7Count + "(" + Lb7Prop + "%)");
+                        btn7.setText(text[1]+ ":"+ Lb7Count + "(" + String.format("%.2f",Lb7Prop) + "%)");
                     }
                     btn7.setBackground(ContextCompat.getDrawable(getApplicationContext(), R.drawable.button7));
                     btn7.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.white));
@@ -317,11 +327,13 @@ public class MorphologyCount extends AppCompatActivity {
         row = new TableRow(this);
 
         btn = new Button(this);
+        btn.setId(R.id.button);
         btn.setText("Edit Morphology Counts");
         btn.setGravity(Gravity.CENTER);
         row.addView(btn, cell1Lp);
 
         tv= new TextView(this);
+        tv.setId(R.id.totals);
         tv.setText("Total Count:" + Constant.sum);
         tv.setGravity(Gravity.CENTER);
         row.addView(tv,cell1Lp);
@@ -338,6 +350,38 @@ public class MorphologyCount extends AppCompatActivity {
         if(initVals==null)
         {
             morphologyCounts = new HashSet<String>();
+            if(btn1!=null){
+                String initEntry = btn1.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn2!=null){
+                String initEntry = btn2.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn3!=null){
+                String initEntry = btn3.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn4!=null){
+                String initEntry = btn4.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn5!=null){
+                String initEntry = btn5.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn6!=null){
+                String initEntry = btn6.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn7!=null){
+                String initEntry = btn7.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
+            if(btn8!=null){
+                String initEntry = btn8.getText().toString().trim().replace(":","=");
+                morphologyCounts.add(initEntry);
+            }
         }
         else
         {
@@ -392,7 +436,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             NormalCount = NormalCount + 1;
                             Constant.sum = Constant.sum + 1;
-                            NormalProp = (NormalCount*100.0)/limit;
+                            NormalProp = (NormalCount*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + NormalCount + "(" + String.format("%.2f",NormalProp) + "%" + ")";
                             btn1.setText(newTxt);
                             newTxt = btnLbl + "=" + NormalCount + "(" + String.format("%.2f",NormalProp) + "%" + ")";
@@ -454,7 +498,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb2Count = Lb2Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb2Prop = (Lb2Count*100.0)/limit;
+                            Lb2Prop = (Lb2Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb2Count + "(" + String.format("%.2f",Lb2Prop) + "%" + ")";
                             btn2.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb2Count + "(" + String.format("%.2f",Lb2Prop) + "%" + ")";
@@ -512,7 +556,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb3Count = Lb3Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb3Prop = (Lb3Count*100.0)/limit;
+                            Lb3Prop = (Lb3Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb3Count + "(" + String.format("%.2f",Lb3Prop) + "%" + ")";
                             btn3.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb3Count + "(" + String.format("%.2f",Lb3Prop) + "%" + ")";
@@ -570,7 +614,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb4Count = Lb4Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb4Prop = (Lb4Count*100.0)/limit;
+                            Lb4Prop = (Lb4Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb4Count + "(" + String.format("%.2f",Lb4Prop) + "%" + ")";
                             btn4.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb4Count + "(" + String.format("%.2f",Lb4Prop) + "%" + ")";
@@ -628,7 +672,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb5Count = Lb5Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb5Prop = (Lb5Count*100.0)/limit;
+                            Lb5Prop = (Lb5Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb5Count + "(" + String.format("%.2f",Lb5Prop) + "%" + ")";
                             btn5.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb5Count + "(" + String.format("%.2f",Lb5Prop) + "%" + ")";
@@ -686,7 +730,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb6Count = Lb6Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb6Prop = (Lb6Count*100.0)/limit;
+                            Lb6Prop = (Lb6Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb6Count + "(" + String.format("%.2f",Lb6Prop) + "%" + ")";
                             btn6.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb6Count + "(" + String.format("%.2f",Lb6Prop) + "%" + ")";
@@ -744,7 +788,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb7Count = Lb7Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb7Prop = (Lb7Count*100.0)/limit;
+                            Lb7Prop = (Lb7Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb7Count + "(" + String.format("%.2f",Lb7Prop) + "%" + ")";
                             btn7.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb7Count + "(" + String.format("%.2f",Lb7Prop) + "%" + ")";
@@ -802,7 +846,7 @@ public class MorphologyCount extends AppCompatActivity {
                             morphologyCounts.remove(oldTxt);
                             Lb8Count = Lb8Count + 1;
                             Constant.sum = Constant.sum + 1;
-                            Lb8Prop = (Lb8Count*100.0)/limit;
+                            Lb8Prop = (Lb8Count*100.0)/Constant.sum;
                             String newTxt = btnLbl + ":" + Lb8Count + "(" + String.format("%.2f",Lb8Prop) + "%" + ")";
                             btn8.setText(newTxt);
                             newTxt = btnLbl + "=" + Lb8Count + "(" + String.format("%.2f",Lb8Prop) + "%" + ")";

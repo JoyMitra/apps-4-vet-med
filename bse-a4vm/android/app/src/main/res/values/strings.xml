@@ -3,8 +3,8 @@
     <string name="Collections">Groups</string>
     <string name="Settings">Settings</string>
     <string name="Delete">Delete 30+ day old data</string>
-    <string name="VetInfo">Veterinary Information</string>
-    <string name="MorphFields">Morphology Fields</string>
+    <string name="VetInfo">Setup Veterinary Information</string>
+    <string name="MorphFields">Setup Morphology Fields</string>
     <string name="fname">First Name</string>
     <string name="lname">Last Name</string>
     <string name="cname">Clinic name</string>

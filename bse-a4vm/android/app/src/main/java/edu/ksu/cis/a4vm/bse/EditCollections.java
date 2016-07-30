@@ -91,8 +91,6 @@ public class EditCollections extends AppCompatActivity {
         tvExport.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                File file;
-                File root = Environment.getExternalStorageDirectory();
                 if (permission != PackageManager.PERMISSION_GRANTED) {
                     // We don't have permission so prompt the user
                     ActivityCompat.requestPermissions(
@@ -101,7 +99,9 @@ public class EditCollections extends AppCompatActivity {
                             REQUEST_EXTERNAL_STORAGE
                     );
                 }
-                //if (root.canWrite()){
+                else{
+                    File file;
+                    File root = Environment.getExternalStorageDirectory();
                     File dir = new File (root.getAbsolutePath() + "/bull_collections");
                     dir.mkdirs();
                     file   =   new File(dir, "Data.csv");
@@ -121,7 +121,7 @@ public class EditCollections extends AppCompatActivity {
                         {
                             for(int i=0;i<Constant.morphHeaders.size();i++)
                             {
-                                    head = head + Constant.morphHeaders.get(i) + ",";
+                                head = head + Constant.morphHeaders.get(i) + ",";
                             }
                         }
                         out.write(head.getBytes());
@@ -157,6 +157,9 @@ public class EditCollections extends AppCompatActivity {
                     sendIntent.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(file));
                     sendIntent.setType("text/html");
                     startActivityForResult(sendIntent, 119);
+                }
+                //if (root.canWrite()){
+
                 //}
                 /*else
                 {
@@ -166,6 +169,79 @@ public class EditCollections extends AppCompatActivity {
         });
 
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantresults){
+        if(requestCode==REQUEST_EXTERNAL_STORAGE){
+            if(grantresults.length>0 && grantresults[0]==PackageManager.PERMISSION_GRANTED)
+            {
+                File file;
+                File root = Environment.getExternalStorageDirectory();
+                File dir = new File (root.getAbsolutePath() + "/bull_collections");
+                dir.mkdirs();
+                file   =   new File(dir, "Data.csv");
+                try {
+                    if(!file.exists())
+                    {
+                        file.createNewFile();
+                    }
+                    FileOutputStream out   =   null;
+
+                    out = new FileOutputStream(file);
+
+                    String head = Constant.CSV_HEADING;
+
+                    ArrayList<ArrayList> list = CreateCSV.getData(getApplicationContext(),grpId);
+                    if(Constant.morphHeaders!=null)
+                    {
+                        for(int i=0;i<Constant.morphHeaders.size();i++)
+                        {
+                            head = head + Constant.morphHeaders.get(i) + ",";
+                        }
+                    }
+                    out.write(head.getBytes());
+                    if(list!=null)
+                    {
+                        for(int i=0;i<list.size();i++)
+                        {
+                            out.write("\n".getBytes());
+                            ArrayList<String> row = list.get(i);
+                            String contents;
+                            if(row!=null)
+                            {
+                                contents = row.get(0);
+                                for(int j=1;j<103;j++)
+                                {
+                                    contents = contents + "," + row.get(j);
+                                }
+                                out.write(contents.getBytes());
+                            }
+
+                        }
+                    }
+                    out.close();
+
+                } catch (IOException e) {
+                    Log.e(Constant.CSV_MSG,"File writing error");
+                    e.printStackTrace();
+                }
+
+
+                Intent sendIntent = new Intent(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_SUBJECT, "Exported file");
+                sendIntent.putExtra(Intent.EXTRA_STREAM,Uri.fromFile(file));
+                sendIntent.setType("text/html");
+                startActivityForResult(sendIntent, 119);
+            }
+            else{
+                Toast.makeText(getApplicationContext(),"Permission denied!",Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        else{
+            Log.d("BSE Msg","Request Storage permission failed!");
+        }
     }
 
     @Override

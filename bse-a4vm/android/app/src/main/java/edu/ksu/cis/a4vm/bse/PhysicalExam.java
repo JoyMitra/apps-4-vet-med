@@ -55,12 +55,12 @@ public class PhysicalExam extends AppCompatActivity {
     private Set<EditText> fields = null;
     private Set<CheckBox> checks = null;
 
-    private String bullKey = null;
+    public String bullKey = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physical_exam);
-
+        bullKey = getIntent().getStringExtra("bullKey");
         field1 = (EditText) findViewById(R.id.field1);
         field2 = (EditText) findViewById(R.id.field2);
         field3 = (EditText) findViewById(R.id.field3);
@@ -121,7 +121,7 @@ public class PhysicalExam extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
-        bullKey = getIntent().getStringExtra("bullKey");
+
 
         //load data
         Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),

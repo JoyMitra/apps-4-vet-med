@@ -56,7 +56,7 @@ public class EditMorphologyCounts extends AppCompatActivity {
     double Lb7Prop = 0.0;
     int Lb8Count = 0;
     double Lb8Prop = 0.0;
-    Double limit = 150.0;
+    Double limit = 1000000.0;
     String key = null;
     String grpKey = null;
     public boolean valid = true;
@@ -100,7 +100,7 @@ public class EditMorphologyCounts extends AppCompatActivity {
 
 
 
-        if(morphInfo!=null && fields!=null)
+        if(morphInfo!=null)
         {
             for(String Val: morphInfo)
             {
@@ -110,7 +110,7 @@ public class EditMorphologyCounts extends AppCompatActivity {
                     NormalCount = Integer.valueOf(values[1].trim().substring(0,values[1].trim().indexOf("(")));
                     NormalProp = Double.valueOf(values[1].trim().substring(values[1].trim().indexOf("(")+1,values[1].trim().indexOf("%")));
                 }
-                else
+                else if(fields!=null)
                 {
                     for(String label: fields)
                     {

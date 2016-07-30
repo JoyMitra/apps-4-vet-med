@@ -40,7 +40,7 @@ public class MatingInfo extends AppCompatActivity {
     private Set<EditText> fields = null;
     private Set<ToggleButton> tgBtns = null;
 
-    private String bullKey = null;
+    public String bullKey = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

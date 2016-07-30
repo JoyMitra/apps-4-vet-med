@@ -37,15 +37,6 @@ public class SharedPrefUtil {
         editor.commit();
     }
 
-    public static void saveMorphologyLimits(Context ctx, String data, String key)
-    {
-        SharedPreferences settings=null;
-        SharedPreferences.Editor editor=null;
-        settings = ctx.getSharedPreferences(Constant.PREFS_FILE_MORPH_INFO, ctx.MODE_PRIVATE);
-        editor = settings.edit();
-        editor.putString(key, data);
-        editor.commit();
-    }
 
     public static void saveGroup(Context ctx, String fileName, String key, Set<String> data)
     {

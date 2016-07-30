@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
@@ -208,18 +209,7 @@ public class Util
         return bullKey;
     }
 
-    public static Set<String> editMorghologyCount(Context ctx,int limit,Button btn1, Set<String> morphologyCounts, MediaPlayer mp)
-    {
 
-            String[] text = btn1.getText().toString().trim().split(":");
-            Double count = Double.valueOf(text[1].substring(0,text[1].trim().indexOf("(")));
-            return morphologyCounts;
-
-
-
-
-
-    }
 
 
     public static int get_days_of_a_month(int month, int year)
@@ -263,6 +253,27 @@ public class Util
         }
         else
             return false;
+    }
+
+    public static String getAge(int year, int month){
+        int todayYr = Calendar.getInstance().get(Calendar.YEAR);
+        int todayMth = Calendar.getInstance().get(Calendar.MONTH) + 1;
+        int birthYr = year;
+        int birthMth = month;
+        int ageY = 0;
+        int ageM = 0;
+
+
+        if (todayYr >= birthYr) {
+            ageY = todayYr - birthYr;
+            if (todayMth >= birthMth)
+                ageM = todayMth - birthMth;
+            else {
+                ageM = todayMth + (12 - birthMth);
+                ageY = ageY - 1;
+            }
+        }
+        return(ageY + "," + ageM);
     }
 
 }

@@ -70,17 +70,6 @@ public class MorphologyDashboardTest extends ActivityInstrumentationTestCase2<Mo
 
     @Test
     public void AddMorphologyCountToDashboard(){
-        /*final Button addMorph = (Button)morphologyDashboard.findViewById(R.id.addMorphology);
-        morphologyDashboard.runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                addMorph.performClick();
-            }
-        });
-        MorphologyCount morphologyCount = (MorphologyCount)getInstrumentation().waitForMonitorWithTimeout(activityMonitor,5000);
-        assertNotNull(morphologyCount);
-        assertNotNull(morphologyCount.grpKey);
-        assertNotNull(morphologyCount.morphKey);*/
         ListView lv = (ListView)morphologyDashboard.findViewById(R.id.morphCollection);
         ListAdapter ladp = lv.getAdapter();
         if(ladp!=null)

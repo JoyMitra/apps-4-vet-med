@@ -32,38 +32,46 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView tx = (TextView) findViewById(R.id.collections);
-        tx.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                if (SharedPrefUtil.getValue(getApplicationContext(),
-                        Constant.PREFS_FILE_VET_INFO, Constant.KEY_VET) != null) {
-                    Intent goToCollections = new Intent(getApplicationContext(), Collections.class);
-                    startActivity(goToCollections);
+        if (SharedPrefUtil.getValue(getApplicationContext(),
+                Constant.PREFS_FILE_VET_INFO, Constant.KEY_VET) == null){
+            Intent goToSettings = new Intent(getApplicationContext(), SettingsActivity.class);
+            startActivity(goToSettings);
+        }
+        else{
+            TextView tx = (TextView) findViewById(R.id.collections);
+            tx.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    if (SharedPrefUtil.getValue(getApplicationContext(),
+                            Constant.PREFS_FILE_VET_INFO, Constant.KEY_VET) != null) {
+                        Intent goToCollections = new Intent(getApplicationContext(), Collections.class);
+                        startActivity(goToCollections);
+                    }
+                    else
+                        Toast.makeText(getApplicationContext(),"Go to settings and configure app first",Toast.LENGTH_SHORT).show();
+
                 }
-                else
-                    Toast.makeText(getApplicationContext(),"Go to settings and configure app first",Toast.LENGTH_SHORT).show();
+            });
 
-            }
-        });
+            TextView tx1 = (TextView) findViewById(R.id.usrSetting);
+            tx1.setOnClickListener(new OnClickListener() {
+                public void onClick(View view) {
+                    Intent goToSettings = new Intent(getApplicationContext(), SettingsActivity.class);
+                    startActivity(goToSettings);
+                }
+            });
 
-        TextView tx1 = (TextView) findViewById(R.id.usrSetting);
-        tx1.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                Intent goToSettings = new Intent(getApplicationContext(), SettingsActivity.class);
-                startActivity(goToSettings);
-            }
-        });
+            TextView txDlt = (TextView) findViewById(R.id.DeleteHistory);
+            txDlt.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    String msg = new deleteHistory().doInBackground();
+                    new deleteHistory().onPostExecute(msg);
 
-        TextView txDlt = (TextView) findViewById(R.id.DeleteHistory);
-        txDlt.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) 
-            {
-                String msg = new deleteHistory().doInBackground();
-                new deleteHistory().onPostExecute(msg);
+                }
+            });
+        }
 
-            }
-        });
     }
 
     /*
@@ -221,5 +229,16 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),msg,Toast.LENGTH_SHORT).show();
         }
 
+    }
+    public void onPause(){
+        super.onPause();
+    }
+
+    public void onStop(){
+        super.onStop();
+    }
+
+    public void onDestroy(){
+        super.onDestroy();
     }
 }

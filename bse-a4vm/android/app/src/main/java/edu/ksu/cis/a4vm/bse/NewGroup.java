@@ -40,9 +40,9 @@ public class NewGroup extends AppCompatActivity {
     private EditText zip = null;
     private EditText phone = null;
     private Button btn = null;
-    private HashSet<EditText> fields = null;
-    private String key = null;
+    HashSet<EditText> fields = null;
 
+    String key = null;
     Boolean validateRanch = false;
     Boolean validatelRancher = false;
     Boolean validatePhone = false;

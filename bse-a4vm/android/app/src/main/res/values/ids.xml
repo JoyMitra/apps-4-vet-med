@@ -8,6 +8,8 @@
     <item name="button6" type="id"/>
     <item name="button7" type="id"/>
     <item name="button8" type="id"/>
+    <item name="button"  type="id"/>
+    <item name="totals"  type="id"/>
 
 
 </resources>

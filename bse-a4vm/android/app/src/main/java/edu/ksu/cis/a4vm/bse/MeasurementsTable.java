@@ -50,7 +50,7 @@ public class MeasurementsTable extends AppCompatActivity {
     private Set<EditText> fields = null;
     private Set<CheckBox> checks = null;
 
-    private String bullKey = null;
+    String bullKey = null;
 
     public boolean valid1 = true;
     public boolean valid2 = true;
@@ -86,6 +86,8 @@ public class MeasurementsTable extends AppCompatActivity {
         fields.add(field7);
         fields.add(field8);
 
+        bullKey = getIntent().getStringExtra("bullKey");
+
         /*check1 = (CheckBox) findViewById(R.id.checkbox1);
         check2 = (CheckBox) findViewById(R.id.checkbox2);
         check3 = (CheckBox) findViewById(R.id.checkbox3);
@@ -114,7 +116,7 @@ public class MeasurementsTable extends AppCompatActivity {
     public void onResume()
     {
         super.onResume();
-        bullKey = getIntent().getStringExtra("bullKey");
+
 
         //load data
         Util.setFields(SharedPrefUtil.getValue(getApplicationContext(),
