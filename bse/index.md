@@ -40,6 +40,7 @@ For the Android app, first-time users will be taken to a Settings page as shown 
  </tr>
 </table>
 
+In the Vet Info screen as shown below only the first and last names are mandatory. All other fields are optional.
 <table>
  <tr>
   <td><img src="img/screenshots/iPhone/Vetinfo.PNG?raw=true" width="200" height="400" /></td>
