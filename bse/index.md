@@ -31,11 +31,11 @@ Since the mobile app has consistent look and feel on both Android and iPhone pla
 
 <h1 id="Setup">Initial Setup</h1>
 Upon opening the app for the first time after installation, veterinarian will be prompted to input personal information such as name and email address for the iPhone app.
-For the Android app, first-time users will be to a Settings page as shown below. From the Settings page users can fill personal information and morphology.
+For the Android app, first-time users will be take to a Settings page as shown below. From the Settings page users can fill personal information and morphology.
 
 <table>
  <tr>
-  <td><img src="img/screenshots/Android/Settings.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/Android/Settings.png?raw=true" width="200" height="400" /></td>
   <td></td>
  </tr>
 </table>
