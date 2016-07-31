@@ -35,7 +35,7 @@ For the Android app, first-time users will be to a Settings page as shown below.
 
 <table>
  <tr>
-  <td><img src="img/screenshots/iPhone/Settings.PNG?raw=true" width="200" height="400" /></td>
+  <td><img src="img/screenshots/Android/Settings.PNG?raw=true" width="200" height="400" /></td>
   <td></td>
  </tr>
 </table>
