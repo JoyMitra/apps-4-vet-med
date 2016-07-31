@@ -1,7 +1,7 @@
 <h1>Bovine Respiratory Disease (BRD) Treatment Evaluation</h1>
 <ul>
     <li><a href="#GenInfo">General Information</a></li>
-    <li><a href="#MainScreen">Main Screen</a></li>
+    <li><a href="#LandingScreen">Landing Screen</a></li>
     <li><a href="#PopPage">Population Parameters</a></li>
     <li><a href="#DrugPage">Drug Parameters</a></li>
     <li><a href="#ResultsPage">Results Page</a></li>
@@ -12,12 +12,12 @@
 <h1 id="GenInfo">General Information</h1>
 <p>BRD Tx Evaluation mobile app calculates the best drug treatment option based upon
    certain inputs (population and drug specific) for combating Bovine Respiratory
-    Disease in beef cattle. This mobile app will be utilized by Stockers and
-    Feedlot Managers in the industry. </p>
+    Disease in beef cattle. This mobile app is intended to be used by stockers
+    and feedlot managers in the beef industry. </p>
 
-<h1 id="MainScreen">Main Screen</h1>
-<p>The main screen provides a short description of the app's purpose. The user
-  will then click on the button when ready to begin.</p>
+<h1 id="LandingScreen">Landing Screen</h1>
+<p>The main screen provides a short description of the app's purpose. Click
+  on the Start button to begin.</p>
 <table>
   <tr>
     <td>
@@ -30,9 +30,11 @@
 </table>
 
 <h1 id="PopPage">Population Parameters</h1>
-<p>This screen asks the user for 6 different population parameters. Each
-  individual field has its own constaint and all 6 have to meet the requirements
-  to move forward. The data inputed may be saved in the device for later use.</p>
+<p>You will specify 6 different population parameters in this screen. The
+  values provided for each parameter is checked for validity. You can move
+  to the next screen only after entering valid values for all six parameters.
+  The entered data may be used for auto-completion during subsequent uses
+  of the app.</p>
   <table>
     <tr>
       <td>
@@ -47,13 +49,12 @@
   </table>
 
 <h1 id="DrugPage">Drug Parameters</h1>
-<p>Since we are comparing 2 drugs, we have 2 screens: Drug 1 and Drug 2. Each
-  drug has 5 different parameters. Most of the fields support
-  autocompletion based on previously entered data. Again, each individual
-  field has its own constraints and all 6 have to satisfy the constraints to move
-  to the next screen.
-  Input data will be saved on the device to enable autocompletion in future use
-  of the app on the device.</p>
+<p>Since the app compares two drugs, it collects information about the drugs in
+  two screens titled Drug 1 and Drug 2. You will specify five different
+  parameters for each drug. The values provided for each parameter is checked
+  for validity. You can move to the next screen only after entering valid values
+  for all five parameters. The entered data may be used for auto-completion
+  during subsequent uses of the app</p>
 <table>
   <tr>
     <td>
@@ -69,10 +70,8 @@
 
 
 <h1 id="ResultsPage">Results Page</h1>
-<p>The last screen shows the results of the comparison.
-  We have simplified it tremendously to only display the important calcuation,
-  only displaying which drug is better by how much. The formulas were provided by
-  the people of BCI.</p>
+<p>The screen shows the results of the comparison -- which of the two drugs is
+  better and by how much.</p>
 <table>
   <tr>
     <td>
@@ -87,5 +86,7 @@
 <a href="mailto:mobile-apps-group@santoslab.org" target="_top">mobile-apps-group@santoslab.org</a>.</p>
 
 <h1 id="Credits">Credits</h1>
-<h3>Third party library:</h3>
+<h3>The following third party libraries were used in iPhone app: </h3>
 <li><a href="https://github.com/EddyBorja/MLPAutoCompleteTextField">MLPAutoCompleteTextField</a></li>
+<h3>The following third party libraries were used in Android app: </h3>
+<li><a href="https://github.com/google/gson">Google GSON</a></li>
