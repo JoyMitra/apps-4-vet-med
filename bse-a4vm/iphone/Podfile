@@ -11,10 +11,12 @@ target 'BSE' do
 end
 
 target 'BSETests' do
-
+    pod 'JVFloatLabeledTextField'
+    pod 'KMPlaceholderTextView', '~> 1.1.1'
 end
 
 target 'BSEUITests' do
-
+    pod 'JVFloatLabeledTextField'
+    pod 'KMPlaceholderTextView', '~> 1.1.1'
 end
 

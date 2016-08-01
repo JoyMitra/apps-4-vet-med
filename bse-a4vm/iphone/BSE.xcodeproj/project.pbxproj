@@ -29,7 +29,6 @@
 		ADCF2F5F1BF168C50083F1A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADCF2F5E1BF168C50083F1A0 /* Assets.xcassets */; };
 		ADCF2F621BF168C50083F1A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADCF2F601BF168C50083F1A0 /* LaunchScreen.storyboard */; };
 		ADCF2F6D1BF168C50083F1A0 /* BSETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F6C1BF168C50083F1A0 /* BSETests.swift */; };
-		ADCF2F781BF168C50083F1A0 /* BSEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F771BF168C50083F1A0 /* BSEUITests.swift */; };
 		ADCF2F861BF16C2E0083F1A0 /* GroupsTableViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F851BF16C2E0083F1A0 /* GroupsTableViewTableViewController.swift */; };
 		ADCF2F8A1BF16F010083F1A0 /* ExistingGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F891BF16F010083F1A0 /* ExistingGroupTableViewCell.swift */; };
 		ADCF2F8C1BF175BA0083F1A0 /* NewGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F8B1BF175BA0083F1A0 /* NewGroupViewController.swift */; };
@@ -52,6 +51,24 @@
 		CA53E1F61CC87E1500EC4438 /* EditMorphology.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53E1F51CC87E1500EC4438 /* EditMorphology.swift */; };
 		CA5C5CFF1C5926930092CAF2 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA5C5CFE1C5926930092CAF2 /* Media.xcassets */; };
 		CA5D92291CB2E97F00CCCCAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5D92271CB2E97F00CCCCAD /* Main.storyboard */; };
+		CAA63E471D4B9CEA00DA5F00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F591BF168C50083F1A0 /* ViewController.swift */; };
+		CAA63E481D4B9FFB00DA5F00 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F8E1BF198B00083F1A0 /* Parse.framework */; };
+		CAA63E4A1D4BA9F200DA5F00 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F8E1BF198B00083F1A0 /* Parse.framework */; };
+		CAA63E4B1D4BA9FD00DA5F00 /* Pods_BSE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3D7CF92E6CCB1196724909 /* Pods_BSE.framework */; };
+		CAA63E4C1D4BAA0300DA5F00 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F8D1BF198B00083F1A0 /* Bolts.framework */; };
+		CAA63E4D1D4BAA0900DA5F00 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F921BF198FA0083F1A0 /* AudioToolbox.framework */; };
+		CAA63E4E1D4BAA0D00DA5F00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F941BF199060083F1A0 /* CFNetwork.framework */; };
+		CAA63E4F1D4BAA1500DA5F00 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA01BF199510083F1A0 /* SystemConfiguration.framework */; };
+		CAA63E501D4BAA1800DA5F00 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F9E1BF1993C0083F1A0 /* StoreKit.framework */; };
+		CAA63E511D4BAA1B00DA5F00 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F9C1BF199320083F1A0 /* Security.framework */; };
+		CAA63E521D4BAA1E00DA5F00 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F9A1BF199280083F1A0 /* QuartzCore.framework */; };
+		CAA63E531D4BAA2100DA5F00 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F981BF1991C0083F1A0 /* CoreLocation.framework */; };
+		CAA63E541D4BAA2400DA5F00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2F961BF199110083F1A0 /* CoreGraphics.framework */; };
+		CAA63E551D4BAA9700DA5F00 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA61BF19C2A0083F1A0 /* libsqlite3.dylib */; };
+		CAA63E561D4BAA9B00DA5F00 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA71BF19C2A0083F1A0 /* libz.1.dylib */; };
+		CAA63E571D4BAA9E00DA5F00 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA41BF199680083F1A0 /* libsqlite3.tbd */; };
+		CAA63E581D4BAAA100DA5F00 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADCF2FA21BF1995A0083F1A0 /* libz.tbd */; };
+		CAA63E5B1D4BB71500DA5F00 /* BSEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCF2F771BF168C50083F1A0 /* BSEUITests.swift */; };
 		CAA7710E1C7A853800CF4FE5 /* beep-03.wav in Resources */ = {isa = PBXBuildFile; fileRef = CAA7710D1C7A853800CF4FE5 /* beep-03.wav */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA63E4A1D4BA9F200DA5F00 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +183,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA63E4C1D4BAA0300DA5F00 /* Bolts.framework in Frameworks */,
+				CAA63E501D4BAA1800DA5F00 /* StoreKit.framework in Frameworks */,
+				CAA63E571D4BAA9E00DA5F00 /* libsqlite3.tbd in Frameworks */,
+				CAA63E481D4B9FFB00DA5F00 /* Parse.framework in Frameworks */,
+				CAA63E581D4BAAA100DA5F00 /* libz.tbd in Frameworks */,
+				CAA63E4B1D4BA9FD00DA5F00 /* Pods_BSE.framework in Frameworks */,
+				CAA63E561D4BAA9B00DA5F00 /* libz.1.dylib in Frameworks */,
+				CAA63E4D1D4BAA0900DA5F00 /* AudioToolbox.framework in Frameworks */,
+				CAA63E4F1D4BAA1500DA5F00 /* SystemConfiguration.framework in Frameworks */,
+				CAA63E531D4BAA2100DA5F00 /* CoreLocation.framework in Frameworks */,
+				CAA63E511D4BAA1B00DA5F00 /* Security.framework in Frameworks */,
+				CAA63E4E1D4BAA0D00DA5F00 /* CFNetwork.framework in Frameworks */,
+				CAA63E541D4BAA2400DA5F00 /* CoreGraphics.framework in Frameworks */,
+				CAA63E551D4BAA9700DA5F00 /* libsqlite3.dylib in Frameworks */,
+				CAA63E521D4BAA1E00DA5F00 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +553,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADCF2F781BF168C50083F1A0 /* BSEUITests.swift in Sources */,
+				CAA63E5B1D4BB71500DA5F00 /* BSEUITests.swift in Sources */,
+				CAA63E471D4B9CEA00DA5F00 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -646,10 +680,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 69DA7ACAA9195C30277932B3 /* Pods-BSE.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Santos Laboratory (2DL8LXE5VK)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -662,6 +699,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = YES;
 			};
 			name = Debug;
 		};
@@ -669,9 +707,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 583304E95731EC55091D4AEC /* Pods-BSE.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -684,6 +725,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = YES;
 			};
 			name = Release;
 		};
@@ -691,6 +733,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BSETests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.null-development.BSETests";
@@ -703,6 +749,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BSETests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.null-development.BSETests";
@@ -714,6 +764,10 @@
 		ADCF2F831BF168C50083F1A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BSEUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.null-development.BSEUITests";
@@ -726,6 +780,10 @@
 		ADCF2F841BF168C50083F1A0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BSEUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.null-development.BSEUITests";

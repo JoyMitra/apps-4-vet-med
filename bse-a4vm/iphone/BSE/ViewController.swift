@@ -9,6 +9,7 @@
 import UIKit
 
 import Parse
+
 extension String {
     var isPhoneNumber: Bool {
         do {
@@ -26,6 +27,7 @@ extension String {
 }
 
 class ViewController: UIViewController {
+    
 var ranchersArray = [PFObject]();
     @IBAction func Delete30(sender: AnyObject) {
         let alert = UIAlertController(title: "Delete operation", message: "This feature is disabled till next update. ", preferredStyle: .Alert)
@@ -81,11 +83,12 @@ var ranchersArray = [PFObject]();
         
         
     }
+    var currentUser = PFUser.currentUser()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let currentUser = PFUser.currentUser();
+        currentUser = PFUser.currentUser();
         
         
         if currentUser != nil {
@@ -144,7 +147,7 @@ var ranchersArray = [PFObject]();
     }
     
     //Pops up a file dialog that asks the user for their email, then asks the user to input their name by calling getName()
-    func getEmail(){
+   public func getEmail(){
         
         //1. Create the alert controller.
         var alert = UIAlertController(title: "Enter Email", message: "This appears to be your first time using the app. Please set you email.", preferredStyle: .Alert)
@@ -152,7 +155,7 @@ var ranchersArray = [PFObject]();
         //2. Add the text field. You can configure it however you need.
         alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
             textField.placeholder="name@example.com"
-            
+            //textField.becomeFirstResponder()
         })
         
         //3. Grab the value from the text field, and print it when the user clicks OK.
@@ -184,6 +187,7 @@ var ranchersArray = [PFObject]();
 
         // 4. Present the alert.
         self.presentViewController(alert, animated: true, completion: nil)
+            alert.textFields![0].becomeFirstResponder()
     }
     
     

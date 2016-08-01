@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import BSE
+
 
 class BSETests: XCTestCase {
     
@@ -32,5 +32,6 @@ class BSETests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
     
 }
