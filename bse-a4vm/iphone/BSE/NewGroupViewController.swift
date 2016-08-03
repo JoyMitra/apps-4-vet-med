@@ -239,7 +239,7 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
         let result =  phoneTest.evaluateWithObject(value)
         return result
     }
-
+    
     @IBAction func Email(sender: AnyObject) {
         if(lastName.text != "")
         {
@@ -247,7 +247,7 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
             if(!isValidEmail(lastName.text!))
             {
                 let alert = UIAlertController(title: "Incorrect email", message: " The Email address you have input is wrong", preferredStyle: .Alert)
-                
+              
                 //2. Add the text field. You can configure it however you need.
                 alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
                     textField.text = self.lastName.text
@@ -359,6 +359,7 @@ class NewGroupViewController: UIViewController, UITextFieldDelegate ,UIPickerVie
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if(segue.identifier == "newGroupSegue"){
+            
             let bullTableVC = segue.destinationViewController as! BullTableViewController;
             
             bullTableVC.group = self.group;

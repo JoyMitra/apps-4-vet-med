@@ -16,6 +16,7 @@ import Parse
 
 class BSEUITests: XCTestCase {
     var vc : ViewController!
+    var vc2 : NewGroupViewController!
     override func setUp() {
         super.setUp()
         
@@ -33,7 +34,7 @@ class BSEUITests: XCTestCase {
         super.tearDown()
     }
   
-    func testEmailAlert() {
+    func testStartupCallsEmailAlert() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         class FakeAlertView: ViewController{
@@ -59,35 +60,24 @@ class BSEUITests: XCTestCase {
             
     }
     
-    func testNameAlert() {
+    func testCorrentEmailInStartUpSavesAndCallsNameAlert() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
-            
             override func presentViewController(viewcontrollertopresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
-                
                 self.viewcontrollertopresent = viewcontrollertopresent
-            
-            
             }
         }
-        
-          let vc = FakeAlertView()
-        
-        
+        let vc = FakeAlertView()
         vc.getEmail()
         let app = XCUIApplication()
-
-        
         if let alert = vc.viewcontrollertopresent as? UIAlertController {
             XCTAssertEqual("Enter Email", alert.title!)
             //     app.alerts["Enter Email"].textFields.elementBoundByIndex(0).tap()
         }
-            app.alerts["Enter Email"].textFields["name@example.com"].typeText("Shubhchopra@gmail.com")
-            let vc2 = FakeAlertView()
-          
-          
+        app.alerts["Enter Email"].textFields["name@example.com"].typeText("Shubhchopra@gmail.com")
+        let vc2 = FakeAlertView()
           //  app.alerts["Enter Email"].buttons["OK"].tap();
             if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
                 XCTAssertEqual("Enter your Name", alert2.title!)
@@ -96,46 +86,33 @@ class BSEUITests: XCTestCase {
         
         
     }
-    func testIncorrectFail() {
+    func testIncorrectEmailonSetupTiggersError() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
-            
             override func presentViewController(viewcontrollertopresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
-                
                 self.viewcontrollertopresent = viewcontrollertopresent
-                
-                
             }
         }
         
         let vc = FakeAlertView()
-        
-        
         vc.getEmail()
         let app = XCUIApplication()
-        
-        
         if let alert = vc.viewcontrollertopresent as? UIAlertController {
             XCTAssertEqual("Enter Email", alert.title!)
             //     app.alerts["Enter Email"].textFields.elementBoundByIndex(0).tap()
         }
         app.alerts["Enter Email"].textFields["name@example.com"].typeText("Shubhchopragmail.com")
-        let vc2 = FakeAlertView()
-        
         app.alerts["Enter Email"].buttons["OK"].tap()
-        
         //  app.alerts["Enter Email"].buttons["OK"].tap();
-        if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Incorrect Email", alert2.title!)
-        }
+        XCTAssertTrue(app.alerts["Incorrect Email"].exists)
         
         
         
     }
 
-    func testNoName() {
+    func testCorrectEmailAndCorrentFirstNameCallsLastNameAlert() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         class FakeAlertView: ViewController{
@@ -150,12 +127,6 @@ class BSEUITests: XCTestCase {
         }
         
         let vc = FakeAlertView()
-        
-        
-        vc.getEmail()
-        
-        
-        
         vc.getEmail()
         let app = XCUIApplication()
         
@@ -181,17 +152,14 @@ class BSEUITests: XCTestCase {
         app.alerts["Enter your Name"].buttons["OK"].tap()
         
  
-        
-        //  app.alerts["Enter Email"].buttons["OK"].tap();
-        if let alert3 = vc3.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Enter your Name", alert3.title!)
-        }
+        XCTAssertTrue(app.alerts["Enter your Name"].exists)
+
         
 
     
     }
     
-    func testGroupEmail()
+    func testGroupIncorrectEmailTiggersIncorrectAlert()
     {
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
@@ -218,16 +186,16 @@ class BSEUITests: XCTestCase {
         elementsQuery.textFields["Email"].typeText("Shubh.chopra94gmail.com");
         
             elementsQuery.textFields["Address 1"].tap()
-       let vc2 = FakeAlertView()
-        if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Incorrect email", alert2.title!)
-        }
+       
+        XCTAssertTrue(app.alerts["Incorrect email"].exists)
+        
         
     }
-    func testCorrectPhoneInGroupIsAccepted()
+    func testCorrectPhoneInGroupIsAcceptedNoAlert()
     {
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
+            var AlertCalled = true
             override func presentViewController(viewcontrollertopresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
                 self.viewcontrollertopresent = viewcontrollertopresent
             }
@@ -247,7 +215,7 @@ class BSEUITests: XCTestCase {
         let app2 = app
         app2.tables.staticTexts["Add New Group"].tap()
         
-        let elementsQuery = app.scrollViews.otherElements
+        var elementsQuery = app.scrollViews.otherElements
         elementsQuery.textFields["Email"].swipeUp()
         
 
@@ -256,17 +224,15 @@ class BSEUITests: XCTestCase {
         elementsQuery.textFields["Phone"].typeText("3473612600");
         
         elementsQuery.textFields["Zip"].tap()
-        let vc2 = FakeAlertView()
-        if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Incorrect phone", alert2.title!)
-        }
-        app = XCUIApplication()
         
-        app.alerts["Incorrect phone"].buttons["OK"].tap();
-
+       
+       // app.alerts["Incorrect phone"].collectionViews.buttons["OK"].tap()
+       XCTAssertFalse(app.alerts["Incorrect phone"].exists)
+        
+      
         
     }
-    func testGroupNumberPass()
+    func testInCorrectNumberInGroupTriggersAlert()
     {
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
@@ -280,8 +246,7 @@ class BSEUITests: XCTestCase {
         var app = XCUIApplication()
         if (vc.isFirstTime() == true)
         {
-            if let alert = vc.viewcontrollertopresent as? UIAlertController
-            {
+            if let alert = vc.viewcontrollertopresent as? UIAlertController {
                 XCTAssertEqual("Enter Email", alert.title!)
                 app.alerts["Enter Email"].buttons["Not now"].tap()
             }
@@ -294,16 +259,10 @@ class BSEUITests: XCTestCase {
         elementsQuery.textFields["Phone"].tap()
         elementsQuery.textFields["Phone"].typeText("34736126");
         elementsQuery.textFields["Zip"].tap()
-        let vc2 = FakeAlertView()
-        if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Incorrect phone", alert2.title!)
-        }
-        app = XCUIApplication()
-       
-        app.alerts["Incorrect phone"].buttons["OK"].tap();
-        
+      
+            XCTAssertTrue(app.alerts["Incorrect phone"].exists)
     }
-    func testGroupNumberFail2()
+    func testCorrectNumberInGroupNoAlert()
     {
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
@@ -332,17 +291,10 @@ class BSEUITests: XCTestCase {
         elementsQuery.textFields["Phone"].tap()
         
         elementsQuery.textFields["Phone"].typeText("(347)361-2600");
-        
-        elementsQuery.textFields["Zip"].tap()
-        let vc2 = FakeAlertView()
-        if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Incorrect phone", alert2.title!)
-        }
-        app = XCUIApplication()
-        
-        app.alerts["Incorrect phone"].buttons["OK"].tap();
+       XCTAssertFalse(app.alerts["Incorrect phone"].exists)
+    
     }
-    func testGroupNumberFail3()
+    func testCorrectNumberInGroupNoAlert2()
     {
         class FakeAlertView: ViewController{
             var viewcontrollertopresent: UIViewController?
@@ -372,14 +324,9 @@ class BSEUITests: XCTestCase {
         
         elementsQuery.textFields["Phone"].typeText("347.361.2600");
         
-        elementsQuery.textFields["Zip"].tap()
-        let vc2 = FakeAlertView()
-        if let alert2 = vc2.viewcontrollertopresent as? UIAlertController {
-            XCTAssertEqual("Incorrect phone", alert2.title!)
-        }
-        app = XCUIApplication()
+       XCTAssertFalse(app.alerts["Incorrect phone"].exists)
         
-        app.alerts["Incorrect phone"].buttons["OK"].tap();
+        
     }
     
 

@@ -27,7 +27,7 @@ extension String {
 }
 
 class ViewController: UIViewController {
-    
+   
 var ranchersArray = [PFObject]();
     @IBAction func Delete30(sender: AnyObject) {
         let alert = UIAlertController(title: "Delete operation", message: "This feature is disabled till next update. ", preferredStyle: .Alert)

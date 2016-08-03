@@ -22,31 +22,16 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BSE.SingleBullTableViewController.__deallocating_deinit"
-                  moduleName = "BSE"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "491759941.692882"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "BSE.SingleBullTableViewController.init (style : __C.UITableViewStyle) -&gt; BSE.SingleBullTableViewController"
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "491759941.693167"
+                  timestampString = "491941350.901974"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "40">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -56,12 +41,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "491759941.693391"
+                  timestampString = "491941350.902246"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "152">
+                  offsetFromSymbolStart = "89">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -71,12 +56,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/SingleBullTableViewController.swift"
-                  timestampString = "491759941.693613"
+                  timestampString = "491941350.902514"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "112">
+                  offsetFromSymbolStart = "40">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1864,12 +1849,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ViewController.swift"
-                  timestampString = "491759941.796754"
+                  timestampString = "491941351.046528"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "238"
                   endingLineNumber = "238"
-                  offsetFromSymbolStart = "196">
+                  offsetFromSymbolStart = "218">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1879,12 +1864,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ViewController.swift"
-                  timestampString = "491759941.796992"
+                  timestampString = "491941351.046716"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "239"
                   endingLineNumber = "239"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "37">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1948,7 +1933,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
-            endingLineNumber = "111">
+            endingLineNumber = "111"
+            landmarkName = "SameBullID(_:bullType:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1962,7 +1949,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
-            endingLineNumber = "113">
+            endingLineNumber = "113"
+            landmarkName = "SameBullID(_:bullType:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1976,7 +1965,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "117"
-            endingLineNumber = "117">
+            endingLineNumber = "117"
+            landmarkName = "SameBullID(_:bullType:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1990,7 +1981,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
-            endingLineNumber = "119">
+            endingLineNumber = "119"
+            landmarkName = "SameBullID(_:bullType:)"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2000,12 +1993,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.801999"
+                  timestampString = "491941351.053726"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "119"
                   endingLineNumber = "119"
-                  offsetFromSymbolStart = "580">
+                  offsetFromSymbolStart = "881">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2015,12 +2008,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.802179"
+                  timestampString = "491941351.05394"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "122"
                   endingLineNumber = "122"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2036,7 +2029,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346">
+            endingLineNumber = "346"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2050,7 +2045,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "344"
-            endingLineNumber = "344">
+            endingLineNumber = "344"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2064,7 +2061,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "343"
-            endingLineNumber = "343">
+            endingLineNumber = "343"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2078,7 +2077,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "342"
-            endingLineNumber = "342">
+            endingLineNumber = "342"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2092,7 +2093,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346">
+            endingLineNumber = "346"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2106,7 +2109,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346">
+            endingLineNumber = "346"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2120,7 +2125,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346">
+            endingLineNumber = "346"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2134,7 +2141,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "346"
-            endingLineNumber = "346">
+            endingLineNumber = "346"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2276,7 +2285,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "349"
-            endingLineNumber = "349">
+            endingLineNumber = "349"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2290,7 +2301,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "353"
-            endingLineNumber = "353">
+            endingLineNumber = "353"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2304,7 +2317,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "357"
-            endingLineNumber = "357">
+            endingLineNumber = "357"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2318,7 +2333,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "361"
-            endingLineNumber = "361">
+            endingLineNumber = "361"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2332,7 +2349,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
-            endingLineNumber = "151">
+            endingLineNumber = "151"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2346,7 +2365,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
-            endingLineNumber = "86">
+            endingLineNumber = "86"
+            landmarkName = "getBullID()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2360,7 +2381,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
-            endingLineNumber = "89">
+            endingLineNumber = "89"
+            landmarkName = "getBullID()"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2370,12 +2393,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.829842"
+                  timestampString = "491941351.071499"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
                   endingLineNumber = "89"
-                  offsetFromSymbolStart = "196">
+                  offsetFromSymbolStart = "218">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2385,12 +2408,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.830026"
+                  timestampString = "491941351.071715"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "90"
                   endingLineNumber = "90"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "34">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2406,7 +2429,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
-            endingLineNumber = "94">
+            endingLineNumber = "94"
+            landmarkName = "getBullID()"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2416,12 +2441,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.830948"
+                  timestampString = "491941351.072792"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "94"
                   endingLineNumber = "94"
-                  offsetFromSymbolStart = "504">
+                  offsetFromSymbolStart = "574">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2431,7 +2456,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.831125"
+                  timestampString = "491941351.072991"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "97"
@@ -2452,7 +2477,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
-            endingLineNumber = "102">
+            endingLineNumber = "102"
+            landmarkName = "getBullID()"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2462,12 +2489,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.831972"
+                  timestampString = "491941351.074039"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "102"
                   endingLineNumber = "102"
-                  offsetFromSymbolStart = "796">
+                  offsetFromSymbolStart = "1031">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2477,12 +2504,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.832148"
+                  timestampString = "491941351.074222"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "105"
                   endingLineNumber = "105"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2498,7 +2525,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
-            endingLineNumber = "139">
+            endingLineNumber = "139"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2512,7 +2541,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "140"
-            endingLineNumber = "140">
+            endingLineNumber = "140"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2526,7 +2557,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
-            endingLineNumber = "141">
+            endingLineNumber = "141"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2540,7 +2573,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
-            endingLineNumber = "142">
+            endingLineNumber = "142"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2554,7 +2589,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
-            endingLineNumber = "143">
+            endingLineNumber = "143"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2564,12 +2601,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.835342"
+                  timestampString = "491941351.078189"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "143"
                   endingLineNumber = "143"
-                  offsetFromSymbolStart = "488">
+                  offsetFromSymbolStart = "719">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -2579,12 +2616,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/BullTableViewController.swift"
-                  timestampString = "491759941.835514"
+                  timestampString = "491941351.078417"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "135"
                   endingLineNumber = "135"
-                  offsetFromSymbolStart = "40">
+                  offsetFromSymbolStart = "81">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2600,7 +2637,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "345"
-            endingLineNumber = "345">
+            endingLineNumber = "345"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2614,7 +2653,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "347"
-            endingLineNumber = "347">
+            endingLineNumber = "347"
+            landmarkName = "createBull(_:bulltype:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2628,7 +2669,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "232"
-            endingLineNumber = "232">
+            endingLineNumber = "232"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2642,7 +2685,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "241"
-            endingLineNumber = "241">
+            endingLineNumber = "241"
+            landmarkName = "getBullType(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3837,12 +3882,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.868207"
+                  timestampString = "491941351.114629"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -3852,12 +3897,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.868393"
+                  timestampString = "491941351.114858"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -3933,12 +3978,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.871193"
+                  timestampString = "491941351.121287"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "170"
                   endingLineNumber = "170"
-                  offsetFromSymbolStart = "596">
+                  offsetFromSymbolStart = "664">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -3948,12 +3993,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.871368"
+                  timestampString = "491941351.121461"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "170"
                   endingLineNumber = "170"
-                  offsetFromSymbolStart = "680">
+                  offsetFromSymbolStart = "756">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4045,12 +4090,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.88082"
+                  timestampString = "491941351.123552"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "200">
+                  offsetFromSymbolStart = "299">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4060,12 +4105,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.881284"
+                  timestampString = "491941351.123764"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
                   endingLineNumber = "61"
-                  offsetFromSymbolStart = "24">
+                  offsetFromSymbolStart = "30">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4157,12 +4202,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.893725"
+                  timestampString = "491941351.128532"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "170"
                   endingLineNumber = "170"
-                  offsetFromSymbolStart = "596">
+                  offsetFromSymbolStart = "664">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4172,12 +4217,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.894013"
+                  timestampString = "491941351.128717"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "170"
                   endingLineNumber = "170"
-                  offsetFromSymbolStart = "680">
+                  offsetFromSymbolStart = "756">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4301,12 +4346,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.900851"
+                  timestampString = "491941351.134697"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
                   endingLineNumber = "43"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "38">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4316,7 +4361,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.90103"
+                  timestampString = "491941351.134947"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -4331,12 +4376,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.901202"
+                  timestampString = "491941351.135158"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
                   endingLineNumber = "43"
-                  offsetFromSymbolStart = "228">
+                  offsetFromSymbolStart = "146">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4346,12 +4391,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.901374"
+                  timestampString = "491941351.135378"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
                   endingLineNumber = "43"
-                  offsetFromSymbolStart = "284">
+                  offsetFromSymbolStart = "197">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4361,12 +4406,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759941.901554"
+                  timestampString = "491941351.135583"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
                   endingLineNumber = "43"
-                  offsetFromSymbolStart = "228">
+                  offsetFromSymbolStart = "148">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4394,12 +4439,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.903743"
+                  timestampString = "491941351.138106"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4409,12 +4454,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.904359"
+                  timestampString = "491941351.138295"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4442,12 +4487,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.905332"
+                  timestampString = "491941351.139496"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4457,12 +4502,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.905514"
+                  timestampString = "491941351.139672"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4490,12 +4535,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.91016"
+                  timestampString = "491941351.141744"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4505,12 +4550,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.910595"
+                  timestampString = "491941351.141934"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4538,12 +4583,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.911905"
+                  timestampString = "491941351.143159"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4553,12 +4598,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.912265"
+                  timestampString = "491941351.14334"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4586,12 +4631,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.913174"
+                  timestampString = "491941351.144598"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4601,12 +4646,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.91339"
+                  timestampString = "491941351.144789"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4634,12 +4679,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.914256"
+                  timestampString = "491941351.146006"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4649,12 +4694,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.914442"
+                  timestampString = "491941351.146181"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4682,12 +4727,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.915374"
+                  timestampString = "491941351.147485"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4697,12 +4742,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.915551"
+                  timestampString = "491941351.147662"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4730,12 +4775,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.916408"
+                  timestampString = "491941351.148906"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4745,12 +4790,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.916629"
+                  timestampString = "491941351.149087"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4778,12 +4823,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.917403"
+                  timestampString = "491941351.152873"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4793,12 +4838,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.917584"
+                  timestampString = "491941351.153073"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -4826,12 +4871,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.918745"
+                  timestampString = "491941351.154268"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "486">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -4841,12 +4886,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/ExistingGroupViewController.swift"
-                  timestampString = "491759941.918927"
+                  timestampString = "491941351.154447"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "70"
                   endingLineNumber = "70"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -8971,12 +9016,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491501799.584374"
+            timestampString = "491939031.417083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "testEmailAlert()"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "testStartupCallsEmailAlert()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9003,12 +9048,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491503153.880949"
+            timestampString = "491939031.417083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "testEmailAlert()"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "testStartupCallsEmailAlert()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9019,12 +9064,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491503153.880949"
+            timestampString = "491939031.417083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "testEmailAlert()"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "testStartupCallsEmailAlert()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -9082,12 +9127,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491503153.880949"
+            timestampString = "491939031.417083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "testEmailAlert()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "testStartupCallsEmailAlert()"
             landmarkType = "5">
             <Locations>
                <Location
@@ -9126,160 +9171,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491514593.025188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "testNameAlert()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491514593.025188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "testNameAlert()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BSEUITests.BSEUITests.testNameAlert () -&gt; ()"
-                  moduleName = "BSEUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSEUITests/BSEUITests.swift"
-                  timestampString = "491512845.278951"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BSEUITests.BSEUITests.testNameAlert () -&gt; ()"
-                  moduleName = "BSEUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSEUITests/BSEUITests.swift"
-                  timestampString = "491512845.279617"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "255">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491511014.726137"
+            timestampString = "491939031.417083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "testNameAlert()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491514593.025188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "testNameAlert()"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BSEUITests.BSEUITests.testNameAlert () -&gt; ()"
-                  moduleName = "BSEUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSEUITests/BSEUITests.swift"
-                  timestampString = "491512845.280386"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BSEUITests.BSEUITests.testNameAlert () -&gt; ()"
-                  moduleName = "BSEUITests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSEUITests/BSEUITests.swift"
-                  timestampString = "491512845.280913"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "84"
-                  endingLineNumber = "84"
-                  offsetFromSymbolStart = "255">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491514593.025188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "testNameAlert()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491518333.716416"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
-            landmarkName = "testNameAlert()"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "testCorrentEmailInStartUpSavesAndCallsNameAlert()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9290,11 +9191,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491762050.900568"
+            timestampString = "491943599.273154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "411"
-            endingLineNumber = "411">
+            startingLineNumber = "359"
+            endingLineNumber = "359">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9320,12 +9221,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759942.020529"
+                  timestampString = "491941351.245541"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
                   endingLineNumber = "44"
-                  offsetFromSymbolStart = "48">
+                  offsetFromSymbolStart = "38">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -9335,7 +9236,7 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759942.02073"
+                  timestampString = "491941351.245736"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
@@ -9350,12 +9251,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759942.020894"
+                  timestampString = "491941351.245901"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
                   endingLineNumber = "44"
-                  offsetFromSymbolStart = "252">
+                  offsetFromSymbolStart = "165">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -9365,12 +9266,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759942.021066"
+                  timestampString = "491941351.246077"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
                   endingLineNumber = "44"
-                  offsetFromSymbolStart = "308">
+                  offsetFromSymbolStart = "216">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -9380,12 +9281,12 @@
                   moduleName = "BSE"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shubhchopra/Downloads/BSE-23/BSE/GroupsTableViewTableViewController.swift"
-                  timestampString = "491759942.021695"
+                  timestampString = "491941351.24625"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "44"
                   endingLineNumber = "44"
-                  offsetFromSymbolStart = "252">
+                  offsetFromSymbolStart = "167">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -9397,12 +9298,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491520318.673728"
+            timestampString = "491943599.273154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
-            landmarkName = "testGroupEmail()"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
+            landmarkName = "testGroupIncorrectEmailTiggersIncorrectAlert()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -9413,13 +9314,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491761495.373074"
+            timestampString = "491943599.273154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "312"
-            endingLineNumber = "312"
-            landmarkName = "presentViewController(_:animated:completion:)"
-            landmarkType = "5">
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "FakeAlertView"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -9429,13 +9330,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491761495.373074"
+            timestampString = "491943599.273154"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
-            landmarkName = "testGroupNumberFail2()"
-            landmarkType = "5">
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "FakeAlertView"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BSE/ViewController.swift"
+            timestampString = "491936210.853911"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "ViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
