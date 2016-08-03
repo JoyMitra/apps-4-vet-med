@@ -10,6 +10,7 @@
 		0831E820AAC7A8912B08A592 /* libPods-BRDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DD348BBF1C7EE0C1F52F72 /* libPods-BRDUITests.a */; };
 		281224A01D47028F00FEC655 /* BCITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812249F1D47028F00FEC655 /* BCITextField.swift */; };
 		281224A81D481DE400FEC655 /* BRD_Tx_EvaluationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281224A71D481DE400FEC655 /* BRD_Tx_EvaluationTests.swift */; };
+		282619C11D5184B000118232 /* BCIMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282619C01D5184B000118232 /* BCIMainViewController.swift */; };
 		283B4C1A1D242B22001D60FF /* BCIDrugsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */; };
 		283B4C1D1D242CC9001D60FF /* BCIAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */; };
 		283B4C251D243565001D60FF /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1F1D243565001D60FF /* MLPAutoCompleteTextField.m */; };
@@ -54,6 +55,7 @@
 		281224A51D481DE300FEC655 /* BRD Tx EvaluationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BRD Tx EvaluationTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		281224A71D481DE400FEC655 /* BRD_Tx_EvaluationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRD_Tx_EvaluationTests.swift; sourceTree = "<group>"; };
 		281224A91D481DE400FEC655 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		282619C01D5184B000118232 /* BCIMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIMainViewController.swift; sourceTree = "<group>"; };
 		283B4C171D242B22001D60FF /* BRD-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRD-Bridging-Header.h"; sourceTree = "<group>"; };
 		283B4C181D242B22001D60FF /* BCIDrugsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIDrugsDataSource.h; sourceTree = "<group>"; };
 		283B4C191D242B22001D60FF /* BCIDrugsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIDrugsDataSource.m; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				287422DF1D10DD8500927E06 /* BCIResultsViewController.swift */,
 				287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */,
 				287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */,
+				282619C01D5184B000118232 /* BCIMainViewController.swift */,
 				287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */,
 				2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */,
 				289994511D19983F0083359E /* BCIExtensions.swift */,
@@ -460,6 +463,7 @@
 				281224A01D47028F00FEC655 /* BCITextField.swift in Sources */,
 				283B4C251D243565001D60FF /* MLPAutoCompleteTextField.m in Sources */,
 				283B4C1A1D242B22001D60FF /* BCIDrugsDataSource.m in Sources */,
+				282619C11D5184B000118232 /* BCIMainViewController.swift in Sources */,
 				287422AF1D0F988300927E06 /* BCIAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
