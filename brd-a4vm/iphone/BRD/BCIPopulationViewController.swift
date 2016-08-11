@@ -43,6 +43,10 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         self.adgField.delegate = self
     }
 
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -156,7 +160,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         switch(textField) {
         case morbidityField:
             let input = Double(morbidityField.text!)
-            if (input >= 0 && input <= 100) {
+            if (input >= 0 && input <= 100 && !input!.isSignMinus) {
                 removeErrorHighlightTextField(myTextField)
             } else {
                 errorHighlightTextField(myTextField)
