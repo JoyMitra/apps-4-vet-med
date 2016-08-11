@@ -3,7 +3,7 @@
 BSE-Aggregator is desktop extension to BSE-A4VM mobile app to aid veterinarians to combine the collected data (CSV files) from BSE-A4VM in to a single CSV file. It can export a single file from any number of files and find ambiguities in the data as well, the mass export of data in CSV format that can be used with MS Excel or other data processing applications.
 
 ## Download Link
-https://github.com/santoslab/apps-4-vet-med/releases/download/1.0/Aggregator.jar
+https://github.com/santoslab/apps-4-vet-med/raw/gh-pages/Aggregator/Aggregator.jar
 
 ### Prerequisities
 
