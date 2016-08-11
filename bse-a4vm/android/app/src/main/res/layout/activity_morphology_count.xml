@@ -4,7 +4,7 @@
     android:id="@+id/morphCount"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.ksu.cis.a4vm.bse.MorphologyCount">
+    tools:context="edu.ksu.cs.a4vm.bse.MorphologyCount">
 
 
 

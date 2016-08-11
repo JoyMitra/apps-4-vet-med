@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.ksu.cis.a4vm.bse">
+    package="edu.ksu.cs.a4vm.bse">
 
     <uses-sdk
         android:maxSdkVersion="23"
@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="edu.ksu.cs.a4vm.bse.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,61 +23,61 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsActivity"
+            android:name="edu.ksu.cs.a4vm.bse.SettingsActivity"
             android:label="Settings" />
         <activity
-            android:name=".VetinfoActivity"
+            android:name="edu.ksu.cs.a4vm.bse.VetinfoActivity"
             android:label="Vet Info" />
         <activity
-            android:name=".MorphologyActivity"
+            android:name="edu.ksu.cs.a4vm.bse.MorphologyActivity"
             android:label="Morphology Config" />
         <activity
-            android:name=".Collections"
+            android:name="edu.ksu.cs.a4vm.bse.Collections"
             android:label="Dasboard" />
         <activity
-            android:name=".EditCollections"
+            android:name="edu.ksu.cs.a4vm.bse.EditCollections"
             android:label="Group" />
         <activity
-            android:name=".NewGroup"
+            android:name="edu.ksu.cs.a4vm.bse.NewGroup"
             android:label="New Group" />
         <activity
-            android:name=".BullGroup"
+            android:name="edu.ksu.cs.a4vm.bse.BullGroup"
             android:label="Bull Dashboard" />
         <activity
-            android:name=".BullExam"
+            android:name="edu.ksu.cs.a4vm.bse.BullExam"
             android:label="Bull Exams" />
         <activity
-            android:name=".BullInfo"
+            android:name="edu.ksu.cs.a4vm.bse.BullInfo"
             android:label="Bull Info" />
         <activity
-            android:name=".MatingInfo"
+            android:name="edu.ksu.cs.a4vm.bse.MatingInfo"
             android:label="Sex and Mating Info" />
         <activity
-            android:name=".PhysicalParameter"
+            android:name="edu.ksu.cs.a4vm.bse.PhysicalParameter"
             android:label="Physical Parameters" />
         <activity
-            android:name=".MeasurementsTable"
+            android:name="edu.ksu.cs.a4vm.bse.MeasurementsTable"
             android:label="Measurements" />
         <activity
-            android:name=".PhysicalExam"
+            android:name="edu.ksu.cs.a4vm.bse.PhysicalExam"
             android:label="Physical Exam" />
         <activity
-            android:name=".Motility"
+            android:name="edu.ksu.cs.a4vm.bse.Motility"
             android:label="Motility" />
         <activity
-            android:name=".Classification"
+            android:name="edu.ksu.cs.a4vm.bse.Classification"
             android:label="Classification" />
         <activity
-            android:name=".Comments"
+            android:name="edu.ksu.cs.a4vm.bse.Comments"
             android:label="Comments" />
         <activity
-            android:name=".MorphologyDashboard"
+            android:name="edu.ksu.cs.a4vm.bse.MorphologyDashboard"
             android:label="Morphology Dashboard" />
         <activity
-            android:name=".MorphologyCount"
+            android:name="edu.ksu.cs.a4vm.bse.MorphologyCount"
             android:label="Morphology Count" />
         <activity
-            android:name=".EditMorphologyCounts"
+            android:name="edu.ksu.cs.a4vm.bse.EditMorphologyCounts"
             android:label="Edit Morphology Counts"/>
     </application>
 
