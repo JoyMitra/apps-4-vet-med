@@ -160,7 +160,7 @@ class BCIPopulationViewController: UIViewController,UITextFieldDelegate {
         switch(textField) {
         case morbidityField:
             let input = Double(morbidityField.text!)
-            if (input >= 0 && input <= 100) {
+            if (input >= 0 && input <= 100 && !input!.isSignMinus) {
                 removeErrorHighlightTextField(myTextField)
             } else {
                 errorHighlightTextField(myTextField)
