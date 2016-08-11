@@ -140,6 +140,18 @@
                                     <segue destination="W6b-ne-XnW" kind="show" id="2gZ-mq-DXY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXU-C8-5nH">
+                                <rect key="frame" x="509" y="72" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="Q0m-sF-S9h"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lri-eW-55u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -152,10 +164,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="EYG-8j-O1s" secondAttribute="trailing" constant="25" id="EHC-AN-Mnt"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="top" secondItem="0cc-ME-Pk4" secondAttribute="bottom" constant="14" id="F4j-LD-7qd"/>
                             <constraint firstItem="VA1-rj-AXV" firstAttribute="leading" secondItem="0cc-ME-Pk4" secondAttribute="leading" id="FQX-YO-84r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wXU-C8-5nH" secondAttribute="trailing" constant="25" id="JGK-cU-Vab"/>
                             <constraint firstItem="EYG-8j-O1s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="Nfj-Lu-Yyn"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="trailing" secondItem="9wG-mm-cUx" secondAttribute="trailing" id="PQo-uM-1gy"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="top" secondItem="9wG-mm-cUx" secondAttribute="top" constant="25" id="cXP-Cf-gJj"/>
                             <constraint firstItem="0cc-ME-Pk4" firstAttribute="top" secondItem="9wG-mm-cUx" secondAttribute="bottom" constant="-7" id="eTv-dJ-MYw"/>
+                            <constraint firstItem="wXU-C8-5nH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="eVm-Gc-NU9"/>
                             <constraint firstItem="9wG-mm-cUx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="euu-vs-DNx"/>
                             <constraint firstItem="6AQ-Tf-C9f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-50" id="rob-LL-724"/>
                             <constraint firstItem="9wG-mm-cUx" firstAttribute="top" secondItem="6AQ-Tf-C9f" secondAttribute="bottom" constant="-12" id="yzD-iJ-WQD"/>
@@ -366,6 +380,7 @@
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-8x-VpF" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="132" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="tpf"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="qD7-Xj-bmH"/>
                                                 </constraints>
@@ -392,6 +407,7 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-qn-Wqy" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="199" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="cfr"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
@@ -411,10 +427,11 @@
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-Bb-mef" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="333" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="chronic"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egb-l1-dQK" customClass="MLPAutoCompleteTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Drug name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egb-l1-dQK" customClass="MLPAutoCompleteTextField">
                                                 <rect key="frame" x="20" y="62" width="260" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="TQ0-Vx-s84"/>
@@ -536,7 +553,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-YT-d7e">
                                         <rect key="frame" x="0.0" y="0.0" width="603" height="736"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-pp-M0c" customClass="MLPAutoCompleteTextField">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Drug name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-pp-M0c" customClass="MLPAutoCompleteTextField">
                                                 <rect key="frame" x="23" y="62" width="260" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="L9d-g2-rRj"/>
@@ -551,6 +568,7 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aox-ou-7kD" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="129" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="tpf"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="l3v-d7-xGJ"/>
                                                 </constraints>
@@ -559,6 +577,7 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abv-5f-Za3" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="196" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="cfr"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
@@ -572,6 +591,7 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-sR-JdX" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
                                                 <rect key="frame" x="23" y="330" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="chronic"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>

@@ -23,6 +23,10 @@ class BCIMainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func resetAction(sender: AnyObject) {
+        let appDomain = NSBundle.mainBundle().bundleIdentifier!
+        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+    }
 
     /*
     // MARK: - Navigation

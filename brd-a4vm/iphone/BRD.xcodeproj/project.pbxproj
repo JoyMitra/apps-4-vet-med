@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0831E820AAC7A8912B08A592 /* libPods-BRDUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0DD348BBF1C7EE0C1F52F72 /* libPods-BRDUITests.a */; };
 		281224A01D47028F00FEC655 /* BCITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2812249F1D47028F00FEC655 /* BCITextField.swift */; };
 		281224A81D481DE400FEC655 /* BRD_Tx_EvaluationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281224A71D481DE400FEC655 /* BRD_Tx_EvaluationTests.swift */; };
 		282619C11D5184B000118232 /* BCIMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282619C01D5184B000118232 /* BCIMainViewController.swift */; };
@@ -15,13 +14,13 @@
 		283B4C1D1D242CC9001D60FF /* BCIAutoCompleteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1C1D242CC9001D60FF /* BCIAutoCompleteObject.m */; };
 		283B4C251D243565001D60FF /* MLPAutoCompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C1F1D243565001D60FF /* MLPAutoCompleteTextField.m */; };
 		283B4C261D243565001D60FF /* NSString+Levenshtein.m in Sources */ = {isa = PBXBuildFile; fileRef = 283B4C241D243565001D60FF /* NSString+Levenshtein.m */; };
+		284691391D5D16D2006F7225 /* BRD_Tx_EvaluationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284691381D5D16D2006F7225 /* BRD_Tx_EvaluationUITests.swift */; };
 		2865C6641D199EE400FCC4E4 /* BCIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */; };
 		287422AF1D0F988300927E06 /* BCIAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422AE1D0F988300927E06 /* BCIAppDelegate.swift */; };
 		287422B41D0F988300927E06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287422B21D0F988300927E06 /* Main.storyboard */; };
 		287422B71D0F988300927E06 /* BRD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 287422B51D0F988300927E06 /* BRD.xcdatamodeld */; };
 		287422B91D0F988300927E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287422B81D0F988300927E06 /* Assets.xcassets */; };
 		287422BC1D0F988300927E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287422BA1D0F988300927E06 /* LaunchScreen.storyboard */; };
-		287422D21D0F988300927E06 /* BRDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422D11D0F988300927E06 /* BRDUITests.swift */; };
 		287422E01D10DD8500927E06 /* BCIResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422DF1D10DD8500927E06 /* BCIResultsViewController.swift */; };
 		287422E21D11BA8F00927E06 /* BCIDrug1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */; };
 		287422E41D11BA9700927E06 /* BCIDrug2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */; };
@@ -39,7 +38,7 @@
 			remoteGlobalIDString = 287422AA1D0F988300927E06;
 			remoteInfo = BRD;
 		};
-		287422CE1D0F988300927E06 /* PBXContainerItemProxy */ = {
+		2846913B1D5D16D2006F7225 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 287422A31D0F988300927E06 /* Project object */;
 			proxyType = 1;
@@ -68,6 +67,9 @@
 		283B4C221D243565001D60FF /* MLPAutoCompletionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPAutoCompletionObject.h; sourceTree = "<group>"; };
 		283B4C231D243565001D60FF /* NSString+Levenshtein.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Levenshtein.h"; sourceTree = "<group>"; };
 		283B4C241D243565001D60FF /* NSString+Levenshtein.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Levenshtein.m"; sourceTree = "<group>"; };
+		284691361D5D16D2006F7225 /* BRD Tx EvaluationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BRD Tx EvaluationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		284691381D5D16D2006F7225 /* BRD_Tx_EvaluationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRD_Tx_EvaluationUITests.swift; sourceTree = "<group>"; };
+		2846913A1D5D16D2006F7225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2865C6631D199EE400FCC4E4 /* BCIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDataSource.swift; sourceTree = "<group>"; };
 		287422AB1D0F988300927E06 /* BRD Tx Evaluation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BRD Tx Evaluation.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		287422AE1D0F988300927E06 /* BCIAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCIAppDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +78,6 @@
 		287422B81D0F988300927E06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		287422BB1D0F988300927E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		287422BD1D0F988300927E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		287422CD1D0F988300927E06 /* BRDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BRDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		287422D11D0F988300927E06 /* BRDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRDUITests.swift; sourceTree = "<group>"; };
-		287422D31D0F988300927E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		287422DF1D10DD8500927E06 /* BCIResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIResultsViewController.swift; sourceTree = "<group>"; };
 		287422E11D11BA8F00927E06 /* BCIDrug1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDrug1ViewController.swift; sourceTree = "<group>"; };
 		287422E31D11BA9700927E06 /* BCIDrug2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCIDrug2ViewController.swift; sourceTree = "<group>"; };
@@ -102,19 +101,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		284691331D5D16D2006F7225 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		287422A81D0F988300927E06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5AC4D7B9AE718184212FB67D /* libPods-BRD.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		287422CA1D0F988300927E06 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0831E820AAC7A8912B08A592 /* libPods-BRDUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,12 +152,21 @@
 			name = MLPAutoCompleteTextField;
 			sourceTree = "<group>";
 		};
+		284691371D5D16D2006F7225 /* BRD Tx EvaluationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				284691381D5D16D2006F7225 /* BRD_Tx_EvaluationUITests.swift */,
+				2846913A1D5D16D2006F7225 /* Info.plist */,
+			);
+			path = "BRD Tx EvaluationUITests";
+			sourceTree = "<group>";
+		};
 		287422A21D0F988300927E06 = {
 			isa = PBXGroup;
 			children = (
 				287422AD1D0F988300927E06 /* BRD */,
-				287422D01D0F988300927E06 /* BRDUITests */,
 				281224A61D481DE400FEC655 /* BRD Tx EvaluationTests */,
+				284691371D5D16D2006F7225 /* BRD Tx EvaluationUITests */,
 				287422AC1D0F988300927E06 /* Products */,
 				2B67EA91590D7861A3880572 /* Pods */,
 				0C3734C1D32E91FF357ED3AE /* Frameworks */,
@@ -170,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				287422AB1D0F988300927E06 /* BRD Tx Evaluation.app */,
-				287422CD1D0F988300927E06 /* BRDUITests.xctest */,
 				281224A51D481DE300FEC655 /* BRD Tx EvaluationTests.xctest */,
+				284691361D5D16D2006F7225 /* BRD Tx EvaluationUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,15 +209,6 @@
 				283B4C171D242B22001D60FF /* BRD-Bridging-Header.h */,
 			);
 			path = BRD;
-			sourceTree = "<group>";
-		};
-		287422D01D0F988300927E06 /* BRDUITests */ = {
-			isa = PBXGroup;
-			children = (
-				287422D11D0F988300927E06 /* BRDUITests.swift */,
-				287422D31D0F988300927E06 /* Info.plist */,
-			);
-			path = BRDUITests;
 			sourceTree = "<group>";
 		};
 		2B67EA91590D7861A3880572 /* Pods */ = {
@@ -247,6 +245,24 @@
 			productReference = 281224A51D481DE300FEC655 /* BRD Tx EvaluationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		284691351D5D16D2006F7225 /* BRD Tx EvaluationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2846913F1D5D16D2006F7225 /* Build configuration list for PBXNativeTarget "BRD Tx EvaluationUITests" */;
+			buildPhases = (
+				284691321D5D16D2006F7225 /* Sources */,
+				284691331D5D16D2006F7225 /* Frameworks */,
+				284691341D5D16D2006F7225 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2846913C1D5D16D2006F7225 /* PBXTargetDependency */,
+			);
+			name = "BRD Tx EvaluationUITests";
+			productName = "BRD Tx EvaluationUITests";
+			productReference = 284691361D5D16D2006F7225 /* BRD Tx EvaluationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		287422AA1D0F988300927E06 /* BRD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287422D61D0F988300927E06 /* Build configuration list for PBXNativeTarget "BRD" */;
@@ -267,26 +283,6 @@
 			productReference = 287422AB1D0F988300927E06 /* BRD Tx Evaluation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		287422CC1D0F988300927E06 /* BRDUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 287422DC1D0F988300927E06 /* Build configuration list for PBXNativeTarget "BRDUITests" */;
-			buildPhases = (
-				FF903F2747E419F52A4DAF21 /* 📦 Check Pods Manifest.lock */,
-				287422C91D0F988300927E06 /* Sources */,
-				287422CA1D0F988300927E06 /* Frameworks */,
-				287422CB1D0F988300927E06 /* Resources */,
-				A4AC2FED5DE8AF9C4CF7453F /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				287422CF1D0F988300927E06 /* PBXTargetDependency */,
-			);
-			name = BRDUITests;
-			productName = BRDUITests;
-			productReference = 287422CD1D0F988300927E06 /* BRDUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -302,13 +298,13 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = 287422AA1D0F988300927E06;
 					};
+					284691351D5D16D2006F7225 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 287422AA1D0F988300927E06;
+					};
 					287422AA1D0F988300927E06 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = K4N5VD7AQJ;
-					};
-					287422CC1D0F988300927E06 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 287422AA1D0F988300927E06;
 					};
 				};
 			};
@@ -326,14 +322,21 @@
 			projectRoot = "";
 			targets = (
 				287422AA1D0F988300927E06 /* BRD */,
-				287422CC1D0F988300927E06 /* BRDUITests */,
 				281224A41D481DE300FEC655 /* BRD Tx EvaluationTests */,
+				284691351D5D16D2006F7225 /* BRD Tx EvaluationUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		281224A31D481DE300FEC655 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284691341D5D16D2006F7225 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,13 +351,6 @@
 				289994501D19974B0083359E /* Localizable.strings in Resources */,
 				287422B91D0F988300927E06 /* Assets.xcassets in Resources */,
 				287422B41D0F988300927E06 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		287422CB1D0F988300927E06 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,21 +387,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRD/Pods-BRD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A4AC2FED5DE8AF9C4CF7453F /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRDUITests/Pods-BRDUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F238410BABE93DB6B91DB91D /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,21 +402,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRD/Pods-BRD-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FF903F2747E419F52A4DAF21 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -444,6 +410,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				281224A81D481DE400FEC655 /* BRD_Tx_EvaluationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		284691321D5D16D2006F7225 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284691391D5D16D2006F7225 /* BRD_Tx_EvaluationUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,14 +442,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		287422C91D0F988300927E06 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				287422D21D0F988300927E06 /* BRDUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -484,10 +450,10 @@
 			target = 287422AA1D0F988300927E06 /* BRD */;
 			targetProxy = 281224AA1D481DE400FEC655 /* PBXContainerItemProxy */;
 		};
-		287422CF1D0F988300927E06 /* PBXTargetDependency */ = {
+		2846913C1D5D16D2006F7225 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 287422AA1D0F988300927E06 /* BRD */;
-			targetProxy = 287422CE1D0F988300927E06 /* PBXContainerItemProxy */;
+			targetProxy = 2846913B1D5D16D2006F7225 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -513,6 +479,7 @@
 /* Begin XCBuildConfiguration section */
 		281224AD1D481DE400FEC655 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "BRD Tx EvaluationTests/Info.plist";
@@ -532,6 +499,31 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "BCI.BRD-Tx-EvaluationTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BRD Tx Evaluation.app/BRD Tx Evaluation";
+			};
+			name = Release;
+		};
+		2846913D1D5D16D2006F7225 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = "BRD Tx EvaluationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "km.BRD-Tx-EvaluationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BRD;
+			};
+			name = Debug;
+		};
+		2846913E1D5D16D2006F7225 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				INFOPLIST_FILE = "BRD Tx EvaluationUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "km.BRD-Tx-EvaluationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BRD;
 			};
 			name = Release;
 		};
@@ -556,6 +548,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -602,6 +595,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -657,30 +651,6 @@
 			};
 			name = Release;
 		};
-		287422DD1D0F988300927E06 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B69B1192C13709248F96F31 /* Pods-BRDUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = BRDUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BCI.BRDUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BRD;
-			};
-			name = Debug;
-		};
-		287422DE1D0F988300927E06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F57A93EE9C611BA5A5BFA66 /* Pods-BRDUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = BRDUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = BCI.BRDUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = BRD;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -692,6 +662,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2846913F1D5D16D2006F7225 /* Build configuration list for PBXNativeTarget "BRD Tx EvaluationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2846913D1D5D16D2006F7225 /* Debug */,
+				2846913E1D5D16D2006F7225 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		287422A61D0F988300927E06 /* Build configuration list for PBXProject "BRD" */ = {
 			isa = XCConfigurationList;
@@ -707,15 +685,6 @@
 			buildConfigurations = (
 				287422D71D0F988300927E06 /* Debug */,
 				287422D81D0F988300927E06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		287422DC1D0F988300927E06 /* Build configuration list for PBXNativeTarget "BRDUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				287422DD1D0F988300927E06 /* Debug */,
-				287422DE1D0F988300927E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
