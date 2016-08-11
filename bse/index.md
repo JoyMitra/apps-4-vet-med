@@ -30,10 +30,17 @@ _For most part, these mobile apps do not require network access._  They will req
 Since the mobile app has consistent look and feel on both Android and iPhone platforms, the rest of this documentation will describe the app with no specific reference to the platform.  When screen shots are provided for illustration, screen shots from both iPhone app (left) and Android app (right) will be provided.
 
 <h1 id="Setup">Initial Setup</h1>
-Upon opening the app for the first time after installation, veterinarian will be prompted to input personal information such as name and email address.
+Upon opening the app for the first time after installation, veterinarian will be prompted to input personal information such as name and email address for the iPhone app.
+For the Android app, first-time users will be taken to a Settings page as shown below. From the Settings page users can fill personal information and morphology.
 
-Current veterinary information can be viewed and edited via the _Settings_ page of the app.
+<table>
+ <tr>
+  <td><img src="img/screenshots/Android/Settings.png?raw=true" width="200" height="400" /></td>
+  <td></td>
+ </tr>
+</table>
 
+In the Vet Info screen as shown below only the first and last names are mandatory. All other fields are optional.
 <table>
  <tr>
   <td><img src="img/screenshots/iPhone/Vetinfo.PNG?raw=true" width="200" height="400" /></td>
