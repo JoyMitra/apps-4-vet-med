@@ -20,6 +20,7 @@ Just a single step process, just download the file and double click it to run.
 
 ### Startup screen
 There is only one Screen on this aggregator app.
+
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/master/bse-a4vm/Aggregator/img/Agg1.jpg)
 
 The app gives you 2 options from which you can choose from
