@@ -21,7 +21,7 @@ Just a single step process, just download the file and double click it to run.
 ### Startup screen
 There is only one Screen on this aggregator app.
 
-https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg1.jpg
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg1.jpg)
 
 The app gives you 2 options from which you can choose from
 1)	Choose a folder
@@ -33,7 +33,7 @@ And then an option to combine and save the file.
 Step 1) Click the button “Browse” under Choose files
 Follow the screen to the folder where your csv files are located.
 
-https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg2.jpg
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg2.jpg)
 
 Step 2) press ctrl and Select all the CSV files that are to be aggregated.
 Step 3) Click the “Combine and Save” button and save the file with (Some-Name).CSV (it is recommended to have a (.csv) at the end of the file name else you will have to choose a program to open the file.)
@@ -42,7 +42,7 @@ Step 3) Click the “Combine and Save” button and save the file with (Some-Nam
 Step 1) Click the button “Browse” under Choose folder
 Follow the screen to the folder where your csv files are saved.
 
-https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg3.jpg
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg3.jpg)
 
 Step 2) Select the desired folder.
 NOTE: The desired folder must contain only CSV files else the app won’t be able to aggregate the file.
