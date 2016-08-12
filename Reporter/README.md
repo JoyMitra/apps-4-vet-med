@@ -17,16 +17,21 @@ Just a single step process, just download the file and double click it to run.
 ## Getting Started 
 
 ### Startup screen
+
 There are 3 Screen in Reporter App.
 
 ####Screen 1 (Select a file)
+ 
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Reporter/img/Repo1.jpg)
 
 On this screen there is an option to select a .CSV file (Only one file).
-
 
 ####Screen 2 (Select Colums for the reporter to generate)
 
 Here you will see 2 Lists and 3 Buttons
+
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Reporter/img/Repo2.jpg)
+
 1) List1: This contains all the colums present in your CSV file, this is where you can select all the required Colums to be reported.
 
 2) List2: This is where you will see the selected columns after you have selected and pressed the "ADD->" button.
@@ -40,6 +45,8 @@ Here you will see 2 Lists and 3 Buttons
 ####Screen 3 (Select Bulls for the reporter to generate)
 
 Here you will see 2 Lists, 5 Buttons and 3 check boxes
+
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Reporter/img/Repo3.jpg)
 
 1) List1: This contains all the Bulls present in your CSV file, this is where you can select all the required Bulls to be reported (Bulls will be represented with their bullIDs, if a bull have multiple type of BullIDs all of them will be displayed).
 
@@ -62,6 +69,8 @@ NOTE: You can select both, the app will make all the single graphs first and the
 
 
 ## Understanding the output of the App
+
+![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Reporter/img/Repo4.jpg)
 
 #### Top left side of the app.
 This is the Veterinary Heath Center at Kansas State University Logo
