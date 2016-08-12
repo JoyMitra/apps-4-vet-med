@@ -63,7 +63,7 @@ class BCIResultsViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         // The text displayed at the results screen
-        resultString = "Drug \(bestDrugName) shows $ \(differenceInReturnString)/head advantage over Drug \(otherDrugName) using the information provided."
+        resultString = "\(bestDrugName) shows $\(differenceInReturnString)/head advantage over \(otherDrugName) using the information provided. This calculator does not provide a recommendation for antimicrobial selection. Please consult your veterinarian to make the most appropriate decision for your operation."
         resultsTextView.text = resultString
                 
     }

@@ -705,10 +705,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-uB-fe2">
-                                <rect key="frame" x="20" y="64" width="560" height="130"/>
+                                <rect key="frame" x="20" y="64" width="560" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="Wvk-Tc-3qr"/>
+                                    <constraint firstAttribute="height" constant="218" id="Wvk-Tc-3qr"/>
                                     <constraint firstAttribute="height" constant="246" id="vHe-fq-uq9"/>
                                 </constraints>
                                 <string key="text">According to the calculation,  Drug 1 (The name of the drug) is better than Drug 2 (The name of the other drug) because the difference in return to ownership is negative. 
@@ -721,8 +721,17 @@
                                     </mask>
                                 </variation>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The recommendation could change if the difference in cost of treatment between the drugs was more than $Y" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="umI-UY-qHf">
+                                <rect key="frame" x="20" y="673" width="560" height="112"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="i2e-bK-rfV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5ev-u8-bDt" userLabel="Labels Table View">
-                                <rect key="frame" x="20" y="191" width="399" height="247"/>
+                                <rect key="frame" x="20" y="290" width="399" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="247" id="iY5-wr-rKq"/>
@@ -793,7 +802,7 @@
                                 </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lmB-aZ-tTm">
-                                <rect key="frame" x="500" y="191" width="80" height="247"/>
+                                <rect key="frame" x="500" y="290" width="80" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Vgf-ee-a4M"/>
@@ -856,7 +865,7 @@
                                 </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w2w-Ym-hGw">
-                                <rect key="frame" x="420" y="191" width="80" height="247"/>
+                                <rect key="frame" x="420" y="290" width="80" height="247"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="bqU-y5-9b9"/>
@@ -927,31 +936,22 @@
                                     <outlet property="delegate" destination="dgd-y8-bau" id="Bae-Of-DkI"/>
                                 </connections>
                             </tableView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The recommendation could change if the difference in cost of treatment between the drugs was more than $Y" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="umI-UY-qHf">
-                                <rect key="frame" x="20" y="673" width="560" height="112"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="112" id="i2e-bK-rfV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zvU-lv-062" firstAttribute="top" secondItem="5ev-u8-bDt" secondAttribute="bottom" constant="364" id="C1Y-4T-2tL"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ZIr-uB-fe2" secondAttribute="leading" id="HJp-7G-zVo"/>
-                            <constraint firstItem="lmB-aZ-tTm" firstAttribute="top" secondItem="ZIr-uB-fe2" secondAttribute="bottom" constant="-3" id="HkE-30-VrB"/>
+                            <constraint firstItem="lmB-aZ-tTm" firstAttribute="top" secondItem="ZIr-uB-fe2" secondAttribute="bottom" constant="8" id="HkE-30-VrB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lmB-aZ-tTm" secondAttribute="trailing" id="MoS-8T-csj"/>
                             <constraint firstAttribute="leadingMargin" secondItem="umI-UY-qHf" secondAttribute="leading" id="Pf9-tq-vHP"/>
-                            <constraint firstItem="w2w-Ym-hGw" firstAttribute="top" secondItem="ZIr-uB-fe2" secondAttribute="bottom" constant="-3" id="Ufy-VD-Qg0"/>
+                            <constraint firstItem="w2w-Ym-hGw" firstAttribute="top" secondItem="ZIr-uB-fe2" secondAttribute="bottom" constant="8" id="Ufy-VD-Qg0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="umI-UY-qHf" secondAttribute="trailing" id="bV8-BZ-uvC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZIr-uB-fe2" secondAttribute="trailing" id="boF-UG-0Zl"/>
                             <constraint firstItem="w2w-Ym-hGw" firstAttribute="leading" secondItem="5ev-u8-bDt" secondAttribute="trailing" constant="1" id="btZ-pO-NeO"/>
                             <constraint firstItem="zvU-lv-062" firstAttribute="top" secondItem="umI-UY-qHf" secondAttribute="bottom" constant="15" id="hji-19-una"/>
                             <constraint firstItem="lmB-aZ-tTm" firstAttribute="leading" secondItem="w2w-Ym-hGw" secondAttribute="trailing" id="n9j-fW-ub1"/>
                             <constraint firstItem="ZIr-uB-fe2" firstAttribute="top" secondItem="Use-1x-Pzp" secondAttribute="bottom" id="nhm-D1-g97"/>
-                            <constraint firstItem="5ev-u8-bDt" firstAttribute="top" secondItem="ZIr-uB-fe2" secondAttribute="bottom" constant="-3" id="q4y-v5-AUk"/>
+                            <constraint firstItem="5ev-u8-bDt" firstAttribute="top" secondItem="ZIr-uB-fe2" secondAttribute="bottom" constant="8" id="q4y-v5-AUk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="5ev-u8-bDt" secondAttribute="leading" id="yVg-w5-YI8"/>
                         </constraints>
                         <variation key="default">
