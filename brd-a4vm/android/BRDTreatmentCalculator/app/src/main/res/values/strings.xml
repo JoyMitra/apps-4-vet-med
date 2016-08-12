@@ -6,9 +6,10 @@
     <string name="drug_1_header"><b>Drug 1</b></string>
     <string name="drug_2_header"><b>Drug 2</b></string>
     <string name="results_header"><b>Results</b></string>
-    <string name="welcome_message">This application is used to help compare drugs for treating
-        Bovine Respiratory Disease. You will first be asked to enter population specific parameters,
-        next the two drugs, then you\'ll be able to compare and see the results</string>
+    <string name="welcome_message">This calculator compares two antimicrobial treatment options
+    based on user-entered values expressed in economic terms. The results of the comparison
+    provides some information but does not provide a recommendation. Please consult your
+    veterinarian to make the most appropriate decision for your operation.</string>
     <string name="continue_main"><b>Start</b></string>
     <string name="attributions">Author: A.J. Cabanatuan\n
         Team: Robert Larson, Brad White, Venkatesh Prasad Ranganath, Kevin Manase\n
@@ -17,24 +18,32 @@
     <string name="back">Back</string>
     <string name="next">Next</string>
     <string name="morbidity"><b>Morbidity</b></string>
-    <string name="cost_of_gain"><b>Cost of Gain</b></string>
-    <string name="price_received_at_sale"><b>Price Received At Sale</b></string>
-    <string name="arrival_weight"><b>Arrival Weight</b></string>
-    <string name="days_on_feed"><b>Days on Feed</b></string>
-    <string name="adg_healthy_cattle"><b>ADG Healthy Cattle</b></string>
+    <string name="cost_of_gain"><b>Cost of Gain ($0.1-$10)</b></string>
+    <string name="price_received_at_sale"><b>Price Received At Sale ($0.1-$40)</b></string>
+    <string name="arrival_weight"><b>Arrival Weight (100-1200)</b></string>
+    <string name="days_on_feed"><b>Days on Feed (1-400)</b></string>
+    <string name="adg_healthy_cattle"><b>ADG Healthy Cattle (0.1-5)</b></string>
     <string name="name_of_drug_1"><b>Name of Drug 1</b></string>
     <string name="treatment_failure_percent"><b>Treatment Failure Percent</b></string>
+    <string name="treatment_failure_percent_short"><b>Tx Failure Percent</b></string>
     <string name="case_fatality_rate"><b>Case Fatality Rate</b></string>
     <string name="cost_of_treatment"><b>Cost of Treatment</b></string>
+    <string name="ct_range"><b>Cost of Treatment ($0-$50)</b></string>
     <string name="chronic_percentage"><b>Chronic Percentage</b></string>
     <string name="name_of_drug_2"><b>Name of Drug 2</b></string>
     <string name="results"><b>Results: </b></string>
     <string name="restart">Restart</string>
-    <string name="percent_placeholder"><i>0-100%</i></string>
-    <string name="cost_of_gain_placeholder"><i>$/lbs./head</i></string>
-    <string name="adg_placeholder"><i>lbs./head/day</i></string>
+    <string name="tfp_placeholder"><i>0%-50%</i></string>
+    <string name="percent_placeholder"><i>0%-100%</i></string>
+    <string name="cost_of_gain_placeholder"><i>$/lb/head</i></string>
+    <string name="adg_placeholder"><i>lb/head/day</i></string>
     <string name="days_on_feed_placeholder"><i>1-400</i></string>
     <string name="cost_of_treatment_placeholder"><i>$/head</i></string>
     <string name="dollar_sign_placeholder"><i>$</i></string>
-    <string name="weight_placeholder"><i>lbs.</i></string>
+    <string name="weight_placeholder"><i>lb</i></string>
+    <string name="number_temp_view">##.##</string>
+    <string name="results_cost_diff_suggestion">The recommendation could change if
+        the difference in cost of treatment between the drugs was more than $Y.
+        We can calculate the difference by iterating through the cost of treatment in
+        increments/decrements of 10 cents.</string>
 </resources>
