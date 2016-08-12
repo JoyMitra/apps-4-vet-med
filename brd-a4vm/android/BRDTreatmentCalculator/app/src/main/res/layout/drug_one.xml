@@ -54,7 +54,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/name_of_drug_1"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:maxLines="1"
                 />
 
             <AutoCompleteTextView
@@ -72,14 +73,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/treatment_failure_percent"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
+                android:id="@+id/drugOneTreatmentFailurePercentEditText"
                 android:layout_width="275sp"
                 android:layout_height="wrap_content"
-                android:id="@+id/drugOneTreatmentFailurePercentEditText"
                 android:inputType="numberDecimal"
                 android:background="@drawable/edit_text_style"
                 android:textSize="20sp"
@@ -91,8 +93,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/case_fatality_rate"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -109,9 +112,10 @@
                 android:id="@+id/drugOneCostOfTreatmentLabelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cost_of_treatment"
-                android:textSize="24sp"
+                android:text="@string/ct_range"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -129,8 +133,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chronic_percentage"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText

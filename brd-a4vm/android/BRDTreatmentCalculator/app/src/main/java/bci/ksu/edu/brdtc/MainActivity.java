@@ -41,7 +41,7 @@ import bci.ksu.edu.brdtc.util.FileReadAndWrite;
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private static final String LOG_CAT = MainActivity.class.getSimpleName();
-    private static DecimalFormat df = new DecimalFormat(".##");
+    private static DecimalFormat df = new DecimalFormat("#.00");
 
     private ViewFlipper viewFlipper;
 
@@ -80,6 +80,16 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     // Results
     private TextView mResultsTextView;
+    private TextView mTableDrug1Name;
+    private TextView mTableDrug1Cfr;
+    private TextView mTableDrug1Ct;
+    private TextView mTableDrug1Cpr;
+    private TextView mTableDrug1Tfp;
+    private TextView mTableDrug2Name;
+    private TextView mTableDrug2Cfr;
+    private TextView mTableDrug2Ct;
+    private TextView mTableDrug2Cpr;
+    private TextView mTableDrug2Tfp;
 
     // Parameters & Calculator
     private Calculator calculator;
@@ -141,8 +151,18 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         mDrugTwoCostOfTreatmentEditText = (EditText) findViewById(R.id.drugTwoCostOfTreatmentEditText);
         mDrugTwoChronicPercentEditText = (EditText) findViewById(R.id.drugTwoChronicPercentEditText);
 
-        // Text View
+        // Results Widgets
         mResultsTextView = (TextView) findViewById(R.id.resultsTextView);
+        mTableDrug1Name = (TextView) findViewById(R.id.tableDrug1Name);
+        mTableDrug1Cfr = (TextView) findViewById(R.id.tableDrug1Cfr);
+        mTableDrug1Ct = (TextView) findViewById(R.id.tableDrug1Ct);
+        mTableDrug1Cpr = (TextView) findViewById(R.id.tableDrug1Cpr);
+        mTableDrug1Tfp = (TextView) findViewById(R.id.tableDrug1Tfp);
+        mTableDrug2Name = (TextView) findViewById(R.id.tableDrug2Name);
+        mTableDrug2Cfr = (TextView) findViewById(R.id.tableDrug2Cfr);
+        mTableDrug2Ct = (TextView) findViewById(R.id.tableDrug2Ct);
+        mTableDrug2Cpr = (TextView) findViewById(R.id.tableDrug2Cpr);
+        mTableDrug2Tfp = (TextView) findViewById(R.id.tableDrug2Tfp);
     }
 
     private void setupListeners() {
@@ -349,8 +369,45 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sb.append(notAsGoodDrug);
         sb.append(" using the information you provided");
         String resultsText = sb.toString();
+        setResultsPage(resultsText);
+    }
+
+    private void setResultsPage(String resultsText) {
         mResultsTextView.setText("");
         mResultsTextView.append(resultsText);
+        // Set Table Results
+        mTableDrug1Name.setText("");
+        mTableDrug1Name.setText(drugOne.getName());
+        mTableDrug2Name.setText("");
+        mTableDrug2Name.setText(drugTwo.getName());
+        displayTxValues(mTableDrug1Tfp, mTableDrug2Tfp, drugOne.getTfp(), drugTwo.getTfp());
+        displayTxValues(mTableDrug1Cfr, mTableDrug2Cfr, drugOne.getCfr(), drugTwo.getCfr());
+        displayTxValues(mTableDrug1Ct, mTableDrug2Ct, drugOne.getCt1(), drugTwo.getCt1());
+        displayTxValues(mTableDrug1Cpr, mTableDrug2Cpr, drugOne.getCp(), drugTwo.getCp());
+    }
+
+    private void displayTxValues(TextView txView1, TextView txView2, float txValue1, float txValue2) {
+        if (txValue1 < txValue2) {
+            setNumberText(txView1, txValue1);
+            txView1.setTextColor(getResources().getColor(R.color.green));
+            setNumberText(txView2, txValue2);
+        } else {
+            setNumberText(txView2, txValue2);
+            txView2.setTextColor(getResources().getColor(R.color.green));
+            setNumberText(txView1, txValue1);
+        }
+    }
+
+    private void setNumberText(TextView view, float txValue) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("$");
+        if (txValue < 1) {
+            sb.append("0");
+        }
+        sb.append(df.format(txValue));
+        String number = sb.toString();
+        view.setText("");
+        view.setText(number);
     }
 
     private boolean existNullFields(List<EditText> editTexts) {

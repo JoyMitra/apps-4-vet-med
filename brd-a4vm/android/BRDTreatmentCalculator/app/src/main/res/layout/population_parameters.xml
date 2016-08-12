@@ -55,7 +55,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/morbidity"
-                android:textSize="24sp"
+                android:textSize="20sp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -73,8 +74,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cost_of_gain"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -92,8 +94,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/price_received_at_sale"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -111,8 +114,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/arrival_weight"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -130,8 +134,9 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/daysOnFeedLabelTextView"
                 android:text="@string/days_on_feed"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
@@ -149,8 +154,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/adg_healthy_cattle"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:paddingTop="10dp"
+                android:maxLines="1"
                 />
 
             <EditText
