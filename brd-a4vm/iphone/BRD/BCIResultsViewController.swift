@@ -65,6 +65,10 @@ class BCIResultsViewController: UIViewController, UITableViewDelegate, UITableVi
         // The text displayed at the results screen
         resultString = "\(bestDrugName) shows $\(differenceInReturnString)/head advantage over \(otherDrugName) using the information provided. This calculator does not provide a recommendation for antimicrobial selection. Please consult your veterinarian to make the most appropriate decision for your operation."
         resultsTextView.text = resultString
+        
+        let costDiffernce = calculateCostDifference()
+        let differenceText = "The recommendation could change if the difference in cost of treatment between the drugs was more than $\(costDiffernce.format(doubleFormat))"
+        differentialTextView.text = differenceText
                 
     }
 
@@ -140,6 +144,28 @@ class BCIResultsViewController: UIViewController, UITableViewDelegate, UITableVi
                       "cfr":String(source.cfrb.format(doubleFormat)),
                       "cot":String(source.ctb1.format(doubleFormat)),
                       "chronic":String(source.cpb.format(doubleFormat))]
+    }
+    
+    func calculateCostDifference() -> Double {
+        let cta1: Double = source.cta1
+        let ctb1: Double = source.ctb1
+        var max = 0.0
+        var min = 0.0
+        if (cta1 > ctb1) {
+            max = cta1
+            min = ctb1
+        } else {
+            max = ctb1
+            min = cta1
+        }
+        var temp = min
+        while (temp<max) {
+            temp = temp + 0.10
+        }
+        
+        let difference = temp - min + 0.10
+        
+        return abs(difference)
     }
 
     /*
