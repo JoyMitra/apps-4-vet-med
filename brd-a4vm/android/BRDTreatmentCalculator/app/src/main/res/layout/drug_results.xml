@@ -29,7 +29,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug1Name"
+                android:id="@+id/tableDrug1NameTextView"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -40,7 +40,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug2Name"
+                android:id="@+id/tableDrug2NameTextView"
                 android:layout_column="2"
                 android:layout_gravity="center"
                 android:layout_weight="0.3"
@@ -68,7 +68,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug1Tfp"
+                android:id="@+id/tableDrug1TfpTextView"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -79,7 +79,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug2Tfp"
+                android:id="@+id/tableDrug2TfpTextView"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -107,7 +107,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug1Cfr"
+                android:id="@+id/tableDrug1CfrTextView"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -118,7 +118,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug2Cfr"
+                android:id="@+id/tableDrug2CfrTextView"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -146,7 +146,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug1Ct"
+                android:id="@+id/tableDrug1CtTextView"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -157,7 +157,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug2Ct"
+                android:id="@+id/tableDrug2CtTextView"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -185,7 +185,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug1Cpr"
+                android:id="@+id/tableDrug1CprTextView"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -196,7 +196,7 @@
                 />
 
             <TextView
-                android:id="@+id/tableDrug2Cpr"
+                android:id="@+id/tableDrug2CprTextView"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -211,6 +211,7 @@
     </TableLayout>
 
     <TextView
+        android:id="@+id/costPivotInfoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/resultsTable"
