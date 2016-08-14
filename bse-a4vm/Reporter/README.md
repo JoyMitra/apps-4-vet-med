@@ -77,13 +77,14 @@ This is the Veterinary Heath Center at Kansas State University Logo
 
 #### Top Right Side of the app.
 This is the Rancher Information in the CSV file that you have selected, including:
-- 1)Owner Name
-- 2)Ranch Name
-- 3)Address
-- 4)City
-- 5)State 
-- 6)Zip
-- 7)Phone number
+
+1. Owner Name
+2. Ranch Name
+3. Address
+4. City
+5. State 
+6. Zip
+7. Phone number
 
 #### Center
 This the main table of the report where the colums are the fields that are filled via BSE app and rows are the bull information entered through the app.
