@@ -35,7 +35,7 @@ public class CalculatorUnitTest {
         drug2.setCt1(25);
         drug2.setCp(2.7f);
 
-        float result = calculator.calcDifferenceInReturnToOAM(drug1, drug2, population);
+        float result = calculator.differenceInReturnToOAM(drug1, drug2, population);
         DecimalFormat df = new DecimalFormat(".##");
         Assert.assertEquals("0.62", df.format(result));
     }

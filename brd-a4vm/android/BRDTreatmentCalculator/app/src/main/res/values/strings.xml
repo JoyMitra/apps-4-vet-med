@@ -43,7 +43,5 @@
     <string name="weight_placeholder"><i>lb</i></string>
     <string name="number_temp_view">##.##</string>
     <string name="results_cost_diff_suggestion">The recommendation could change if
-        the difference in cost of treatment between the drugs was more than $Y.
-        We can calculate the difference by iterating through the cost of treatment in
-        increments/decrements of 10 cents.</string>
+        the difference in cost of treatment between the drugs was more than $</string>
 </resources>

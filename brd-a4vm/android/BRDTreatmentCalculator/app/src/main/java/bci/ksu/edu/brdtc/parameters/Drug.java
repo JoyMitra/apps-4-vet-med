@@ -8,8 +8,14 @@ public class Drug {
     private float ct1;  // Cost of Treatment
     private float cp;   // Chronic Percent
 
-    public Drug() {
+    public Drug() {}
 
+    public Drug(Drug drug) {
+        this.name = drug.getName();
+        this.tfp = drug.getTfp();
+        this.cfr = drug.getCfr();
+        this.ct1 = drug.getCt1();
+        this.cp = drug.getCp();
     }
 
     public String getName() {
