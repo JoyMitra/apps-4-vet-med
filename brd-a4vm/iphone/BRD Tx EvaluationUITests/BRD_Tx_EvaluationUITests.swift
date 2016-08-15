@@ -82,12 +82,13 @@ class BRD_Tx_EvaluationUITests: XCTestCase {
         app.buttons["Next"].tap()
         app.buttons["Compare"].tap()
         XCTAssert(app.staticTexts["Results"].exists)
-        let result = app.textViews.element.value
+        let result = app.textViews.elementBoundByIndex(0).value
         XCTAssertTrue(result!.containsString("99.76"))
     }
     
     // Test to see if we retained previously retained values
     func testRetaineChangedValues() {
+        resetValues()
         resetValues()
         useApp()
         setGoodParameterVariables()
@@ -232,6 +233,7 @@ class BRD_Tx_EvaluationUITests: XCTestCase {
         cogField.typeText("-2")
         
         let priceField = app.textFields["$/lb"]
+        app.scrollToElement(priceField)
         priceField.tap()
         priceField.typeText("50")
         
