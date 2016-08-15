@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wTA-w3-G5Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wTA-w3-G5Q">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -208,96 +208,109 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hG3-Km-erU" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                        <rect key="frame" x="32" y="62" width="77" height="30"/>
+                                                        <rect key="frame" x="15" y="62" width="77" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="77" id="g5q-1t-bnV"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$/lb/head" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8w5-Xf-szd" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                        <rect key="frame" x="32" y="132" width="97" height="30"/>
+                                                        <rect key="frame" x="15" y="132" width="97" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morbidity " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQi-Dt-eQY">
-                                                        <rect key="frame" x="32" y="33" width="77" height="21"/>
+                                                        <rect key="frame" x="15" y="33" width="572" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price received per sale ($0.1 - $40)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYv-e7-iRg">
-                                                        <rect key="frame" x="32" y="170" width="270" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price received per sale ($0.1 - $40)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kYv-e7-iRg">
+                                                        <rect key="frame" x="15" y="170" width="572" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$/lb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oRx-zY-AZu" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                        <rect key="frame" x="32" y="199" width="95" height="30"/>
+                                                        <rect key="frame" x="15" y="199" width="95" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="95" id="2Kb-7A-RM2"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N8M-ni-FOb" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                        <rect key="frame" x="32" y="271" width="68" height="30"/>
+                                                        <rect key="frame" x="15" y="271" width="95" height="30"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="68" id="qPs-6y-YA2"/>
+                                                            <constraint firstAttribute="width" constant="95" id="qPs-6y-YA2"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="days" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhw-lK-beb" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                        <rect key="frame" x="32" y="338" width="97" height="30"/>
+                                                        <rect key="frame" x="15" y="338" width="97" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arrival weight (100-1200 lbs)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0c-Wb-6MK">
-                                                        <rect key="frame" x="32" y="242" width="221" height="21"/>
+                                                        <rect key="frame" x="15" y="242" width="572" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Days on Feed (1 - 400 days)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ary-w2-KAY">
-                                                        <rect key="frame" x="32" y="309" width="215" height="21"/>
+                                                        <rect key="frame" x="15" y="309" width="572" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADG healthy Cattle (0.1 - 5 lbs/head/day)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-5i-bxz">
-                                                        <rect key="frame" x="32" y="376" width="313" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADG healthy Cattle (0.1 - 5 lbs/head/day)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="pmc-5i-bxz">
+                                                        <rect key="frame" x="15" y="376" width="572" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost of Gain ($0.1 - $10/pound/head)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-2o-Mrd">
+                                                        <rect key="frame" x="15" y="103" width="572" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lb/head/day" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h4-7w-PsX" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                        <rect key="frame" x="32" y="405" width="97" height="30"/>
+                                                        <rect key="frame" x="15" y="405" width="97" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="97" id="GVO-9z-Cbp"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost of Gain ($0.1 - $10/pound/head)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvN-2o-Mrd">
-                                                        <rect key="frame" x="32" y="103" width="285" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="pmc-5i-bxz" firstAttribute="leading" secondItem="2h4-7w-PsX" secondAttribute="leading" id="0bf-W4-lMB"/>
+                                                    <constraint firstItem="e0c-Wb-6MK" firstAttribute="trailing" secondItem="kYv-e7-iRg" secondAttribute="trailing" id="4Eh-bf-upB"/>
                                                     <constraint firstItem="kYv-e7-iRg" firstAttribute="top" secondItem="8w5-Xf-szd" secondAttribute="bottom" constant="8" symbolic="YES" id="5RD-l8-not"/>
-                                                    <constraint firstItem="vhw-lK-beb" firstAttribute="leading" secondItem="pmc-5i-bxz" secondAttribute="leading" id="7fc-9M-I8V"/>
                                                     <constraint firstItem="N8M-ni-FOb" firstAttribute="leading" secondItem="ary-w2-KAY" secondAttribute="leading" id="9lE-58-kfL"/>
-                                                    <constraint firstItem="fQi-Dt-eQY" firstAttribute="leading" secondItem="QhC-Xg-1IK" secondAttribute="leading" constant="32" id="A8w-XZ-KOU"/>
+                                                    <constraint firstItem="fQi-Dt-eQY" firstAttribute="leading" secondItem="QhC-Xg-1IK" secondAttribute="leading" constant="15" id="A8w-XZ-KOU"/>
                                                     <constraint firstItem="pmc-5i-bxz" firstAttribute="top" secondItem="vhw-lK-beb" secondAttribute="bottom" constant="8" symbolic="YES" id="DJt-eW-hkk"/>
                                                     <constraint firstItem="lvN-2o-Mrd" firstAttribute="leading" secondItem="8w5-Xf-szd" secondAttribute="leading" id="Ghf-91-cRB"/>
                                                     <constraint firstItem="8w5-Xf-szd" firstAttribute="trailing" secondItem="vhw-lK-beb" secondAttribute="trailing" id="HUs-QN-wPl"/>
                                                     <constraint firstItem="kYv-e7-iRg" firstAttribute="leading" secondItem="oRx-zY-AZu" secondAttribute="leading" id="IgV-1J-0hb"/>
+                                                    <constraint firstItem="pmc-5i-bxz" firstAttribute="leading" secondItem="vhw-lK-beb" secondAttribute="leading" id="Ker-d4-JE6"/>
                                                     <constraint firstItem="ary-w2-KAY" firstAttribute="top" secondItem="N8M-ni-FOb" secondAttribute="bottom" constant="8" symbolic="YES" id="PbT-7K-hci"/>
                                                     <constraint firstItem="fQi-Dt-eQY" firstAttribute="top" secondItem="QhC-Xg-1IK" secondAttribute="top" constant="33" id="Qgh-o4-Edy"/>
+                                                    <constraint firstItem="pmc-5i-bxz" firstAttribute="trailing" secondItem="ary-w2-KAY" secondAttribute="trailing" id="SMF-bw-KhM"/>
                                                     <constraint firstItem="vhw-lK-beb" firstAttribute="trailing" secondItem="2h4-7w-PsX" secondAttribute="trailing" id="T9S-kr-iev"/>
                                                     <constraint firstItem="8w5-Xf-szd" firstAttribute="top" secondItem="lvN-2o-Mrd" secondAttribute="bottom" constant="8" symbolic="YES" id="TVx-v1-S48"/>
-                                                    <constraint firstItem="lvN-2o-Mrd" firstAttribute="trailing" secondItem="oRx-zY-AZu" secondAttribute="trailing" constant="190" id="USb-7s-2xJ"/>
+                                                    <constraint firstItem="kYv-e7-iRg" firstAttribute="trailing" secondItem="lvN-2o-Mrd" secondAttribute="trailing" id="UeV-BN-iFm"/>
                                                     <constraint firstItem="fQi-Dt-eQY" firstAttribute="leading" secondItem="hG3-Km-erU" secondAttribute="leading" id="VHS-f5-9BC"/>
                                                     <constraint firstItem="e0c-Wb-6MK" firstAttribute="top" secondItem="oRx-zY-AZu" secondAttribute="bottom" constant="13" id="VO2-o4-7dg"/>
                                                     <constraint firstItem="lvN-2o-Mrd" firstAttribute="top" secondItem="hG3-Km-erU" secondAttribute="bottom" constant="11" id="cQg-XV-S6N"/>
+                                                    <constraint firstItem="lvN-2o-Mrd" firstAttribute="trailing" secondItem="fQi-Dt-eQY" secondAttribute="trailing" id="fk2-oN-fwE"/>
                                                     <constraint firstItem="vhw-lK-beb" firstAttribute="top" secondItem="ary-w2-KAY" secondAttribute="bottom" constant="8" symbolic="YES" id="iEi-XL-tMm"/>
                                                     <constraint firstItem="hG3-Km-erU" firstAttribute="leading" secondItem="lvN-2o-Mrd" secondAttribute="leading" id="imU-v5-eNH"/>
+                                                    <constraint firstItem="ary-w2-KAY" firstAttribute="trailing" secondItem="e0c-Wb-6MK" secondAttribute="trailing" id="jm3-kY-g1B"/>
                                                     <constraint firstItem="2h4-7w-PsX" firstAttribute="top" secondItem="pmc-5i-bxz" secondAttribute="bottom" constant="8" symbolic="YES" id="liI-qz-7MM"/>
                                                     <constraint firstItem="e0c-Wb-6MK" firstAttribute="leading" secondItem="N8M-ni-FOb" secondAttribute="leading" id="myC-S0-qUs"/>
                                                     <constraint firstItem="ary-w2-KAY" firstAttribute="leading" secondItem="vhw-lK-beb" secondAttribute="leading" id="p6B-xt-ssT"/>
@@ -305,7 +318,7 @@
                                                     <constraint firstItem="N8M-ni-FOb" firstAttribute="top" secondItem="e0c-Wb-6MK" secondAttribute="bottom" constant="8" symbolic="YES" id="tFZ-p2-Bzu"/>
                                                     <constraint firstItem="8w5-Xf-szd" firstAttribute="leading" secondItem="kYv-e7-iRg" secondAttribute="leading" id="uAe-Og-jGA"/>
                                                     <constraint firstItem="oRx-zY-AZu" firstAttribute="leading" secondItem="e0c-Wb-6MK" secondAttribute="leading" id="uR8-tw-sYR"/>
-                                                    <constraint firstItem="fQi-Dt-eQY" firstAttribute="trailing" secondItem="hG3-Km-erU" secondAttribute="trailing" id="vPr-BU-eye"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fQi-Dt-eQY" secondAttribute="trailing" constant="13" id="xug-kD-cnc"/>
                                                     <constraint firstItem="hG3-Km-erU" firstAttribute="top" secondItem="fQi-Dt-eQY" secondAttribute="bottom" constant="8" symbolic="YES" id="zTe-4X-la0"/>
                                                 </constraints>
                                             </view>
@@ -379,7 +392,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="736"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZhH-8x-VpF" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="132" width="70" height="30"/>
+                                                <rect key="frame" x="15" y="132" width="70" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="tpf"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="qD7-Xj-bmH"/>
@@ -387,32 +400,26 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Drug 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOD-dO-lPt">
-                                                <rect key="frame" x="20" y="33" width="119" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment Failure Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-cS-9Hw">
-                                                <rect key="frame" x="20" y="103" width="197" height="21"/>
+                                                <rect key="frame" x="15" y="103" width="569" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Fatality Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7Q-Ma-T5i">
-                                                <rect key="frame" x="20" y="170" width="137" height="21"/>
+                                                <rect key="frame" x="15" y="170" width="569" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-qn-Wqy" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="199" width="70" height="30"/>
+                                                <rect key="frame" x="15" y="199" width="70" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="cfr"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mP2-up-BBn" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="266" width="97" height="30"/>
+                                                <rect key="frame" x="15" y="266" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="cQe-Xa-CqI"/>
                                                 </constraints>
@@ -420,19 +427,19 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chronic Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yi3-9y-64h">
-                                                <rect key="frame" x="20" y="304" width="152" height="21"/>
+                                                <rect key="frame" x="15" y="304" width="569" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJB-Bb-mef" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="333" width="70" height="30"/>
+                                                <rect key="frame" x="15" y="333" width="70" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="chronic"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Drug name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egb-l1-dQK" customClass="MLPAutoCompleteTextField">
-                                                <rect key="frame" x="20" y="62" width="260" height="30"/>
+                                                <rect key="frame" x="15" y="62" width="260" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="TQ0-Vx-s84"/>
                                                 </constraints>
@@ -444,8 +451,14 @@
                                                     <outlet property="delegate" destination="dNU-GM-ggw" id="t5A-SW-zOU"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost of Treatment ($0 - $50)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK8-xY-G94">
-                                                <rect key="frame" x="20" y="237" width="223" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost of Treatment ($0 - $50)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="uK8-xY-G94">
+                                                <rect key="frame" x="15" y="237" width="569" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Drug 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOD-dO-lPt">
+                                                <rect key="frame" x="15" y="33" width="569" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -458,7 +471,8 @@
                                             <constraint firstItem="qJB-Bb-mef" firstAttribute="top" secondItem="Yi3-9y-64h" secondAttribute="bottom" constant="8" symbolic="YES" id="4GD-mU-4Od"/>
                                             <constraint firstItem="wOD-dO-lPt" firstAttribute="leading" secondItem="egb-l1-dQK" secondAttribute="leading" id="9D3-qR-YrJ"/>
                                             <constraint firstItem="UUt-qn-Wqy" firstAttribute="trailing" secondItem="qJB-Bb-mef" secondAttribute="trailing" id="ASh-JQ-A3y"/>
-                                            <constraint firstItem="wOD-dO-lPt" firstAttribute="leading" secondItem="vOg-oM-Msa" secondAttribute="leading" constant="20" id="F4Z-Or-blj"/>
+                                            <constraint firstItem="wOD-dO-lPt" firstAttribute="leading" secondItem="vOg-oM-Msa" secondAttribute="leading" constant="15" id="F4Z-Or-blj"/>
+                                            <constraint firstItem="Yi3-9y-64h" firstAttribute="trailing" secondItem="uK8-xY-G94" secondAttribute="trailing" id="IF1-Ay-dAW"/>
                                             <constraint firstItem="ZhH-8x-VpF" firstAttribute="trailing" secondItem="UUt-qn-Wqy" secondAttribute="trailing" id="Kve-2B-xJD"/>
                                             <constraint firstItem="Yi3-9y-64h" firstAttribute="top" secondItem="mP2-up-BBn" secondAttribute="bottom" constant="8" symbolic="YES" id="Lme-IJ-NMh"/>
                                             <constraint firstItem="Yi3-9y-64h" firstAttribute="leading" secondItem="qJB-Bb-mef" secondAttribute="leading" id="N32-e6-zEV"/>
@@ -469,10 +483,14 @@
                                             <constraint firstItem="egb-l1-dQK" firstAttribute="leading" secondItem="vgo-cS-9Hw" secondAttribute="leading" id="e8A-EG-bee"/>
                                             <constraint firstItem="wOD-dO-lPt" firstAttribute="top" secondItem="vOg-oM-Msa" secondAttribute="top" constant="33" id="eqf-ts-g6f"/>
                                             <constraint firstItem="ZhH-8x-VpF" firstAttribute="top" secondItem="vgo-cS-9Hw" secondAttribute="bottom" constant="8" symbolic="YES" id="gwe-yt-g3J"/>
+                                            <constraint firstAttribute="trailing" secondItem="wOD-dO-lPt" secondAttribute="trailing" constant="16" id="jFu-eE-PBD"/>
                                             <constraint firstItem="F7Q-Ma-T5i" firstAttribute="leading" secondItem="UUt-qn-Wqy" secondAttribute="leading" id="lrn-NA-q0W"/>
+                                            <constraint firstItem="uK8-xY-G94" firstAttribute="trailing" secondItem="F7Q-Ma-T5i" secondAttribute="trailing" id="lsu-KH-2Ui"/>
                                             <constraint firstItem="mP2-up-BBn" firstAttribute="leading" secondItem="Yi3-9y-64h" secondAttribute="leading" id="qKs-CV-2fN"/>
                                             <constraint firstItem="UUt-qn-Wqy" firstAttribute="leading" secondItem="uK8-xY-G94" secondAttribute="leading" id="qkD-LR-qWq"/>
+                                            <constraint firstItem="vgo-cS-9Hw" firstAttribute="trailing" secondItem="wOD-dO-lPt" secondAttribute="trailing" id="rnZ-vl-9H8"/>
                                             <constraint firstItem="F7Q-Ma-T5i" firstAttribute="top" secondItem="ZhH-8x-VpF" secondAttribute="bottom" constant="8" symbolic="YES" id="sd8-S7-neJ"/>
+                                            <constraint firstItem="F7Q-Ma-T5i" firstAttribute="trailing" secondItem="vgo-cS-9Hw" secondAttribute="trailing" id="vfK-ql-OqP"/>
                                             <constraint firstItem="egb-l1-dQK" firstAttribute="top" secondItem="wOD-dO-lPt" secondAttribute="bottom" constant="8" symbolic="YES" id="xqf-N0-Fsl"/>
                                             <constraint firstItem="mP2-up-BBn" firstAttribute="top" secondItem="uK8-xY-G94" secondAttribute="bottom" constant="8" symbolic="YES" id="zDt-w5-f54"/>
                                             <constraint firstItem="UUt-qn-Wqy" firstAttribute="top" secondItem="F7Q-Ma-T5i" secondAttribute="bottom" constant="8" symbolic="YES" id="zL5-1U-FXu"/>
@@ -554,7 +572,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="603" height="736"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Drug name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-pp-M0c" customClass="MLPAutoCompleteTextField">
-                                                <rect key="frame" x="23" y="62" width="260" height="30"/>
+                                                <rect key="frame" x="15" y="62" width="260" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="260" id="L9d-g2-rRj"/>
                                                 </constraints>
@@ -567,7 +585,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aox-ou-7kD" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="129" width="70" height="30"/>
+                                                <rect key="frame" x="15" y="129" width="70" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="tpf"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="l3v-d7-xGJ"/>
@@ -576,55 +594,55 @@
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abv-5f-Za3" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="196" width="70" height="30"/>
+                                                <rect key="frame" x="15" y="196" width="70" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="cfr"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gwS-g2-i7c" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="263" width="97" height="30"/>
+                                                <rect key="frame" x="15" y="263" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="sex-2A-WBL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-sR-JdX" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
-                                                <rect key="frame" x="23" y="330" width="70" height="30"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="chronic"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Drug 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6a1-Q1-a46">
-                                                <rect key="frame" x="20" y="33" width="122" height="21"/>
+                                                <rect key="frame" x="15" y="33" width="571" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment Failure Percent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dr4-7C-b0U">
-                                                <rect key="frame" x="23" y="100" width="197" height="21"/>
+                                                <rect key="frame" x="15" y="100" width="571" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Case Fatality Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDC-Qm-37A">
-                                                <rect key="frame" x="23" y="167" width="137" height="21"/>
+                                                <rect key="frame" x="15" y="167" width="571" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chronic Percentage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKg-l7-1ue">
-                                                <rect key="frame" x="23" y="301" width="152" height="21"/>
+                                                <rect key="frame" x="15" y="301" width="571" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost of Treatment ($0 - $50)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k6c-pr-JT2">
-                                                <rect key="frame" x="23" y="234" width="223" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost of Treatment ($0 - $50)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="k6c-pr-JT2">
+                                                <rect key="frame" x="15" y="234" width="571" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0-100%" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-sR-JdX" customClass="BCITextField" customModule="BRD_Tx_Evaluation" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="330" width="70" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="chronic"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -633,11 +651,15 @@
                                             <constraint firstItem="aox-ou-7kD" firstAttribute="top" secondItem="Dr4-7C-b0U" secondAttribute="bottom" constant="8" symbolic="YES" id="AtX-af-u3G"/>
                                             <constraint firstItem="4Cw-pp-M0c" firstAttribute="top" secondItem="6a1-Q1-a46" secondAttribute="bottom" constant="8" symbolic="YES" id="CCh-L4-2BA"/>
                                             <constraint firstItem="abv-5f-Za3" firstAttribute="trailing" secondItem="0PL-sR-JdX" secondAttribute="trailing" id="CiD-CO-vbp"/>
-                                            <constraint firstItem="4Cw-pp-M0c" firstAttribute="leading" secondItem="iY9-YT-d7e" secondAttribute="leading" constant="23" id="KE1-wA-gHx"/>
+                                            <constraint firstItem="4Cw-pp-M0c" firstAttribute="leading" secondItem="6a1-Q1-a46" secondAttribute="leading" id="EQX-8J-PfB"/>
+                                            <constraint firstItem="JDC-Qm-37A" firstAttribute="trailing" secondItem="Dr4-7C-b0U" secondAttribute="trailing" id="F6W-sZ-LRy"/>
                                             <constraint firstItem="fKg-l7-1ue" firstAttribute="leading" secondItem="0PL-sR-JdX" secondAttribute="leading" id="Mmi-8G-owa"/>
+                                            <constraint firstItem="Dr4-7C-b0U" firstAttribute="trailing" secondItem="6a1-Q1-a46" secondAttribute="trailing" id="Mvt-1c-Kmh"/>
                                             <constraint firstItem="fKg-l7-1ue" firstAttribute="top" secondItem="gwS-g2-i7c" secondAttribute="bottom" constant="8" symbolic="YES" id="SQf-pb-2Ub"/>
                                             <constraint firstItem="k6c-pr-JT2" firstAttribute="top" secondItem="abv-5f-Za3" secondAttribute="bottom" constant="8" symbolic="YES" id="TCA-BF-WzO"/>
+                                            <constraint firstAttribute="trailing" secondItem="6a1-Q1-a46" secondAttribute="trailing" constant="17" id="VpT-78-yg9"/>
                                             <constraint firstItem="gwS-g2-i7c" firstAttribute="top" secondItem="k6c-pr-JT2" secondAttribute="bottom" constant="8" symbolic="YES" id="X9y-h0-YyU"/>
+                                            <constraint firstItem="fKg-l7-1ue" firstAttribute="trailing" secondItem="k6c-pr-JT2" secondAttribute="trailing" id="XDg-U0-d4S"/>
                                             <constraint firstItem="abv-5f-Za3" firstAttribute="leading" secondItem="k6c-pr-JT2" secondAttribute="leading" id="aql-tG-GJQ"/>
                                             <constraint firstItem="6a1-Q1-a46" firstAttribute="top" secondItem="iY9-YT-d7e" secondAttribute="top" constant="33" id="dL9-ja-ZPF"/>
                                             <constraint firstItem="aox-ou-7kD" firstAttribute="leading" secondItem="JDC-Qm-37A" secondAttribute="leading" id="dNF-6s-rCU"/>
@@ -646,7 +668,8 @@
                                             <constraint firstAttribute="height" constant="736" id="hoq-u6-H0g"/>
                                             <constraint firstItem="0PL-sR-JdX" firstAttribute="top" secondItem="fKg-l7-1ue" secondAttribute="bottom" constant="8" symbolic="YES" id="jd4-VQ-Rf9"/>
                                             <constraint firstItem="JDC-Qm-37A" firstAttribute="leading" secondItem="abv-5f-Za3" secondAttribute="leading" id="kGN-s3-LqS"/>
-                                            <constraint firstItem="6a1-Q1-a46" firstAttribute="leading" secondItem="iY9-YT-d7e" secondAttribute="leading" constant="20" id="kYP-MZ-46Y"/>
+                                            <constraint firstItem="6a1-Q1-a46" firstAttribute="leading" secondItem="iY9-YT-d7e" secondAttribute="leading" constant="15" id="kYP-MZ-46Y"/>
+                                            <constraint firstItem="k6c-pr-JT2" firstAttribute="trailing" secondItem="JDC-Qm-37A" secondAttribute="trailing" id="kaO-OH-xfn"/>
                                             <constraint firstItem="Dr4-7C-b0U" firstAttribute="top" secondItem="4Cw-pp-M0c" secondAttribute="bottom" constant="8" symbolic="YES" id="lB7-Rj-XW5"/>
                                             <constraint firstItem="k6c-pr-JT2" firstAttribute="leading" secondItem="gwS-g2-i7c" secondAttribute="leading" id="swX-az-qVU"/>
                                             <constraint firstItem="4Cw-pp-M0c" firstAttribute="leading" secondItem="Dr4-7C-b0U" secondAttribute="leading" id="tTu-Sc-2hq"/>

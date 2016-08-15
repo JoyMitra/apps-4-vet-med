@@ -27,7 +27,6 @@
 		287422E61D11BAA200927E06 /* BCIPopulationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287422E51D11BAA200927E06 /* BCIPopulationViewController.swift */; };
 		289994501D19974B0083359E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2899944F1D19974B0083359E /* Localizable.strings */; };
 		289994521D19983F0083359E /* BCIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289994511D19983F0083359E /* BCIExtensions.swift */; };
-		5AC4D7B9AE718184212FB67D /* libPods-BRD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 052BF958824E7DC5F076998B /* libPods-BRD.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,7 +111,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC4D7B9AE718184212FB67D /* libPods-BRD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +265,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 287422D61D0F988300927E06 /* Build configuration list for PBXNativeTarget "BRD" */;
 			buildPhases = (
-				8AFE6A9199F597A92027CC3D /* 📦 Check Pods Manifest.lock */,
 				287422A71D0F988300927E06 /* Sources */,
 				287422A81D0F988300927E06 /* Frameworks */,
 				287422A91D0F988300927E06 /* Resources */,
-				F238410BABE93DB6B91DB91D /* 📦 Embed Pods Frameworks */,
-				9E2EC985D48136521399AFFB /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -356,54 +351,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8AFE6A9199F597A92027CC3D /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		9E2EC985D48136521399AFFB /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRD/Pods-BRD-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F238410BABE93DB6B91DB91D /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BRD/Pods-BRD-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		281224A11D481DE300FEC655 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -479,7 +426,6 @@
 /* Begin XCBuildConfiguration section */
 		281224AD1D481DE400FEC655 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "BRD Tx EvaluationTests/Info.plist";
@@ -504,7 +450,6 @@
 		};
 		2846913D1D5D16D2006F7225 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "BRD Tx EvaluationUITests/Info.plist";
@@ -616,7 +561,6 @@
 		};
 		287422D71D0F988300927E06 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DCF0A2241965B3B8CD01EAA /* Pods-BRD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -635,7 +579,6 @@
 		};
 		287422D81D0F988300927E06 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93509D5CB47EE8F4AA50CCB9 /* Pods-BRD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -670,6 +613,7 @@
 				2846913E1D5D16D2006F7225 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		287422A61D0F988300927E06 /* Build configuration list for PBXProject "BRD" */ = {
 			isa = XCConfigurationList;
