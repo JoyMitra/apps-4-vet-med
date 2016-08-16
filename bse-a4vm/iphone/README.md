@@ -21,3 +21,4 @@ This section contains the source code of the BSE iPhone app. To make any changes
 9) If you would like to run individual tests, then 
   - Click in the down arrow beside _BSE_ entry (with blue icon) in left pane of Xcode to expand it.  Now click on _BSEUITests_ and then click on _BSEUITests.swift_ to open it in Xcode.
   - Scroll the file and look for the test fuction you want to test and click the emply diamond icon on the left of the name of the function. Make sure you have correct bulid devices on the step 5 and 6 above. As soon as you click the diamond icon xcode will built and run the test on your device.
+  -After each built please make sure to remove/delete the application on the simulator/device before you run the test as each test considers that application to be freshly installed. This can be done by either manually deleting the application (press and hold and then click the red cross) or you can go to simulator->Reset Content and Settings
