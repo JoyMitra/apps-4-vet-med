@@ -29,4 +29,5 @@ BRD Tx Evaluation mobile app calculates the best drug treatment option based upo
 3. Verify Android emulator properties within project
 4. Through terminal, start up appium server using command "appium"
 5. Start up android emulator
-6. Run Test
+6. Compile dependencies, build project
+7. Run Test
