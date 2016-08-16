@@ -3,6 +3,7 @@ package bci.ksu.edu.brdtc;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -275,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 setDrugTwoParameters();
                 getAndDisplayResults();
                 setNormalBackground(editTexts);
+
                 hideSoftKeyboard();
                 viewFlipper.showNext();
                 break;
@@ -294,7 +296,18 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             // When user taps previous button on results page
             case R.id.resultsPageBackButton :
                 hideSoftKeyboard();
+                List<TextView> tableViews = new ArrayList<>();
+                tableViews.add(mTableDrug1CfrTextView);
+                tableViews.add(mTableDrug1CprTextView);
+                tableViews.add(mTableDrug1CtTextView);
+                tableViews.add(mTableDrug1TfpTextView);
+                tableViews.add(mTableDrug2CfrTextView);
+                tableViews.add(mTableDrug2CprTextView);
+                tableViews.add(mTableDrug2CtTextView);
+                tableViews.add(mTableDrug2TfpTextView);
+                setNormalTextView(tableViews);
                 mResultsTextView.setText(R.string.results);
+                mCostPivotTextView.setText(R.string.results_cost_diff_suggestion);
                 viewFlipper.showPrevious();
                 break;
         }
@@ -354,11 +367,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private void getAndDisplayResults() {
         float results = calculator.differenceInReturnToOAM(drugOne, drugTwo, population);
+        Log.d(LOG_CAT, "Got results: " + results);
         float costPivot = calculator.calculateCostPivot(results, drugOne, drugTwo, population);
+        Log.d(LOG_CAT, "Calculated pivot" + costPivot);
         if (costPivot < 1) {
             mCostPivotTextView.append("0");
         }
         mCostPivotTextView.append(df.format(costPivot));
+        Log.d(LOG_CAT, "Displaying Pivot");
         StringBuilder sb = new StringBuilder();
         String betterDrug;
         String notAsGoodDrug;
@@ -386,6 +402,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sb.append(" using the information you provided");
         String resultsText = sb.toString();
         setResultsPage(resultsText);
+        Log.d(LOG_CAT, "Displaying results");
     }
 
     private void setResultsPage(String resultsText) {
@@ -405,12 +422,23 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void displayTxValues(TextView txView1, TextView txView2, float txValue1, float txValue2) {
         if (txValue1 < txValue2) {
             setNumberText(txView1, txValue1);
-            txView1.setTextColor(getResources().getColor(R.color.green));
+            txView1.setTextColor(getResources().getColor(R.color.white));
+            txView1.setBackgroundColor(getResources().getColor(R.color.green));
             setNumberText(txView2, txValue2);
         } else {
             setNumberText(txView2, txValue2);
-            txView2.setTextColor(getResources().getColor(R.color.green));
+            txView2.setTextColor(getResources().getColor(R.color.white));
+            txView2.setBackgroundColor(getResources().getColor(R.color.green));
+
             setNumberText(txView1, txValue1);
+        }
+    }
+
+    private void setNormalTextView(List<TextView> textViews) {
+        int defaultColor = mTableDrug1NameTextView.getCurrentTextColor();
+        for (TextView textView : textViews) {
+            textView.setTextColor(defaultColor);
+            textView.setBackgroundColor(getResources().getColor(R.color.white));
         }
     }
 

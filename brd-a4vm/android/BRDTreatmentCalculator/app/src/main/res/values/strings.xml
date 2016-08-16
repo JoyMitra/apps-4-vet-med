@@ -18,11 +18,11 @@
     <string name="back">Back</string>
     <string name="next">Next</string>
     <string name="morbidity"><b>Morbidity</b></string>
-    <string name="cost_of_gain"><b>Cost of Gain ($0.1-$10)</b></string>
+    <string name="cost_of_gain"><b>Cost of Gain ($0.1-$10/pound/head)</b></string>
     <string name="price_received_at_sale"><b>Price Received At Sale ($0.1-$40)</b></string>
-    <string name="arrival_weight"><b>Arrival Weight (100-1200)</b></string>
-    <string name="days_on_feed"><b>Days on Feed (1-400)</b></string>
-    <string name="adg_healthy_cattle"><b>ADG Healthy Cattle (0.1-5)</b></string>
+    <string name="arrival_weight"><b>Arrival Weight (100-1200 lbs)</b></string>
+    <string name="days_on_feed"><b>Days on Feed (1-400 days)</b></string>
+    <string name="adg_healthy_cattle"><b>ADG Healthy Cattle (0.1-5/head/day)</b></string>
     <string name="name_of_drug_1"><b>Name of Drug 1</b></string>
     <string name="treatment_failure_percent"><b>Treatment Failure Percent</b></string>
     <string name="treatment_failure_percent_short"><b>Tx Failure Percent</b></string>
@@ -33,6 +33,7 @@
     <string name="name_of_drug_2"><b>Name of Drug 2</b></string>
     <string name="results"><b>Results: </b></string>
     <string name="restart">Restart</string>
+    <string name="drug_name_placeholder"><i>Drug Name</i></string>
     <string name="tfp_placeholder"><i>0%-50%</i></string>
     <string name="percent_placeholder"><i>0%-100%</i></string>
     <string name="cost_of_gain_placeholder"><i>$/lb/head</i></string>

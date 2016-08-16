@@ -66,6 +66,7 @@
                 android:inputType="text"
                 android:background="@drawable/edit_text_style"
                 android:textSize="20sp"
+                android:hint="@string/drug_name_placeholder"
                 />
 
             <TextView

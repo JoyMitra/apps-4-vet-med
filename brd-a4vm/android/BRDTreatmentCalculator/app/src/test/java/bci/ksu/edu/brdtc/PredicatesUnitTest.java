@@ -22,9 +22,9 @@ public class PredicatesUnitTest {
         String number3 = "6";
 
         ValidatePredicate vp = new AdgHealthyCattlePredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 
     @Test
@@ -34,9 +34,9 @@ public class PredicatesUnitTest {
         String number3 = "1500";
 
         ValidatePredicate vp = new ArrivalWeightPredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 
     @Test
@@ -46,9 +46,9 @@ public class PredicatesUnitTest {
         String number3 = "11";
 
         ValidatePredicate vp = new CostOfGainPredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 
     @Test
@@ -58,9 +58,9 @@ public class PredicatesUnitTest {
         String number3 = "100";
 
         ValidatePredicate vp = new CostOfTreatmentPredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 
     @Test
@@ -70,9 +70,9 @@ public class PredicatesUnitTest {
         String number3 = "500";
 
         ValidatePredicate vp = new DaysOnFeedPredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 
     @Test
@@ -82,9 +82,9 @@ public class PredicatesUnitTest {
         String number3 = "101";
 
         ValidatePredicate vp = new InvalidBoundsPredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 
     @Test
@@ -93,8 +93,8 @@ public class PredicatesUnitTest {
         String number2 = "";
 
         ValidatePredicate vp = new NullFieldPredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
     }
 
     @Test
@@ -104,8 +104,8 @@ public class PredicatesUnitTest {
         String number3 = "100";
 
         ValidatePredicate vp = new PriceReceivedAtSalePredicate();
-        Assert.assertTrue(vp.test(number));
-        Assert.assertFalse(vp.test(number2));
-        Assert.assertFalse(vp.test(number3));
+        Assert.assertFalse(vp.test(number));
+        Assert.assertTrue(vp.test(number2));
+        Assert.assertTrue(vp.test(number3));
     }
 }
