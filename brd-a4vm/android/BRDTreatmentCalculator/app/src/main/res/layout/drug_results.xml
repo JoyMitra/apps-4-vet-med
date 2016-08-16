@@ -34,7 +34,7 @@
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
                 android:text="@string/drug_1_header"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textAlignment="center"
                 android:maxLines="2"
                 />
@@ -45,7 +45,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="0.3"
                 android:text="@string/drug_2_header"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 android:textAlignment="center"
                 android:maxLines="2"
                 />
@@ -69,6 +69,7 @@
 
             <TextView
                 android:id="@+id/tableDrug1TfpTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -80,6 +81,7 @@
 
             <TextView
                 android:id="@+id/tableDrug2TfpTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -108,6 +110,7 @@
 
             <TextView
                 android:id="@+id/tableDrug1CfrTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -119,6 +122,7 @@
 
             <TextView
                 android:id="@+id/tableDrug2CfrTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -147,6 +151,7 @@
 
             <TextView
                 android:id="@+id/tableDrug1CtTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -158,6 +163,7 @@
 
             <TextView
                 android:id="@+id/tableDrug2CtTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -186,6 +192,7 @@
 
             <TextView
                 android:id="@+id/tableDrug1CprTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="1"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"
@@ -197,6 +204,7 @@
 
             <TextView
                 android:id="@+id/tableDrug2CprTextView"
+                android:layout_width="wrap_content"
                 android:layout_column="2"
                 android:layout_weight="0.3"
                 android:layout_gravity="center"

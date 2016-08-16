@@ -141,21 +141,23 @@ public class Calculator {
         float costDifferenetial = 0;
         if (differenceROAM < 0) {
             float ctb1 = txb.getCt1();
+            Drug txbTemp = new Drug(txb);
             while (differenceROAM < 0) {
                 ctb1 += .10;
-                Drug txbTemp = new Drug(txb);
                 txbTemp.setCt1(ctb1);
                 differenceInReturnToOAM(txa, txbTemp, population);
                 costDifferenetial += .10;
+                differenceROAM += .10;
             }
         } else {
             float cta1 = txa.getCt1();
+            Drug txaTemp = new Drug(txa);
             while (differenceROAM > 0) {
                 cta1 -= .10;
-                Drug txaTemp = new Drug(txa);
                 txaTemp.setCt1(cta1);
                 differenceInReturnToOAM(txa, txaTemp, population);
                 costDifferenetial += .10;
+                differenceROAM -= .10;
             }
         }
         return costDifferenetial;
