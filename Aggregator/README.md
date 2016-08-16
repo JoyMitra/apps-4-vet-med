@@ -14,7 +14,7 @@ Make sure the file extention is .CSV, if not then it has to be changed to CSV be
 
 ### Installing
 
-Just a single step process, just download the file and double click it to run.
+Just a single step process, just download the file, unzip it and double click the .jar file to run.
 
 ## Getting Started 
 
