@@ -12,10 +12,9 @@ This is a decision making app used to compare two different drugs. Outcomes vary
 #How to build it
 ######Prerequisites:
 - Git
-- [CocoaPods] (http://stackoverflow.com/questions/20755044/how-to-install-cocoa-pods)
+- X-Code
 
 ######Steps:
 1. Clone this repo by running `git clone git@github.com:santoslab/apps-4-vet-med.git`
-2. run `pod install`
-3. open `BRD.xcworkspace`
-4. Build and voila!
+2. open `BRD.xcodeproj`
+3. Build and voila!
