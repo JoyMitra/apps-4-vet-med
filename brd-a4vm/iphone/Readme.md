@@ -16,5 +16,5 @@ This is a decision making app used to compare two different drugs. Outcomes vary
 
 ######Steps:
 1. Clone this repo by running `git clone git@github.com:santoslab/apps-4-vet-med.git`
-2. open `BRD.xcodeproj`
+2. Navigate to the `BRD` folder then open `BRD.xcodeproj`
 3. Build and voila!
