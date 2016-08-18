@@ -11,6 +11,7 @@ import XCTest
 class BRD_Tx_EvaluationUITests: XCTestCase {
     
     let app = XCUIApplication()
+    typealias CompletionHandler = (success:Bool) -> Void
     
     override func setUp() {
         super.setUp()
@@ -34,79 +35,119 @@ class BRD_Tx_EvaluationUITests: XCTestCase {
     // Test the app with empty fields
     func testEmptyValues() {
         resetValues()
-        useApp()
-        app.buttons["Next"].tap()
-        XCTAssert(app.staticTexts["Error"].exists)
+        useApp { (success) in
+            if (success == true) {
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Error"].exists)
+            }
+        }
     }
     
     // Test the app with invalid parameters
     func testInvalidValues() {
         resetValues()
-        useApp()
-        setBadPopulationVariables()
-        app.buttons["Next"].tap()
-        XCTAssert(app.staticTexts["Error"].exists)
-        app.buttons["Okay"].tap()
-        app.navigationBars.buttons.elementBoundByIndex(0).tap() // Back button
-        app.buttons["Reset"].tap() // There is a hidden reset button
-        app.buttons["Start"].tap()
-        setGoodParameterVariables()
-        app.buttons["Next"].tap()
-        setBadDrug1ParameterVariables()
-        app.buttons["Next"].tap()
-        XCTAssert(app.staticTexts["Error"].exists)
+        useApp { (success) in
+            if (success == true) {
+                self.setBadPopulationVariables()
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Error"].exists)
+                self.app.buttons["Okay"].tap()
+                self.app.navigationBars.buttons.elementBoundByIndex(0).tap() // Back button
+                self.app.buttons["Reset"].tap() // There is a hidden reset button
+                self.app.buttons["Start"].tap()
+                self.setGoodParameterVariables()
+                self.app.buttons["Next"].tap()
+                self.setBadDrug1ParameterVariables()
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Error"].exists)
+            }
+        }
     }
     
     // Test the app with good values
     func testValidValues() {
         resetValues()
-        useApp()
-        setGoodParameterVariables()
-        app.buttons["Next"].tap()
-        XCTAssert(app.staticTexts["Drug 1"].exists)
-        setGoodDrug1ParameterVariables()
-        app.buttons["Next"].tap()
-        XCTAssert(app.staticTexts["Drug 2"].exists)
-        setGoodDrug2ParameterVariables()
-        app.buttons["Compare"].tap()
-        XCTAssert(app.staticTexts["Results"].exists)
+        useApp { (success) in
+            if (success == true) {
+                self.setGoodParameterVariables()
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Drug 1"].exists)
+                self.setGoodDrug1ParameterVariables()
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Drug 2"].exists)
+                self.setGoodDrug2ParameterVariables()
+                self.app.buttons["Compare"].tap()
+                XCTAssert(self.app.staticTexts["Results"].exists)
+            }
+        }
     }
     
     // Test if values were retained
     func testRetainedValues() {
-        testValidValues()
-        app.terminate()
-        app.launch()
-        useApp()
-        app.buttons["Next"].tap()
-        app.buttons["Next"].tap()
-        app.buttons["Compare"].tap()
-        XCTAssert(app.staticTexts["Results"].exists)
-        let result = app.textViews.elementBoundByIndex(0).value
-        XCTAssertTrue(result!.containsString("99.76"))
+        resetValues()
+        useApp { (success) in
+            if (success == true) {
+                self.setGoodParameterVariables()
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Drug 1"].exists)
+                self.setGoodDrug1ParameterVariables()
+                self.app.buttons["Next"].tap()
+                XCTAssert(self.app.staticTexts["Drug 2"].exists)
+                self.setGoodDrug2ParameterVariables()
+                self.app.buttons["Compare"].tap()
+                XCTAssert(self.app.staticTexts["Results"].exists)
+                self.app.terminate()
+                self.app.launch()
+            }
+        }
+        useApp { (success) in
+            if (success == true) {
+                if (self.app.buttons["Start"].exists) {
+                    self.app.buttons["Start"].tap()
+                }
+                self.app.buttons["Next"].tap()
+                self.app.buttons["Next"].tap()
+                self.app.buttons["Compare"].tap()
+                XCTAssert(self.app.staticTexts["Results"].exists)
+                let result = self.app.textViews.elementBoundByIndex(0).value
+                XCTAssertTrue(result!.containsString("99.76"))
+            }
+        }
     }
     
     // Test to see if we retained previously retained values
-    func testRetaineChangedValues() {
+    func testRetainChangedValues() {
         resetValues()
-        resetValues()
-        useApp()
-        setGoodParameterVariables()
-        app.buttons["Next"].tap()
-        app.navigationBars.buttons.elementBoundByIndex(0).tap() // Back button
-        let rawMorbidity = String(app.textFields["0-100%"].value!)
-        XCTAssertEqual(rawMorbidity,"30")
-        changeValue()
-        app.buttons["Next"].tap()
-        app.navigationBars.buttons.elementBoundByIndex(0).tap() // Back button
-        let modMorbidity = String(app.textFields["0-100%"].value!)
-        XCTAssertEqual(modMorbidity,"50")
+        useApp { (success) in
+            if (success == true) {
+                self.setGoodParameterVariables()
+                self.app.buttons["Next"].tap()
+                self.app.navigationBars.buttons.elementBoundByIndex(0).tap() // Back button
+                let rawMorbidity = String(self.app.textFields["0-100%"].value!)
+                XCTAssertEqual(rawMorbidity,"30")
+                self.changeValue()
+                self.app.buttons["Next"].tap()
+                self.app.navigationBars.buttons.elementBoundByIndex(0).tap() // Back button
+                let modMorbidity = String(self.app.textFields["0-100%"].value!)
+                XCTAssertEqual(modMorbidity,"50")
+            }
+        }
     }
     
     // Start using the app by click the "Start" button
-    func useApp() {
-        XCTAssert(app.staticTexts["WELCOME"].exists)
-        app.buttons["Start"].tap()
+    func useApp(completionHandler: CompletionHandler) {
+        let startButton = app.buttons["Start"]
+        let welcomeText = app.staticTexts["WELCOME"]
+        let exists = NSPredicate(format: "exists == 1")
+        
+        expectationForPredicate(exists, evaluatedWithObject: startButton, handler: nil)
+        expectationForPredicate(exists, evaluatedWithObject: welcomeText, handler: nil)
+        waitForExpectationsWithTimeout(50) { (error: NSError?) in
+            if (error == nil) {
+                startButton.tap()
+                completionHandler(success: true)
+            }
+        } // User input, fails if not watched
     }
     
     func changeValue() {
@@ -254,9 +295,10 @@ class BRD_Tx_EvaluationUITests: XCTestCase {
     }
     
     func resetValues() {
-       app.buttons["Reset"].tap() // There is a hidden Reset button. Check Storyboard
+        app.buttons["Reset"].tap() // There is a hidden Reset button. Check Storyboard
+        app.buttons["Reset"].tap()
+        app.buttons["Reset"].tap()
     }
-    
 }
 
 extension XCUIElement {

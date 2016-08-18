@@ -24,8 +24,11 @@ class BCIMainViewController: UIViewController {
     }
     
     @IBAction func resetAction(sender: AnyObject) {
-        let appDomain = NSBundle.mainBundle().bundleIdentifier!
-        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+//        let appDomain = NSBundle.mainBundle().bundleIdentifier!
+//        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+        for key in Array(NSUserDefaults.standardUserDefaults().dictionaryRepresentation().keys) {
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(key)
+        }
     }
 
     /*
