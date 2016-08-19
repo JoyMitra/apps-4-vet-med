@@ -819,6 +819,7 @@
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rancher Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tXx-Zp-3ad" customClass="JVFloatLabeledTextField">
                                                 <rect key="frame" x="20" y="75" width="560" height="47"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="Rancher Name"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>

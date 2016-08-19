@@ -9191,11 +9191,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BSEUITests/BSEUITests.swift"
-            timestampString = "491943599.273154"
+            timestampString = "491955352.116892"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "359"
-            endingLineNumber = "359">
+            startingLineNumber = "498"
+            endingLineNumber = "498">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

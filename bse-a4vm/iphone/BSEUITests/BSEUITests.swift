@@ -328,7 +328,146 @@ class BSEUITests: XCTestCase {
         
         
     }
+    func elemetswithinwindow (element: XCUIElement) -> Bool{
     
+        guard element.exists && !CGRectIsEmpty(element.frame) && element.hittable else {return false}
+        return CGRectContainsRect(XCUIApplication().windows.elementBoundByIndex(0).frame, element.frame)
+    }
+    
+    func ScrollDown()
+    {
+       
+    }
+    
+    func testTwoSameBullIDsTriggersConfirmationAlert()
+    {
+        
+        let app = XCUIApplication()
+    
+        app.alerts["Enter Email"].collectionViews.buttons["Not now"].tap()
+        app.buttons["Groups"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery.staticTexts["Add New Group"].tap()
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        elementsQuery.textFields["Rancher Name"].tap()
+        elementsQuery.textFields["Rancher Name"].typeText("Rancherxyz")
+        while !elemetswithinwindow(elementsQuery.buttons["Save"]) {
+            elementsQuery.textFields["Rancher Name"].swipeUp()
+        }
+        elementsQuery.buttons["Save"].tap()
+        let addNewBullStaticText = tablesQuery.staticTexts["Add New Bull"]
+        addNewBullStaticText.tap()
+        app.alerts["Enter Bull ID"].textFields.elementBoundByIndex(0).tap()
+        app.alerts["Enter Bull ID"].textFields.elementBoundByIndex(0).typeText("111")
+         let app2 = app
+        let enterBullIdAlert = app.alerts["Enter Bull ID"]
+        let okButton = enterBullIdAlert.collectionViews.buttons["OK"]
+        okButton.tap()
+        let tagButton = app.alerts["Select Bull Type"].collectionViews.buttons["Tag"]
+        tagButton.tap()
+        app.navigationBars["Bull ID: 111"].childrenMatchingType(.Button).matchingIdentifier("Back").elementBoundByIndex(0).tap()
+        addNewBullStaticText.tap()
+        app.alerts["Enter Bull ID"].textFields.elementBoundByIndex(0).tap()
+        app.alerts["Enter Bull ID"].textFields.elementBoundByIndex(0).typeText("111")
+        okButton.tap()
+        tagButton.tap()
+       XCTAssertTrue( app.alerts["Same ID Alert!"].exists)
+        
+    }
 
+    func testIncorectZipcodeAtStartupTriggersIncorrectAlert() {
+    
+        
+        let app = XCUIApplication()
+        let enterEmailAlert = app.alerts["Enter Email"]
+        enterEmailAlert.tap()
+        enterEmailAlert.collectionViews.textFields["name@example.com"]
+        app.otherElements.containingType(.Alert, identifier:"Enter Email").element.tap()
+        
+        let collectionViewsQuery = app.alerts["Enter your Name"].collectionViews
+        collectionViewsQuery.textFields["Your First Name"].tap()
+        collectionViewsQuery.textFields["Your First Name"]
+        
+        let okButton = collectionViewsQuery.buttons["OK"]
+        okButton.tap()
+        collectionViewsQuery.textFields["Your Last Name"].tap()
+        collectionViewsQuery.textFields["Your Last Name"]
+        okButton.tap()
+        
+        let collectionViewsQuery2 = app.alerts["Enter Clinic Name"].collectionViews
+        collectionViewsQuery2.textFields["Your Clinic Name"].tap()
+        collectionViewsQuery2.textFields["Your Clinic Name"]
+        collectionViewsQuery2.buttons["OK"].tap()
+        
+        let collectionViewsQuery3 = app.alerts["Enter your Address1"].collectionViews
+        collectionViewsQuery3.textFields["Your Address1"].tap()
+        collectionViewsQuery3.textFields["Your Address1"]
+        collectionViewsQuery3.buttons["OK"].tap()
+        
+        let collectionViewsQuery4 = app.alerts["Enter your Address2"].collectionViews
+        collectionViewsQuery4.textFields[" Your Address2"].tap()
+        collectionViewsQuery4.textFields[" Your Address2"]
+    
+    }
+    
+    func testIncorrectZipAtStartUpTriggersIncorrectAlert() {
+        
+        class FakeAlertView: ViewController{
+            var viewcontrollertopresent: UIViewController?
+            override func presentViewController(viewcontrollertopresent: UIViewController, animated flag: Bool, completion: (() -> Void)?) {
+                self.viewcontrollertopresent = viewcontrollertopresent
+            }
+        }
+        // let vc = UIViewController()
+        let vc = FakeAlertView()
+        vc.getEmail()
+        if (vc.isFirstTime() == true)
+        {
+            if let alert = vc.viewcontrollertopresent as? UIAlertController {
+                XCTAssertEqual("Enter Email", alert.title!)
+            }
+        }
+
+        let app = XCUIApplication()
+        app.alerts["Enter Email"].collectionViews.textFields["name@example.com"].tap()
+        app.alerts["Enter Email"].collectionViews.textFields["name@example.com"].typeText("Shubh.chopra@gmail.com")
+         app.alerts["Enter Email"].buttons["OK"].tap()
+        var collectionViewsQuery = app.alerts["Enter your Name"].collectionViews
+        collectionViewsQuery.textFields["Your First Name"].tap()
+        collectionViewsQuery.textFields["Your First Name"].typeText("Shubh")
+        
+        let okButton = collectionViewsQuery.buttons["OK"]
+        okButton.tap()
+        collectionViewsQuery.textFields["Your Last Name"].tap()
+        collectionViewsQuery.textFields["Your Last Name"].typeText("Chopra")
+        collectionViewsQuery = app.alerts["Enter your Name"].collectionViews
+       app.alerts["Enter your Name"].buttons["OK"].tap()
+        let collectionViewsQuery2 = app.alerts["Enter Clinic Name"].collectionViews
+        collectionViewsQuery2.textFields["Your Clinic Name"].typeText("XYZ")
+        
+        let okButton2 = collectionViewsQuery2.buttons["OK"]
+        okButton2.tap()
+        app.alerts["Enter your Address1"].collectionViews.textFields["Your Address1"].tap()
+        app.alerts["Enter your Address1"].collectionViews.textFields["Your Address1"].typeText("xyz")
+        app.alerts["Enter your Address1"].buttons["OK"].tap()
+        app.alerts["Enter your Address2"].collectionViews.textFields[" Your Address2"]
+        app.alerts["Enter your Address2"].buttons["OK"].tap()
+        app.alerts["Enter your City"].collectionViews.textFields["Your City"].tap()
+        app.alerts["Enter your City"].collectionViews.textFields["Your City"].typeText("Manhattan")
+        app.alerts["Enter your City"].collectionViews.textFields["Your City"].buttons["OK"].tap()
+        let collectionViewsQuery3 = app.alerts["Enter your Phone"].collectionViews
+        collectionViewsQuery3.textFields["Your Phone Number"].typeText("3473612600")
+        
+        let okButton3 = collectionViewsQuery3.buttons["OK"]
+        okButton3.tap()
+        
+        let collectionViewsQuery4 = app.alerts["Enter your Zip Code"].collectionViews
+        collectionViewsQuery4.textFields["Your Zip Code"].typeText("1234")
+        collectionViewsQuery4.buttons["OK"].tap()
+        XCTAssertTrue( app.alerts["Incorrect Zip"].exists)
+        
+    }
     
 }
