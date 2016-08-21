@@ -19,6 +19,10 @@ import edu.ksu.cs.a4vm.bse.util.SharedPrefUtil;
 /**
  * Created by Joy on 7/18/16.
  * Run these tests after PhyExamTest
+ *
+ * * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest

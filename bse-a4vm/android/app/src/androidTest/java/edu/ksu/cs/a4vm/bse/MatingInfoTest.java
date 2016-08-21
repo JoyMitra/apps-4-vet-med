@@ -21,6 +21,10 @@ import edu.ksu.cs.a4vm.bse.util.SharedPrefUtil;
 /**
  * Created by Joy on 6/12/16.
  * Run these tests BullInfoTest
+ *
+ * * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
@@ -96,6 +100,7 @@ public class MatingInfoTest extends ActivityInstrumentationTestCase2<MatingInfo>
         matingInfo.runOnUiThread(new Runnable() {
             @Override
             public void run() {
+                matingInfo.onResume();
                 if(tgbtn.getCurrentTextColor()== ContextCompat.getColor(matingInfo.getApplicationContext(), R.color.lightBlue)){
                     //tgbtn.callOnClick();
                     tgbtn.setTextColor(ContextCompat.getColor(matingInfo.getApplicationContext(), R.color.colorAccent));

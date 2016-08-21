@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 /**
  * Created by Joy on 2/22/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
  */
 public class Constant {
     public static String PREFS_FILE_VET_INFO = "vet_info_file";

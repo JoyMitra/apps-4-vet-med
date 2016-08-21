@@ -23,6 +23,10 @@ import edu.ksu.cs.a4vm.bse.util.SharedPrefUtil;
 /**
  * Created by Joy on 6/12/16.
  * Run these tests after CollectionsTest.
+ *
+ * * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
