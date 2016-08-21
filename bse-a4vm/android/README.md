@@ -1,4 +1,4 @@
-Requirements:
+**Requirements:**
 
 1. Android Studio 1.5.1.
 2. JRE 1.6.0.
@@ -11,7 +11,7 @@ This section contains the source code of the BSE Android app. To make any change
 4. You can now run the code on an emulator or by connecting to a device.
 
 
-How to run the tests:
+**How to run the tests:**
 
 1.  Once you have followed the above steps to setup this project in Android Studio, you can run tests in the AndroidTest folder.
 2.  In Android Studio go to *Build Variants* on the left hand pane of the editor. Selected *Android Instrumentation Tests* as the *Test Artifcact*.
