@@ -19,7 +19,9 @@ This section contains the source code of the BSE Android app. To make any change
 
 **How to run the tests (using Gradle):**
 
+
 Use the following command to run all tests from gradle:
-  **./gradlew app:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=edu.ksu.cs.a4vm.bse.BSETestSuite**
+
+  `./gradlew app:connectedAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=edu.ksu.cs.a4vm.bse.BSETestSuite`
   
 All tests should pass with the message that Build was successful.
