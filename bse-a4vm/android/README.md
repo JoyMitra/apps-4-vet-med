@@ -1,7 +1,7 @@
 **Requirements:**
 
-1. Android Studio 1.5.1.
-2. JRE 1.6.0.
+1. Android Studio 1.5.1+.
+2. JRE 1.6.0+.
 
 This section contains the source code of the BSE Android app. To make any changes, please fork the repository and follow the following steps:
 
