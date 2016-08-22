@@ -11,6 +11,7 @@ import junit.framework.*;
  * Licensed under Eclipse Public License v1.0
  * http://www.eclipse.org/legal/epl-v10.html
  */
+
 public class ApplicationTest extends ApplicationTestCase<Application> {
     public ApplicationTest() {
         super(Application.class);

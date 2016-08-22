@@ -98,11 +98,11 @@ public class CollectionsTest extends ActivityInstrumentationTestCase2<Collection
     public void navigateToEditCollectionsOnCollectionItemClicked(){
         final ListView lv = (ListView)collections.findViewById(R.id.ranchId);
         assertNotNull(lv);
-        String selectedItem = lv.getItemAtPosition(2).toString();
+        String selectedItem = lv.getItemAtPosition(0).toString();
         collections.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                lv.getOnItemClickListener().onItemClick(lv,lv,2,R.id.ranchId);
+                lv.getOnItemClickListener().onItemClick(lv,lv,0,R.id.ranchId);
             }
         });
         EditCollections editCollections = (EditCollections)getInstrumentation().waitForMonitorWithTimeout(activityMonitor2, 5000);

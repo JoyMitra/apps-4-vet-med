@@ -166,7 +166,7 @@ public class BullInfoTest extends ActivityInstrumentationTestCase2<BullInfo>{
                 assertEquals(dob.getBackground().getConstantState(), ContextCompat.getDrawable(bullInfo.getApplicationContext(),
                         R.drawable.focus_color).getConstantState());
                 assertEquals(ageYr.getText().toString().trim() + "," + ageMth.getText().toString().trim()
-                        , Util.getAge(2014,12));
+                        , Util.getAge(2014, 12));
                 save.performClick();
                 final HashSet<String> bullKeys1 = (HashSet<String>) SharedPrefUtil.getValue(
                         bullInfo.getApplicationContext(), Constant.PREFS_BULL_INFO, Constant.KEY_BULL);
