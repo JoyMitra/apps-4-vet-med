@@ -27,7 +27,7 @@ If you have a device connected use the following command to run all tests from g
 All tests should pass with the message that Build was successful.
 
 
-If you do not have a device then you will need to start an emulator. You can use of the following two methods:
+If you do not have a device then you will need to start an emulator. You can use one of the following two methods:
 
 1.  use the AVD manager under tools in Android Studio
 2.  If you have to use the command line then first create the avd by calling ` android create avd -n <name> -t <targetID>`, where targetID is the API level you need. You can then start the emulator by calling `emulator avd name`. 
