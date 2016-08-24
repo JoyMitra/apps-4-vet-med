@@ -1,3 +1,9 @@
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
 package edu.ksu.cs.a4vm.bse;
 import android.test.suitebuilder.annotation.SmallTest;
 
@@ -15,9 +21,6 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by Joy on 6/4/16.
- */
 @SmallTest
 @RunWith(MockitoJUnitRunner.class)
 public class UtilTest{

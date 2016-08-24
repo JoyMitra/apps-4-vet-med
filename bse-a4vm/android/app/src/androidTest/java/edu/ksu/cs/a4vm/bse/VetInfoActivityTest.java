@@ -1,3 +1,12 @@
+/**
+ * Created by Joydeep Mitra on 6/12/16.
+ * Run these tests after CollectionsTest.
+ *
+ * * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+
 package edu.ksu.cs.a4vm.bse;
 
 import android.app.Instrumentation;
@@ -18,14 +27,6 @@ import java.util.HashSet;
 import edu.ksu.cs.a4vm.bse.Constants.Constant;
 import edu.ksu.cs.a4vm.bse.util.SharedPrefUtil;
 
-/**
- * Created by Joy on 7/3/16.
- * Run these tests first.
- *
- * * Copyright (c) 2016, Kansas State University
- * Licensed under Eclipse Public License v1.0
- * http://www.eclipse.org/legal/epl-v10.html
- */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
 public class VetInfoActivityTest extends ActivityInstrumentationTestCase2<VetinfoActivity>{

@@ -1,3 +1,10 @@
+/**
+ * Created by Joydeep Mitra on 3/11/16.
+ * Copyright (c) 2016, Kansas State University
+ * Licensed under Eclipse Public License v1.0
+ * http://www.eclipse.org/legal/epl-v10.html
+ */
+
 package edu.ksu.cs.a4vm.bse;
 
 import android.content.Intent;
@@ -17,13 +24,6 @@ import edu.ksu.cs.a4vm.bse.Constants.Constant;
 import edu.ksu.cs.a4vm.bse.util.SharedPrefUtil;
 
 import static android.R.layout.simple_list_item_1;
-
-/**
- * Created by Joydeep Mitra on 3/11/16.
- * Copyright (c) 2016, Kansas State University
- * Licensed under Eclipse Public License v1.0
- * http://www.eclipse.org/legal/epl-v10.html
- */
 
 public class BullGroup extends AppCompatActivity {
 
