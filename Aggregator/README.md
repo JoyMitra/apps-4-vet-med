@@ -5,11 +5,11 @@ BSE-Aggregator is desktop extension to BSE-A4VM mobile app to aid veterinarians 
 ## Download Link
 https://github.com/santoslab/apps-4-vet-med/raw/gh-pages/Aggregator/Aggregator.jar
 
-### Prerequisities
+### Prerequisites
 
 It aggregates files only generated from BSE i-Phone/Android .CSV files.
-It is recomended to keep all the aggregating files in a single folder before running the application for making it easier to select files.
-Make sure the file extention is .CSV, if not then it has to be changed to CSV before aggregating it.
+It is recommended to keep all the aggregating files in a single folder before running the application for making it easier to select files.
+Make sure the file extension is .CSV, if not then it has to be changed to CSV before aggregating it.
 
 
 ### Installing
@@ -39,7 +39,7 @@ Follow the screen to the folder where your csv files are located.
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg2.jpg)
 
 2. press ctrl and Select all the CSV files that are to be aggregated.
-3. Click the “Combine and Save” button and save the file with (Some-Name).CSV (it is recommended to have a (.csv) at the end of the file name else you will have to choose a program to open the file.)
+3. Provide the name of the file (e.g., combined.csv) in which to save the combined data an click on Combine and Save button. Always include the .csv suffix in the filename.
 
 #### To generate an aggregated CSV file with a folder containing CSV files:
 1. Click the button “Browse” under Choose folder
@@ -88,7 +88,7 @@ B2		A		B		C				2
 
 ```
 #### Repeated Bull IDs with different morphology Fields (Different number of columns)
-When the bull IDs in all the CSV files to be aggregated have duplicated Bull ID (having Both Bull ID and Bull ID Type to be same) then the output file will be a single file having all the Bulls in the order of its Bull IDs and an extra Columns in the end for Collisions. 
+When bull IDs in the CSV files to be aggregated are unique, the output file will contain one row for each bull ID (ordered by bull ID) along with every column in CSV files; common columns appearing at most once. When a row does not have value for a columns, the corresponding position/cell will be empty. 
 For instance if 2 Bulls have a same Bull ID then all its fields will be compared, there may be 3 cases for the same
 1. If the information for a particular column are different that column name will be added in the collision Field in the end. 
 2. If for a particular column for one bull is empty and other is filled then information from filled column will be copied to the empty field of the other.
