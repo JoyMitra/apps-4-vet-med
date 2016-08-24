@@ -24,29 +24,32 @@ There is only one Screen on this aggregator app.
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg1.jpg)
 
 The app gives you 2 options from which you can choose from
-1)	Choose a folder
-2)	Choose files
+
+1.	Choose a folder
+
+2.	Choose files
+
 And then an option to combine and save the file.
 
 ### Working:
 #### To generate an aggregated CSV file with 2 or more CSV files:
-Step 1) Click the button “Browse” under Choose files
+1. Click the button “Browse” under Choose files
 Follow the screen to the folder where your csv files are located.
 
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg2.jpg)
 
-Step 2) press ctrl and Select all the CSV files that are to be aggregated.
-Step 3) Click the “Combine and Save” button and save the file with (Some-Name).CSV (it is recommended to have a (.csv) at the end of the file name else you will have to choose a program to open the file.)
+2. press ctrl and Select all the CSV files that are to be aggregated.
+3. Click the “Combine and Save” button and save the file with (Some-Name).CSV (it is recommended to have a (.csv) at the end of the file name else you will have to choose a program to open the file.)
 
 #### To generate an aggregated CSV file with a folder containing CSV files:
-Step 1) Click the button “Browse” under Choose folder
+1. Click the button “Browse” under Choose folder
 Follow the screen to the folder where your csv files are saved.
 
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Aggregator/img/Agg3.jpg)
 
-Step 2) Select the desired folder.
+2. Select the desired folder.
 NOTE: The desired folder must contain only CSV files else the app won’t be able to aggregate the file.
-Step 3) Click the “Combine and Save” button and save the file with (Some-Name).CSV (it is recommended to have a (.csv) at the end of the file name else you will have to choose a program to open the file.)
+3. Click the “Combine and Save” button and save the file with (Some-Name).CSV (it is recommended to have a (.csv) at the end of the file name else you will have to choose a program to open the file.)
 
 ## Understanding the output of the App
 
@@ -87,9 +90,9 @@ B2		A		B		C				2
 #### Repeated Bull IDs with different morphology Fields (Different number of columns)
 When the bull IDs in all the CSV files to be aggregated have duplicated Bull ID (having Both Bull ID and Bull ID Type to be same) then the output file will be a single file having all the Bulls in the order of its Bull IDs and an extra Columns in the end for Collisions. 
 For instance if 2 Bulls have a same Bull ID then all its fields will be compared, there may be 3 cases for the same
-1) If the information for a particular column are different that column name will be added in the collision Field in the end. 
-2) If for a particular column for one bull is empty and other is filled then information from filled column will be copied to the empty field of the other.
-3) If both fields are empty for a particular column then no action is taken.
+1. If the information for a particular column are different that column name will be added in the collision Field in the end. 
+2. If for a particular column for one bull is empty and other is filled then information from filled column will be copied to the empty field of the other.
+3. If both fields are empty for a particular column then no action is taken.
 ```
 File1.csv:
 Bull_ID	Col1	Col2	Col3	
