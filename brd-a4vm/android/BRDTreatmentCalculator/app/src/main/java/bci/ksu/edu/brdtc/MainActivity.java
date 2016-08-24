@@ -402,7 +402,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         sb.append(" using the information you provided");
         sb.append("This calculator does not provide a recommendation for antimicrobial " +
                 "selection. Please consult your veterinarian to make the most appropriate " +
-                "decision for your operation");
+                "decision for your operation.");
         String resultsText = sb.toString();
         setResultsPage(resultsText);
         Log.d(LOG_CAT, "Displaying results");

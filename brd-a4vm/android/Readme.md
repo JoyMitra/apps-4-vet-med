@@ -21,7 +21,7 @@ BRD Tx Evaluation mobile app calculates the best drug treatment option based upo
 * [Node] (https://nodejs.org/en/download/) 4.5+
 * [Appium] (http://appium.io/downloads.html) 1.5.3+
 * [Maven] (https://maven.apache.org/download.cgi) 3.3.9
-* IDE (Intellij Community Edition)
+* [IntelliJ IDEA Community Edition] (https://www.jetbrains.com/idea/download) 2.2+
 * Android Virtual Device API 23
 
 ### Instructions
@@ -30,12 +30,13 @@ BRD Tx Evaluation mobile app calculates the best drug treatment option based upo
 3. Open Terminal, start up appium server using command "appium"
 4. Verify Appium succesfully started, should say "Appium REST http interface listener started on 0.0.0.0:4723" (port may be different)
 5. Open android project in Android Studio
-6. On Navigation bar got to -> Build -> Build apk
+6. On Navigation bar got to -> Build -> Build apk, once built the apk file should popup in a file explorer
 7. Copy apk file into desired folder
-8. Copy path to apk
-9. Open UI project (brdtxe-ui-test)in Intellij
+8. Copy path to apk, this is used to replace the path variable in the UITest Class
+9. Open UI project (brdtxe-ui-test) in Intellij
 10. Navigate to UI Test Class "BrdTxEvalUITest"
-11. Look for File variable named "app" and replace string with your path to built apk
+11. Look for File variable named "app" on line 25 and replace string with your path to built apk
+	ex. File app = new File("C:\\path\\to\\file\\app-debug.apk")
 12. Verify Android emulator properties within project (Make sure they match the properties of your AVD)
 13. In Intellij, run test by running UI test class BrdTxEvalUITest
 14. Android emulator should start up when running
