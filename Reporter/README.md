@@ -32,15 +32,15 @@ Here you will see 2 Lists and 3 Buttons
 
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Reporter/img/Repo2.jpg)
 
-1) List1: This contains all the columns present in your CSV file, this is where you can select all the required Columns to be reported.
+1. List1: This contains all the columns present in your CSV file, this is where you can select all the required Columns to be reported.
 
-2) List2: This is where you will see the selected columns after you have selected and pressed the "ADD->" button.
+2. List2: This is where you will see the selected columns after you have selected and pressed the "ADD->" button.
 
-3) ADD: This is a button which is used to add the selected columns, you can add a single column or multiple columns at once. (You cannot select a columns twice, it won't appear twice in the List2).
+3. ADD: This is a button which is used to add the selected columns, you can add a single column or multiple columns at once. (You cannot select a columns twice, it won't appear twice in the List2).
 
-4) Remove: If you wish to remove a column from list2/reporter you can just select a column in list2 and then press the remove button.
+4. Remove: If you wish to remove a column from list2/reporter you can just select a column in list2 and then press the remove button.
 
-5) Next: After you are done you can move forward and click next for the next screen.
+5. Next: After you are done you can move forward and click next for the next screen.
 
 ####Screen 3 (Select Bulls for the reporter to generate)
 
@@ -48,23 +48,23 @@ Here you will see 2 Lists, 5 Buttons and 3 check boxes
 
 ![alt tag] (https://github.com/santoslab/apps-4-vet-med/blob/gh-pages/Reporter/img/Repo3.jpg)
 
-1) List1: This contains all the Bulls present in your CSV file, this is where you can select all the required Bulls to be reported (Bulls will be represented with their BullIDs, if a bull have multiple type of BullIDs all of them will be displayed).
+1. List1: This contains all the Bulls present in your CSV file, this is where you can select all the required Bulls to be reported (Bulls will be represented with their BullIDs, if a bull have multiple type of BullIDs all of them will be displayed).
 
-2) List2: This is where you will see the selected Bulls after you have selected and pressed the "ADD->" button.
+2. List2: This is where you will see the selected Bulls after you have selected and pressed the "ADD->" button.
 
-3) Add: This is a button which is used to add the selected Bulls, you can add a single Bulls or multiple Bulls at once. (You cannot select a Bull twice, it won't appear twice in the List2).
+3. Add: This is a button which is used to add the selected Bulls, you can add a single Bulls or multiple Bulls at once. (You cannot select a Bull twice, it won't appear twice in the List2).
 
-4) Remove: If you wish to remove a Bull from list2/reporter you can just select a Bull in list2 and then press the remove button.
+4. Remove: If you wish to remove a Bull from list2/reporter you can just select a Bull in list2 and then press the remove button.
 
-5) Checkbox 1 (Single graph): If you want graphs for all the selected bulls individually then you have to select this option.
+5. Checkbox 1 (Single graph): If you want graphs for all the selected bulls individually then you have to select this option.
 
-6) Checkbox 2 (Multiple graph): If you want a single graph having information about multiple bulls then select this option.
+6. Checkbox 2 (Multiple graph): If you want a single graph having information about multiple bulls then select this option.
 
 NOTE: You can select both, the app will make all the single graphs first and then will make a Multi graph for all the bulls. If only one bull is selected then a single-graph and a multi-graph is exactly the same.
 
-7) Preview: This button is used to see a preview of the pdf you have created. If you want to change something before saving the file you can go back and deselect/Add more columns/Bulls in the graph.
+7. Preview: This button is used to see a preview of the pdf you have created. If you want to change something before saving the file you can go back and deselect/Add more columns/Bulls in the graph.
 
-8) Save: After you are satisfied you can move forward and click save for saving the file.
+8. Save: After you are satisfied you can move forward and click save for saving the file.
 (NOTE: Please save the file in .PDF extension)
 
 
