@@ -34,6 +34,6 @@ If you do not have a device then you will need to start an emulator. You can use
 
 After you have the emulator up and running use the following command to run the test suite.
 
-./gradlew app:connectedAndroidTest -i -Pandroid.testInstrumentationRunnerArguments.class=edu.ksu.cs.a4vm.bse.BSETestSuite
+`./gradlew app:connectedAndroidTest -i -Pandroid.testInstrumentationRunnerArguments.class=edu.ksu.cs.a4vm.bse.BSETestSuite`
 
 All tests should pass. 
