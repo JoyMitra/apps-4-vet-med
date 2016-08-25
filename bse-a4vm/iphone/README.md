@@ -16,7 +16,7 @@ This section contains the source code of the BSE iPhone app. To make any changes
 
 7) At this point you are good to go. You click the "Play" button and the application will built and run on your selected device.
 
-8) If you would like to run the tests in the project, click on _Project -> Test_ from the top menu
+8) If you would like to run the tests in the project, click on _Product -> Test_ from the top menu
 
 9) If you would like to run individual tests, then 
   - Click in the down arrow beside _BSE_ entry (with blue icon) in left pane of Xcode to expand it.  Now click on _BSEUITests_ and then click on _BSEUITests.swift_ to open it in Xcode.
