@@ -25,35 +25,41 @@ import javax.swing.JTextArea;
  * @author Shubh Chopra
  */
 class ColumnComparator implements Comparator {
-	int columnToSort;
-	ColumnComparator(int columnToSort) {
-		this.columnToSort = columnToSort;
-	}
-	//overriding compare method
-	public int compare(Object o1, Object o2) {
-		String[] row1 = (String[]) o1;
-		String[] row2 = (String[]) o2;
-		//compare the columns to sort
-		return row1[columnToSort].compareTo(row2[columnToSort]);
-	}
+
+    int columnToSort;
+
+    ColumnComparator(int columnToSort) {
+        this.columnToSort = columnToSort;
+    }
+
+    //overriding compare method
+
+    public int compare(Object o1, Object o2) {
+        String[] row1 = (String[]) o1;
+        String[] row2 = (String[]) o2;
+        //compare the columns to sort
+        return row1[columnToSort].compareTo(row2[columnToSort]);
+    }
 }
+
 public class Combine extends javax.swing.JFrame {
 
     /**
      * Creates new form Combine
      */
-    int number_of_rows1=0;
-    int number_of_rows2=0;
+    int number_of_rows1 = 0;
+    int number_of_rows2 = 0;
     String File1;
     String File3;
     String File2;
     String header[];
-    String bull1 [][] ;
-    String bull2 [] ;
-    String bull [][];
+    String bull1[][];
+    String bull2[];
+    String bull[][];
     String bull3[][];
     File[] listoffiles;
     File[] listoffiles1;
+
     public Combine() {
         initComponents();
     }
@@ -180,44 +186,38 @@ public class Combine extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    public void combineandsave(String s1, String s2)
-    {
-           
-        if(!"".equals(s1))
-        {
+    public void combineandsave(String s1, String s2) {
+
+        if (!"".equals(s1)) {
             File1 = s1;
             File folder = new File(File1);
-            listoffiles =  folder.listFiles();
-        }
-        else if (!"".equals(s2))
-        {
+            listoffiles = folder.listFiles();
+        } else if (!"".equals(s2)) {
             listoffiles = listoffiles1;
         }
-        
-            BufferedReader br = null;
-            String line = "";
-            
-            JFileChooser chooser =new JFileChooser();
-            int option = chooser.showSaveDialog(null);
-            if(option == JFileChooser.APPROVE_OPTION){
-            if(chooser.getSelectedFile()!=null){
-            File3 = chooser.getSelectedFile().getAbsolutePath();
+
+        BufferedReader br = null;
+        String line = "";
+
+        JFileChooser chooser = new JFileChooser();
+        int option = chooser.showSaveDialog(null);
+        if (option == JFileChooser.APPROVE_OPTION) {
+            if (chooser.getSelectedFile() != null) {
+                File3 = chooser.getSelectedFile().getAbsolutePath();
             }
             PrintWriter writer = null;
-             try {
-                   writer = new PrintWriter(File3, "UTF-8");
-                  } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                     }
-               BufferedReader br1=null;
-                String s;
-                header = new String [120];
-            for(int x=0;x<120;x++)
-            {
-            header[x]="";
+            try {
+                writer = new PrintWriter(File3, "UTF-8");
+            } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+                Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
             }
-            for(int j=0; j<listoffiles.length; j++)
-            {
+            BufferedReader br1 = null;
+            String s;
+            header = new String[120];
+            for (int x = 0; x < 120; x++) {
+                header[x] = "";
+            }
+            for (int j = 0; j < listoffiles.length; j++) {
                 File f = listoffiles[j];
                 BufferedReader br2 = null;
                 try {
@@ -226,527 +226,455 @@ public class Combine extends javax.swing.JFrame {
                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    int temp2=0;
-                    while ((line = br2.readLine()) != null) { 
-                        
+                    int temp2 = 0;
+                    while ((line = br2.readLine()) != null) {
+
                         // use comma as separator
-                       while (temp2==0)
-                       {
-                        String Bull[] = line.split(",");
-                      //  System.out.println(Bull.length);
-                        if(j==0)
-                        {
-                            for(int i =0; i<Bull.length; i++)
-                            {
-                                header[i]=Bull[i];
+                        while (temp2 == 0) {
+                            String Bull[] = line.split(",");
+                            //  System.out.println(Bull.length);
+                            if (j == 0) {
+                                for (int i = 0; i < Bull.length; i++) {
+                                    header[i] = Bull[i];
+                                }
                             }
-                        }
-                        int k=77;
-                        for( int i=77; i<Bull.length;)
-                        {
-                            
-                                if(Bull[i].equals(header[k]))
-                                {
+                            int k = 77;
+                            for (int i = 77; i < Bull.length;) {
+
+                                if (Bull[i].equals(header[k])) {
                                     i++;
-                                    k=77;
-                                }
-                                else if(!Bull[i].equals(header[k]) && !header[k].equals( ""))
-                                {
+                                    k = 77;
+                                } else if (!Bull[i].equals(header[k]) && !header[k].equals("")) {
                                     k++;
-                                }
-                                else if(!Bull[i].equals(header[k]) && header[k].equals( ""))
-                                {
+                                } else if (!Bull[i].equals(header[k]) && header[k].equals("")) {
                                     header[k] = Bull[i];
                                     i++;
-                                    k=77;
-                                    
+                                    k = 77;
+
                                 }
+                            }
+                            temp2 = 1;
+
                         }
-                        temp2=1;
-                        
-                       }
                         number_of_rows1++;
-                    }   } catch (IOException ex) {
+                    }
+                } catch (IOException ex) {
                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                     JOptionPane.showMessageDialog(null,"Incorrect File format, please researt the app");
+                    JOptionPane.showMessageDialog(null, "Incorrect File format, please researt the app");
                 }
             }
-            for (int y=0;y<header.length;y++)
-            {
-              //  System.out.print(header[y]);
+            for (int y = 0; y < header.length; y++) {
+                //  System.out.print(header[y]);
             }
-            number_of_rows1 = number_of_rows1-listoffiles.length;
-        //    System.out.println(number_of_rows1);
-             bull1=new String [number_of_rows1][];
-            int l =0;
-             for(int i=0; i<listoffiles.length; i++)
-            {
-               
-            File file = listoffiles[i]; 
-          
+            number_of_rows1 = number_of_rows1 - listoffiles.length;
+            //    System.out.println(number_of_rows1);
+            bull1 = new String[number_of_rows1][];
+            int l = 0;
+            for (int i = 0; i < listoffiles.length; i++) {
+
+                File file = listoffiles[i];
+
                 try {
-               br1 = new BufferedReader(new FileReader(file));
+                    br1 = new BufferedReader(new FileReader(file));
                     br = new BufferedReader(new FileReader(file));
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                
-          
-            BufferedReader br2 = null;
-                try {
-                    br2 = new BufferedReader(new FileReader(file));
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                try {
-                    int temp=0;
-                    while ((line = br2.readLine()) != null) {
-                        
-                        // use comma as separator
-                        if(temp == 0)
-                        {
-                        String Bull[] = line.split(",");
-                      //  System.out.println(Bull.length);
-                        bull2=new String [Bull.length+1];
-                        for(int j=0; j<Bull.length;j++)
-                        {
-                        bull2[j]=Bull[j];
-                        }
-                        }
-                        
-                        if(temp !=0)
-                        {
-                        String Bull[] = line.split(",");
-                      //  System.out.println(Bull.length);
-                        bull1[l]=new String [Bull.length+1];
-                        for(int j=0; j<Bull.length;j++)
-                        {
-                            if(j<77)
-                            bull1[l][j]=Bull[j];
-                            if(j>=77)
-                                bull1[l][j]=Bull[j]+":"+bull2[j];
-                        }
-                        l++;
-                        }
-                        temp++;
-                    }   } catch (IOException ex) {
-                    Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-            Arrays.sort(bull1, new ColumnComparator(7));
-            for(int m=0; m<number_of_rows1;m++)
-            {
-            for (int y=0;y<bull1[m].length;y++)
-            {
-          //      System.out.print(bull1[m][y]);
-            }
-            //System.out.println();
-            }
-                int flag=-1;
-                for(int x=0;x<number_of_rows1;x++)
-                {
-                    String collision="";
-                    for(int y=0;y<number_of_rows1;y++)
-                    {
-                        if(x!=y)
-                        {
-                        if( (bull1[x][2].equals(bull1[y][2]) && !bull1[x][2].equals(""))|| (bull1[x][6].equals(bull1[y][6])&& !bull1[x][6].equals("")) ||(bull1[x][7].equals(bull1[y][7])&& !bull1[x][7].equals("")) || (bull1[x][8].equals(bull1[y][8]) && !bull1[x][8].equals(""))|| (bull1[x][9].equals(bull1[y][9]) && !bull1[x][9].equals("")))
-                        {
-                            for(int a=0; a<bull1[y].length-1 && a<bull1[x].length-1; a++)
-                            {
-                                if(!bull1[x][a].equals(bull1[y][a]) && !bull1[x][a].equals("") && !bull1[y][a].equals("") )
-                                {
-                                    if(a!=34 && a!=65)
-                                    {
-                                    collision+=header[a]+" ";
-                                    
-                                    }
-                                    
-                                }
-                            }
-                            flag=y;
-                            break;   
-                        }
-                        }
-                    }
-                    bull1[x][bull1[x].length-1]=collision;
-                    if( flag!=-1)
-                    {
-                        for(int a=0; a<bull1[x].length-1 && a<bull1[flag].length-1; a++)
-                            {
-                                if(a!=34 && a!=65)
-                                {
-                                    if(bull1[flag][a].equals(""))
-                                    {
-                                        bull1[flag][a]=bull1[x][a];
-                              //          System.out.println(bull1[x][a]+" "+bull1[flag][a]);
-                                        continue;
-                                    }
-                                        if(bull1[x][a].equals(""))
-                                        {
-                                        bull1[x][a]=bull1[flag][a];
-                                 //    System.out.println(bull1[flag][a]);
-                                        }
-                                }
-                            }
-                    }
-                    flag=-1;
-              //      System.out.println(collision);
-                }
-                
-            int temp=0;
-                
-                    int x= 0;
-                   
-                    for(int y=0;y<header.length;y++)
-                    {
-                        if(!header[y].equals(""))
-                          writer.print(header[y] + ",");
-                        else
-                        {
-                            writer.println();
-                            break;
-                        }
-                    }
-                    
-                    while(x<number_of_rows1)
-                    {
-                        s="";
-                        temp++;
-                        for (int b=0;b<77;b++)
-                          { 
-                              if(b<77)
-                              s += bull1[x][b] + ",";
-                          }
-                        for(int c = 77 ; c<header.length;c++)
-                        {
-                            //int a = header.length;
-                           // int b = bull1[x].length;
-                            int flag1 =0;
-                            for(int d= 77; d<bull1[x].length;d++)
-                            {
-                                if(bull1[x][d] != null && !bull1[x][d].equals(""))
-                                {
-                                if(bull1[x][d].indexOf(':') != -1)
-                                {
-                                String[] parts = bull1[x][d].split(":", 2);
-                                String string1 = parts[0];
-                                String string2 = parts[1];
-                                    if(header[c].equals(string2))
-                                    {
-                                        flag1 = 1;
-                                            s += string1 + ",";
-                                    break;
-                                    }
-                               }
-                                }
-                            }
-                            if( flag1 == 0)
-                            {
-                                s += ",";
-                            }
-                            if (header[c+1].equals(""))
-                                break;
-                        }
-                            if(bull1[x][bull1[x].length-1]!="")
-                        writer.print(s+","+bull1[x][bull1[x].length-1]);
-                            else
-                              writer.print(s);  
-                        writer.println();
-                        x++;           
-                }
-        writer.close();
-        JOptionPane.showMessageDialog(null,"Aggregation Successful");
-            }
-    }
-     public void combineandsavetest(String s1, String s2)
-    {
-           
-        if(!"".equals(s1))
-        {
-            File1 = s1;
-            File folder = new File(File1);
-            listoffiles =  folder.listFiles();
-        }
-        else if (!"".equals(s2))
-        {
-            listoffiles = listoffiles1;
-        }
-        
-            BufferedReader br = null;
-            String line = "";
-            
-            
-            File3 = s1 + "/actual_result.csv";
-            
-            PrintWriter writer = null;
-             try {
-                   writer = new PrintWriter(File3, "UTF-8");
-                  } catch (FileNotFoundException | UnsupportedEncodingException ex) {
-                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                     }
-               BufferedReader br1=null;
-                String s;
-                header = new String [120];
-            for(int x=0;x<120;x++)
-            {
-            header[x]="";
-            }
-            for(int j=0; j<listoffiles.length; j++)
-            {
-                File f = listoffiles[j];
+
                 BufferedReader br2 = null;
                 try {
-                    br2 = new BufferedReader(new FileReader(f));
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                try {
-                    int temp2=0;
-                    while ((line = br2.readLine()) != null) { 
-                        
-                        // use comma as separator
-                       while (temp2==0)
-                       {
-                        String Bull[] = line.split(",");
-                      //  System.out.println(Bull.length);
-                        if(j==0)
-                        {
-                            for(int i =0; i<Bull.length; i++)
-                            {
-                                header[i]=Bull[i];
-                            }
-                        }
-                        int k=77;
-                        for( int i=77; i<Bull.length;)
-                        {
-                            
-                                if(Bull[i].equals(header[k]))
-                                {
-                                    i++;
-                                    k=77;
-                                }
-                                else if(!Bull[i].equals(header[k]) && !header[k].equals( ""))
-                                {
-                                    k++;
-                                }
-                                else if(!Bull[i].equals(header[k]) && header[k].equals( ""))
-                                {
-                                    header[k] = Bull[i];
-                                    i++;
-                                    k=77;
-                                    
-                                }
-                        }
-                        temp2=1;
-                        
-                       }
-                        number_of_rows1++;
-                    }   } catch (IOException ex) {
-                    Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                     JOptionPane.showMessageDialog(null,"Incorrect File format, please researt the app");
-                }
-            }
-            for (int y=0;y<header.length;y++)
-            {
-              //  System.out.print(header[y]);
-            }
-            number_of_rows1 = number_of_rows1-listoffiles.length;
-        //    System.out.println(number_of_rows1);
-             bull1=new String [number_of_rows1][];
-            int l =0;
-             for(int i=0; i<listoffiles.length; i++)
-            {
-               
-            File file = listoffiles[i]; 
-          
-                try {
-               br1 = new BufferedReader(new FileReader(file));
-                    br = new BufferedReader(new FileReader(file));
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                
-          
-            BufferedReader br2 = null;
-                try {
                     br2 = new BufferedReader(new FileReader(file));
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 try {
-                    int temp=0;
+                    int temp = 0;
                     while ((line = br2.readLine()) != null) {
-                        
+
                         // use comma as separator
-                        if(temp == 0)
-                        {
-                        String Bull[] = line.split(",");
-                      //  System.out.println(Bull.length);
-                        bull2=new String [Bull.length+1];
-                        for(int j=0; j<Bull.length;j++)
-                        {
-                        bull2[j]=Bull[j];
+                        if (temp == 0) {
+                            String Bull[] = line.split(",");
+                            //  System.out.println(Bull.length);
+                            bull2 = new String[Bull.length + 1];
+                            for (int j = 0; j < Bull.length; j++) {
+                                bull2[j] = Bull[j];
+                            }
                         }
-                        }
-                        
-                        if(temp !=0)
-                        {
-                        String Bull[] = line.split(",");
-                      //  System.out.println(Bull.length);
-                        bull1[l]=new String [Bull.length+1];
-                        for(int j=0; j<Bull.length;j++)
-                        {
-                            if(j<77)
-                            bull1[l][j]=Bull[j];
-                            if(j>=77)
-                                bull1[l][j]=Bull[j]+":"+bull2[j];
-                        }
-                        l++;
+
+                        if (temp != 0) {
+                            String Bull[] = line.split(",");
+                            //  System.out.println(Bull.length);
+                            bull1[l] = new String[Bull.length + 1];
+                            for (int j = 0; j < Bull.length; j++) {
+                                if (j < 77) {
+                                    bull1[l][j] = Bull[j];
+                                }
+                                if (j >= 77) {
+                                    bull1[l][j] = Bull[j] + ":" + bull2[j];
+                                }
+                            }
+                            l++;
                         }
                         temp++;
-                    }   } catch (IOException ex) {
+                    }
+                } catch (IOException ex) {
                     Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             Arrays.sort(bull1, new ColumnComparator(7));
-            for(int m=0; m<number_of_rows1;m++)
-            {
-            for (int y=0;y<bull1[m].length;y++)
-            {
-          //      System.out.print(bull1[m][y]);
-            }
-            //System.out.println();
-            }
-                int flag=-1;
-                for(int x=0;x<number_of_rows1;x++)
-                {
-                    String collision="";
-                    for(int y=0;y<number_of_rows1;y++)
-                    {
-                        if(x!=y)
-                        {
-                        if( (bull1[x][2].equals(bull1[y][2]) && !bull1[x][2].equals(""))|| (bull1[x][6].equals(bull1[y][6])&& !bull1[x][6].equals("")) ||(bull1[x][7].equals(bull1[y][7])&& !bull1[x][7].equals("")) || (bull1[x][8].equals(bull1[y][8]) && !bull1[x][8].equals(""))|| (bull1[x][9].equals(bull1[y][9]) && !bull1[x][9].equals("")))
-                        {
-                            for(int a=0; a<bull1[y].length-1 && a<bull1[x].length-1; a++)
-                            {
-                                if(!bull1[x][a].equals(bull1[y][a]) && !bull1[x][a].equals("") && !bull1[y][a].equals("") )
-                                {
-                                    if(a!=34 && a!=65)
-                                    {
-                                    collision+=header[a]+" ";
-                                    
-                                    }
-                                    
-                                }
-                            }
-                            flag=y;
-                            break;   
-                        }
-                        }
-                    }
-                    bull1[x][bull1[x].length-1]=collision;
-                    if( flag!=-1)
-                    {
-                        for(int a=0; a<bull1[x].length-1 && a<bull1[flag].length-1; a++)
-                            {
-                                if(a!=34 && a!=65)
-                                {
-                                    if(bull1[flag][a].equals(""))
-                                    {
-                                        bull1[flag][a]=bull1[x][a];
-                              //          System.out.println(bull1[x][a]+" "+bull1[flag][a]);
-                                        continue;
-                                    }
-                                        if(bull1[x][a].equals(""))
-                                        {
-                                        bull1[x][a]=bull1[flag][a];
-                                 //    System.out.println(bull1[flag][a]);
-                                        }
-                                }
-                            }
-                    }
-                    flag=-1;
-              //      System.out.println(collision);
+            for (int m = 0; m < number_of_rows1; m++) {
+                for (int y = 0; y < bull1[m].length; y++) {
+                    //      System.out.print(bull1[m][y]);
                 }
-                
-            int temp=0;
-                
-                    int x= 0;
-                   
-                    for(int y=0;y<header.length;y++)
-                    {
-                        if(!header[y].equals(""))
-                          writer.print(header[y] + ",");
-                        else
-                        {
-                            writer.println();
+                //System.out.println();
+            }
+            int flag = -1;
+            for (int x = 0; x < number_of_rows1; x++) {
+                String collision = "";
+                for (int y = 0; y < number_of_rows1; y++) {
+                    if (x != y) {
+                        if ((bull1[x][2].equals(bull1[y][2]) && !bull1[x][2].equals("")) || (bull1[x][6].equals(bull1[y][6]) && !bull1[x][6].equals("")) || (bull1[x][7].equals(bull1[y][7]) && !bull1[x][7].equals("")) || (bull1[x][8].equals(bull1[y][8]) && !bull1[x][8].equals("")) || (bull1[x][9].equals(bull1[y][9]) && !bull1[x][9].equals(""))) {
+                            for (int a = 0; a < bull1[y].length - 1 && a < bull1[x].length - 1; a++) {
+                                if (!bull1[x][a].equals(bull1[y][a]) && !bull1[x][a].equals("") && !bull1[y][a].equals("")) {
+                                    if (a != 34 && a != 65) {
+                                        collision += header[a] + " ";
+
+                                    }
+
+                                }
+                            }
+                            flag = y;
                             break;
                         }
                     }
-                    
-                    while(x<number_of_rows1)
-                    {
-                        s="";
-                        temp++;
-                        for (int b=0;b<77;b++)
-                          { 
-                              if(b<77)
-                              s += bull1[x][b] + ",";
-                          }
-                        for(int c = 77 ; c<header.length;c++)
-                        {
-                            //int a = header.length;
-                           // int b = bull1[x].length;
-                            int flag1 =0;
-                            for(int d= 77; d<bull1[x].length;d++)
-                            {
-                                if(bull1[x][d] != null && !bull1[x][d].equals(""))
-                                {
-                                if(bull1[x][d].indexOf(':') != -1)
-                                {
-                                String[] parts = bull1[x][d].split(":", 2);
-                                String string1 = parts[0];
-                                String string2 = parts[1];
-                                    if(header[c].equals(string2))
-                                    {
-                                        flag1 = 1;
-                                            s += string1 + ",";
-                                    break;
-                                    }
-                               }
-                                }
-                            }
-                            if( flag1 == 0)
-                            {
-                                s += ",";
-                            }
-                            if (header[c+1].equals(""))
-                                break;
-                        }
-                            if(bull1[x][bull1[x].length-1]!="")
-                        writer.print(s+","+bull1[x][bull1[x].length-1]);
-                            else
-                              writer.print(s);  
-                        writer.println();
-                        x++;           
                 }
-        writer.close();
-        JOptionPane.showMessageDialog(null,"Aggregation Successful");
+                bull1[x][bull1[x].length - 1] = collision;
+                if (flag != -1) {
+                    for (int a = 0; a < bull1[x].length - 1 && a < bull1[flag].length - 1; a++) {
+                        if (a != 34 && a != 65) {
+                            if (bull1[flag][a].equals("")) {
+                                bull1[flag][a] = bull1[x][a];
+                                //          System.out.println(bull1[x][a]+" "+bull1[flag][a]);
+                                continue;
+                            }
+                            if (bull1[x][a].equals("")) {
+                                bull1[x][a] = bull1[flag][a];
+                                //    System.out.println(bull1[flag][a]);
+                            }
+                        }
+                    }
+                }
+                flag = -1;
+                //      System.out.println(collision);
             }
 
-    
+            int temp = 0;
+
+            int x = 0;
+
+            for (int y = 0; y < header.length; y++) {
+                if (!header[y].equals("")) {
+                    writer.print(header[y] + ",");
+                } else {
+                    writer.println();
+                    break;
+                }
+            }
+
+            while (x < number_of_rows1) {
+                s = "";
+                temp++;
+                for (int b = 0; b < 77; b++) {
+                    if (b < 77) {
+                        s += bull1[x][b] + ",";
+                    }
+                }
+                for (int c = 77; c < header.length; c++) {
+                            //int a = header.length;
+                    // int b = bull1[x].length;
+                    int flag1 = 0;
+                    for (int d = 77; d < bull1[x].length; d++) {
+                        if (bull1[x][d] != null && !bull1[x][d].equals("")) {
+                            if (bull1[x][d].indexOf(':') != -1) {
+                                String[] parts = bull1[x][d].split(":", 2);
+                                String string1 = parts[0];
+                                String string2 = parts[1];
+                                if (header[c].equals(string2)) {
+                                    flag1 = 1;
+                                    s += string1 + ",";
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (flag1 == 0) {
+                        s += ",";
+                    }
+                    if (header[c + 1].equals("")) {
+                        break;
+                    }
+                }
+                if (bull1[x][bull1[x].length - 1] != "") {
+                    writer.print(s + "," + bull1[x][bull1[x].length - 1]);
+                } else {
+                    writer.print(s);
+                }
+                writer.println();
+                x++;
+            }
+            writer.close();
+            JOptionPane.showMessageDialog(null, "Aggregation Successful");
+        }
+    }
+
+    public void combineandsavetest(String s1, String s2) {
+
+        if (!"".equals(s1)) {
+            File1 = s1;
+            File folder = new File(File1);
+            listoffiles = folder.listFiles();
+        } else if (!"".equals(s2)) {
+            listoffiles = listoffiles1;
+        }
+
+        BufferedReader br = null;
+        String line = "";
+
+        File3 = s1 + "/actual_result.csv";
+
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter(File3, "UTF-8");
+        } catch (FileNotFoundException | UnsupportedEncodingException ex) {
+            Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        BufferedReader br1 = null;
+        String s;
+        header = new String[120];
+        for (int x = 0; x < 120; x++) {
+            header[x] = "";
+        }
+        for (int j = 0; j < listoffiles.length; j++) {
+            File f = listoffiles[j];
+            BufferedReader br2 = null;
+            try {
+                br2 = new BufferedReader(new FileReader(f));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                int temp2 = 0;
+                while ((line = br2.readLine()) != null) {
+
+                    // use comma as separator
+                    while (temp2 == 0) {
+                        String Bull[] = line.split(",");
+                        //  System.out.println(Bull.length);
+                        if (j == 0) {
+                            for (int i = 0; i < Bull.length; i++) {
+                                header[i] = Bull[i];
+                            }
+                        }
+                        int k = 77;
+                        for (int i = 77; i < Bull.length;) {
+
+                            if (Bull[i].equals(header[k])) {
+                                i++;
+                                k = 77;
+                            } else if (!Bull[i].equals(header[k]) && !header[k].equals("")) {
+                                k++;
+                            } else if (!Bull[i].equals(header[k]) && header[k].equals("")) {
+                                header[k] = Bull[i];
+                                i++;
+                                k = 77;
+
+                            }
+                        }
+                        temp2 = 1;
+
+                    }
+                    number_of_rows1++;
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(null, "Incorrect File format, please researt the app");
+            }
+        }
+        for (int y = 0; y < header.length; y++) {
+            //  System.out.print(header[y]);
+        }
+        number_of_rows1 = number_of_rows1 - listoffiles.length;
+        //    System.out.println(number_of_rows1);
+        bull1 = new String[number_of_rows1][];
+        int l = 0;
+        for (int i = 0; i < listoffiles.length; i++) {
+
+            File file = listoffiles[i];
+
+            try {
+                br1 = new BufferedReader(new FileReader(file));
+                br = new BufferedReader(new FileReader(file));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            BufferedReader br2 = null;
+            try {
+                br2 = new BufferedReader(new FileReader(file));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                int temp = 0;
+                while ((line = br2.readLine()) != null) {
+
+                    // use comma as separator
+                    if (temp == 0) {
+                        String Bull[] = line.split(",");
+                        //  System.out.println(Bull.length);
+                        bull2 = new String[Bull.length + 1];
+                        for (int j = 0; j < Bull.length; j++) {
+                            bull2[j] = Bull[j];
+                        }
+                    }
+
+                    if (temp != 0) {
+                        String Bull[] = line.split(",");
+                        //  System.out.println(Bull.length);
+                        bull1[l] = new String[Bull.length + 1];
+                        for (int j = 0; j < Bull.length; j++) {
+                            if (j < 77) {
+                                bull1[l][j] = Bull[j];
+                            }
+                            if (j >= 77) {
+                                bull1[l][j] = Bull[j] + ":" + bull2[j];
+                            }
+                        }
+                        l++;
+                    }
+                    temp++;
+                }
+            } catch (IOException ex) {
+                Logger.getLogger(Combine.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        Arrays.sort(bull1, new ColumnComparator(7));
+        for (int m = 0; m < number_of_rows1; m++) {
+            for (int y = 0; y < bull1[m].length; y++) {
+                //      System.out.print(bull1[m][y]);
+            }
+            //System.out.println();
+        }
+        int flag = -1;
+        for (int x = 0; x < number_of_rows1; x++) {
+            String collision = "";
+            for (int y = 0; y < number_of_rows1; y++) {
+                if (x != y) {
+                    if ((bull1[x][2].equals(bull1[y][2]) && !bull1[x][2].equals("")) || (bull1[x][6].equals(bull1[y][6]) && !bull1[x][6].equals("")) || (bull1[x][7].equals(bull1[y][7]) && !bull1[x][7].equals("")) || (bull1[x][8].equals(bull1[y][8]) && !bull1[x][8].equals("")) || (bull1[x][9].equals(bull1[y][9]) && !bull1[x][9].equals(""))) {
+                        for (int a = 0; a < bull1[y].length - 1 && a < bull1[x].length - 1; a++) {
+                            if (!bull1[x][a].equals(bull1[y][a]) && !bull1[x][a].equals("") && !bull1[y][a].equals("")) {
+                                if (a != 34 && a != 65) {
+                                    collision += header[a] + " ";
+
+                                }
+
+                            }
+                        }
+                        flag = y;
+                        break;
+                    }
+                }
+            }
+            bull1[x][bull1[x].length - 1] = collision;
+            if (flag != -1) {
+                for (int a = 0; a < bull1[x].length - 1 && a < bull1[flag].length - 1; a++) {
+                    if (a != 34 && a != 65) {
+                        if (bull1[flag][a].equals("")) {
+                            bull1[flag][a] = bull1[x][a];
+                            //          System.out.println(bull1[x][a]+" "+bull1[flag][a]);
+                            continue;
+                        }
+                        if (bull1[x][a].equals("")) {
+                            bull1[x][a] = bull1[flag][a];
+                            //    System.out.println(bull1[flag][a]);
+                        }
+                    }
+                }
+            }
+            flag = -1;
+            //      System.out.println(collision);
+        }
+
+        int temp = 0;
+
+        int x = 0;
+
+        for (int y = 0; y < header.length; y++) {
+            if (!header[y].equals("")) {
+                writer.print(header[y] + ",");
+            } else {
+                writer.println();
+                break;
+            }
+        }
+
+        while (x < number_of_rows1) {
+            s = "";
+            temp++;
+            for (int b = 0; b < 77; b++) {
+                if (b < 77) {
+                    s += bull1[x][b] + ",";
+                }
+            }
+            for (int c = 77; c < header.length; c++) {
+                            //int a = header.length;
+                // int b = bull1[x].length;
+                int flag1 = 0;
+                for (int d = 77; d < bull1[x].length; d++) {
+                    if (bull1[x][d] != null && !bull1[x][d].equals("")) {
+                        if (bull1[x][d].indexOf(':') != -1) {
+                            String[] parts = bull1[x][d].split(":", 2);
+                            String string1 = parts[0];
+                            String string2 = parts[1];
+                            if (header[c].equals(string2)) {
+                                flag1 = 1;
+                                s += string1 + ",";
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (flag1 == 0) {
+                    s += ",";
+                }
+                if (header[c + 1].equals("")) {
+                    break;
+                }
+            }
+            if (bull1[x][bull1[x].length - 1] != "") {
+                writer.print(s + "," + bull1[x][bull1[x].length - 1]);
+            } else {
+                writer.print(s);
+            }
+            writer.println();
+            x++;
+        }
+        writer.close();
+        JOptionPane.showMessageDialog(null, "Aggregation Successful");
+    }
+
+
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-           combineandsave(jTextField1.getText(),jTextArea1.getText());
+        combineandsave(jTextField1.getText(), jTextArea1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         jTextArea1.setText("");
-        JFileChooser choose =new JFileChooser();
-       choose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        JFileChooser choose = new JFileChooser();
+        choose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
         choose.showOpenDialog(null);
-       File f = choose.getSelectedFile();
+        File f = choose.getSelectedFile();
         String path = f.getAbsolutePath();
         jTextField1.setText(path);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -757,20 +685,14 @@ public class Combine extends javax.swing.JFrame {
         chooser.setMultiSelectionEnabled(true);
         chooser.showOpenDialog(null);
         listoffiles1 = chooser.getSelectedFiles();
-        for(int i=0; i<listoffiles1.length; i++)
-            {
-            File file = listoffiles1[i]; 
-                jTextArea1.setText(file.getAbsolutePath()+"\n"+jTextArea1.getText());
-            }
+        for (int i = 0; i < listoffiles1.length; i++) {
+            File file = listoffiles1[i];
+            jTextArea1.setText(file.getAbsolutePath() + "\n" + jTextArea1.getText());
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    
      // @param args the command line arguments
-     
-        
-        
-    
-public static void main(String args[]) {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

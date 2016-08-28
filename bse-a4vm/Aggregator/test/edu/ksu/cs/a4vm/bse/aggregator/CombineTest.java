@@ -21,7 +21,8 @@ import static org.junit.Assert.*;
  * @author Shubh Chopra
  */
 public class CombineTest {
-    String testpath = "C:/Users/Shubh Chopra/Desktop/AggregatorTest";
+    String testpath = System.getProperty("user.dir") + "/AggregatorTest";
+   // String testpath = "C:/Users/Shubh Chopra/Desktop/AggregatorTest";
     public CombineTest() {
         
     }
